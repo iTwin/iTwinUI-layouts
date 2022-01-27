@@ -1,0 +1,17 @@
+# Built Files
+**/dist
+
+# Node
+**/node_modules
+yarn-error.log
+
+# MacOS
+**/.DS_Store
+
+# Yarn Modern
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

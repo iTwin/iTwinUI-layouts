@@ -1,0 +1,21 @@
+.iui-layouts-page {
+  height: 100vh;
+  display: grid;
+  grid-template:
+    'header header' auto
+    'sidenav content' 1fr / auto 1fr;
+
+  &-header {
+    grid-area: header;
+  }
+
+  &-sidenav {
+    grid-area: sidenav;
+  }
+
+  &-content {
+    grid-area: content;
+    overflow: auto;
+    background-color: var(--iui-color-background-2);
+  }
+}

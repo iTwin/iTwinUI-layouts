@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+*.html -linguist-detectable
+
+/.yarn/releases/** binary
+/.yarn/plugins/** binary
