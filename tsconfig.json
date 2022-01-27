@@ -18,13 +18,5 @@
     "noUnusedLocals": true,
     "skipLibCheck": true
   },
-  "references": [
-    {
-      "path": "packages/layouts-react"
-    },
-    {
-      "path": "demo"
-    }
-  ],
   "exclude": ["**/dist/**/*"]
 }
