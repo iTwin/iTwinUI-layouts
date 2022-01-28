@@ -13,7 +13,6 @@ import {
 } from '@itwin/itwinui-icons-react';
 
 export type DemoTemplateProps = {
-  title: string;
   children: React.ReactNode;
 };
 
@@ -25,7 +24,7 @@ const toDemoCode = (code: string) => {
 };
 
 export const DemoTemplate = (props: DemoTemplateProps) => {
-  const { title, children } = props;
+  const { children } = props;
 
   const [isFullScreen, setIsFullScreen] = React.useState(false);
 
