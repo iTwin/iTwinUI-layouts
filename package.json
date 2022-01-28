@@ -7,7 +7,8 @@
   ],
   "packageManager": "yarn@3.1.1",
   "scripts": {
-    "dev": "yarn workspace @itwin/itwinui-layouts-demo dev",
+    "start": "concurrently -n demo,css,react -k \"yarn start:demo\" \"yarn build:css:watch\" \"yarn build:react:watch\"",
+    "start:demo": "yarn workspace @itwin/itwinui-layouts-demo dev",
     "build:css": "yarn workspace @itwin/itwinui-layouts-css build",
     "build:css:watch": "yarn workspace @itwin/itwinui-layouts-css build:watch",
     "build:react": "yarn workspace @itwin/itwinui-layouts-react build",
