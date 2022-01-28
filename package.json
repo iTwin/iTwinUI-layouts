@@ -14,11 +14,12 @@
     "build:css:watch": "yarn workspace @itwin/itwinui-layouts-css build:watch",
     "build:react": "yarn workspace @itwin/itwinui-layouts-react build",
     "build:react:watch": "yarn workspace @itwin/itwinui-layouts-react build:watch",
-    "build": "yarn build:css && yarn build:react",
+    "build": "yarn build:css && yarn lint:copyright --fix packages/layouts-css/dist/* && yarn build:react",
     "build:watch": "yarn build && concurrently -n css,react -k \"yarn build:css:watch\" \"yarn build:react:watch\"",
     "lint:js": "eslint \"*/**/*.{js,ts,tsx}\" --max-warnings=0",
     "lint:css": "stylelint \"**/*.scss\"",
-    "lint": "yarn lint:js && yarn lint:css",
+    "lint:copyright": "node scripts/copyrightLinter.js",
+    "lint": "yarn lint:js && yarn lint:css && yarn lint:copyright",
     "prepare": "husky install",
     "pre-commit": "lint-staged"
   },
@@ -51,6 +52,9 @@
     "*.{scss}": [
       "prettier --write",
       "stylelint --fix"
+    ],
+    "*.{js,ts,tsx,scss}": [
+      "yarn lint:copyright --fix"
     ]
   }
 }

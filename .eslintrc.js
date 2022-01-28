@@ -1,3 +1,7 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
 module.exports = {
   parser: "@typescript-eslint/parser", // Specifies the ESLint parser
   parserOptions: {
@@ -36,5 +40,5 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "no-restricted-imports": ["error", ".."]
   },
-  ignorePatterns: ["dist", "node_modules"]
+  ignorePatterns: ["**/dist/*", "**/node_modules/*", "scripts"]
 };
