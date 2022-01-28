@@ -9,6 +9,7 @@
   "scripts": {
     "start": "concurrently -n demo,css,react -k \"yarn start:demo\" \"yarn build:css:watch\" \"yarn build:react:watch\"",
     "start:demo": "yarn workspace @itwin/itwinui-layouts-demo dev",
+    "build:demo": "yarn workspace @itwin/itwinui-layouts-demo build",
     "build:css": "yarn workspace @itwin/itwinui-layouts-css build",
     "build:css:watch": "yarn workspace @itwin/itwinui-layouts-css build:watch",
     "build:react": "yarn workspace @itwin/itwinui-layouts-react build",

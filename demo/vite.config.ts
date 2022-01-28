@@ -14,6 +14,9 @@ export default defineConfig({
       },
     }),
   ],
+  css: {
+    preprocessorOptions: { css: { charset: false }, scss: { charset: false } },
+  },
   // build: {
   //   outDir: '../dist',
   //   target: 'es2018',
