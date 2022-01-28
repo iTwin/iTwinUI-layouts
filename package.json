@@ -29,7 +29,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "husky": "=4",
+    "husky": "4",
     "lint-staged": "^11.2.6",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",
@@ -43,7 +43,8 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "eslint --cache --fix"
+      "prettier --write",
+      "eslint --fix"
     ],
     "*.{scss}": [
       "prettier --write",

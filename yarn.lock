@@ -723,7 +723,7 @@ __metadata:
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.28.0
     eslint-plugin-react-hooks: ^4.3.0
-    husky: =4
+    husky: 4
     lint-staged: ^11.2.6
     postcss: ^8.4.5
     prettier: ^2.5.1
@@ -3193,7 +3193,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:=4":
+"husky@npm:4":
   version: 4.3.8
   resolution: "husky@npm:4.3.8"
   dependencies:
