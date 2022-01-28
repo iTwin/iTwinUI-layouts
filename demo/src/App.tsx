@@ -28,16 +28,6 @@ const App = () => {
       ) : (
         <div className='App'>
           <Headline>iTwinUI Layouts demo</Headline>
-          {/* <iframe
-        src='#page-layout'
-        style={{ width: '100%', height: '100%' }}
-        onLoad={(e) => {
-          (e.target as HTMLIFrameElement).style.height = `${
-            (e.target as HTMLIFrameElement).contentWindow!.document.body
-              .scrollHeight
-          }px`;
-        }}
-      /> */}
           <ul>
             {Object.entries(demos).map(([link, { name }]) => (
               <li key={name}>
@@ -45,7 +35,6 @@ const App = () => {
               </li>
             ))}
           </ul>
-          {/* <PageLayoutDemo /> */}
         </div>
       )}
     </>
