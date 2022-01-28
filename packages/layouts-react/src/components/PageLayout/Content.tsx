@@ -9,4 +9,6 @@ export const Content = (props: ContentProps) => {
   return <div className='iui-layouts-page-content'>{children}</div>;
 };
 
+Content.displayName = 'PageLayout.Content';
+
 export default Content;

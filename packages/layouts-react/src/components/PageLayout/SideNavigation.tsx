@@ -9,4 +9,6 @@ export const SideNavigation = (props: SideNavigationProps) => {
   return <div className='iui-layouts-page-sidenav'>{children}</div>;
 };
 
+SideNavigation.displayName = 'PageLayout.SideNavigation';
+
 export default SideNavigation;

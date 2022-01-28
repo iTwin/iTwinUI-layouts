@@ -9,4 +9,6 @@ export const Header = (props: HeaderProps) => {
   return <div className='iui-layouts-page-header'>{children}</div>;
 };
 
+Header.displayName = 'PageLayout.Header';
+
 export default Header;
