@@ -4,10 +4,6 @@
  *--------------------------------------------------------------------------------------------*/
 @import '@itwin/itwinui-css/scss/variables';
 
-body {
-  @include iui-reset;
-}
-
 .app {
-  padding: 22px 24px;
+  padding: 2 * $iui-baseline $iui-l;
 }
