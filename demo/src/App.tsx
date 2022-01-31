@@ -26,7 +26,7 @@ const App = () => {
       {demos[hash] ? (
         demos[hash].component()
       ) : (
-        <div className='App'>
+        <div className='app'>
           <Headline>iTwinUI Layouts demo</Headline>
           <ul>
             {Object.entries(demos).map(([link, { name }]) => (

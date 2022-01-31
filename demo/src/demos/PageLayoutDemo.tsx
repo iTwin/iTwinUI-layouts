@@ -10,7 +10,7 @@ import { PageLayout } from '@itwin/itwinui-layouts-react';
 
 export const PageLayoutDemo = () => {
   return (
-    <DemoTemplate title='PageLayout'>
+    <DemoTemplate>
       <PageLayout>
         <PageLayout.Header>
           <DemoHeader />

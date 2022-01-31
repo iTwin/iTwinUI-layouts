@@ -13,6 +13,11 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/iTwin/iTwinUI-layouts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iTwin/iTwinUI-layouts.git",
+    "directory": "packages/layouts-css"
+  },
   "keywords": [
     "layouts",
     "css",
@@ -23,7 +28,8 @@
     "ux",
     "standards",
     "bentley systems",
-    "itwin"
+    "itwin",
+    "itwinui"
   ],
   "dependencies": {
     "@itwin/itwinui-css": "^0.44.2"

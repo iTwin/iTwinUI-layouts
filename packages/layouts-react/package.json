@@ -12,15 +12,14 @@
       "require": "./dist/cjs/index.js"
     }
   },
-  "typesVersions": {
-    "*": {
-      "index.d.ts": [
-        "dist/cjs/index.d.ts"
-      ]
-    }
-  },
   "license": "MIT",
   "homepage": "https://github.com/iTwin/iTwinUI-layouts",
+  
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iTwin/iTwinUI-layouts.git",
+    "directory": "packages/layouts-react"
+  },
   "keywords": [
     "layouts",
     "css",
@@ -32,6 +31,7 @@
     "standards",
     "bentley systems",
     "itwin",
+    "itwinui",
     "react-component",
     "react"
   ],
