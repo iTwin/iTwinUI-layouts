@@ -40,5 +40,5 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "no-restricted-imports": ["error", ".."]
   },
-  ignorePatterns: ["**/dist/*", "**/node_modules/*", "scripts"]
+  ignorePatterns: ["**/dist/*", "**/node_modules/*", "**/*.js"]
 };
