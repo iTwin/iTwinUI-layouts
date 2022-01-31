@@ -11,7 +11,7 @@ export type PageLayoutProps = {
   children: React.ReactNode;
 };
 
-export type PageLayoutType = React.FC<PageLayoutProps> & {
+export type PageLayoutType = (props: PageLayoutProps) => JSX.Element & {
   Header: typeof Header;
   SideNavigation: typeof SideNavigation;
   Content: typeof Content;

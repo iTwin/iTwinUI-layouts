@@ -33,8 +33,8 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
   const [isFullScreen, setIsFullScreen] = React.useState(false);
 
   return (
-    <div className={'demo-template-container'}>
-      <div className={'demo-template-content'}>
+    <div className='demo-template-container'>
+      <div className='demo-template-content'>
         {children}
         <IconButton
           className='demo-template-fullscreen-button'
@@ -44,7 +44,7 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
         </IconButton>
       </div>
       {!isFullScreen && (
-        <div className={'demo-template-code'}>
+        <div className='demo-template-code'>
           <SandpackProvider template='react-ts'>
             <SandpackLayout theme='github-light'>
               <SandpackCodeViewer

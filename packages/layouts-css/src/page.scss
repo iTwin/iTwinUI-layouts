@@ -17,6 +17,7 @@
 
   &-content {
     grid-area: content;
+    overflow: overlay;
     overflow: auto;
     background-color: var(--iui-color-background-2);
   }
