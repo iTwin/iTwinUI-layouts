@@ -1,0 +1,36 @@
+// Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+// See LICENSE.md in the project root for license terms and full copyright notice.
+@import '@itwin/itwinui-css/scss/variables';
+
+.demo-template {
+  &-container {
+    box-shadow: $iui-elevation-2;
+    background-color: var(--iui-color-background-1);
+    display: flex;
+  }
+
+  &-content {
+    flex: 2;
+    position: relative;
+  }
+
+  &-code {
+    flex: 1;
+
+    .sp-wrapper,
+    .sp-stack {
+      height: 100%;
+    }
+
+    .sp-layout {
+      border-radius: 0;
+      height: 100%;
+    }
+  }
+
+  &-fullscreen-button {
+    position: absolute;
+    bottom: 22px;
+    right: 24px;
+  }
+}

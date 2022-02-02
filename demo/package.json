@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "name": "@itwin/itwinui-layouts-demo",
+  "version": "0.1.0",
+  "author": "Bentley Systems",
+  "main": "src/main.tsx",
+  "license": "MIT",
+  "homepage": "https://github.com/iTwin/iTwinUI-layouts",
+  "keywords": [
+    "layouts",
+    "css",
+    "sass",
+    "scss",
+    "html",
+    "ui",
+    "ux",
+    "standards",
+    "bentley systems",
+    "itwin",
+    "react-component",
+    "react"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@codesandbox/sandpack-react": "^0.13.7",
+    "@itwin/itwinui-css": "^0.44.2",
+    "@itwin/itwinui-icons-react": "^1.5.1",
+    "@itwin/itwinui-layouts-css": "workspace:*",
+    "@itwin/itwinui-layouts-react": "workspace:*",
+    "@itwin/itwinui-react": "^1.29.3",
+    "react-element-to-jsx-string": "^14.3.4",
+    "vite-plugin-svgr": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@vitejs/plugin-react": "^1.0.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.49.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "private": true,
+  "name": "@itwin/itwinui-layouts-monorepo",
+  "workspaces": [
+    "packages/*",
+    "demo"
+  ],
+  "packageManager": "yarn@3.1.1",
+  "scripts": {
+    "start": "concurrently -n demo,css,react -k \"yarn start:demo\" \"yarn build:css:watch\" \"yarn build:react:watch\"",
+    "start:demo": "yarn workspace @itwin/itwinui-layouts-demo dev",
+    "build:demo": "yarn workspace @itwin/itwinui-layouts-demo build",
+    "build:css": "yarn workspace @itwin/itwinui-layouts-css build",
+    "build:css:watch": "yarn workspace @itwin/itwinui-layouts-css build:watch",
+    "build:react": "yarn workspace @itwin/itwinui-layouts-react build",
+    "build:react:watch": "yarn workspace @itwin/itwinui-layouts-react build:watch",
+    "build": "yarn build:css && yarn lint:copyright --fix packages/layouts-css/dist/* && yarn build:react",
+    "build:watch": "yarn build && concurrently -n css,react -k \"yarn build:css:watch\" \"yarn build:react:watch\"",
+    "lint:js": "eslint \"*/**/*.{js,ts,tsx}\" --max-warnings=0",
+    "lint:css": "stylelint \"**/*.scss\"",
+    "lint:copyright": "node scripts/copyrightLinter.js",
+    "lint": "yarn lint:js && yarn lint:css && yarn lint:copyright",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/parser": "^5.10.1",
+    "concurrently": "^7.0.0",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.2.6",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "stylelint": "^14.3.0",
+    "stylelint-config-sass-guidelines": "^9.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{scss}": [
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{js,ts,tsx,scss}": [
+      "yarn lint:copyright --fix"
+    ]
+  }
+}
