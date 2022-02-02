@@ -647,7 +647,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-css@npm:^0.44.1, @itwin/itwinui-css@npm:^0.44.2":
+"@itwin/itwinui-css@npm:0.x, @itwin/itwinui-css@npm:^0.44.1, @itwin/itwinui-css@npm:^0.44.2":
   version: 0.44.2
   resolution: "@itwin/itwinui-css@npm:0.44.2"
   checksum: 33571b956be4882904a24c2fd984ffe6211c391df0ff0fa12abbf0c8d6d3fa4b286dfec6a14d63d69d9bdc54fbfe94d8676d403723cb1c5d158c033542189f1b
@@ -678,7 +678,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@itwin/itwinui-layouts-css@workspace:packages/layouts-css"
   dependencies:
-    "@itwin/itwinui-css": ^0.44.2
+    "@itwin/itwinui-css": 0.x
     autoprefixer: ^10.4.2
     chokidar-cli: ^3.0.0
     postcss: ^8.4.5
