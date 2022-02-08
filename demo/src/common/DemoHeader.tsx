@@ -93,6 +93,7 @@ export const DemoHeader = () => {
               description='0x0987654321'
               startIcon={<SvgModel />}
               onClick={() => {}}
+              isActive
               menuItems={() => [
                 <MenuItem
                   key='iModelA'
