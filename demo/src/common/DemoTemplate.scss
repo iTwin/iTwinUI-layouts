@@ -15,16 +15,43 @@
   }
 
   &-code {
+    display: grid;
+    grid-template-rows: 55px 1fr;
     flex: 1;
+    border-left: 2px solid var(--iui-color-background-5);
+    box-sizing: border-box;
+
+    &-header {
+      display: flex;
+      align-content: center;
+      padding: 0 12px;
+
+      h1 {
+        user-select: all;
+
+        a,
+        span {
+          user-select: none;
+        }
+      }
+    }
 
     .sp-wrapper,
     .sp-stack {
       height: 100%;
+      overflow: auto;
+      overflow-wrap: break-word;
+    }
+
+    .sp-cm {
+      padding-bottom: 0;
     }
 
     .sp-layout {
       border-radius: 0;
       height: 100%;
+      border: none;
+      border-top: 2px solid var(--iui-color-background-5);
     }
   }
 

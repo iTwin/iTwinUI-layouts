@@ -45,6 +45,14 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
       </div>
       {!isFullScreen && (
         <div className='demo-template-code'>
+          <div className='demo-template-code-header'>
+            <h1 className='iui-text-headline'>
+              <a href='/iTwinUI-layouts/' className='iui-anchor'>
+                ..
+              </a>
+              <span className='iui-text-muted'>&nbsp;/&nbsp;</span>Template name
+            </h1>
+          </div>
           <SandpackProvider template='react-ts'>
             <SandpackLayout theme='github-light'>
               <SandpackCodeViewer
