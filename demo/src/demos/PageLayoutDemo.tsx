@@ -26,10 +26,6 @@ export const PageLayoutDemo = () => {
             loading='lazy'
             style={{ border: 'none', width: '100%', height: '100%' }}
           />
-
-          {/* <div
-            style={{ width: '100%', height: '100%', backgroundColor: 'red' }}
-          /> */}
         </PageLayout.Content>
       </PageLayout>
     </DemoTemplate>
