@@ -22,7 +22,7 @@ export const PageLayoutDemo = () => {
 
         <PageLayout.Content>
           <iframe
-            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d391622.38536755356!2d-75.43763126705527!3d39.92908811024802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6f534e0393163%3A0x1eb84dcc94686b39!2sBentley%20Systems%20Inc!5e0!3m2!1sen!2sus!4v1644333059464!5m2!1sen!2sus'
+            src='https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-Layouts%20demo?editorPane=Hide'
             loading='lazy'
             style={{
               border: 'none',
@@ -30,6 +30,7 @@ export const PageLayoutDemo = () => {
               height: '100%',
               display: 'block',
             }}
+            sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
           />
         </PageLayout.Content>
       </PageLayout>
