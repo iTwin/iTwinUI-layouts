@@ -28,7 +28,7 @@
   "dependencies": {
     "@codesandbox/sandpack-react": "^0.13.7",
     "@itwin/itwinui-css": "^0.44.2",
-    "@itwin/itwinui-icons-react": "^1.5.1",
+    "@itwin/itwinui-icons-react": "^1.7.0",
     "@itwin/itwinui-layouts-css": "workspace:*",
     "@itwin/itwinui-layouts-react": "workspace:*",
     "@itwin/itwinui-react": "^1.29.3",

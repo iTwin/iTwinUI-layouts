@@ -6,11 +6,16 @@ import React from 'react';
 import './App.scss';
 import '@codesandbox/sandpack-react/dist/index.css';
 import '@itwin/itwinui-layouts-css/styles.css';
-import { Anchor, Headline, Body } from '@itwin/itwinui-react';
+import { ThemeType, useTheme, Anchor, Text, Body } from '@itwin/itwinui-react';
 import { PageLayoutDemo } from './demos/PageLayoutDemo';
 
 const demos: Record<string, { name: string; component: () => JSX.Element }> = {
   '#page-layout': { name: 'Page Layout', component: PageLayoutDemo },
+};
+
+export const ThemeButton = () => {
+  const [theme] = React.useState<ThemeType>('os');
+  useTheme(theme);
 };
 
 const App = () => {
@@ -63,7 +68,9 @@ const App = () => {
             </svg>
           </a>
 
-          <h1 className='iui-text-headline'>iTwinUI-Layouts</h1>
+          <Text as='h1' variant='headline'>
+            iTwinUI-Layouts
+          </Text>
           <Body>
             An open-source design system that helps us build a unified web
             experience.

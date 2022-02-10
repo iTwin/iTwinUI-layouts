@@ -10,10 +10,22 @@ import {
 } from '@codesandbox/sandpack-react';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 import './DemoTemplate.scss';
-import { IconButton } from '@itwin/itwinui-react';
+import {
+  ThemeType,
+  useTheme,
+  IconButton,
+  ButtonGroup,
+  Button,
+  Text,
+  Anchor,
+} from '@itwin/itwinui-react';
 import {
   SvgWindowFullScreen,
   SvgWindowCollapse,
+  SvgSun,
+  SvgMoon,
+  SvgDockRight,
+  SvgDockBottom,
 } from '@itwin/itwinui-icons-react';
 
 export type DemoTemplateProps = {
@@ -27,42 +39,77 @@ const toDemoCode = (code: string) => {
 };`;
 };
 
+export const ThemeButton = () => {
+  const [theme, setTheme] = React.useState<ThemeType>('os');
+  useTheme(theme);
+
+  const changeTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
+  return (
+    <IconButton styleType='default' onClick={changeTheme}>
+      {theme === 'light' ? <SvgSun /> : <SvgMoon />}
+    </IconButton>
+  );
+};
+
 export const DemoTemplate = (props: DemoTemplateProps) => {
   const { children } = props;
 
   const [isFullScreen, setIsFullScreen] = React.useState(false);
+  const [isHorizontal, setIsHorizontal] = React.useState(false);
+  const demoCode = toDemoCode(reactElementToJSXString(children));
 
   return (
-    <div className='demo-template-container'>
-      <div className='demo-template-content'>
-        {children}
-        <IconButton
-          className='demo-template-fullscreen-button'
-          onClick={() => setIsFullScreen((f) => !f)}
-        >
-          {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
-        </IconButton>
-      </div>
+    <div
+      className={`demo-template-container ${
+        isHorizontal && 'demo-template-container-vertical'
+      }`}
+    >
       {!isFullScreen && (
         <div className='demo-template-code'>
           <div className='demo-template-code-header'>
-            <h1 className='iui-text-headline'>
-              <a href='/iTwinUI-layouts/' className='iui-anchor'>
-                ..
-              </a>
-              <span className='iui-text-muted'>&nbsp;/&nbsp;</span>Template name
-            </h1>
+            <div className='demo-template-code-header-left'>
+              <Anchor href='/iTwinUI-layouts/'>..</Anchor>
+
+              <Text as='h1' variant='title'>
+                Template name
+              </Text>
+            </div>
+            <div className='demo-template-code-header-right'>
+              <IconButton onClick={() => setIsHorizontal((f) => !f)}>
+                {isHorizontal ? <SvgDockRight /> : <SvgDockBottom />}
+              </IconButton>
+              <Button
+                onClick={() => navigator.clipboard.writeText(demoCode)}
+                styleType='high-visibility'
+              >
+                Copy
+              </Button>
+            </div>
           </div>
           <SandpackProvider template='react-ts'>
             <SandpackLayout theme='github-light'>
               <SandpackCodeViewer
-                code={toDemoCode(reactElementToJSXString(children))}
+                code={demoCode}
                 showTabs={false}
+                showLineNumbers={true}
+                wrapContent={true}
               />
             </SandpackLayout>
           </SandpackProvider>
         </div>
       )}
+      <div className='demo-template-content'>
+        {children}
+        <ButtonGroup className='demo-template-fullscreen-button'>
+          <ThemeButton key='themeSwitched' />
+          <IconButton onClick={() => setIsFullScreen((f) => !f)}>
+            {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
+          </IconButton>
+        </ButtonGroup>
+      </div>
     </div>
   );
 };

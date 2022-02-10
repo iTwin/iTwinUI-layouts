@@ -4,35 +4,96 @@
 
 .demo-template {
   &-container {
-    box-shadow: $iui-elevation-2;
-    background-color: var(--iui-color-background-1);
     display: flex;
+    flex-direction: row-reverse;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--iui-color-background-4);
+
+    &-vertical {
+      flex-direction: column-reverse;
+
+      .demo-template-code {
+        max-width: revert;
+        max-height: 25%;
+        border-left: 0px;
+        border-top: 2px solid var(--iui-color-background-5);
+
+        &::after {
+          box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
   }
 
   &-content {
-    flex: 2;
     position: relative;
+    width: 100%;
+    height: 100%;
   }
 
   &-code {
+    position: relative;
     display: grid;
     grid-template-rows: 55px 1fr;
-    flex: 1;
     border-left: 2px solid var(--iui-color-background-5);
     box-sizing: border-box;
+    max-width: 25%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      box-shadow: inset 6px 0 12px rgba(0, 0, 0, 0.25);
+    }
 
     &-header {
       display: flex;
-      align-content: center;
+      gap: $iui-s;
+      align-items: center;
+      justify-content: space-between;
       padding: 0 12px;
+      width: 100%;
 
-      h1 {
-        user-select: all;
+      &-left {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        min-width: 0;
 
-        a,
-        span {
+        .iui-anchor {
+          font-size: 24px;
+          font-weight: 300;
           user-select: none;
         }
+
+        h1 {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          user-select: all;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          &::before {
+            content: '/';
+            color: var(--iui-text-color-muted);
+            margin: 0 4px;
+          }
+        }
+      }
+
+      &-right {
+        display: flex;
+        white-space: nowrap;
+        gap: $iui-s;
       }
     }
 
@@ -40,7 +101,6 @@
     .sp-stack {
       height: 100%;
       overflow: auto;
-      overflow-wrap: break-word;
     }
 
     .sp-cm {
@@ -57,7 +117,7 @@
 
   &-fullscreen-button {
     position: absolute;
-    bottom: 22px;
-    right: 24px;
+    bottom: 11px;
+    right: 12px;
   }
 }
