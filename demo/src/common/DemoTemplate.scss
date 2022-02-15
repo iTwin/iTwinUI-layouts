@@ -17,8 +17,8 @@
       .demo-template-code {
         max-width: revert;
         max-height: 25%;
-        border-left: 0px;
-        border-top: 2px solid var(--iui-color-background-5);
+        border-left: none;
+        border-top: $iui-xxs solid var(--iui-color-background-5);
 
         &::after {
           box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.25);
@@ -58,7 +58,7 @@
       gap: $iui-s;
       align-items: center;
       justify-content: space-between;
-      padding: 0 12px;
+      padding: 0 $iui-sm;
       width: 100%;
 
       &-left {
@@ -68,7 +68,7 @@
         min-width: 0;
 
         .iui-anchor {
-          font-size: 24px;
+          font-size: $iui-l;
           font-weight: 300;
           user-select: none;
         }
@@ -85,7 +85,7 @@
           &::before {
             content: '/';
             color: var(--iui-text-color-muted);
-            margin: 0 4px;
+            margin: 0 $iui-xs;
           }
         }
       }
@@ -111,13 +111,14 @@
       border-radius: 0;
       height: 100%;
       border: none;
-      border-top: 2px solid var(--iui-color-background-5);
+      border-top: $iui-xxs solid var(--iui-color-background-5);
     }
   }
 
-  &-fullscreen-button {
+  &-button-overlay {
     position: absolute;
-    bottom: 11px;
-    right: 12px;
+    bottom: $iui-baseline;
+    right: $iui-sm;
+    box-shadow: $iui-elevation-8;
   }
 }

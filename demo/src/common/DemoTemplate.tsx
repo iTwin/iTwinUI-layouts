@@ -85,7 +85,7 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
       )}
       <div className='demo-template-content'>
         {children}
-        <ButtonGroup className='demo-template-fullscreen-button'>
+        <ButtonGroup className='demo-template-button-overlay'>
           <ThemeButton key='themeSwitched' />
           <IconButton onClick={() => setIsFullScreen((f) => !f)}>
             {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
