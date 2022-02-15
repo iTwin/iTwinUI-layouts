@@ -18,7 +18,6 @@ import {
   Text,
 } from '@itwin/itwinui-react';
 import {
-  SvgNetwork,
   SvgCheckmark,
   SvgModel,
   SvgNotification,
@@ -106,7 +105,7 @@ export const DemoHeader = () => {
                   key='iModelB'
                   sublabel='0x0987654321'
                   icon={<SvgModel />}
-                  isSelected='true'
+                  isSelected
                   badge={<SvgCheckmark />}
                 >
                   iModel Beta
@@ -126,7 +125,7 @@ export const DemoHeader = () => {
         />
       }
       actions={[
-        <IconButton key='notif' styleType='borderless'>
+        <IconButton key='notifications' styleType='borderless'>
           <SvgNotification />
         </IconButton>,
         <DropdownMenu

@@ -13,10 +13,10 @@ export const DemoSideNav = () => {
       expanderPlacement='bottom'
       items={[
         <SidenavButton startIcon={<SvgHome />} key='Home'>
-          {'Home'}
+          Home
         </SidenavButton>,
         <SidenavButton startIcon={<SvgMap />} key='Map' isActive>
-          {'Map'}
+          Map
         </SidenavButton>,
       ]}
       secondaryItems={[
