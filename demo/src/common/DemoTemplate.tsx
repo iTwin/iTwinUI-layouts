@@ -11,8 +11,6 @@ import {
 import reactElementToJSXString from 'react-element-to-jsx-string';
 import './DemoTemplate.scss';
 import {
-  ThemeType,
-  useTheme,
   IconButton,
   ButtonGroup,
   Button,
@@ -22,11 +20,10 @@ import {
 import {
   SvgWindowFullScreen,
   SvgWindowCollapse,
-  SvgSun,
-  SvgMoon,
   SvgDockRight,
   SvgDockBottom,
 } from '@itwin/itwinui-icons-react';
+import { ThemeButton } from '../common/ThemeButton';
 
 export type DemoTemplateProps = {
   children: React.ReactNode;
@@ -37,21 +34,6 @@ const toDemoCode = (code: string) => {
   return 
     ${code.replace(/\n/g, '\n    ')}
 };`;
-};
-
-export const ThemeButton = () => {
-  const [theme, setTheme] = React.useState<ThemeType>('os');
-  useTheme(theme);
-
-  const changeTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  };
-
-  return (
-    <IconButton styleType='default' onClick={changeTheme}>
-      {theme === 'light' ? <SvgSun /> : <SvgMoon />}
-    </IconButton>
-  );
 };
 
 export const DemoTemplate = (props: DemoTemplateProps) => {
