@@ -664,13 +664,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-icons-react@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "@itwin/itwinui-icons-react@npm:1.6.0"
+"@itwin/itwinui-icons-react@npm:^1.7.0":
+  version: 1.8.0
+  resolution: "@itwin/itwinui-icons-react@npm:1.8.0"
   peerDependencies:
     react: ^16.8.6 || ^17.0.0
     react-dom: ^16.8.6 || ^17.0.0
-  checksum: 64570bade8d87aa0ee281928e70fd355efab8c7a2dd7eff6e9c2aacac455a054ce6066bb30296b9f7f4102833ac5c2c3d0ca274b034f72ef77cda68d82659a99
+  checksum: 626489e57cdb6030c7f97bff34adce0b559940fafb7a3e0aed627f5734412fd61f27a97157e00abddf524fa51bdb3cc63cf109ace4f8f80ed59ab30c242c44bb
   languageName: node
   linkType: hard
 
@@ -704,7 +704,7 @@ __metadata:
   dependencies:
     "@codesandbox/sandpack-react": ^0.13.7
     "@itwin/itwinui-css": ^0.44.2
-    "@itwin/itwinui-icons-react": ^1.6.0
+    "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
     "@itwin/itwinui-react": ^1.29.3
