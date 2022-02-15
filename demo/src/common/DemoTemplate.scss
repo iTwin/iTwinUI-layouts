@@ -8,7 +8,6 @@
     flex-direction: row-reverse;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
     background-color: var(--iui-color-background-4);
 
     &-vertical {
@@ -19,10 +18,6 @@
         max-height: 25%;
         border-left: none;
         border-top: $iui-xxs solid var(--iui-color-background-5);
-
-        &::after {
-          box-shadow: inset 0 6px 12px rgba(0, 0, 0, 0.25);
-        }
       }
     }
   }
@@ -35,23 +30,10 @@
 
   &-code {
     position: relative;
-    display: grid;
-    grid-template-rows: 55px 1fr;
+    display: flex;
+    flex-direction: column;
     border-left: 2px solid var(--iui-color-background-5);
-    box-sizing: border-box;
     max-width: 25%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      box-shadow: inset 6px 0 12px rgba(0, 0, 0, 0.25);
-    }
 
     &-header {
       display: flex;
@@ -60,6 +42,8 @@
       justify-content: space-between;
       padding: 0 $iui-sm;
       width: 100%;
+      height: $iui-baseline * 5 + 5px;
+      border-bottom: $iui-xxs solid var(--iui-color-background-5);
 
       &-left {
         display: flex;
@@ -78,9 +62,6 @@
           overflow: hidden;
           text-overflow: ellipsis;
           user-select: all;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
 
           &::before {
             content: '/';
@@ -111,7 +92,6 @@
       border-radius: 0;
       height: 100%;
       border: none;
-      border-top: $iui-xxs solid var(--iui-color-background-5);
     }
   }
 

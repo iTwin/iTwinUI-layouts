@@ -26,6 +26,7 @@ import {
 import { ThemeButton } from '../common/ThemeButton';
 
 export type DemoTemplateProps = {
+  title: string;
   children: React.ReactNode;
 };
 
@@ -37,7 +38,7 @@ const toDemoCode = (code: string) => {
 };
 
 export const DemoTemplate = (props: DemoTemplateProps) => {
-  const { children } = props;
+  const { children, title } = props;
 
   const [isFullScreen, setIsFullScreen] = React.useState(false);
   const [isHorizontal, setIsHorizontal] = React.useState(false);
@@ -56,7 +57,7 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
               <Anchor href='../'>..</Anchor>
 
               <Text as='h1' variant='title'>
-                Template name
+                {title}
               </Text>
             </div>
             <div className='demo-template-code-header-right'>
