@@ -72,8 +72,11 @@ const App = () => {
             iTwinUI-Layouts
           </Text>
           <Body>
-            An open-source design system that helps us build a unified web
-            experience.
+            An open-source common UI layouts library built upon{' '}
+            <Anchor href='https://itwin.github.io/iTwinUI-react/'>
+              iTwinUI-react
+            </Anchor>{' '}
+            that helps us build a unified web experience.
           </Body>
           <img
             alt='GitHub last commit'

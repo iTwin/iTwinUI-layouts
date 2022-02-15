@@ -71,7 +71,7 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
         <div className='demo-template-code'>
           <div className='demo-template-code-header'>
             <div className='demo-template-code-header-left'>
-              <Anchor href='/iTwinUI-layouts/'>..</Anchor>
+              <Anchor href='../'>..</Anchor>
 
               <Text as='h1' variant='title'>
                 Template name
