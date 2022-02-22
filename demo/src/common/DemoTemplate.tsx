@@ -51,6 +51,16 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
         'demo-template-container-vertical': isHorizontal,
       })}
     >
+      <div className='demo-template-content'>
+        {children}
+        <ButtonGroup className='demo-template-button-overlay'>
+          <ThemeButton key='themeSwitched' />
+          <IconButton onClick={() => setIsFullScreen((f) => !f)}>
+            {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
+          </IconButton>
+        </ButtonGroup>
+      </div>
+
       {!isFullScreen && (
         <div className='demo-template-code'>
           <div className='demo-template-code-header'>
@@ -85,15 +95,6 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
           </SandpackProvider>
         </div>
       )}
-      <div className='demo-template-content'>
-        {children}
-        <ButtonGroup className='demo-template-button-overlay'>
-          <ThemeButton key='themeSwitched' />
-          <IconButton onClick={() => setIsFullScreen((f) => !f)}>
-            {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
-          </IconButton>
-        </ButtonGroup>
-      </div>
     </div>
   );
 };
