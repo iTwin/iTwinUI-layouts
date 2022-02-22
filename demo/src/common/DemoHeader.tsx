@@ -175,7 +175,7 @@ export const DemoHeader = () => {
               image={
                 <img
                   src='https://itwinplatformcdn.azureedge.net/iTwinUI/user-placeholder.png'
-                  alt='Jon Graft'
+                  alt='Terry Rivers'
                 />
               }
             />
