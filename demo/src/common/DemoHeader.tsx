@@ -190,7 +190,7 @@ export const DemoHeader = () => {
           Feedback
         </MenuItem>,
         <MenuItem key='whats-new' icon={<SvgNews />}>
-          What&#39;s new
+          {`What's new`}
         </MenuItem>,
         <MenuItem key='about' icon={<SvgInfoCircular />}>
           About
