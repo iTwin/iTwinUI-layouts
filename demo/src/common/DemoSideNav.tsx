@@ -3,7 +3,7 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import { SvgMap, SvgHome, SvgSettings } from '@itwin/itwinui-icons-react';
+import { SvgMap, SvgHome, SvgConfiguration } from '@itwin/itwinui-icons-react';
 import { SidenavButton, SideNavigation } from '@itwin/itwinui-react';
 
 export const DemoSideNav = () => {
@@ -20,8 +20,8 @@ export const DemoSideNav = () => {
         </SidenavButton>,
       ]}
       secondaryItems={[
-        <SidenavButton startIcon={<SvgSettings />} key='settings'>
-          Settings
+        <SidenavButton startIcon={<SvgConfiguration />} key='configuration'>
+          Configuration
         </SidenavButton>,
       ]}
     />
