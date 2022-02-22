@@ -3,6 +3,7 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
+import './GitHubBanner.scss';
 
 export const GitHubBanner = () => {
   return (
