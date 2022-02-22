@@ -8,6 +8,7 @@ import {
   SandpackLayout,
   SandpackCodeViewer,
 } from '@codesandbox/sandpack-react';
+import cx from 'classnames';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 import './DemoTemplate.scss';
 import {
@@ -46,9 +47,9 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
 
   return (
     <div
-      className={`demo-template-container ${
-        isHorizontal && 'demo-template-container-vertical'
-      }`}
+      className={cx('demo-template-container', {
+        'demo-template-container-vertical': isHorizontal,
+      })}
     >
       {!isFullScreen && (
         <div className='demo-template-code'>
