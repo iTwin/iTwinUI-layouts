@@ -39,11 +39,11 @@ const App = () => {
             iTwinUI-Layouts
           </Text>
           <Body>
-            An open-source common UI layouts library built upon{' '}
+            An open-source common UI layouts library used to display{' '}
             <Anchor href='https://itwin.github.io/iTwinUI-react/'>
               iTwinUI-react
             </Anchor>{' '}
-            that helps us build a unified web experience.
+            components.
           </Body>
           <img
             alt='GitHub last commit'
