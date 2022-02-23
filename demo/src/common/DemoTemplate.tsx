@@ -72,6 +72,8 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
                   location.hash = '';
                 }}
               >
+                ..
+              </Anchor>
 
               <Text as='h1' variant='title'>
                 {title}
