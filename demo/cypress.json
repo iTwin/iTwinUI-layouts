@@ -1,0 +1,14 @@
+{
+  "integrationFolder": "src/demos",
+  "testFiles": "**/*.spec.{js,ts,jsx,tsx}",
+  "viewportWidth": 1024,
+  "viewportHeight": 768,
+  "video": false,
+
+  "reporter": "../node_modules/cypress-image-snapshot/reporter.js",
+  
+  "pluginsFile": "cypress/plugins/index.js",
+  "supportFile": "cypress/support/index.js",
+  "defaultCommandTimeout": 20000,
+  "requestTimeout": 20000
+}
