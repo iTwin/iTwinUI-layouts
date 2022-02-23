@@ -65,7 +65,13 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
         <div className='demo-template-code'>
           <div className='demo-template-code-header'>
             <div className='demo-template-code-header-left'>
-              <Anchor href='../'>..</Anchor>
+              <Anchor
+                href='../'
+                onClick={(e) => {
+                  e.preventDefault();
+                  location.hash = '';
+                }}
+              >
 
               <Text as='h1' variant='title'>
                 {title}
