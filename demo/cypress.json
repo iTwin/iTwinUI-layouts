@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://host.docker.internal:3000/iTwinUI-layouts/",
+  "baseUrl": "http://localhost:3000/iTwinUI-layouts/",
   "integrationFolder": "src/demos",
   "testFiles": "**/*.spec.{js,ts,jsx,tsx}",
   "viewportWidth": 1024,

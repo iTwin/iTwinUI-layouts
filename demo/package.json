@@ -22,7 +22,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc --no-emit && vite build",
+    "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "node run-tests.js",
     "test:approve": "cypress-image-diff -u"
