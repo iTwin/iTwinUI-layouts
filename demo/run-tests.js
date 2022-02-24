@@ -5,7 +5,7 @@
 const { spawn } = require('child_process');
 
 const dockerProcess = spawn(
-  `docker run --rm -it -v "${__dirname}/../":/e2e -w /e2e/demo cypress/included:9.5.0 --browser chrome --headless`,
+  `docker run --rm -v "${__dirname}/../":/e2e -w /e2e/demo cypress/included:9.5.0 --browser chrome --headless`,
   {
     stdio: 'inherit',
     shell: true,
