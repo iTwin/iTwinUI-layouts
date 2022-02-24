@@ -27,21 +27,27 @@ const toDemoCode = (code: string) => {
 };`;
 };
 
+const isTestRun = () => {
+  return window.localStorage.getItem('testRun') === 'true';
+};
+
 export const DemoTemplate = (props: DemoTemplateProps) => {
   const { children } = props;
 
-  const [isFullScreen, setIsFullScreen] = React.useState(false);
+  const [isFullScreen, setIsFullScreen] = React.useState(isTestRun());
 
   return (
     <div className='demo-template-container'>
       <div className='demo-template-content'>
         {children}
-        <IconButton
-          className='demo-template-fullscreen-button'
-          onClick={() => setIsFullScreen((f) => !f)}
-        >
-          {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
-        </IconButton>
+        {!isTestRun() && (
+          <IconButton
+            className='demo-template-fullscreen-button'
+            onClick={() => setIsFullScreen((f) => !f)}
+          >
+            {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
+          </IconButton>
+        )}
       </div>
       {!isFullScreen && (
         <div className='demo-template-code'>

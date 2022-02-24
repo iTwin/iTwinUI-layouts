@@ -30,10 +30,3 @@
 
 const compareSnapshotCommand = require('cypress-image-diff-js/dist/command');
 compareSnapshotCommand();
-
-// require('cypress-react-unit-test/support')
-// import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
-// addMatchImageSnapshotCommand();
-
-// const compareSnapshotCommand = require('cypress-visual-regression/dist/command');
-// compareSnapshotCommand();

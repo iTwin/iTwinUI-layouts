@@ -22,8 +22,10 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc --no-emit && vite build",
+    "preview": "vite preview",
+    "test": "node run-tests.js",
+    "test:approve": "cypress-image-diff -u"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^0.13.7",
@@ -33,17 +35,15 @@
     "@itwin/itwinui-layouts-react": "workspace:*",
     "@itwin/itwinui-react": "^1.29.3",
     "react-element-to-jsx-string": "^14.3.4",
+    "react-router-dom": "6",
     "vite-plugin-svgr": "^1.0.1"
   },
   "devDependencies": {
-    "@types/cypress-image-snapshot": "^3.1.6",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@vitejs/plugin-react": "^1.0.7",
     "cypress": "^9.5.0",
     "cypress-image-diff-js": "^1.16.1",
-    "cypress-image-snapshot": "^4.0.1",
-    "cypress-visual-regression": "^1.6.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sass": "^1.49.0",

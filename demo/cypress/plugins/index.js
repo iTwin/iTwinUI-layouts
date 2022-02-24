@@ -16,10 +16,6 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-const {
-  addMatchImageSnapshotPlugin,
-} = require('cypress-image-snapshot/plugin');
-const getCompareSnapshotsPlugin = require('cypress-visual-regression/dist/plugin');
 /**
  * @type {Cypress.PluginConfig}
  */
@@ -29,16 +25,4 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
   const getCompareSnapshotsPlugin = require('cypress-image-diff-js/dist/plugin');
   getCompareSnapshotsPlugin(on, config);
-
-  // on('after:screenshot', (details) => {
-  //   console.log('details', details);
-  //   const fs = require('fs-extra');
-  //   console.log(
-  //     'exists',
-  //     fs.readdirSync('/e2e/demo/cypress-visual-screenshots/comparison/'),
-  //   );
-  // });
-
-  // addMatchImageSnapshotPlugin(on, config);
-  // getCompareSnapshotsPlugin(on, config);
 };

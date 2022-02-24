@@ -15,8 +15,8 @@
     "resolveJsonModule": true,
     "declaration": true,
     "jsx": "react-jsx",
-    "types": ["vite-plugin-svgr/client", "cypress", "types.d.ts"],
+    "types": ["vite-plugin-svgr/client", "cypress"],
     "outDir": "dist",
   },
-  "include": ["./src"]
+  "include": ["./src", "types.d.ts"]
 }
