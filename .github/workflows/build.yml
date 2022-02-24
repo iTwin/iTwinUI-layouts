@@ -46,5 +46,6 @@ jobs:
       - run: yarn install --frozen-lockfile
 
       # `&` symbol is needed as it prevents Storybook from running endlessly
-      - run: yarn start &
+      - run: yarn build
+      - run: yarn start:demo &
       - run: yarn test
