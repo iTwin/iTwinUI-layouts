@@ -16,7 +16,7 @@ export const ThemeButton = () => {
 
   return (
     <IconButton styleType='default' onClick={changeTheme}>
-      {theme === 'light' ? <SvgSun /> : <SvgMoon />}
+      {theme === 'light' ? <SvgMoon /> : <SvgSun />}
     </IconButton>
   );
 };
