@@ -47,24 +47,24 @@
         align-items: center;
         flex: 1;
         min-width: 0;
+      }
 
-        .iui-anchor {
-          font-size: $iui-l;
-          font-weight: 300;
-          user-select: none;
-        }
+      &-back {
+        font-size: $iui-l;
+        font-weight: 300;
+        user-select: none;
+      }
 
-        h1 {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          user-select: all;
+      &-title {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        user-select: all;
 
-          &::before {
-            content: '/';
-            color: var(--iui-text-color-muted);
-            margin: 0 $iui-xs;
-          }
+        &::before {
+          content: '/';
+          color: var(--iui-text-color-muted);
+          margin: 0 $iui-xs;
         }
       }
 
