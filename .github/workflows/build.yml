@@ -47,6 +47,4 @@ jobs:
 
       # `&` symbol is needed as it prevents Storybook from running endlessly
       - run: yarn build
-      - run: yarn build:demo
-      - run: yarn yarn workspace @itwin/itwinui-layouts-demo preview &
-      - run: yarn test -e CYPRESS_baseUrl=http://host.docker.internal:5000
+      - run: yarn test
