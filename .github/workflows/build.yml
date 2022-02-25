@@ -47,5 +47,4 @@ jobs:
 
       # `&` symbol is needed as it prevents Storybook from running endlessly
       - run: yarn build
-      - run: yarn start:demo &
       - run: yarn test

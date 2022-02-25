@@ -10,7 +10,7 @@ const serverProcess = spawn('yarn dev', {
 });
 
 const dockerProcess = spawn(
-  `docker run --rm -v "${__dirname}/../":/e2e -w /e2e/demo cypress/included:9.5.0 --browser chrome --headless `,
+  `docker run --rm --add-host host.docker.internal:host-gateway -v "${__dirname}/../":/e2e -w /e2e/demo cypress/included:9.5.0 --browser chrome --headless `,
   {
     stdio: 'inherit',
     shell: true,
