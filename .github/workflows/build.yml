@@ -47,6 +47,4 @@ jobs:
 
       # `&` symbol is needed as it prevents Storybook from running endlessly
       - run: yarn build
-      - run: yarn start:demo &
-      - run: npx wait-on --timeout 60000 http://localhost:3000/
-      - run: yarn test
+      - run: yarn start:demo & yarn test
