@@ -16,6 +16,7 @@
 
   &-code {
     flex: 1;
+    overflow: auto;
 
     .sp-wrapper,
     .sp-stack {
