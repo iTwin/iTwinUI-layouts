@@ -54,4 +54,6 @@ jobs:
         if: failure()
         with:
           name: tests-results
-          path: demo/cypress-visual-report/
+          path: |
+            demo/cypress-visual-report/
+            demo/cypress-visual-screenshots/
