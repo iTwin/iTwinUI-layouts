@@ -24,7 +24,7 @@ after(() => {
   cy.task('generateReport');
 });
 
-before(() => {
+beforeEach(() => {
   // Makes tests full screen and hides fullscreen button
   window.localStorage.setItem('testRun', 'true');
 });
