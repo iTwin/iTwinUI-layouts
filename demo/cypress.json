@@ -2,8 +2,6 @@
   "baseUrl": "http://localhost:5000/iTwinUI-layouts/",
   "integrationFolder": "src/demos",
   "testFiles": "**/*.spec.{js,ts,jsx,tsx}",
-  "viewportWidth": 1024,
-  "viewportHeight": 768,
   "video": false,
   "defaultCommandTimeout": 20000,
   "requestTimeout": 20000

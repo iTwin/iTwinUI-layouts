@@ -10,6 +10,9 @@ const SCREEN_SIZES = [
   { width: 360, height: 640 }, // Mobile
 ] as const;
 
+/**
+ * Runs tests for all the different screen sizes.
+ */
 export const layoutDescribe = (
   testsName: string,
   callback: (screenSize: typeof SCREEN_SIZES[number]) => void,

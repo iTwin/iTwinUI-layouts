@@ -20,6 +20,9 @@ declare global {
         retryOptions?: typeof RecurseDefaults,
       ): Chainable<Element>;
 
+      /**
+       * Hides the element by setting `visibility: hidden`.
+       */
       hide(): Cypress.Chainable<Element>;
     }
   }
