@@ -50,8 +50,8 @@ jobs:
       - run: yarn build:demo
       - run: yarn test
       - name: Upload tests artifacts
-        - if: failure()
-        - uses: actions/upload-artifact@v2
-          with:
-            name: tests-results
-            path: demo/cypress-visual-screenshots/
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: tests-results
+          path: demo/cypress-visual-screenshots/
