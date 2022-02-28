@@ -2,8 +2,17 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-export { PageLayout } from './components/PageLayout';
-export type { PageLayoutProps } from './components/PageLayout';
+import React from 'react';
 
-export { Grid } from './components/Grid';
-export type { GridProps } from './components/Grid';
+export type GridProps = {
+  children: React.ReactNode;
+};
+
+export const Grid = (props: GridProps) => {
+  const { children } = props;
+  return <div className='iui-layouts-grid'>{children}</div>;
+};
+
+Grid.displayName = 'PageLayout.Grid';
+
+export default Grid;

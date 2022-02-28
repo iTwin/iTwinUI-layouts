@@ -8,9 +8,11 @@ import '@codesandbox/sandpack-react/dist/index.css';
 import '@itwin/itwinui-layouts-css/styles.css';
 import { Anchor, Headline } from '@itwin/itwinui-react';
 import { PageLayoutDemo } from './demos/PageLayoutDemo';
+import { GridLayoutDemo } from './demos/GridLayoutDemo';
 
 const demos: Record<string, { name: string; component: () => JSX.Element }> = {
   '#page-layout': { name: 'Page Layout', component: PageLayoutDemo },
+  '#grid-layout': { name: 'Grid Layout', component: GridLayoutDemo },
 };
 
 const App = () => {
