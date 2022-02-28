@@ -5,7 +5,7 @@
 const { spawn } = require('child_process');
 
 const dockerProcess = spawn(
-  `docker run --rm --entrypoint ./demo/entrypoint.sh -v "${__dirname}/../":/e2e -w /e2e cypress/included:9.5.0`,
+  `docker run --rm --entrypoint /bin/bash -v "${__dirname}/../":/e2e -w /e2e cypress/included:9.5.0 ./demo/entrypoint.sh`,
   {
     stdio: 'inherit',
     shell: true,
