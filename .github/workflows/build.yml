@@ -45,13 +45,13 @@ jobs:
 
       - run: yarn install --frozen-lockfile
 
-      # `&` symbol is needed as it prevents Storybook from running endlessly
       - run: yarn build
+
       - run: yarn build:demo
-      - run: yarn test
+      - run: yarn test --ci
       - name: Upload tests artifacts
         uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: tests-results
-          path: demo/cypress-visual-screenshots/
+          path: demo/cypress-visual-report/

@@ -19,6 +19,8 @@ declare global {
         testThreshold?: number,
         retryOptions?: typeof RecurseDefaults,
       ): Chainable<Element>;
+
+      hide(): Cypress.Chainable<Element>;
     }
   }
 }
