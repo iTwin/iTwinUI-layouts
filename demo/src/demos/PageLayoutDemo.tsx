@@ -21,7 +21,17 @@ export const PageLayoutDemo = () => {
         </PageLayout.SideNavigation>
 
         <PageLayout.Content>
-          <div>Custom content</div>
+          <iframe
+            src='https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-Layouts%20demo?editorPane=Hide&headers=Hide'
+            loading='lazy'
+            style={{
+              border: 'none',
+              width: '100%',
+              height: '100%',
+              display: 'block',
+            }}
+            sandbox='allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts'
+          />
         </PageLayout.Content>
       </PageLayout>
     </DemoTemplate>
