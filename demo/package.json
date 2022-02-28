@@ -24,8 +24,7 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "node run-tests.js",
-    "test:ci": "node run-tests.js --ci",
+    "test": "yarn build && node run-tests.js",
     "test:approve": "cypress-image-diff -u"
   },
   "dependencies": {
