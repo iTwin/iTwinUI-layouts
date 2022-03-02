@@ -1,0 +1,15 @@
+.iui-layouts-card {
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: baseline;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  backface-visibility: hidden;
+  background-color: #FFF;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: var(--iui-color-background-1);
+  color: var(--iui-text-color);
+  grid-row: span 2;
+}

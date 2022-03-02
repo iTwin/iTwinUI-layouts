@@ -4,23 +4,23 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 
-export type ContentProps = {
+export type CardProps = {
+  children?: React.ReactNode;
   /**
    * Custom CSS style properties.
    */
   style?: React.CSSProperties;
-  children: React.ReactNode;
 };
 
-export const Content = (props: ContentProps) => {
+export const Card = (props: CardProps) => {
   const { children, style } = props;
   return (
-    <div className='iui-layouts-page-content' style={style}>
+    <div className='iui-layouts-card' style={style}>
       {children}
     </div>
   );
 };
 
-Content.displayName = 'PageLayout.Content';
+Card.displayName = 'PageLayout.Card';
 
-export default Content;
+export default Card;
