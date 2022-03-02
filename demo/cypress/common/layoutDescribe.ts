@@ -3,6 +3,7 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 const SCREEN_SIZES = [
+  { width: 3440, height: 1440 }, // Ultrawide
   { width: 3840, height: 2160 }, // 4K
   { width: 1920, height: 1080 }, // Full HD
   { width: 1366, height: 768 }, // 2nd popular desktop resolution

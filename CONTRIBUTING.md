@@ -4,7 +4,7 @@ We welcome all types of contribution.
 
 Need a feature or found a bug? Please create an [issue](https://github.com/iTwin/iTwinUI-layouts/issues).
 
-Want to contribute by creating a pull request? Great! [Fork iTwinUI](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) to get started.
+Want to contribute by creating a pull request? Great! [Fork iTwinUI-layouts](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) to get started.
 
 ---
 
@@ -44,6 +44,7 @@ yarn test:approve
 ## Testing
 
 For running tests you will need [Docker](https://www.docker.com/products/docker-desktop). It helps to avoid cross-platform rendering differences.
+We are using [cypress](https://www.cypress.io/) for running tests and making screenshots.
 - To check failed tests result, open `cypress-visual-report/cypress-visual-report.html` in your browser.
 - When writing tests, use `layoutsDescribe` instead of regular `describe`. This way tests will be run on different screen sizes. 
 - To make a screenshot, use `cy.compareSnapshot(...)`.
