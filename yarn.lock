@@ -665,12 +665,12 @@ __metadata:
   linkType: hard
 
 "@itwin/itwinui-icons-react@npm:^1.7.0":
-  version: 1.7.0
-  resolution: "@itwin/itwinui-icons-react@npm:1.7.0"
+  version: 1.8.0
+  resolution: "@itwin/itwinui-icons-react@npm:1.8.0"
   peerDependencies:
     react: ^16.8.6 || ^17.0.0
     react-dom: ^16.8.6 || ^17.0.0
-  checksum: cb738deef1a10de8152b7d90bd197380c990b163272581e9ae4348b6ae53130c8acd3620c3ffb078b52f8d3ac1bec7b5aacf16442cd0debf470483700a8fcd5d
+  checksum: 626489e57cdb6030c7f97bff34adce0b559940fafb7a3e0aed627f5734412fd61f27a97157e00abddf524fa51bdb3cc63cf109ace4f8f80ed59ab30c242c44bb
   languageName: node
   linkType: hard
 
