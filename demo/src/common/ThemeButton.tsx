@@ -7,7 +7,11 @@ import { ThemeType, useTheme, IconButton } from '@itwin/itwinui-react';
 import { SvgSun, SvgMoon } from '@itwin/itwinui-icons-react';
 
 export const ThemeButton = () => {
-  const [theme, setTheme] = React.useState<ThemeType>('os');
+  const [theme, setTheme] = React.useState<ThemeType>(() =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light',
+  );
   useTheme(theme);
 
   const changeTheme = () => {
