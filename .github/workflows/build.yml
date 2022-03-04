@@ -58,7 +58,7 @@ jobs:
             demo/cypress-visual-screenshots/
 
   deploy:
-    name: Deploy demo HTML pages
+    name: Deploy demo HTML page
     # if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
@@ -75,7 +75,7 @@ jobs:
       - run: yarn build
       - run: yarn build:demo
 
-      - name: Host css on gh pages
+      - name: Host Demo on GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.2.5
         with:
           branch: gh-pages
