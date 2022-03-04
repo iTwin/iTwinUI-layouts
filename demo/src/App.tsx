@@ -6,10 +6,9 @@ import React from 'react';
 import './App.scss';
 import '@codesandbox/sandpack-react/dist/index.css';
 import '@itwin/itwinui-layouts-css/styles.css';
-import { ThemeType, useTheme, Anchor, Text, Body } from '@itwin/itwinui-react';
+import { Anchor, Text, Body } from '@itwin/itwinui-react';
 import { Link } from 'react-router-dom';
 import { DEMOS_LIST } from './demos/list';
-import { PageLayoutDemo } from './demos/PageLayoutDemo';
 import { GitHubBanner } from './common/GitHubBanner';
 
 const App = () => {
