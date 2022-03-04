@@ -11,11 +11,11 @@ import { DEMOS_LIST } from './demos/list';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename='/iTwinUI-layouts'>
+    <BrowserRouter basename='/iTwinUI-layouts/'>
       <Routes>
-        <Route path='/' element={<App />} />
+        <Route path='' element={<App />} />
         {DEMOS_LIST.map(({ path, component }) => (
-          <Route key={path} path={path} element={component()} />
+          <Route key={path} path={`/${path}`} element={component()} />
         ))}
       </Routes>
     </BrowserRouter>
