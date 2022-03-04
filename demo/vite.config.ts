@@ -8,7 +8,7 @@ import svgrPlugin from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: `./`,
+  base: `/iTwinUI-layouts/`,
   plugins: [
     react(),
     svgrPlugin({
