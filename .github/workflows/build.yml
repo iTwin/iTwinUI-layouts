@@ -76,7 +76,7 @@ jobs:
       - run: yarn build:demo
 
       - name: Host Demo on GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.2.5
+        uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
           branch: gh-pages
           folder: ${{ github.workspace }}/demo/dist
