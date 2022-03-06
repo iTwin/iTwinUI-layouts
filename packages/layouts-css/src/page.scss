@@ -21,4 +21,11 @@
     overflow: overlay;
     background-color: var(--iui-color-background-2);
   }
+
+  &-padded {
+    padding: 32px 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
 }

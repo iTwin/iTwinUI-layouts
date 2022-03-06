@@ -9,9 +9,11 @@ import '@itwin/itwinui-layouts-css/styles.css';
 import { ThemeType, useTheme, Anchor, Text, Body } from '@itwin/itwinui-react';
 import { PageLayoutDemo } from './demos/PageLayoutDemo';
 import { GitHubBanner } from './common/GitHubBanner';
+import GridLayoutDemo from './demos/GridLayoutDemo';
 
 const demos: Record<string, { name: string; component: () => JSX.Element }> = {
   '#page-layout': { name: 'Page Layout', component: PageLayoutDemo },
+  '#grid-layout': { name: 'Grid Layout', component: GridLayoutDemo },
 };
 
 export const ThemeButton = () => {
