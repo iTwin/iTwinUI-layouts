@@ -10,17 +10,6 @@ import { Anchor, Text, Body } from '@itwin/itwinui-react';
 import { Link } from 'react-router-dom';
 import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
-import GridLayoutDemo from './demos/GridLayoutDemo';
-
-const demos: Record<string, { name: string; component: () => JSX.Element }> = {
-  '#page-layout': { name: 'Page Layout', component: PageLayoutDemo },
-  '#grid-layout': { name: 'Grid Layout', component: GridLayoutDemo },
-};
-
-export const ThemeButton = () => {
-  const [theme] = React.useState<ThemeType>('os');
-  useTheme(theme);
-};
 
 const App = () => {
   return (
