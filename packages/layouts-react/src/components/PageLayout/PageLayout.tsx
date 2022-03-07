@@ -8,6 +8,7 @@ import { Header } from './Header';
 import { Grid } from './Grid';
 import SideNavigation from './SideNavigation';
 import PaddedContent from './PaddedContent';
+import TitleArea from './TitleArea';
 
 export type PageLayoutProps = {
   children: React.ReactNode;
@@ -19,6 +20,7 @@ export type PageLayoutType = (props: PageLayoutProps) => JSX.Element & {
   Content: typeof Content;
   Grid: typeof Grid;
   PaddedContent: typeof PaddedContent;
+  TitleArea: typeof TitleArea;
 };
 
 export const PageLayout = (props: PageLayoutProps) => {
@@ -31,5 +33,6 @@ PageLayout.SideNavigation = SideNavigation;
 PageLayout.Content = Content;
 PageLayout.Grid = Grid;
 PageLayout.PaddedContent = PaddedContent;
+PageLayout.TitleArea = TitleArea;
 
 export default PageLayout;
