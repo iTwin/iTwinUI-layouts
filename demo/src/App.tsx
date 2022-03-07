@@ -6,7 +6,14 @@ import React from 'react';
 import './App.scss';
 import '@codesandbox/sandpack-react/dist/index.css';
 import '@itwin/itwinui-layouts-css/styles.css';
-import { ThemeType, useTheme, Anchor, Text, Body } from '@itwin/itwinui-react';
+import {
+  ThemeType,
+  useTheme,
+  Anchor,
+  Text,
+  Body,
+  Tile,
+} from '@itwin/itwinui-react';
 import { PageLayoutDemo } from './demos/PageLayoutDemo';
 import { GitHubBanner } from './common/GitHubBanner';
 
@@ -52,9 +59,9 @@ const App = () => {
           <hr />
           <ul>
             {Object.entries(demos).map(([link, { name }]) => (
-              <li key={name}>
-                <Anchor href={link}>{name}</Anchor>
-              </li>
+              <Anchor key={name} href={link}>
+                <Tile name={name} />
+              </Anchor>
             ))}
           </ul>
         </div>
