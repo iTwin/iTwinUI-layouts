@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build_test:
+    name: Build and test
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node 16.X
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          cache: yarn
+
+      - run: yarn install --frozen-lockfile
+
+      - run: yarn npm audit
+
+      - run: yarn lint
+      - run: yarn lint:copyright ${{ github.workspace }}/*/**.{js,ts,tsx,scss,html}
+      - run: yarn build
+      - run: yarn build:demo
+
+      - run: yarn test:ci
+      - name: Upload tests artifacts
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: tests-results
+          path: |
+            demo/cypress-visual-report/
+            demo/cypress-visual-screenshots/

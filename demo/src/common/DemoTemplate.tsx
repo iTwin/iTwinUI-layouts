@@ -11,13 +11,7 @@ import {
 import cx from 'classnames';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 import './DemoTemplate.scss';
-import {
-  IconButton,
-  ButtonGroup,
-  Button,
-  Text,
-  Anchor,
-} from '@itwin/itwinui-react';
+import { IconButton, ButtonGroup, Button, Text } from '@itwin/itwinui-react';
 import {
   SvgWindowFullScreen,
   SvgWindowCollapse,
@@ -25,6 +19,7 @@ import {
   SvgDockBottom,
 } from '@itwin/itwinui-icons-react';
 import { ThemeButton } from '../common/ThemeButton';
+import { Link } from 'react-router-dom';
 
 export type DemoTemplateProps = {
   title: string;
@@ -38,10 +33,14 @@ const toDemoCode = (code: string) => {
 };`;
 };
 
+const isTestRun = () => {
+  return window.localStorage.getItem('testRun') === 'true';
+};
+
 export const DemoTemplate = (props: DemoTemplateProps) => {
   const { children, title } = props;
 
-  const [isFullScreen, setIsFullScreen] = React.useState(false);
+  const [isFullScreen, setIsFullScreen] = React.useState(isTestRun());
   const [isHorizontal, setIsHorizontal] = React.useState(false);
   const demoCode = toDemoCode(reactElementToJSXString(children));
 
@@ -53,29 +52,26 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
     >
       <div className='demo-template-content'>
         {children}
-        <ButtonGroup className='demo-template-button-overlay'>
-          <ThemeButton />
-          <IconButton onClick={() => setIsFullScreen((f) => !f)}>
-            {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
-          </IconButton>
-        </ButtonGroup>
+        {!isTestRun() && (
+          <ButtonGroup className='demo-template-button-overlay'>
+            <ThemeButton />
+            <IconButton onClick={() => setIsFullScreen((f) => !f)}>
+              {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
+            </IconButton>
+          </ButtonGroup>
+        )}
       </div>
 
       {!isFullScreen && (
         <div className='demo-template-code'>
           <div className='demo-template-code-header'>
             <div className='demo-template-code-header-left'>
-              <Anchor
-                href='../'
-                className='demo-template-code-header-back'
-                onClick={(e) => {
-                  e.preventDefault();
-                  location.hash = '';
-                }}
+              <Link
+                to='../'
+                className='iui-anchor demo-template-code-header-back'
               >
                 ..
-              </Anchor>
-
+              </Link>
               <Text
                 as='h1'
                 variant='title'
