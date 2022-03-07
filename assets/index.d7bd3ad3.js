@@ -1,5 +1,423 @@
-import{j as e,H as k,a as B,S as P,b as j,c as f,M as i,d as S,e as C,f as v,g as u,I as c,h as A,D as w,i as D,k as U,l as o,F as E,T as p,m as R,n as F,U as z,o as G,p as O,q as $,r as V,s as W,t as b,u as J,v as Z,R as l,w as q,x as K,y as _,z as Q,A as X,B as Y,C as ee,E as te,L as N,G as ae,J as re,K as ie,N as ne,O as oe,P as le,Q as se,V as ce,W as de,X as me,Y as ue,Z as I}from"./vendor.2050ea26.js";const he=function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))d(r);new MutationObserver(r=>{for(const n of r)if(n.type==="childList")for(const m of n.addedNodes)m.tagName==="LINK"&&m.rel==="modulepreload"&&d(m)}).observe(document,{childList:!0,subtree:!0});function h(r){const n={};return r.integrity&&(n.integrity=r.integrity),r.referrerpolicy&&(n.referrerPolicy=r.referrerpolicy),r.crossorigin==="use-credentials"?n.credentials="include":r.crossorigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function d(r){if(r.ep)return;r.ep=!0;const n=h(r);fetch(r.href,n)}};he();const pe=()=>e(k,{appLogo:e(B,{logo:e(P,{}),children:"iTwin Services"}),breadcrumbs:e(j,{items:[e(f,{name:"Project Alpha",description:"0x0123456789",startIcon:e("img",{src:"https://itwinplatformcdn.azureedge.net/iTwinUI/stadium.png",alt:"Project thumbnail",draggable:"false"}),onClick:()=>{},menuItems:()=>[e(i,{sublabel:"0x0123456789",icon:e("img",{src:"https://itwinplatformcdn.azureedge.net/iTwinUI/stadium.png",alt:"Project thumbnail",draggable:"false"}),badge:e(S,{}),isSelected:!0,children:"Project Alpha"},"projectA"),e(i,{sublabel:"0x0987654321",icon:e(C,{}),children:"Project Beta"},"projectB"),e(i,{sublabel:"0x0001337420",icon:e(C,{}),children:"Project Charlie"},"projectC"),e(v,{},"divider"),e(i,{children:"My projects"},"myProjects")]},"projectBreadcrumb"),e(f,{name:"iModel Beta",description:"0x0987654321",startIcon:e(u,{}),onClick:()=>{},isActive:!0,menuItems:()=>[e(i,{sublabel:"0x0123456789",icon:e(u,{}),children:"iModel Alpha"},"iModelA"),e(i,{sublabel:"0x0987654321",icon:e(u,{}),isSelected:!0,badge:e(S,{}),children:"iModel Beta"},"iModelB"),e(i,{sublabel:"0x0001337420",icon:e(u,{}),children:"iModel Charlie"},"iModelC"),e(v,{},"divider"),e(i,{children:"My iModels"},"myiModels")]},"iModelBreadcrumb")]}),actions:[e(c,{styleType:"borderless",children:e(A,{})},"notifications"),e(w,{menuItems:()=>[e(i,{children:"Getting started"},"getting-started"),e(i,{children:"Report a problem"},"report-a-problem"),e(i,{children:"Communities"},"communities")],children:e(c,{styleType:"borderless",children:e(D,{})})},"help")],userIcon:e(w,{role:"menu",menuItems:()=>[e(U,{children:o(E,{children:[e(p,{variant:"leading",children:"Terry Rivers"}),e(p,{isMuted:!0,style:{marginBottom:8},children:"terry.rivers@email.com"}),e(R,{options:[{value:"User",label:"User"},{value:"Moderator",label:"Moderator"},{value:"Administrator",label:"Administrator"}],value:"Administrator"})]})},0),e(v,{},1),e(i,{children:"View profile"},"view-profile"),e(i,{badge:e(F,{}),children:"Sign out"},"sign-out")],children:e(c,{styleType:"borderless",children:e(z,{size:"medium",image:e("img",{src:"https://itwinplatformcdn.azureedge.net/iTwinUI/user-placeholder.png",alt:"Terry Rivers"})})})},"profile"),menuItems:()=>[e(i,{icon:e(G,{}),children:"Settings"},"settings"),e(i,{icon:e(O,{}),children:"Feedback"},"feedback"),e(i,{icon:e($,{}),children:"What's new"},"whats-new"),e(i,{icon:e(V,{}),children:"About"},"about")]}),ge=()=>e(W,{className:"app-sidenav",expanderPlacement:"bottom",items:[e(b,{startIcon:e(J,{}),children:"Home"},"Home"),e(b,{startIcon:e(u,{}),isActive:!0,children:"Model"},"Model")],secondaryItems:[e(b,{startIcon:e(Z,{}),children:"Configuration"},"configuration")]});const ve=()=>{const[t,a]=l.useState(()=>window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");return q(t),e(c,{styleType:"default",onClick:()=>{a(t==="light"?"dark":"light")},children:t==="light"?e(K,{}):e(_,{})})},be=t=>`const Demo = () => {
+import { j as jsx, H as Header$1, a as HeaderLogo, S as SvgImodelHollow, b as HeaderBreadcrumbs, c as HeaderButton, M as MenuItem, d as SvgCheckmark, e as SvgProject, f as MenuDivider, g as SvgModel, I as IconButton, h as SvgNotification, D as DropdownMenu, i as SvgHelpCircular, k as MenuExtraContent, l as jsxs, F as Fragment, T as Text, m as Select, n as SvgExit, U as UserIcon, o as SvgSettings, p as SvgSmileyHappy, q as SvgNews, r as SvgInfoCircular, s as SideNavigation$1, t as SidenavButton, u as SvgHome, v as SvgConfiguration, R as React, w as useTheme, x as SvgMoon, y as SvgSun, z as reactElementToJsxString, A as cx, B as ButtonGroup, C as SvgWindowCollapse, E as SvgWindowFullScreen, L as Link, G as SvgDockRight, J as SvgDockBottom, K as Button, N as SandpackProvider, O as SandpackLayout, P as SandpackCodeViewer, Q as Body, V as Anchor, W as ReactDOM, X as HashRouter, Y as Routes, Z as Route } from "./vendor.2050ea26.js";
+const p = function polyfill() {
+  const relList = document.createElement("link").relList;
+  if (relList && relList.supports && relList.supports("modulepreload")) {
+    return;
+  }
+  for (const link of document.querySelectorAll('link[rel="modulepreload"]')) {
+    processPreload(link);
+  }
+  new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.type !== "childList") {
+        continue;
+      }
+      for (const node of mutation.addedNodes) {
+        if (node.tagName === "LINK" && node.rel === "modulepreload")
+          processPreload(node);
+      }
+    }
+  }).observe(document, { childList: true, subtree: true });
+  function getFetchOpts(script) {
+    const fetchOpts = {};
+    if (script.integrity)
+      fetchOpts.integrity = script.integrity;
+    if (script.referrerpolicy)
+      fetchOpts.referrerPolicy = script.referrerpolicy;
+    if (script.crossorigin === "use-credentials")
+      fetchOpts.credentials = "include";
+    else if (script.crossorigin === "anonymous")
+      fetchOpts.credentials = "omit";
+    else
+      fetchOpts.credentials = "same-origin";
+    return fetchOpts;
+  }
+  function processPreload(link) {
+    if (link.ep)
+      return;
+    link.ep = true;
+    const fetchOpts = getFetchOpts(link);
+    fetch(link.href, fetchOpts);
+  }
+};
+p();
+var index$1 = "";
+var App$1 = "";
+var index = "";
+var styles = "";
+const DemoHeader = () => {
+  return /* @__PURE__ */ jsx(Header$1, {
+    appLogo: /* @__PURE__ */ jsx(HeaderLogo, {
+      logo: /* @__PURE__ */ jsx(SvgImodelHollow, {}),
+      children: "iTwin Services"
+    }),
+    breadcrumbs: /* @__PURE__ */ jsx(HeaderBreadcrumbs, {
+      items: [/* @__PURE__ */ jsx(HeaderButton, {
+        name: "Project Alpha",
+        description: "0x0123456789",
+        startIcon: /* @__PURE__ */ jsx("img", {
+          src: "https://itwinplatformcdn.azureedge.net/iTwinUI/stadium.png",
+          alt: "Project thumbnail",
+          draggable: "false"
+        }),
+        onClick: () => {
+        },
+        menuItems: () => [/* @__PURE__ */ jsx(MenuItem, {
+          sublabel: "0x0123456789",
+          icon: /* @__PURE__ */ jsx("img", {
+            src: "https://itwinplatformcdn.azureedge.net/iTwinUI/stadium.png",
+            alt: "Project thumbnail",
+            draggable: "false"
+          }),
+          badge: /* @__PURE__ */ jsx(SvgCheckmark, {}),
+          isSelected: true,
+          children: "Project Alpha"
+        }, "projectA"), /* @__PURE__ */ jsx(MenuItem, {
+          sublabel: "0x0987654321",
+          icon: /* @__PURE__ */ jsx(SvgProject, {}),
+          children: "Project Beta"
+        }, "projectB"), /* @__PURE__ */ jsx(MenuItem, {
+          sublabel: "0x0001337420",
+          icon: /* @__PURE__ */ jsx(SvgProject, {}),
+          children: "Project Charlie"
+        }, "projectC"), /* @__PURE__ */ jsx(MenuDivider, {}, "divider"), /* @__PURE__ */ jsx(MenuItem, {
+          children: "My projects"
+        }, "myProjects")]
+      }, "projectBreadcrumb"), /* @__PURE__ */ jsx(HeaderButton, {
+        name: "iModel Beta",
+        description: "0x0987654321",
+        startIcon: /* @__PURE__ */ jsx(SvgModel, {}),
+        onClick: () => {
+        },
+        isActive: true,
+        menuItems: () => [/* @__PURE__ */ jsx(MenuItem, {
+          sublabel: "0x0123456789",
+          icon: /* @__PURE__ */ jsx(SvgModel, {}),
+          children: "iModel Alpha"
+        }, "iModelA"), /* @__PURE__ */ jsx(MenuItem, {
+          sublabel: "0x0987654321",
+          icon: /* @__PURE__ */ jsx(SvgModel, {}),
+          isSelected: true,
+          badge: /* @__PURE__ */ jsx(SvgCheckmark, {}),
+          children: "iModel Beta"
+        }, "iModelB"), /* @__PURE__ */ jsx(MenuItem, {
+          sublabel: "0x0001337420",
+          icon: /* @__PURE__ */ jsx(SvgModel, {}),
+          children: "iModel Charlie"
+        }, "iModelC"), /* @__PURE__ */ jsx(MenuDivider, {}, "divider"), /* @__PURE__ */ jsx(MenuItem, {
+          children: "My iModels"
+        }, "myiModels")]
+      }, "iModelBreadcrumb")]
+    }),
+    actions: [/* @__PURE__ */ jsx(IconButton, {
+      styleType: "borderless",
+      children: /* @__PURE__ */ jsx(SvgNotification, {})
+    }, "notifications"), /* @__PURE__ */ jsx(DropdownMenu, {
+      menuItems: () => [/* @__PURE__ */ jsx(MenuItem, {
+        children: "Getting started"
+      }, "getting-started"), /* @__PURE__ */ jsx(MenuItem, {
+        children: "Report a problem"
+      }, "report-a-problem"), /* @__PURE__ */ jsx(MenuItem, {
+        children: "Communities"
+      }, "communities")],
+      children: /* @__PURE__ */ jsx(IconButton, {
+        styleType: "borderless",
+        children: /* @__PURE__ */ jsx(SvgHelpCircular, {})
+      })
+    }, "help")],
+    userIcon: /* @__PURE__ */ jsx(DropdownMenu, {
+      role: "menu",
+      menuItems: () => [/* @__PURE__ */ jsx(MenuExtraContent, {
+        children: /* @__PURE__ */ jsxs(Fragment, {
+          children: [/* @__PURE__ */ jsx(Text, {
+            variant: "leading",
+            children: "Terry Rivers"
+          }), /* @__PURE__ */ jsx(Text, {
+            isMuted: true,
+            style: {
+              marginBottom: 8
+            },
+            children: "terry.rivers@email.com"
+          }), /* @__PURE__ */ jsx(Select, {
+            options: [{
+              value: "User",
+              label: "User"
+            }, {
+              value: "Moderator",
+              label: "Moderator"
+            }, {
+              value: "Administrator",
+              label: "Administrator"
+            }],
+            value: "Administrator"
+          })]
+        })
+      }, 0), /* @__PURE__ */ jsx(MenuDivider, {}, 1), /* @__PURE__ */ jsx(MenuItem, {
+        children: "View profile"
+      }, "view-profile"), /* @__PURE__ */ jsx(MenuItem, {
+        badge: /* @__PURE__ */ jsx(SvgExit, {}),
+        children: "Sign out"
+      }, "sign-out")],
+      children: /* @__PURE__ */ jsx(IconButton, {
+        styleType: "borderless",
+        children: /* @__PURE__ */ jsx(UserIcon, {
+          size: "medium",
+          image: /* @__PURE__ */ jsx("img", {
+            src: "https://itwinplatformcdn.azureedge.net/iTwinUI/user-placeholder.png",
+            alt: "Terry Rivers"
+          })
+        })
+      })
+    }, "profile"),
+    menuItems: () => [/* @__PURE__ */ jsx(MenuItem, {
+      icon: /* @__PURE__ */ jsx(SvgSettings, {}),
+      children: "Settings"
+    }, "settings"), /* @__PURE__ */ jsx(MenuItem, {
+      icon: /* @__PURE__ */ jsx(SvgSmileyHappy, {}),
+      children: "Feedback"
+    }, "feedback"), /* @__PURE__ */ jsx(MenuItem, {
+      icon: /* @__PURE__ */ jsx(SvgNews, {}),
+      children: `What's new`
+    }, "whats-new"), /* @__PURE__ */ jsx(MenuItem, {
+      icon: /* @__PURE__ */ jsx(SvgInfoCircular, {}),
+      children: "About"
+    }, "about")]
+  });
+};
+const DemoSideNav = () => {
+  return /* @__PURE__ */ jsx(SideNavigation$1, {
+    className: "app-sidenav",
+    expanderPlacement: "bottom",
+    items: [/* @__PURE__ */ jsx(SidenavButton, {
+      startIcon: /* @__PURE__ */ jsx(SvgHome, {}),
+      children: "Home"
+    }, "Home"), /* @__PURE__ */ jsx(SidenavButton, {
+      startIcon: /* @__PURE__ */ jsx(SvgModel, {}),
+      isActive: true,
+      children: "Model"
+    }, "Model")],
+    secondaryItems: [/* @__PURE__ */ jsx(SidenavButton, {
+      startIcon: /* @__PURE__ */ jsx(SvgConfiguration, {}),
+      children: "Configuration"
+    }, "configuration")]
+  });
+};
+var DemoTemplate$1 = "";
+const ThemeButton = () => {
+  const [theme, setTheme] = React.useState(() => window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  useTheme(theme);
+  const changeTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+  return /* @__PURE__ */ jsx(IconButton, {
+    styleType: "default",
+    onClick: changeTheme,
+    children: theme === "light" ? /* @__PURE__ */ jsx(SvgMoon, {}) : /* @__PURE__ */ jsx(SvgSun, {})
+  });
+};
+const toDemoCode = (code) => {
+  return `const Demo = () => {
   return 
-    ${t.replace(/\n/g,`
-    `)}
-};`,M=()=>window.localStorage.getItem("testRun")==="true",ye=t=>{const{children:a,title:h}=t,[d,r]=l.useState(M()),[n,m]=l.useState(!1),y=be(Q(a));return o("div",{className:X("demo-template-container",{"demo-template-container-vertical":n}),children:[o("div",{className:"demo-template-content",children:[a,!M()&&o(Y,{className:"demo-template-button-overlay",children:[e(ve,{}),e(c,{onClick:()=>r(g=>!g),children:d?e(ee,{}):e(te,{})})]})]}),!d&&o("div",{className:"demo-template-code",children:[o("div",{className:"demo-template-code-header",children:[o("div",{className:"demo-template-code-header-left",children:[e(N,{to:"../",className:"iui-anchor demo-template-code-header-back",children:".."}),e(p,{as:"h1",variant:"title",className:"demo-template-code-header-title",children:h})]}),o("div",{className:"demo-template-code-header-right",children:[e(c,{onClick:()=>m(g=>!g),children:n?e(ae,{}):e(re,{})}),e(ie,{onClick:()=>navigator.clipboard.writeText(y),styleType:"high-visibility",children:"Copy"})]})]}),e(ne,{template:"react-ts",children:e(oe,{theme:"github-light",children:e(le,{code:y,showTabs:!1,showLineNumbers:!0,wrapContent:!0})})})]})]})};var T=function(t){var a=t.children;return l.createElement("div",{className:"iui-layouts-page-content"},a)};T.displayName="PageLayout.Content";var L=function(t){var a=t.children;return l.createElement("div",{className:"iui-layouts-page-header"},a)};L.displayName="PageLayout.Header";var x=function(t){var a=t.children;return l.createElement("div",{className:"iui-layouts-page-sidenav"},a)};x.displayName="PageLayout.SideNavigation";var s=function(t){var a=t.children;return l.createElement("div",{className:"iui-layouts-page"},a)};s.Header=L;s.SideNavigation=x;s.Content=T;const fe=()=>e(ye,{title:"Page Layout",children:o(s,{children:[e(s.Header,{children:e(pe,{})}),e(s.SideNavigation,{children:e(ge,{})}),e(s.Content,{children:e("iframe",{src:"https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-Layouts%20demo?editorPane=Hide&headers=Hide",loading:"lazy",style:{border:"none",width:"100%",height:"100%",display:"block"},sandbox:"allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"})})]})}),H=[{path:"page-layout",name:"Page layout",component:fe}];const Se=()=>e("a",{href:"https://github.com/iTwin/iTwinUI-layouts",className:"github-corner","aria-label":"View source on GitHub",target:"_blank",rel:"noreferrer",children:o("svg",{width:"80",height:"80",viewBox:"0 0 250 250",style:{fill:"#008BE1",color:"#FFF",position:"absolute",top:0,border:0,right:0},"aria-hidden":"true",children:[e("path",{d:"M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"}),e("path",{d:"M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2",fill:"currentColor",style:{transformOrigin:"130px 106px"},className:"octo-arm"}),e("path",{d:"M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z",fill:"currentColor",className:"octo-body"})]})}),Ce=()=>o("div",{className:"app",children:[e(Se,{}),e(p,{as:"h1",variant:"headline",children:"iTwinUI-Layouts"}),o(se,{children:["An open-source common UI layouts library used to display"," ",e(ce,{href:"https://itwin.github.io/iTwinUI-react/",children:"iTwinUI-react"})," ","components."]}),e("img",{alt:"GitHub last commit",src:"https://img.shields.io/github/last-commit/itwin/iTwinUI-layouts"}),e("hr",{}),e("ul",{children:H.map(({path:t,name:a})=>e("li",{children:e(N,{to:t,className:"iui-anchor",children:a})},t))})]});de.render(e(l.StrictMode,{children:e(me,{children:o(ue,{children:[e(I,{path:"/",element:e(Ce,{})}),H.map(({path:t,component:a})=>e(I,{path:t,element:a()},t))]})})}),document.getElementById("root"));
+    ${code.replace(/\n/g, "\n    ")}
+};`;
+};
+const isTestRun = () => {
+  return window.localStorage.getItem("testRun") === "true";
+};
+const DemoTemplate = (props) => {
+  const {
+    children,
+    title
+  } = props;
+  const [isFullScreen, setIsFullScreen] = React.useState(isTestRun());
+  const [isHorizontal, setIsHorizontal] = React.useState(false);
+  const demoCode = toDemoCode(reactElementToJsxString(children));
+  return /* @__PURE__ */ jsxs("div", {
+    className: cx("demo-template-container", {
+      "demo-template-container-vertical": isHorizontal
+    }),
+    children: [/* @__PURE__ */ jsxs("div", {
+      className: "demo-template-content",
+      children: [children, !isTestRun() && /* @__PURE__ */ jsxs(ButtonGroup, {
+        className: "demo-template-button-overlay",
+        children: [/* @__PURE__ */ jsx(ThemeButton, {}), /* @__PURE__ */ jsx(IconButton, {
+          onClick: () => setIsFullScreen((f) => !f),
+          children: isFullScreen ? /* @__PURE__ */ jsx(SvgWindowCollapse, {}) : /* @__PURE__ */ jsx(SvgWindowFullScreen, {})
+        })]
+      })]
+    }), !isFullScreen && /* @__PURE__ */ jsxs("div", {
+      className: "demo-template-code",
+      children: [/* @__PURE__ */ jsxs("div", {
+        className: "demo-template-code-header",
+        children: [/* @__PURE__ */ jsxs("div", {
+          className: "demo-template-code-header-left",
+          children: [/* @__PURE__ */ jsx(Link, {
+            to: "../",
+            className: "iui-anchor demo-template-code-header-back",
+            children: ".."
+          }), /* @__PURE__ */ jsx(Text, {
+            as: "h1",
+            variant: "title",
+            className: "demo-template-code-header-title",
+            children: title
+          })]
+        }), /* @__PURE__ */ jsxs("div", {
+          className: "demo-template-code-header-right",
+          children: [/* @__PURE__ */ jsx(IconButton, {
+            onClick: () => setIsHorizontal((f) => !f),
+            children: isHorizontal ? /* @__PURE__ */ jsx(SvgDockRight, {}) : /* @__PURE__ */ jsx(SvgDockBottom, {})
+          }), /* @__PURE__ */ jsx(Button, {
+            onClick: () => navigator.clipboard.writeText(demoCode),
+            styleType: "high-visibility",
+            children: "Copy"
+          })]
+        })]
+      }), /* @__PURE__ */ jsx(SandpackProvider, {
+        template: "react-ts",
+        children: /* @__PURE__ */ jsx(SandpackLayout, {
+          theme: "github-light",
+          children: /* @__PURE__ */ jsx(SandpackCodeViewer, {
+            code: demoCode,
+            showTabs: false,
+            showLineNumbers: true,
+            wrapContent: true
+          })
+        })
+      })]
+    })]
+  });
+};
+var Content = function(props) {
+  var children = props.children;
+  return React.createElement("div", { className: "iui-layouts-page-content" }, children);
+};
+Content.displayName = "PageLayout.Content";
+var Header = function(props) {
+  var children = props.children;
+  return React.createElement("div", { className: "iui-layouts-page-header" }, children);
+};
+Header.displayName = "PageLayout.Header";
+var SideNavigation = function(props) {
+  var children = props.children;
+  return React.createElement("div", { className: "iui-layouts-page-sidenav" }, children);
+};
+SideNavigation.displayName = "PageLayout.SideNavigation";
+var PageLayout = function(props) {
+  var children = props.children;
+  return React.createElement("div", { className: "iui-layouts-page" }, children);
+};
+PageLayout.Header = Header;
+PageLayout.SideNavigation = SideNavigation;
+PageLayout.Content = Content;
+const PageLayoutDemo = () => {
+  return /* @__PURE__ */ jsx(DemoTemplate, {
+    title: "Page Layout",
+    children: /* @__PURE__ */ jsxs(PageLayout, {
+      children: [/* @__PURE__ */ jsx(PageLayout.Header, {
+        children: /* @__PURE__ */ jsx(DemoHeader, {})
+      }), /* @__PURE__ */ jsx(PageLayout.SideNavigation, {
+        children: /* @__PURE__ */ jsx(DemoSideNav, {})
+      }), /* @__PURE__ */ jsx(PageLayout.Content, {
+        children: /* @__PURE__ */ jsx("iframe", {
+          src: "https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-Layouts%20demo?editorPane=Hide&headers=Hide",
+          loading: "lazy",
+          style: {
+            border: "none",
+            width: "100%",
+            height: "100%",
+            display: "block"
+          },
+          sandbox: "allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        })
+      })]
+    })
+  });
+};
+const DEMOS_LIST = [{
+  path: "page-layout",
+  name: "Page layout",
+  component: PageLayoutDemo
+}];
+var GitHubBanner$1 = "";
+const GitHubBanner = () => {
+  return /* @__PURE__ */ jsx("a", {
+    href: "https://github.com/iTwin/iTwinUI-layouts",
+    className: "github-corner",
+    "aria-label": "View source on GitHub",
+    target: "_blank",
+    rel: "noreferrer",
+    children: /* @__PURE__ */ jsxs("svg", {
+      width: "80",
+      height: "80",
+      viewBox: "0 0 250 250",
+      style: {
+        fill: "#008BE1",
+        color: "#FFF",
+        position: "absolute",
+        top: 0,
+        border: 0,
+        right: 0
+      },
+      "aria-hidden": "true",
+      children: [/* @__PURE__ */ jsx("path", {
+        d: "M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"
+      }), /* @__PURE__ */ jsx("path", {
+        d: "M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2",
+        fill: "currentColor",
+        style: {
+          transformOrigin: "130px 106px"
+        },
+        className: "octo-arm"
+      }), /* @__PURE__ */ jsx("path", {
+        d: "M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z",
+        fill: "currentColor",
+        className: "octo-body"
+      })]
+    })
+  });
+};
+const App = () => {
+  return /* @__PURE__ */ jsxs("div", {
+    className: "app",
+    children: [/* @__PURE__ */ jsx(GitHubBanner, {}), /* @__PURE__ */ jsx(Text, {
+      as: "h1",
+      variant: "headline",
+      children: "iTwinUI-Layouts"
+    }), /* @__PURE__ */ jsxs(Body, {
+      children: ["An open-source common UI layouts library used to display", " ", /* @__PURE__ */ jsx(Anchor, {
+        href: "https://itwin.github.io/iTwinUI-react/",
+        children: "iTwinUI-react"
+      }), " ", "components."]
+    }), /* @__PURE__ */ jsx("img", {
+      alt: "GitHub last commit",
+      src: "https://img.shields.io/github/last-commit/itwin/iTwinUI-layouts"
+    }), /* @__PURE__ */ jsx("hr", {}), /* @__PURE__ */ jsx("ul", {
+      children: DEMOS_LIST.map(({
+        path,
+        name
+      }) => /* @__PURE__ */ jsx("li", {
+        children: /* @__PURE__ */ jsx(Link, {
+          to: path,
+          className: "iui-anchor",
+          children: name
+        })
+      }, path))
+    })]
+  });
+};
+ReactDOM.render(/* @__PURE__ */ jsx(React.StrictMode, {
+  children: /* @__PURE__ */ jsx(HashRouter, {
+    children: /* @__PURE__ */ jsxs(Routes, {
+      children: [/* @__PURE__ */ jsx(Route, {
+        path: "/",
+        element: /* @__PURE__ */ jsx(App, {})
+      }), DEMOS_LIST.map(({
+        path,
+        component
+      }) => /* @__PURE__ */ jsx(Route, {
+        path,
+        element: component()
+      }, path))]
+    })
+  })
+}), document.getElementById("root"));
