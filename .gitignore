@@ -2,6 +2,12 @@
 **/dist
 **/tsconfig.tsbuildinfo
 
+# Cypress
+**/.snapshot-report
+demo/cypress-visual-screenshots/comparison
+demo/cypress-visual-screenshots/diff
+demo/cypress-visual-report
+
 # Node
 **/node_modules
 yarn-error.log
