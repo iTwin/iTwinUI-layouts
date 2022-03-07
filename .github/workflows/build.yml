@@ -42,7 +42,7 @@ jobs:
 
   deploy:
     name: Deploy demo HTML page
-    # if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
