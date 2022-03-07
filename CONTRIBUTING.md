@@ -45,7 +45,7 @@ yarn test:approve
 
 For running tests you will need [Docker](https://www.docker.com/products/docker-desktop). It helps to avoid cross-platform rendering differences.
 We are using [cypress](https://www.cypress.io/) for running tests and making screenshots.
-- To check failed tests result, open `cypress-visual-report/cypress-visual-report.html` in your browser.
+- To check failed tests results, open `demo/cypress-visual-report/cypress-visual-report.html` in your browser.
 - When writing tests, use `layoutsDescribe` instead of regular `describe`. This way tests will be run on different screen sizes. 
 - To make a screenshot, use `cy.compareSnapshot(...)`.
 - Example test:
