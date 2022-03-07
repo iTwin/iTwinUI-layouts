@@ -3,11 +3,13 @@
 
   /* autoprefixer grid: no-autoplace */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(Min(100%, var(--_iui-grid-item-min-width)), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(Min(100%, var(--_iui-grid-item-min-width)), 1fr)
+  );
   grid-gap: 22px 24px;
 
   > * {
     width: 100%;
-    flex-grow: 2;
   }
 }
