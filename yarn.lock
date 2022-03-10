@@ -692,10 +692,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-css@npm:0.x, @itwin/itwinui-css@npm:^0.44.1, @itwin/itwinui-css@npm:^0.44.2":
+"@itwin/itwinui-css@npm:0.x, @itwin/itwinui-css@npm:^0.44.2":
   version: 0.44.2
   resolution: "@itwin/itwinui-css@npm:0.44.2"
   checksum: 33571b956be4882904a24c2fd984ffe6211c391df0ff0fa12abbf0c8d6d3fa4b286dfec6a14d63d69d9bdc54fbfe94d8676d403723cb1c5d158c033542189f1b
+  languageName: node
+  linkType: hard
+
+"@itwin/itwinui-css@npm:^0.50.0":
+  version: 0.50.0
+  resolution: "@itwin/itwinui-css@npm:0.50.0"
+  checksum: f1b55da40e7db37187324a7f7831e4ae01394fefed8fe5dc55ed1fc3e21714c8a872325f3861c94a14580a18d1856e4f599a7afbe52b4f486d6b567e6e8534af
   languageName: node
   linkType: hard
 
@@ -752,7 +759,7 @@ __metadata:
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
-    "@itwin/itwinui-react": ^1.29.3
+    "@itwin/itwinui-react": ^1.33.0
     "@types/react": ^17.0.33
     "@types/react-dom": ^17.0.10
     "@vitejs/plugin-react": ^1.0.7
@@ -808,11 +815,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@itwin/itwinui-react@npm:^1.29.3":
-  version: 1.29.3
-  resolution: "@itwin/itwinui-react@npm:1.29.3"
+"@itwin/itwinui-react@npm:^1.33.0":
+  version: 1.33.0
+  resolution: "@itwin/itwinui-react@npm:1.33.0"
   dependencies:
-    "@itwin/itwinui-css": ^0.44.1
+    "@itwin/itwinui-css": ^0.50.0
     "@itwin/itwinui-icons-react": ^1.5.0
     "@itwin/itwinui-illustrations-react": ^1.0.1
     "@tippyjs/react": ^4.2.5
@@ -823,7 +830,7 @@ __metadata:
   peerDependencies:
     react: ^16.8.6 || ^17.0.0
     react-dom: ^16.8.6 || ^17.0.0
-  checksum: 19096ad76842fa2dba0c698b8abea80011abad2df1bbfccb9c8fdfa628f365354c2853ad7b55ab7da3f8ea2b257ddeb7e1741137bc6da81d0daeadbdbc6f0d1f
+  checksum: b6e794755443a433bed092cee437336372bfa7ae92152e4594531d59c85efacb8fbc2d9eb983160b9223e04f1b4ca55496b2faef2b81e6d60ca374e484f9e458
   languageName: node
   linkType: hard
 
