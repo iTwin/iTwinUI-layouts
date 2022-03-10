@@ -4,11 +4,13 @@
 
 .demo-template-container {
   display: flex;
+  flex-direction: row-reverse;
   height: 100vh;
+  height: -webkit-fill-available;
   background-color: var(--iui-color-background-4);
 
   &-vertical {
-    flex-direction: column;
+    flex-direction: column-reverse;
 
     .demo-template-code {
       max-width: revert;
@@ -22,7 +24,8 @@
 .demo-template-content {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  height: -webkit-fill-available;
 }
 
 .demo-template-code {
@@ -79,6 +82,10 @@
   }
 
   .sp-wrapper {
+    padding-right: env(
+      safe-area-inset-right
+    ); // Might not work when docked at bottom?
+    background-color: var(--iui-color-background-1);
     flex: 1;
   }
 
@@ -92,6 +99,10 @@
     height: 100%;
     border: none;
   }
+
+  ~ .demo-template-content .iui-page-header {
+    padding-right: 0;
+  }
 }
 
 .demo-template-button-overlay {
@@ -99,4 +110,22 @@
   bottom: $iui-baseline;
   right: $iui-sm;
   box-shadow: $iui-elevation-8;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .code-placement {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) {
+  .demo-template-container {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (orientation: portrait) {
+  .demo-template-container {
+    flex-direction: column-reverse;
+  }
 }

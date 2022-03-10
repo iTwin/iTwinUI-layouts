@@ -24,6 +24,7 @@ export const PageLayoutDemo = () => {
           <iframe
             src='https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-Layouts%20demo?editorPane=Hide&headers=Hide'
             loading='lazy'
+            className='myApp'
             style={{
               border: 'none',
               width: '100%',

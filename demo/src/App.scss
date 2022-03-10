@@ -5,7 +5,20 @@
 @import '@itwin/itwinui-css/scss/variables';
 
 .app {
-  padding: $iui-line-height $iui-l;
+  padding-top: unquote(
+    'max(#{$iui-line-height}, #{$iui-line-height} + env(safe-area-inset-top))'
+  );
+  padding-right: unquote(
+    'max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-right))'
+  );
+  padding-bottom: unquote(
+    'max(#{$iui-line-height}, #{$iui-line-height} + env(safe-area-inset-bottom))'
+  );
+  padding-left: unquote(
+    'max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-left))'
+  );
+  height: 100vh;
+  background-color: var(--iui-color-background-1);
 }
 
 hr {

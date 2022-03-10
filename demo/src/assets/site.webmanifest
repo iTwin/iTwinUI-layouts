@@ -1,0 +1,21 @@
+{
+  "name": "iTwinUI-layouts",
+  "short_name": "iTwinUI-layouts",
+  "description": "An open-source common UI layouts library used to display iTwinUI-react components.",
+  "start_url": "https://itwin.github.io/iTwinUI-layouts/",
+  "icons": [
+      {
+          "src": "/src/assets/pwa-icon.png",
+          "sizes": "192x192",
+          "type": "image/png"
+      },
+      {
+          "src": "/src/assets/pwa-icon.png",
+          "sizes": "512x512",
+          "type": "image/png"
+      }
+  ],
+  "theme_color": "#FFFFFF",
+  "background_color": "#F8F9FB",
+  "display": "standalone"
+}
