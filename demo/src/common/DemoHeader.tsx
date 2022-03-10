@@ -31,9 +31,10 @@ import {
   SvgProject,
 } from '@itwin/itwinui-icons-react';
 
-export const DemoHeader = () => {
+export const DemoHeader = ({ isSlim = 'false' }) => {
   return (
     <Header
+      isSlim={isSlim === 'true'}
       appLogo={
         <HeaderLogo logo={<SvgImodelHollow />}>iTwin Services</HeaderLogo>
       }

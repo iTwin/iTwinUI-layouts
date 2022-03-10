@@ -14,20 +14,22 @@ import {
   ButtonGroup,
   IconButton,
 } from '@itwin/itwinui-react';
-import SvgImodelHollow from '@itwin/itwinui-icons-react/cjs/icons/ImodelHollow';
-import SvgFilterHollow from '@itwin/itwinui-icons-react/cjs/icons/FilterHollow';
-import SvgSmileyHappyVeryHollow from '@itwin/itwinui-icons-react/cjs/icons/SmileyHappyVeryHollow';
+import {
+  SvgImodelHollow,
+  SvgFilterHollow,
+  SvgSmileyHappyVeryHollow,
+} from '@itwin/itwinui-icons-react';
 
 export const GridLayoutDemo = () => {
   return (
-    <DemoTemplate title='Page Layout'>
+    <DemoTemplate title='Grid'>
       <PageLayout>
         <PageLayout.Header>
           <DemoHeader />
         </PageLayout.Header>
 
         <PageLayout.SideNavigation>
-          <DemoSideNav />
+          <DemoSideNav activeItemKey='Browse' />
         </PageLayout.SideNavigation>
 
         <PageLayout.Content>

@@ -6,7 +6,8 @@ import React from 'react';
 import './App.scss';
 import '@codesandbox/sandpack-react/dist/index.css';
 import '@itwin/itwinui-layouts-css/styles.css';
-import { Anchor, Text, Body } from '@itwin/itwinui-react';
+import { Anchor, Text, Body, Tile, Button } from '@itwin/itwinui-react';
+import { PageLayout } from '@itwin/itwinui-layouts-react';
 import { Link } from 'react-router-dom';
 import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
@@ -31,15 +32,21 @@ const App = () => {
         src='https://img.shields.io/github/last-commit/itwin/iTwinUI-layouts'
       />
       <hr />
-      <ul>
-        {DEMOS_LIST.map(({ path, name }) => (
-          <li key={path}>
-            <Link to={path} className='iui-anchor'>
-              {name}
-            </Link>
-          </li>
+      <PageLayout.Grid>
+        {DEMOS_LIST.map(({ path, name, description, icon }) => (
+          <Tile
+            key={name}
+            name={name}
+            description={description}
+            thumbnail={icon}
+            buttons={[
+              <Button key='1' onClick={() => open({ path }, '_self')}>
+                View
+              </Button>,
+            ]}
+          />
         ))}
-      </ul>
+      </PageLayout.Grid>
     </div>
   );
 };

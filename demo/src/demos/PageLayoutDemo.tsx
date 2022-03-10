@@ -10,14 +10,14 @@ import { PageLayout } from '@itwin/itwinui-layouts-react';
 
 export const PageLayoutDemo = () => {
   return (
-    <DemoTemplate title='Page Layout'>
+    <DemoTemplate title='App'>
       <PageLayout>
         <PageLayout.Header>
-          <DemoHeader />
+          <DemoHeader isSlim='true' />
         </PageLayout.Header>
 
         <PageLayout.SideNavigation>
-          <DemoSideNav />
+          <DemoSideNav activeItemKey='Model' />
         </PageLayout.SideNavigation>
 
         <PageLayout.Content>
