@@ -9,6 +9,16 @@ import GridLayoutDemo from './GridLayoutDemo';
  * List of all demos. It is used to dynamically populate the home page and react-router.
  */
 export const DEMOS_LIST = [
-  { path: 'page-layout', name: 'Page layout', component: PageLayoutDemo },
-  { path: 'grid-layout', name: 'Grid layout', component: GridLayoutDemo },
+  {
+    path: 'page-layout',
+    name: 'Page layout',
+    description: 'Basic layout with header and side navigation.',
+    component: PageLayoutDemo,
+  },
+  {
+    path: 'grid-layout',
+    name: 'Grid layout',
+    description: 'Grid layout to display array of tiles.',
+    component: GridLayoutDemo,
+  },
 ];

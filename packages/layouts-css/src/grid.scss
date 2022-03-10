@@ -1,3 +1,7 @@
+// Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+// See LICENSE.md in the project root for license terms and full copyright notice.
+@import './breakpoints';
+
 .iui-layouts-grid {
   --_iui-grid-item-min-width: 288px;
 
@@ -7,7 +11,15 @@
     auto-fit,
     minmax(Min(100%, var(--_iui-grid-item-min-width)), 1fr)
   );
-  grid-gap: 22px 24px;
+  grid-gap: 24px;
+
+  @include small-screen {
+    grid-gap: 16px;
+  }
+
+  @include very-small-screen {
+    grid-gap: 16px;
+  }
 
   > div {
     width: 100%;

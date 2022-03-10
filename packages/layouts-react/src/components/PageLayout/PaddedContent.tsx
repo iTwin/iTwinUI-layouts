@@ -10,7 +10,7 @@ export type PaddedContentProps = {
 
 export const PaddedContent = (props: PaddedContentProps) => {
   const { children } = props;
-  return <div className='iui-layouts-page-padded'>{children}</div>;
+  return <div className='iui-layouts-content-padded'>{children}</div>;
 };
 
 PaddedContent.displayName = 'PageLayout.PaddedContent';

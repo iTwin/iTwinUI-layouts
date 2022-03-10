@@ -10,7 +10,7 @@ export type ContentProps = {
 
 export const Content = (props: ContentProps) => {
   const { children } = props;
-  return <div className='iui-layouts-page-content'>{children}</div>;
+  return <div className='iui-layouts-content'>{children}</div>;
 };
 
 Content.displayName = 'PageLayout.Content';

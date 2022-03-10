@@ -1,5 +1,7 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
+@import './breakpoints';
+
 .iui-layouts-page {
   height: 100%;
   display: grid;
@@ -14,19 +16,40 @@
   &-sidenav {
     grid-area: sidenav;
   }
+}
 
-  &-content {
-    grid-area: content;
-    overflow: auto;
-    overflow: overlay;
-    background-color: var(--iui-color-background-2);
-  }
+.iui-layouts-content {
+  grid-area: content;
+  overflow: auto;
+  overflow: overlay;
+  background-color: var(--iui-color-background-2);
+  display: flex;
+  justify-content: center;
 
   &-padded {
-    padding: 32px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    max-width: 1440px;
+
+    @include large-screen {
+      padding: 64px;
+      gap: 24px;
+    }
+
+    @include medium-screen {
+      padding: 44px;
+      gap: 24px;
+    }
+
+    @include small-screen {
+      padding: 32px;
+      gap: 16px;
+    }
+
+    @include very-small-screen {
+      padding: 24px;
+      gap: 16px;
+    }
   }
 
   &-title-area {

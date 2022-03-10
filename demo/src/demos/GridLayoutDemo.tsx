@@ -63,6 +63,18 @@ export const GridLayoutDemo = () => {
                 description='Description #2'
                 thumbnail={<SvgImodelHollow />}
               />
+            </PageLayout.Grid>
+            <PageLayout.Grid>
+              <Tile
+                name='Tile name'
+                description='Description #1'
+                thumbnail={<SvgImodelHollow />}
+              />
+              <Tile
+                name='Tile name'
+                description='Description #2'
+                thumbnail={<SvgImodelHollow />}
+              />
               <Tile
                 name='Tile name'
                 description='Description #3'
