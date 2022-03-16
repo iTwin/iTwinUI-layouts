@@ -6,11 +6,20 @@ import React from 'react';
 
 export type ContentProps = {
   children: React.ReactNode;
+  padded?: boolean;
 };
 
 export const Content = (props: ContentProps) => {
-  const { children } = props;
-  return <div className='iui-layouts-content'>{children}</div>;
+  const { children, padded } = props;
+  return (
+    <div
+      className={`iui-layouts-content ${
+        padded ? 'iui-layouts-content-padded' : ''
+      }`}
+    >
+      {children}
+    </div>
+  );
 };
 
 Content.displayName = 'PageLayout.Content';

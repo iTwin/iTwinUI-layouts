@@ -24,31 +24,26 @@
   overflow: overlay;
   background-color: var(--iui-color-background-2);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 
   &-padded {
-    display: flex;
-    flex-direction: column;
-    max-width: 1440px;
-    overflow: auto;
-
     @include large-screen {
-      margin: 64px;
+      padding: 64px;
       gap: 24px;
     }
 
     @include medium-screen {
-      margin: 44px;
+      padding: 44px;
       gap: 24px;
     }
 
     @include small-screen {
-      margin: 32px;
+      padding: 32px;
       gap: 16px;
     }
 
     @include very-small-screen {
-      margin: 24px;
+      padding: 24px;
       gap: 16px;
     }
   }

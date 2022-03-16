@@ -4,3 +4,5 @@
  *--------------------------------------------------------------------------------------------*/
 export { PageLayout } from './components/PageLayout';
 export type { PageLayoutProps } from './components/PageLayout';
+export { Grid } from './components/PageLayout';
+export type { GridProps } from './components/PageLayout';

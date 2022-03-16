@@ -2,10 +2,9 @@
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import './breakpoints';
 
-.iui-layouts-grid {
+.iui-layouts-tiles-grid {
   --_iui-grid-item-min-width: 288px;
 
-  /* autoprefixer grid: no-autoplace */
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
@@ -21,7 +20,7 @@
     grid-gap: 16px;
   }
 
-  > div {
+  > * {
     width: 100%;
   }
 }
