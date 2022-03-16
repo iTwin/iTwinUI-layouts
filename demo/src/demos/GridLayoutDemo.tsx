@@ -20,7 +20,7 @@ import SvgSmileyHappyVeryHollow from '@itwin/itwinui-icons-react/esm/icons/Smile
 
 export const GridLayoutDemo = () => {
   return (
-    <DemoTemplate title='Page Layout'>
+    <DemoTemplate title='Grid Layout'>
       <PageLayout>
         <PageLayout.Header>
           <DemoHeader />
