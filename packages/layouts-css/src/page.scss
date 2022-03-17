@@ -1,6 +1,7 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import './breakpoints';
+@import '@itwin/itwinui-css/scss/space';
 
 .iui-layouts-page {
   height: 100%;
@@ -28,23 +29,23 @@
 
   &-padded {
     @include large-screen {
-      padding: 64px;
-      gap: 24px;
+      padding: $iui-xxl;
+      gap: $iui-l;
     }
 
     @include medium-screen {
       padding: 44px;
-      gap: 24px;
+      gap: $iui-l;
     }
 
     @include small-screen {
-      padding: 32px;
+      padding: $iui-xl;
       gap: 16px;
     }
 
     @include very-small-screen {
-      padding: 24px;
-      gap: 16px;
+      padding: $iui-l;
+      gap: $iui-m;
     }
   }
 
