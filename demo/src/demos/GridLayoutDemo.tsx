@@ -17,6 +17,7 @@ import {
 import SvgImodelHollow from '@itwin/itwinui-icons-react/esm/icons/ImodelHollow';
 import SvgFilterHollow from '@itwin/itwinui-icons-react/esm/icons/FilterHollow';
 import SvgSmileyHappyVeryHollow from '@itwin/itwinui-icons-react/esm/icons/SmileyHappyVeryHollow';
+import SvgSearch from '@itwin/itwinui-icons-react/esm/icons/Search';
 
 export const GridLayoutDemo = () => {
   const tilesInGrid = (count: number) => {
@@ -31,6 +32,7 @@ export const GridLayoutDemo = () => {
         />
       ));
   };
+
   return (
     <DemoTemplate title='Grid Layout'>
       <PageLayout>
@@ -55,14 +57,23 @@ export const GridLayoutDemo = () => {
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Text>
           </PageLayout.TitleArea>
-          <ButtonGroup>
-            <IconButton styleType='borderless'>
-              <SvgFilterHollow />
-            </IconButton>
-            <IconButton styleType='borderless'>
-              <SvgSmileyHappyVeryHollow />
-            </IconButton>
-          </ButtonGroup>
+          <PageLayout.ContentTools
+            childrenLeft={
+              <ButtonGroup>
+                <IconButton styleType='borderless'>
+                  <SvgFilterHollow />
+                </IconButton>
+                <IconButton styleType='borderless'>
+                  <SvgSmileyHappyVeryHollow />
+                </IconButton>
+              </ButtonGroup>
+            }
+            childrenRight={
+              <IconButton styleType='borderless'>
+                <SvgSearch />
+              </IconButton>
+            }
+          />
           <FluidGrid>{tilesInGrid(12)}</FluidGrid>
         </PageLayout.Content>
       </PageLayout>

@@ -21,36 +21,67 @@
 
 .iui-layouts-content {
   grid-area: content;
-  overflow: auto;
   overflow: overlay;
   background-color: var(--iui-color-background-2);
-  display: flex;
-  flex-direction: column;
 
   &-padded {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     @include large-monitor {
       padding: $iui-xxl;
-      gap: $iui-l;
     }
 
     @include small-monitor {
       padding: 48px;
-      gap: $iui-l;
     }
 
     @include tablet {
       padding: $iui-xl;
-      gap: $iui-m;
     }
 
     @include mobile {
       padding: $iui-l;
-      gap: $iui-m;
     }
+  }
+
+  &-centered {
+    max-width: 1440px;
   }
 
   &-title-area {
     display: flex;
     flex-direction: column;
+    @include large-monitor {
+      padding-bottom: $iui-xl;
+    }
+
+    @include small-monitor {
+      padding-bottom: $iui-l;
+    }
+
+    @include tablet {
+      padding-bottom: $iui-m;
+    }
+
+    @include mobile {
+      padding-bottom: $iui-m;
+    }
+  }
+
+  &-tools {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: $iui-s;
+    justify-content: space-between;
+
+    &-left {
+      justify-content: flex-start;
+    }
+
+    &-right {
+      justify-content: flex-end;
+    }
   }
 }

@@ -4,9 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import Content from './Content';
+import ContentTools from './ContentTools';
 import { Header } from './Header';
 import SideNavigation from './SideNavigation';
-import PaddedContent from './PaddedContent';
 import TitleArea from './TitleArea';
 
 export type PageLayoutProps = {
@@ -17,7 +17,7 @@ export type PageLayoutType = (props: PageLayoutProps) => JSX.Element & {
   Header: typeof Header;
   SideNavigation: typeof SideNavigation;
   Content: typeof Content;
-  PaddedContent: typeof PaddedContent;
+  ContentTools: typeof ContentTools;
   TitleArea: typeof TitleArea;
 };
 
@@ -29,7 +29,7 @@ export const PageLayout = (props: PageLayoutProps) => {
 PageLayout.Header = Header;
 PageLayout.SideNavigation = SideNavigation;
 PageLayout.Content = Content;
-PageLayout.PaddedContent = PaddedContent;
+PageLayout.ContentTools = ContentTools;
 PageLayout.TitleArea = TitleArea;
 
 export default PageLayout;
