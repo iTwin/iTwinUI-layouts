@@ -20,7 +20,7 @@ import SvgSmileyHappyVeryHollow from '@itwin/itwinui-icons-react/esm/icons/Smile
 import SvgSearch from '@itwin/itwinui-icons-react/esm/icons/Search';
 
 export const GridLayoutDemo = () => {
-  const tilesInGrid = (count: number) => {
+  const tilesGenerator = (count: number) => {
     return Array(count)
       .fill(null)
       .map((_, index) => (
@@ -58,7 +58,7 @@ export const GridLayoutDemo = () => {
             </Text>
           </PageLayout.TitleArea>
           <PageLayout.ContentTools
-            childrenLeft={
+            toolsLeft={
               <ButtonGroup>
                 <IconButton styleType='borderless'>
                   <SvgFilterHollow />
@@ -68,13 +68,13 @@ export const GridLayoutDemo = () => {
                 </IconButton>
               </ButtonGroup>
             }
-            childrenRight={
+            toolsRight={
               <IconButton styleType='borderless'>
                 <SvgSearch />
               </IconButton>
             }
           />
-          <FluidGrid>{tilesInGrid(12)}</FluidGrid>
+          <FluidGrid>{tilesGenerator(12)}</FluidGrid>
         </PageLayout.Content>
       </PageLayout>
     </DemoTemplate>

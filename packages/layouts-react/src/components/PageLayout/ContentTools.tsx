@@ -5,16 +5,16 @@
 import React from 'react';
 
 export type ContentToolsProps = {
-  childrenLeft?: React.ReactNode;
-  childrenRight?: React.ReactNode;
+  toolsLeft?: React.ReactNode;
+  toolsRight?: React.ReactNode;
 };
 
 export const ContentTools = (props: ContentToolsProps) => {
-  const { childrenLeft, childrenRight } = props;
+  const { toolsLeft, toolsRight } = props;
   return (
     <div className='iui-layouts-content-tools'>
-      <div className='iui-layouts-content-tools-left'>{childrenLeft}</div>
-      <div className='iui-layouts-content-tools-right'>{childrenRight}</div>
+      <div className='iui-layouts-content-tools-left'>{toolsLeft}</div>
+      <div className='iui-layouts-content-tools-right'>{toolsRight}</div>
     </div>
   );
 };
