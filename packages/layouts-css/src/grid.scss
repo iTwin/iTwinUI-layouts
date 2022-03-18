@@ -2,8 +2,8 @@
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import './breakpoints';
 
-.iui-layouts-tiles-grid {
-  --_iui-grid-item-min-width: 288px;
+.iui-layouts-fluid-grid {
+  --_iui-grid-item-min-width: 0;
 
   display: grid;
   grid-template-columns: repeat(
