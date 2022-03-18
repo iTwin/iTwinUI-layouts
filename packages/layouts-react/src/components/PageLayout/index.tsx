@@ -4,5 +4,3 @@
  *--------------------------------------------------------------------------------------------*/
 export { PageLayout } from './PageLayout';
 export type { PageLayoutProps } from './PageLayout';
-export { Grid } from './Grid';
-export type { GridProps } from './Grid';

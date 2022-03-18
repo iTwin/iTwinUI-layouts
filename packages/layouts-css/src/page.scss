@@ -2,9 +2,6 @@
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import './breakpoints';
 @import '../../../node_modules/@itwin/itwinui-css/scss/variables';
-//variables
-//fluid grid
-//rename size mixins
 
 .iui-layouts-page {
   height: 100%;
@@ -31,22 +28,22 @@
   flex-direction: column;
 
   &-padded {
-    @include large-screen {
+    @include large-monitor {
       padding: $iui-xxl;
-      gap: $iui-xl;
+      gap: $iui-l;
     }
 
-    @include medium-screen {
+    @include small-monitor {
       padding: 48px;
       gap: $iui-l;
     }
 
-    @include small-screen {
-      padding: $iui-l;
+    @include tablet {
+      padding: $iui-xl;
       gap: $iui-m;
     }
 
-    @include very-small-screen {
+    @include mobile {
       padding: $iui-l;
       gap: $iui-m;
     }

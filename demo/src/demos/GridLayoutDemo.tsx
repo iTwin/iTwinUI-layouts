@@ -6,7 +6,7 @@ import React from 'react';
 import { DemoHeader } from '../common/DemoHeader';
 import { DemoSideNav } from '../common/DemoSideNav';
 import { DemoTemplate } from '../common/DemoTemplate';
-import { Grid, PageLayout } from '@itwin/itwinui-layouts-react';
+import { FluidGrid, PageLayout } from '@itwin/itwinui-layouts-react';
 import {
   Tile,
   Headline,
@@ -19,6 +19,18 @@ import SvgFilterHollow from '@itwin/itwinui-icons-react/esm/icons/FilterHollow';
 import SvgSmileyHappyVeryHollow from '@itwin/itwinui-icons-react/esm/icons/SmileyHappyVeryHollow';
 
 export const GridLayoutDemo = () => {
+  const tilesInGrid = (count: number) => {
+    return Array(count)
+      .fill(null)
+      .map((_, index) => (
+        <Tile
+          key={index}
+          name={`Item #${index}`}
+          thumbnail={<SvgImodelHollow />}
+          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.'
+        />
+      ));
+  };
   return (
     <DemoTemplate title='Grid Layout'>
       <PageLayout>
@@ -51,70 +63,7 @@ export const GridLayoutDemo = () => {
               <SvgSmileyHappyVeryHollow />
             </IconButton>
           </ButtonGroup>
-          <Grid>
-            <Tile
-              name='Tile name'
-              description='Description #1'
-              thumbnail={<SvgImodelHollow />}
-            />
-            <Tile
-              name='Tile name'
-              description='Description #2'
-              thumbnail={<SvgImodelHollow />}
-            />
-          </Grid>
-          <Grid>
-            <Tile
-              name='Tile name'
-              description='Description #1'
-              thumbnail={<SvgImodelHollow />}
-            />
-            <Tile
-              name='Tile name'
-              description='Description #2'
-              thumbnail={<SvgImodelHollow />}
-            />
-            <Tile
-              name='Tile name'
-              description='Description #3'
-              thumbnail={<SvgImodelHollow />}
-            />
-            <Tile
-              name='Tile name'
-              description='Description #4'
-              thumbnail={<SvgImodelHollow />}
-            />
-            <Tile
-              name='Tile name'
-              description='Description #5'
-              thumbnail={<SvgImodelHollow />}
-            />
-            <Tile
-              name='Tile name'
-              description='Description #6'
-              thumbnail={<SvgImodelHollow />}
-            />
-            <Tile
-              name='Tile name'
-              description='Description #7'
-              thumbnail={<SvgImodelHollow />}
-            />
-            <Tile
-              name='Tile name'
-              description='Description #8'
-              thumbnail={<SvgImodelHollow />}
-            />
-            <Tile
-              name='Tile name'
-              description='Description #9'
-              thumbnail={<SvgImodelHollow />}
-            />
-            <Tile
-              name='Tile name'
-              description='Description #10'
-              thumbnail={<SvgImodelHollow />}
-            />
-          </Grid>
+          <FluidGrid>{tilesInGrid(12)}</FluidGrid>
         </PageLayout.Content>
       </PageLayout>
     </DemoTemplate>
