@@ -20,19 +20,6 @@ import SvgSmileyHappyVeryHollow from '@itwin/itwinui-icons-react/esm/icons/Smile
 import SvgSearch from '@itwin/itwinui-icons-react/esm/icons/Search';
 
 export const GridLayoutDemo = () => {
-  const tilesGenerator = (count: number) => {
-    return Array(count)
-      .fill(null)
-      .map((_, index) => (
-        <Tile
-          key={index}
-          name={`Item #${index}`}
-          thumbnail={<SvgImodelHollow />}
-          description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.'
-        />
-      ));
-  };
-
   return (
     <DemoTemplate title='Grid Layout'>
       <PageLayout>
@@ -58,7 +45,7 @@ export const GridLayoutDemo = () => {
             </Text>
           </PageLayout.TitleArea>
           <PageLayout.ContentTools
-            toolsLeft={
+            left={
               <ButtonGroup>
                 <IconButton styleType='borderless'>
                   <SvgFilterHollow />
@@ -68,13 +55,24 @@ export const GridLayoutDemo = () => {
                 </IconButton>
               </ButtonGroup>
             }
-            toolsRight={
+            right={
               <IconButton styleType='borderless'>
                 <SvgSearch />
               </IconButton>
             }
           />
-          <FluidGrid>{tilesGenerator(12)}</FluidGrid>
+          <FluidGrid>
+            {Array(12)
+              .fill(null)
+              .map((_, index) => (
+                <Tile
+                  key={index}
+                  name={`Item #${index}`}
+                  thumbnail={<SvgImodelHollow />}
+                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.'
+                />
+              ))}
+          </FluidGrid>
         </PageLayout.Content>
       </PageLayout>
     </DemoTemplate>

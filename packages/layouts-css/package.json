@@ -8,7 +8,7 @@
     "./*": "./dist/*"
   },
   "scripts": {
-    "build": "sass --no-source-map src:dist && postcss dist --replace --no-map",
+    "build": "sass --no-source-map --load-path=../../node_modules src:dist && postcss dist --replace --no-map",
     "build:watch": "chokidar \"src/**/*\" -c \"yarn build\""
   },
   "license": "MIT",

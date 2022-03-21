@@ -55,19 +55,19 @@
     display: flex;
     flex-direction: column;
     @include large-monitor {
-      padding-bottom: $iui-xl;
-    }
-
-    @include small-monitor {
       padding-bottom: $iui-l;
     }
 
-    @include tablet {
+    @include small-monitor {
       padding-bottom: $iui-m;
     }
 
+    @include tablet {
+      padding-bottom: $iui-s;
+    }
+
     @include mobile {
-      padding-bottom: $iui-m;
+      padding-bottom: $iui-xs;
     }
   }
 

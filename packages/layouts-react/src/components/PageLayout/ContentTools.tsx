@@ -5,16 +5,22 @@
 import React from 'react';
 
 export type ContentToolsProps = {
-  toolsLeft?: React.ReactNode;
-  toolsRight?: React.ReactNode;
+  /**
+   * Tools displayed at the left side of toolbar
+   */
+  left?: React.ReactNode;
+  /**
+   * Tools displayed at the right side of toolbar
+   */
+  right?: React.ReactNode;
 };
 
 export const ContentTools = (props: ContentToolsProps) => {
-  const { toolsLeft, toolsRight } = props;
+  const { left, right } = props;
   return (
     <div className='iui-layouts-content-tools'>
-      <div className='iui-layouts-content-tools-left'>{toolsLeft}</div>
-      <div className='iui-layouts-content-tools-right'>{toolsRight}</div>
+      {left && <div className='iui-layouts-content-tools-left'>{left}</div>}
+      {right && <div className='iui-layouts-content-tools-right'>{right}</div>}
     </div>
   );
 };
