@@ -30,19 +30,19 @@
     align-items: center;
 
     @include large-monitor {
-      padding: $iui-xxl;
+      padding: $iui-xl $iui-xxl;
     }
 
     @include small-monitor {
-      padding: 48px;
+      padding: $iui-l 48px;
     }
 
     @include tablet {
-      padding: $iui-xl;
+      padding: $iui-m $iui-xl;
     }
 
     @include mobile {
-      padding: $iui-l;
+      padding: $iui-s $iui-l;
     }
   }
 
