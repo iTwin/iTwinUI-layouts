@@ -16,11 +16,11 @@ export type ContentProps = {
 export const Content = (props: ContentProps) => {
   const { children, padded = false } = props;
   return padded ? (
-    <div className='iui-layouts-content iui-layouts-content-padded'>
-      <div className='iui-layouts-content-centered'>{children}</div>
+    <div className='iui-layouts-page-content iui-layouts-page-content-padded'>
+      <div className='iui-layouts-page-content-centered'>{children}</div>
     </div>
   ) : (
-    <div className='iui-layouts-content'>{children}</div>
+    <div className='iui-layouts-page-content'>{children}</div>
   );
 };
 

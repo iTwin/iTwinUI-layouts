@@ -17,72 +17,72 @@
   &-sidenav {
     grid-area: sidenav;
   }
-}
 
-.iui-layouts-content {
-  grid-area: content;
-  overflow: overlay;
-  background-color: var(--iui-color-background-2);
+  &-content {
+    grid-area: content;
+    overflow: overlay;
+    background-color: var(--iui-color-background-2);
 
-  &-padded {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    &-padded {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-    @include large-monitor {
-      padding: $iui-xl $iui-xxl;
+      @include large-monitor {
+        padding: $iui-xl $iui-xxl;
+      }
+
+      @include small-monitor {
+        padding: $iui-l 48px;
+      }
+
+      @include tablet {
+        padding: $iui-m $iui-xl;
+      }
+
+      @include mobile {
+        padding: $iui-s $iui-l;
+      }
     }
 
-    @include small-monitor {
-      padding: $iui-l 48px;
+    &-centered {
+      max-width: 1440px;
+      width: 100%;
     }
 
-    @include tablet {
-      padding: $iui-m $iui-xl;
+    &-title-area {
+      display: flex;
+      flex-direction: column;
+      @include large-monitor {
+        padding-bottom: $iui-l;
+      }
+
+      @include small-monitor {
+        padding-bottom: $iui-m;
+      }
+
+      @include tablet {
+        padding-bottom: $iui-s;
+      }
+
+      @include mobile {
+        padding-bottom: $iui-xs;
+      }
     }
 
-    @include mobile {
-      padding: $iui-s $iui-l;
-    }
-  }
-
-  &-centered {
-    max-width: 1440px;
-    width: 100%;
-  }
-
-  &-title-area {
-    display: flex;
-    flex-direction: column;
-    @include large-monitor {
-      padding-bottom: $iui-l;
-    }
-
-    @include small-monitor {
-      padding-bottom: $iui-m;
-    }
-
-    @include tablet {
+    &-tools {
+      display: flex;
+      flex-direction: row;
       padding-bottom: $iui-s;
-    }
+      justify-content: space-between;
 
-    @include mobile {
-      padding-bottom: $iui-xs;
-    }
-  }
+      &-left {
+        justify-content: flex-start;
+      }
 
-  &-tools {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: $iui-s;
-    justify-content: space-between;
-
-    &-left {
-      justify-content: flex-start;
-    }
-
-    &-right {
-      justify-content: flex-end;
+      &-right {
+        justify-content: flex-end;
+      }
     }
   }
 }
