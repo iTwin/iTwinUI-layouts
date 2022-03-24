@@ -13,6 +13,7 @@ import {
   Text,
   ButtonGroup,
   IconButton,
+  LabeledInput,
 } from '@itwin/itwinui-react';
 import {
   SvgImodelHollow,
@@ -58,9 +59,11 @@ export const GridLayoutDemo = () => {
               </ButtonGroup>
             }
             right={
-              <IconButton styleType='borderless'>
-                <SvgSearch />
-              </IconButton>
+              <LabeledInput
+                iconDisplayStyle='inline'
+                size='small'
+                svgIcon={<SvgSearch />}
+              />
             }
           />
           <FluidGrid>
