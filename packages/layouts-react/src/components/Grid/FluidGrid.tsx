@@ -10,17 +10,17 @@ export type FluidGridProps = {
    * Minimum grid item width.
    * default: 288
    */
-  minColumnWidth?: number;
+  minItemWidth?: number;
 };
 
 export const FluidGrid = (props: FluidGridProps) => {
-  const { children, minColumnWidth = 288 } = props;
+  const { children, minItemWidth = 256 } = props;
   return (
     <div
       className='iui-layouts-fluid-grid'
       style={
         {
-          '--_iui-grid-item-min-width': `${minColumnWidth}px`,
+          '--_iui-grid-item-min-width': `${minItemWidth}px`,
         } as React.CSSProperties
       }
     >

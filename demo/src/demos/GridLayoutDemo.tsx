@@ -14,15 +14,41 @@ import {
   ButtonGroup,
   IconButton,
   LabeledInput,
+  Button,
+  DropdownMenu,
+  MenuItem,
 } from '@itwin/itwinui-react';
 import {
   SvgImodelHollow,
-  SvgFilterHollow,
-  SvgSmileyHappyVeryHollow,
+  SvgInfo,
   SvgSearch,
+  SvgPlaceholder,
+  SvgMore,
+  SvgDownload,
+  SvgAdd,
+  SvgArrowRight,
+  SvgRename,
+  SvgList,
+  SvgThumbnails,
+  SvgDeveloper,
 } from '@itwin/itwinui-icons-react';
 
 export const GridLayoutDemo = () => {
+  const toolsButtons = [
+    <IconButton key={1}>
+      <SvgDownload />
+    </IconButton>,
+    <IconButton key={2}>
+      <SvgArrowRight />
+    </IconButton>,
+    <IconButton key={3}>
+      <SvgRename />
+    </IconButton>,
+    <IconButton key={4}>
+      <SvgDeveloper />
+    </IconButton>,
+  ];
+
   return (
     <DemoTemplate title='Grid Layout'>
       <PageLayout>
@@ -48,23 +74,67 @@ export const GridLayoutDemo = () => {
             </Text>
           </PageLayout.TitleArea>
           <PageLayout.ContentTools
-            left={
-              <ButtonGroup>
-                <IconButton styleType='borderless'>
-                  <SvgFilterHollow />
-                </IconButton>
-                <IconButton styleType='borderless'>
-                  <SvgSmileyHappyVeryHollow />
-                </IconButton>
-              </ButtonGroup>
-            }
-            right={
+            left={[
+              <Button
+                startIcon={<SvgAdd />}
+                styleType='high-visibility'
+                key='new'
+              >
+                New
+              </Button>,
+              <ButtonGroup
+                key='button-group'
+                overflowPlacement='end'
+                orientation='horizontal'
+                overflowButton={(oveflowStart) => (
+                  <DropdownMenu
+                    menuItems={(close) =>
+                      Array(toolsButtons.length - oveflowStart + 1)
+                        .fill(null)
+                        .map((_, _index) => {
+                          const index = oveflowStart + _index;
+                          const onClick = () => {
+                            close();
+                          };
+                          return (
+                            <MenuItem
+                              key={index}
+                              onClick={onClick}
+                              icon={<SvgPlaceholder />}
+                            >
+                              Button #{index}
+                            </MenuItem>
+                          );
+                        })
+                    }
+                  >
+                    <IconButton>
+                      <SvgMore />
+                    </IconButton>
+                  </DropdownMenu>
+                )}
+              >
+                {toolsButtons}
+              </ButtonGroup>,
+            ]}
+            right={[
               <LabeledInput
+                key='search'
                 iconDisplayStyle='inline'
-                size='small'
                 svgIcon={<SvgSearch />}
-              />
-            }
+              />,
+              <ButtonGroup key='button-group2'>
+                <IconButton key='left-smiley'>
+                  <SvgList />
+                </IconButton>
+                <IconButton key='left-sad'>
+                  <SvgThumbnails />
+                </IconButton>
+              </ButtonGroup>,
+              <IconButton key='info'>
+                <SvgInfo />
+              </IconButton>,
+            ]}
           />
           <FluidGrid>
             {Array(12)

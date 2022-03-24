@@ -4,39 +4,16 @@
 @import '@itwin/itwinui-css/scss/variables';
 
 .iui-layouts-fluid-grid {
-  --_iui-grid-item-min-width: 288px;
+  --_iui-grid-item-min-width: 256px;
 
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
     minmax(Min(100%, var(--_iui-grid-item-min-width)), 1fr)
   );
+  gap: $iui-l;
 
-  @include large-monitor {
-    gap: $iui-l;
-  }
-
-  @include small-monitor {
-    gap: $iui-l;
-  }
-
-  @include tablet {
-    gap: $iui-m;
-
-    > * {
-      max-width: 100%;
-    }
-  }
-
-  @include mobile {
-    gap: $iui-m;
-
-    > * {
-      max-width: 100%;
-    }
-  }
-
-  > * {
-    min-width: 100%;
+  &.iui-layouts-fluid-grid > * {
+    width: 100%;
   }
 }

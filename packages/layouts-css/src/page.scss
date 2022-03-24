@@ -53,36 +53,30 @@
     &-title-area {
       display: flex;
       flex-direction: column;
-      @include large-monitor {
-        padding-bottom: $iui-l;
-      }
-
-      @include small-monitor {
-        padding-bottom: $iui-m;
-      }
-
-      @include tablet {
-        padding-bottom: $iui-s;
-      }
-
-      @include mobile {
-        padding-bottom: $iui-xs;
-      }
+      margin-bottom: $iui-baseline * 3;
     }
 
     &-tools {
       display: flex;
       flex-direction: row;
-      padding-bottom: $iui-s;
+      margin-bottom: $iui-baseline * 2;
       justify-content: space-between;
       align-items: center;
 
       &-left {
+        display: flex;
+        flex-direction: row;
         justify-content: flex-start;
+        gap: $iui-s;
+        align-items: center;
       }
 
       &-right {
+        display: flex;
+        flex-direction: row;
         justify-content: flex-end;
+        gap: $iui-s;
+        align-items: center;
       }
     }
   }
