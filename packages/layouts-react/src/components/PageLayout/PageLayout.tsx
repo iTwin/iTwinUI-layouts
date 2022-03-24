@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import Content from './Content';
-import ContentTools from './ContentTools';
+import ContentTools from './ToolsArea';
 import { Header } from './Header';
 import SideNavigation from './SideNavigation';
 import TitleArea from './TitleArea';

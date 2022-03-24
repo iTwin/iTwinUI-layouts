@@ -18,9 +18,13 @@ export type ContentToolsProps = {
 export const ContentTools = (props: ContentToolsProps) => {
   const { left, right } = props;
   return (
-    <div className='iui-layouts-content-tools'>
-      {left && <div className='iui-layouts-content-tools-left'>{left}</div>}
-      {right && <div className='iui-layouts-content-tools-right'>{right}</div>}
+    <div className='iui-layouts-page-content-tools'>
+      {left && (
+        <div className='iui-layouts-page-content-tools-left'>{left}</div>
+      )}
+      {right && (
+        <div className='iui-layouts-page-content-tools-right'>{right}</div>
+      )}
     </div>
   );
 };
