@@ -32,6 +32,18 @@ yarn start
 yarn test
 ```
 
+#### To run visual tests on M1 processors
+
+```console
+yarn test:m1
+```
+
+or 
+
+```console
+yarn test --m1
+```
+
 _Before running this command, make sure Docker is running._
 
 ### To approve changed visual tests images
