@@ -17,6 +17,7 @@ import {
   Button,
   DropdownMenu,
   MenuItem,
+  Footer,
 } from '@itwin/itwinui-react';
 import {
   SvgImodelHollow,
@@ -73,7 +74,7 @@ export const GridLayoutDemo = () => {
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Text>
           </PageLayout.TitleArea>
-          <PageLayout.ContentTools
+          <PageLayout.ToolsArea
             left={[
               <Button
                 startIcon={<SvgAdd />}
@@ -84,8 +85,6 @@ export const GridLayoutDemo = () => {
               </Button>,
               <ButtonGroup
                 key='button-group'
-                overflowPlacement='end'
-                orientation='horizontal'
                 overflowButton={(oveflowStart) => (
                   <DropdownMenu
                     menuItems={(close) =>

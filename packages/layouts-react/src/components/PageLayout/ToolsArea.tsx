@@ -15,7 +15,7 @@ export type ContentToolsProps = {
   right?: React.ReactNode;
 };
 
-export const ContentTools = (props: ContentToolsProps) => {
+export const ToolsArea = (props: ContentToolsProps) => {
   const { left, right } = props;
   return (
     <div className='iui-layouts-page-content-tools'>
@@ -29,6 +29,6 @@ export const ContentTools = (props: ContentToolsProps) => {
   );
 };
 
-ContentTools.displayName = 'PageLayout.ContentTools';
+ToolsArea.displayName = 'PageLayout.ToolsArea';
 
-export default ContentTools;
+export default ToolsArea;
