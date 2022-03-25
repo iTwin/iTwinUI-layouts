@@ -63,20 +63,19 @@
       justify-content: space-between;
       align-items: center;
 
-      &-left {
+      &-left,
+      &-right {
         display: flex;
-        flex-direction: row;
         justify-content: flex-start;
+        flex-direction: row;
         gap: $iui-s;
         align-items: center;
+        min-width: 0;
+        flex-basis: 50%;
       }
 
       &-right {
-        display: flex;
-        flex-direction: row;
         justify-content: flex-end;
-        gap: $iui-s;
-        align-items: center;
       }
     }
   }
