@@ -376,6 +376,10 @@ const GitHubBanner = () => {
     })
   });
 };
+var _300 = "";
+var _400 = "";
+var _600 = "";
+var _700 = "";
 const App = () => {
   return /* @__PURE__ */ jsxs("div", {
     className: "app",
