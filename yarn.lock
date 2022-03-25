@@ -755,6 +755,7 @@ __metadata:
   resolution: "@itwin/itwinui-layouts-demo@workspace:demo"
   dependencies:
     "@codesandbox/sandpack-react": ^0.13.7
+    "@fontsource/open-sans": ^4.5.8
     "@itwin/itwinui-css": ^0.44.2
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
@@ -780,7 +781,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@itwin/itwinui-layouts-monorepo@workspace:."
   dependencies:
-    "@fontsource/open-sans": ^4.5.8
     "@typescript-eslint/eslint-plugin": ^5.10.1
     "@typescript-eslint/parser": ^5.10.1
     concurrently: ^7.0.0

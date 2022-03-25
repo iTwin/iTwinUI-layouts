@@ -60,8 +60,5 @@
     "*.{js,ts,tsx,scss}": [
       "yarn lint:copyright --fix"
     ]
-  },
-  "dependencies": {
-    "@fontsource/open-sans": "^4.5.8"
   }
 }
