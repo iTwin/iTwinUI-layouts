@@ -667,6 +667,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/open-sans@npm:^4.5.8":
+  version: 4.5.8
+  resolution: "@fontsource/open-sans@npm:4.5.8"
+  checksum: 62b00d6b9b51a831c274c04c4e8249883b4cc48cfa040fd54a72a9f9dbb7d367b116495df7a1aa356873589a0afc14dbd523d57cb1061af26768fc4c28274822
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.0.1":
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
@@ -748,6 +755,7 @@ __metadata:
   resolution: "@itwin/itwinui-layouts-demo@workspace:demo"
   dependencies:
     "@codesandbox/sandpack-react": ^0.13.7
+    "@fontsource/open-sans": ^4.5.8
     "@itwin/itwinui-css": ^0.44.2
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"

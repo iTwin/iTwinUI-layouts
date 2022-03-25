@@ -4,6 +4,12 @@
  *--------------------------------------------------------------------------------------------*/
 const { spawn } = require('child_process');
 
+// Using diferent Cypress image for M1 processors
+const isM1 = process.argv.includes('--m1');
+const dockerImage = isM1
+  ? `cookiescrumbs/cypress-m1:9.4.1`
+  : `cypress/included:9.5.0`;
+
 // Need to use this script because current directory variable is different in different shells
 const dockerProcess = spawn(
   // --rm - removes container after run
@@ -11,9 +17,9 @@ const dockerProcess = spawn(
   // -e WIDTH=3840 -e HEIGHT=2160 - sets the width and height of the browser window, required for headless Chrome
   // -v "${__dirname}/../":/e2e - mount a root repo directory from host (your PC) to container
   // -w /e2e - makes `e2e` the working directory
-  // cypress/included:9.5.0 - Docker image to run
+  // cypress/included:9.5.0 or cookiescrumbs/cypress-m1:9.4.1 - Docker image to run
   // ./demo/entrypoint.sh - entrypoint script to run
-  `docker run --rm --entrypoint /bin/bash -e WIDTH=3840 -e HEIGHT=2160 -v "${__dirname}/../":/e2e -w /e2e cypress/included:9.5.0 ./demo/entrypoint.sh`,
+  `docker run --rm --entrypoint /bin/bash -e WIDTH=3840 -e HEIGHT=2160 -v "${__dirname}/../":/e2e -w /e2e ${dockerImage} ./demo/entrypoint.sh`,
   {
     stdio: 'inherit',
     shell: true,
