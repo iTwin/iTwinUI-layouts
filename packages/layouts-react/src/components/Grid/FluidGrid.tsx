@@ -8,7 +8,7 @@ export type FluidGridProps = {
   children: React.ReactNode;
   /**
    * Minimum grid item width.
-   * default: 288
+   * default: 256
    */
   minItemWidth?: number;
 };
