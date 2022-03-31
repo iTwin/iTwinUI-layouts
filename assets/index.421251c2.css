@@ -13,13 +13,6 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-img,
-picture,
-svg {
-  display: block;
-  max-width: 100%;
 }/*---------------------------------------------------------------------------------------------
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
@@ -38,11 +31,8 @@ hr {
  *--------------------------------------------------------------------------------------------*/
 .iui-layouts-page{
   height:100%;
-  display:-ms-grid;
   display:grid;
-  -ms-grid-rows: auto 1fr;
-  -ms-grid-columns: auto 1fr;
-      grid-template:"header header" auto "sidenav content" 1fr/auto 1fr;
+  grid-template:"header header" auto "sidenav content" 1fr/auto 1fr;
 }
 .iui-layouts-page-header{
   -ms-grid-row:1;
@@ -59,9 +49,70 @@ hr {
   -ms-grid-row:2;
   -ms-grid-column:2;
   grid-area:content;
-  overflow:auto;
   overflow:overlay;
   background-color:var(--iui-color-background-2);
+}
+.iui-layouts-page-content-padded{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+@media (min-width: 1200px){
+  .iui-layouts-page-content-padded{
+    padding:32px 64px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  .iui-layouts-page-content-padded{
+    padding:24px 48px;
+  }
+}
+@media (min-width: 769px) and (max-width: 991px){
+  .iui-layouts-page-content-padded{
+    padding:16px 32px;
+  }
+}
+@media (max-width: 768px){
+  .iui-layouts-page-content-padded{
+    padding:8px 24px;
+  }
+}
+.iui-layouts-page-content-centered{
+  max-width:1440px;
+  width:100%;
+}
+.iui-layouts-page-content-title-area{
+  display:flex;
+  flex-direction:column;
+  margin-bottom:33px;
+}
+.iui-layouts-page-content-tools{
+  display:flex;
+  flex-direction:row;
+  margin-bottom:22px;
+  justify-content:space-between;
+}
+.iui-layouts-page-content-tools-left, .iui-layouts-page-content-tools-right{
+  display:flex;
+  justify-content:flex-start;
+  flex-direction:row;
+  gap:8px;
+  align-items:center;
+  min-width:0;
+  flex-basis:50%;
+}
+.iui-layouts-page-content-tools-right{
+  justify-content:flex-end;
+}
+
+.iui-layouts-fluid-grid{
+  --_iui-grid-item-min-width:256px;
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(min(100%, var(--_iui-grid-item-min-width)), 1fr));
+  gap:24px;
+}
+.iui-layouts-fluid-grid.iui-layouts-fluid-grid > *{
+  width:100%;
 }
 .demo-template-container {
   display: flex;
@@ -87,7 +138,7 @@ hr {
   display: flex;
   flex-direction: column;
   border-left: 2px solid var(--iui-color-background-5);
-  max-width: 25%;
+  width: 40%;
 }
 .demo-template-code-header {
   display: flex;

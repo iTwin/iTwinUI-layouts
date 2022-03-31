@@ -1,4 +1,4 @@
-import { j as jsx, H as Header$1, a as HeaderLogo, S as SvgImodelHollow, b as HeaderBreadcrumbs, c as HeaderButton, M as MenuItem, d as SvgCheckmark, e as SvgProject, f as MenuDivider, g as SvgModel, I as IconButton, h as SvgNotification, D as DropdownMenu, i as SvgHelpCircular, k as MenuExtraContent, l as jsxs, F as Fragment, T as Text, m as Select, n as SvgExit, U as UserIcon, o as SvgSettings, p as SvgSmileyHappy, q as SvgNews, r as SvgInfoCircular, s as SideNavigation$1, t as SidenavButton, u as SvgHome, v as SvgConfiguration, R as React, w as useTheme, x as SvgMoon, y as SvgSun, z as reactElementToJsxString, A as cx, B as ButtonGroup, C as SvgWindowCollapse, E as SvgWindowFullScreen, L as Link, G as SvgDockRight, J as SvgDockBottom, K as Button, N as SandpackProvider, O as SandpackLayout, P as SandpackCodeViewer, Q as Body, V as Anchor, W as ReactDOM, X as HashRouter, Y as Routes, Z as Route } from "./vendor.2050ea26.js";
+import { j as jsx, H as Header$1, a as HeaderLogo, S as SvgImodelHollow, b as HeaderBreadcrumbs, c as HeaderButton, M as MenuItem, d as SvgCheckmark, e as SvgProject, f as MenuDivider, g as SvgModel, I as IconButton, h as SvgNotification, D as DropdownMenu, i as SvgHelpCircular, k as MenuExtraContent, l as jsxs, F as Fragment, T as Text, m as Select, n as SvgExit, U as UserIcon, o as SvgSettings, p as SvgSmileyHappy, q as SvgNews, r as SvgInfoCircular, s as SideNavigation$1, t as SidenavButton, u as SvgHome, v as SvgConfiguration, R as React, w as useTheme, x as SvgMoon, y as SvgSun, z as reactElementToJsxString, A as cx, B as ButtonGroup, C as SvgWindowCollapse, E as SvgWindowFullScreen, L as Link, G as SvgDockRight, J as SvgDockBottom, K as Button, N as SandpackProvider, O as SandpackLayout, P as SandpackCodeViewer, Q as Headline, V as SvgAdd, W as LabeledInput, X as SvgSearch, Y as Tile, Z as Body, _ as Anchor, $ as ReactDOM, a0 as HashRouter, a1 as Routes, a2 as Route } from "./vendor.cb330440.js";
 const p = function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -288,10 +288,15 @@ const DemoTemplate = (props) => {
   });
 };
 var Content = function(props) {
-  var children = props.children;
-  return React.createElement("div", { className: "iui-layouts-page-content" }, children);
+  var children = props.children, _a = props.padded, padded = _a === void 0 ? false : _a;
+  return padded ? React.createElement("div", { className: "iui-layouts-page-content iui-layouts-page-content-padded" }, React.createElement("div", { className: "iui-layouts-page-content-centered" }, children)) : React.createElement("div", { className: "iui-layouts-page-content" }, children);
 };
 Content.displayName = "PageLayout.Content";
+var ToolsArea = function(props) {
+  var left = props.left, right = props.right;
+  return React.createElement("div", { className: "iui-layouts-page-content-tools" }, left && React.createElement("div", { className: "iui-layouts-page-content-tools-left" }, left), right && React.createElement("div", { className: "iui-layouts-page-content-tools-right" }, right));
+};
+ToolsArea.displayName = "PageLayout.ToolsArea";
 var Header = function(props) {
   var children = props.children;
   return React.createElement("div", { className: "iui-layouts-page-header" }, children);
@@ -302,6 +307,11 @@ var SideNavigation = function(props) {
   return React.createElement("div", { className: "iui-layouts-page-sidenav" }, children);
 };
 SideNavigation.displayName = "PageLayout.SideNavigation";
+var TitleArea = function(props) {
+  var children = props.children;
+  return React.createElement("div", { className: "iui-layouts-page-content-title-area" }, children);
+};
+TitleArea.displayName = "PageLayout.TitleArea";
 var PageLayout = function(props) {
   var children = props.children;
   return React.createElement("div", { className: "iui-layouts-page" }, children);
@@ -309,6 +319,14 @@ var PageLayout = function(props) {
 PageLayout.Header = Header;
 PageLayout.SideNavigation = SideNavigation;
 PageLayout.Content = Content;
+PageLayout.ToolsArea = ToolsArea;
+PageLayout.TitleArea = TitleArea;
+var FluidGrid = function(props) {
+  var children = props.children, _a = props.minItemWidth, minItemWidth = _a === void 0 ? 256 : _a;
+  return React.createElement("div", { className: "iui-layouts-fluid-grid", style: {
+    "--_iui-grid-item-min-width": "".concat(minItemWidth, "px")
+  } }, children);
+};
 const PageLayoutDemo = () => {
   return /* @__PURE__ */ jsx(DemoTemplate, {
     title: "Page Layout",
@@ -333,10 +351,53 @@ const PageLayoutDemo = () => {
     })
   });
 };
+const GridLayoutDemo = () => {
+  return /* @__PURE__ */ jsx(DemoTemplate, {
+    title: "Grid Layout",
+    children: /* @__PURE__ */ jsxs(PageLayout, {
+      children: [/* @__PURE__ */ jsx(PageLayout.Header, {
+        children: /* @__PURE__ */ jsx(DemoHeader, {})
+      }), /* @__PURE__ */ jsx(PageLayout.SideNavigation, {
+        children: /* @__PURE__ */ jsx(DemoSideNav, {})
+      }), /* @__PURE__ */ jsxs(PageLayout.Content, {
+        padded: true,
+        children: [/* @__PURE__ */ jsxs(PageLayout.TitleArea, {
+          children: [/* @__PURE__ */ jsx(Headline, {
+            children: "This is grid layout"
+          }), /* @__PURE__ */ jsx(Text, {
+            children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          })]
+        }), /* @__PURE__ */ jsx(PageLayout.ToolsArea, {
+          left: /* @__PURE__ */ jsx(Button, {
+            startIcon: /* @__PURE__ */ jsx(SvgAdd, {}),
+            styleType: "high-visibility",
+            children: "New"
+          }, "new"),
+          right: /* @__PURE__ */ jsx(LabeledInput, {
+            iconDisplayStyle: "inline",
+            svgIcon: /* @__PURE__ */ jsx(SvgSearch, {})
+          }, "search")
+        }), /* @__PURE__ */ jsx(FluidGrid, {
+          children: Array(12).fill(null).map((_, index2) => /* @__PURE__ */ jsx(Tile, {
+            name: `Item #${index2}`,
+            thumbnail: /* @__PURE__ */ jsx(SvgImodelHollow, {}),
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat."
+          }, index2))
+        })]
+      })]
+    })
+  });
+};
 const DEMOS_LIST = [{
   path: "page-layout",
   name: "Page layout",
+  description: "Basic layout with header and side navigation.",
   component: PageLayoutDemo
+}, {
+  path: "grid-layout",
+  name: "Grid layout",
+  description: "Grid layout to display array of tiles.",
+  component: GridLayoutDemo
 }];
 var GitHubBanner$1 = "";
 const GitHubBanner = () => {
