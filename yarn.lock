@@ -763,7 +763,6 @@ __metadata:
   dependencies:
     "@codesandbox/sandpack-react": ^0.13.7
     "@fontsource/open-sans": ^4.5.8
-    "@itwin/itwinui-css": 0.x
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
