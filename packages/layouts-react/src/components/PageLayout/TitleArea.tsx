@@ -2,15 +2,17 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+import React from 'react';
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+export type TitleAreaProps = {
+  children: React.ReactNode;
+};
+
+export const TitleArea = (props: TitleAreaProps) => {
+  const { children } = props;
+  return <div className='iui-layouts-page-content-title-area'>{children}</div>;
+};
+
+TitleArea.displayName = 'PageLayout.TitleArea';
+
+export default TitleArea;

@@ -2,15 +2,11 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+import { layoutDescribe } from '../../cypress/common/layoutDescribe';
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+layoutDescribe('GridLayoutDemo', (screenSize) => {
+  it('should render GridLayoutDemo', () => {
+    cy.visit('grid-layout');
+    cy.compareSnapshot(`basic-${screenSize.width}x${screenSize.height}`);
+  });
+});

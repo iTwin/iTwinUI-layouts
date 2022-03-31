@@ -6,11 +6,22 @@ import React from 'react';
 
 export type ContentProps = {
   children: React.ReactNode;
+  /**
+   * Adds padding and max-width to content
+   * @default false
+   */
+  padded?: boolean;
 };
 
 export const Content = (props: ContentProps) => {
-  const { children } = props;
-  return <div className='iui-layouts-page-content'>{children}</div>;
+  const { children, padded = false } = props;
+  return padded ? (
+    <div className='iui-layouts-page-content iui-layouts-page-content-padded'>
+      <div className='iui-layouts-page-content-centered'>{children}</div>
+    </div>
+  ) : (
+    <div className='iui-layouts-page-content'>{children}</div>
+  );
 };
 
 Content.displayName = 'PageLayout.Content';
