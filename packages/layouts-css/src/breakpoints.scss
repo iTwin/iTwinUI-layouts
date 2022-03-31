@@ -2,12 +2,12 @@
 // See LICENSE.md in the project root for license terms and full copyright notice.
 
 @mixin mobile {
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     @content;
   }
 }
 @mixin tablet {
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 769px) and (max-width: 991px) {
     @content;
   }
 }

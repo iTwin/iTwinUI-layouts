@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 
-export type ContentToolsProps = {
+export type ToolsAreaProps = {
   /**
    * Tools displayed at the left side of toolbar
    */
@@ -15,7 +15,7 @@ export type ContentToolsProps = {
   right?: React.ReactNode;
 };
 
-export const ToolsArea = (props: ContentToolsProps) => {
+export const ToolsArea = (props: ToolsAreaProps) => {
   const { left, right } = props;
   return (
     <div className='iui-layouts-page-content-tools'>
