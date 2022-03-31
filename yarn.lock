@@ -699,10 +699,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-css@npm:0.x, @itwin/itwinui-css@npm:^0.44.2":
-  version: 0.44.2
-  resolution: "@itwin/itwinui-css@npm:0.44.2"
-  checksum: 33571b956be4882904a24c2fd984ffe6211c391df0ff0fa12abbf0c8d6d3fa4b286dfec6a14d63d69d9bdc54fbfe94d8676d403723cb1c5d158c033542189f1b
+"@itwin/itwinui-css@npm:0.x":
+  version: 0.53.2
+  resolution: "@itwin/itwinui-css@npm:0.53.2"
+  checksum: a0dd7609f945fe11bbc8adb052a5f33c6d874c42fd1521e14b2bcdf01bd86e12272baf70d4eee1d05aba1f90f11432d061dd5b1b78bd510c88062659d13da1e0
   languageName: node
   linkType: hard
 
@@ -763,11 +763,11 @@ __metadata:
   dependencies:
     "@codesandbox/sandpack-react": ^0.13.7
     "@fontsource/open-sans": ^4.5.8
-    "@itwin/itwinui-css": ^0.44.2
+    "@itwin/itwinui-css": 0.x
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
-    "@itwin/itwinui-react": ^1.34.1
+    "@itwin/itwinui-react": ^1.34.2
     "@types/react": ^17.0.33
     "@types/react-dom": ^17.0.10
     "@vitejs/plugin-react": ^1.0.7
@@ -823,9 +823,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@itwin/itwinui-react@npm:^1.34.1":
-  version: 1.34.1
-  resolution: "@itwin/itwinui-react@npm:1.34.1"
+"@itwin/itwinui-react@npm:^1.34.2":
+  version: 1.34.2
+  resolution: "@itwin/itwinui-react@npm:1.34.2"
   dependencies:
     "@itwin/itwinui-css": ^0.52.0
     "@itwin/itwinui-icons-react": ^1.5.0
@@ -838,7 +838,7 @@ __metadata:
   peerDependencies:
     react: ^16.8.6 || ^17.0.0
     react-dom: ^16.8.6 || ^17.0.0
-  checksum: 6f6695e611b5f678d084e023fe3697d9b2ff174508c4c6163e05e26388741c0fed452f0282724ce7fd440c02aeb06cf8666a9a57dfecc23b855ce1fbc0b169c5
+  checksum: f319f9a7964b21c6616e84a80ecee67c3ab54006633ada97d41eabab36d29b16590c75b203da14762a725c414eb840436f6b93630650ceee10be4cd79105882e
   languageName: node
   linkType: hard
 
