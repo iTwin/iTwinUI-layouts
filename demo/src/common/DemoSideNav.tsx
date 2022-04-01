@@ -28,7 +28,7 @@ export const DemoSideNav = ({ activeItemKey = 'Home' }) => {
           startIcon={<SvgModel />}
           key='Model'
           isActive={activeItemKey === 'Model'}
-          onClick={() => open('/iTwinUI-layouts/#/app', '_self')}
+          onClick={() => open('/iTwinUI-layouts/#/app-layout', '_self')}
         >
           Model
         </SidenavButton>,
@@ -36,7 +36,7 @@ export const DemoSideNav = ({ activeItemKey = 'Home' }) => {
           startIcon={<SvgFolder />}
           key='Browse'
           isActive={activeItemKey === 'Browse'}
-          onClick={() => open('/iTwinUI-layouts/#/grid', '_self')}
+          onClick={() => open('/iTwinUI-layouts/#/grid-layout', '_self')}
         >
           Browse
         </SidenavButton>,
