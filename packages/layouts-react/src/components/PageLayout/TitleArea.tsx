@@ -10,7 +10,7 @@ export type TitleAreaProps = {
 
 export const TitleArea = (props: TitleAreaProps) => {
   const { children } = props;
-  return <div className='iui-layouts-content-title-area'>{children}</div>;
+  return <div className='iui-layouts-page-content-title-area'>{children}</div>;
 };
 
 TitleArea.displayName = 'PageLayout.TitleArea';

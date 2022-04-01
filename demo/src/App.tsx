@@ -11,6 +11,10 @@ import { PageLayout } from '@itwin/itwinui-layouts-react';
 import { Link } from 'react-router-dom';
 import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
+import '@fontsource/open-sans/300.css';
+import '@fontsource/open-sans/400.css';
+import '@fontsource/open-sans/600.css';
+import '@fontsource/open-sans/700.css';
 
 const App = () => {
   return (

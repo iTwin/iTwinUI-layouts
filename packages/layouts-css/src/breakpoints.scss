@@ -1,23 +1,23 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
 
-@mixin very-small-screen {
-  @media (max-width: 479px) {
+@mixin mobile {
+  @media (max-width: 768px) {
     @content;
   }
 }
-@mixin small-screen {
-  @media (min-width: 480px) and (max-width: 768px) {
+@mixin tablet {
+  @media (min-width: 769px) and (max-width: 991px) {
     @content;
   }
 }
-@mixin medium-screen {
-  @media (min-width: 769px) and (max-width: 1079px) {
+@mixin small-monitor {
+  @media (min-width: 992px) and (max-width: 1199px) {
     @content;
   }
 }
-@mixin large-screen {
-  @media (min-width: 1080px) {
+@mixin large-monitor {
+  @media (min-width: 1200px) {
     @content;
   }
 }

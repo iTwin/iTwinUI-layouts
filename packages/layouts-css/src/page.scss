@@ -1,6 +1,7 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import './breakpoints';
+@import '@itwin/itwinui-css/scss/variables';
 
 .iui-layouts-page {
   height: 100%;
@@ -52,8 +53,64 @@
     }
   }
 
-  &-title-area {
-    display: flex;
-    flex-direction: column;
+  &-content {
+    grid-area: content;
+    overflow: overlay;
+    background-color: var(--iui-color-background-2);
+
+    &-padded {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include large-monitor {
+        padding: $iui-xl $iui-xxl;
+      }
+
+      @include small-monitor {
+        padding: $iui-l 48px;
+      }
+
+      @include tablet {
+        padding: $iui-m $iui-xl;
+      }
+
+      @include mobile {
+        padding: $iui-s $iui-l;
+      }
+    }
+
+    &-centered {
+      max-width: 1440px;
+      width: 100%;
+    }
+
+    &-title-area {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: $iui-baseline * 3;
+    }
+
+    &-tools {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: $iui-baseline * 2;
+      justify-content: space-between;
+
+      &-left,
+      &-right {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        gap: $iui-s;
+        align-items: center;
+        min-width: 0;
+        flex-basis: 50%;
+      }
+
+      &-right {
+        justify-content: flex-end;
+      }
+    }
   }
 }
