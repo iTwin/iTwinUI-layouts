@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 import { layoutDescribe } from '../../cypress/common/layoutDescribe';
 
-layoutDescribe('PageLayoutDemo', (screenSize) => {
-  it('should render PageLayoutDemo', () => {
+layoutDescribe('AppLayoutDemo', (screenSize) => {
+  it('should render AppLayoutDemo', () => {
     cy.visit('app-layout');
     // Hiding iTwin.js viewer to avoid flakiness
     cy.get('iframe').hide();

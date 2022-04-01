@@ -3,7 +3,7 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import PageLayoutDemo from './PageLayoutDemo';
+import AppLayoutDemo from './AppLayoutDemo';
 import GridLayoutDemo from './GridLayoutDemo';
 import { SvgImodelHollow, SvgGrid } from '@itwin/itwinui-icons-react';
 
@@ -16,7 +16,7 @@ export const DEMOS_LIST = [
     name: 'App',
     description: 'Display an iTwin.js frame within the content area.',
     icon: <SvgImodelHollow />,
-    component: PageLayoutDemo,
+    component: AppLayoutDemo,
   },
   {
     path: 'grid-layout',
