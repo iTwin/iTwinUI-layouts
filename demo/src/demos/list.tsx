@@ -19,7 +19,7 @@ export const DEMOS_LIST = [
     component: PageLayoutDemo,
   },
   {
-    path: 'tiles-grid-layout',
+    path: 'grid-layout',
     name: 'Tiles grid',
     description: 'A responsive grid of tiles.',
     icon: <SvgGrid />,
