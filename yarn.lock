@@ -713,13 +713,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-css@npm:^0.50.0":
-  version: 0.50.0
-  resolution: "@itwin/itwinui-css@npm:0.50.0"
-  checksum: f1b55da40e7db37187324a7f7831e4ae01394fefed8fe5dc55ed1fc3e21714c8a872325f3861c94a14580a18d1856e4f599a7afbe52b4f486d6b567e6e8534af
-  languageName: node
-  linkType: hard
-
 "@itwin/itwinui-icons-react@npm:^1.5.0":
   version: 1.5.1
   resolution: "@itwin/itwinui-icons-react@npm:1.5.1"

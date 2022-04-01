@@ -7,8 +7,7 @@ import './App.scss';
 import '@codesandbox/sandpack-react/dist/index.css';
 import '@itwin/itwinui-layouts-css/styles.css';
 import { Anchor, Text, Body, Tile, Button } from '@itwin/itwinui-react';
-import { PageLayout } from '@itwin/itwinui-layouts-react';
-import { Link } from 'react-router-dom';
+import { FluidGrid } from '@itwin/itwinui-layouts-react';
 import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
 import '@fontsource/open-sans/300.css';
@@ -36,7 +35,7 @@ const App = () => {
         src='https://img.shields.io/github/last-commit/itwin/iTwinUI-layouts'
       />
       <hr />
-      <PageLayout.Grid>
+      <FluidGrid>
         {DEMOS_LIST.map(({ path, name, description, icon }) => (
           <Tile
             key={name}
@@ -44,13 +43,13 @@ const App = () => {
             description={description}
             thumbnail={icon}
             buttons={[
-              <Button key='1' onClick={() => open({ path }, '_self')}>
+              <Button key='1' onClick={() => open(`#/${path}`, '_self')}>
                 View
               </Button>,
             ]}
           />
         ))}
-      </PageLayout.Grid>
+      </FluidGrid>
     </div>
   );
 };

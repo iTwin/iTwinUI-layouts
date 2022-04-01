@@ -17,41 +17,6 @@
   &-sidenav {
     grid-area: sidenav;
   }
-}
-
-.iui-layouts-content {
-  grid-area: content;
-  overflow: auto;
-  overflow: overlay;
-  background-color: var(--iui-color-background-2);
-  display: flex;
-  justify-content: center;
-
-  &-padded {
-    display: flex;
-    flex-direction: column;
-    max-width: 1440px;
-
-    @include large-screen {
-      padding: 64px;
-      gap: 24px;
-    }
-
-    @include medium-screen {
-      padding: 44px;
-      gap: 24px;
-    }
-
-    @include small-screen {
-      padding: 32px;
-      gap: 16px;
-    }
-
-    @include very-small-screen {
-      padding: 24px;
-      gap: 16px;
-    }
-  }
 
   &-content {
     grid-area: content;

@@ -13,7 +13,7 @@ export const PageLayoutDemo = () => {
     <DemoTemplate title='App'>
       <PageLayout>
         <PageLayout.Header>
-          <DemoHeader isSlim='true' />
+          <DemoHeader isSlim />
         </PageLayout.Header>
 
         <PageLayout.SideNavigation>

@@ -2,6 +2,7 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
+import React from 'react';
 import PageLayoutDemo from './PageLayoutDemo';
 import GridLayoutDemo from './GridLayoutDemo';
 import { SvgImodelHollow, SvgGrid } from '@itwin/itwinui-icons-react';

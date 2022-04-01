@@ -11,15 +11,10 @@ import {
   Tile,
   Headline,
   Text,
-  ButtonGroup,
-  IconButton,  LabeledInput,
+  LabeledInput,
   Button,
 } from '@itwin/itwinui-react';
-import {
-  SvgImodelHollow,
-  SvgFilterHollow,
-  SvgSmileyHappyVeryHollow,SvgSearch, SvgAdd 
-} from '@itwin/itwinui-icons-react';
+import { SvgImodelHollow, SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
 
 export const GridLayoutDemo = () => {
   return (

@@ -6,7 +6,6 @@ import React from 'react';
 import Content from './Content';
 import ToolsArea from './ToolsArea';
 import { Header } from './Header';
-import { Grid } from './Grid';
 import SideNavigation from './SideNavigation';
 import TitleArea from './TitleArea';
 
