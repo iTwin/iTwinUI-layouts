@@ -40,7 +40,12 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
     <Header
       isSlim={isSlim}
       appLogo={
-        <HeaderLogo logo={<SvgImodelHollow />}>iTwin Services</HeaderLogo>
+        <HeaderLogo
+          logo={<SvgImodelHollow />}
+          onClick={() => open(`#/`, '_self')}
+        >
+          iTwin Services
+        </HeaderLogo>
       }
       breadcrumbs={
         <HeaderBreadcrumbs

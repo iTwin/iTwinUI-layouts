@@ -12,15 +12,15 @@ import { SvgImodelHollow, SvgGrid } from '@itwin/itwinui-icons-react';
  */
 export const DEMOS_LIST = [
   {
-    path: 'app',
+    path: 'app-layout',
     name: 'App',
     description: 'Display an iTwin.js frame within the content area.',
     icon: <SvgImodelHollow />,
     component: PageLayoutDemo,
   },
   {
-    path: 'grid',
-    name: 'Grid',
+    path: 'tiles-grid-layout',
+    name: 'Tiles grid',
     description: 'A responsive grid of tiles.',
     icon: <SvgGrid />,
     component: GridLayoutDemo,
