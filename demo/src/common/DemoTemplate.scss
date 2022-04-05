@@ -2,35 +2,101 @@
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import '@itwin/itwinui-css/scss/variables';
 
-.demo-template {
-  &-container {
-    box-shadow: $iui-elevation-2;
-    background-color: var(--iui-color-background-1);
+.demo-template-container {
+  display: flex;
+  height: 100vh;
+  background-color: var(--iui-color-background-4);
+
+  &-vertical {
+    flex-direction: column;
+
+    .demo-template-code {
+      max-width: revert;
+      max-height: 25%;
+      border-left: none;
+      border-top: $iui-xxs solid var(--iui-color-background-5);
+    }
+  }
+}
+
+.demo-template-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.demo-template-code {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--iui-color-background-5);
+  width: 40%;
+
+  &-header {
     display: flex;
+    gap: $iui-s;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $iui-sm;
+    height: $iui-baseline * 5 + 2px;
+    border-bottom: $iui-xxs solid var(--iui-color-background-5);
+
+    &-left {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      min-width: 0;
+    }
+
+    &-back {
+      font-size: $iui-l;
+      font-weight: 300;
+      user-select: none;
+    }
+
+    &-title {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      user-select: all;
+
+      &::before {
+        content: '/';
+        color: var(--iui-text-color-muted);
+        margin: 0 $iui-xs;
+      }
+    }
+
+    &-right {
+      display: flex;
+      gap: $iui-s;
+    }
   }
 
-  &-content {
-    flex: 2;
-    position: relative;
+  .sp-wrapper,
+  .sp-stack {
+    overflow: auto;
   }
 
-  &-code {
+  .sp-wrapper {
     flex: 1;
-
-    .sp-wrapper,
-    .sp-stack {
-      height: 100%;
-    }
-
-    .sp-layout {
-      border-radius: 0;
-      height: 100%;
-    }
   }
 
-  &-fullscreen-button {
-    position: absolute;
-    bottom: 22px;
-    right: 24px;
+  .sp-stack {
+    min-width: auto;
+    height: 100%;
   }
+
+  .sp-layout {
+    border-radius: 0;
+    height: 100%;
+    border: none;
+  }
+}
+
+.demo-template-button-overlay {
+  position: absolute;
+  bottom: $iui-baseline;
+  right: $iui-sm;
+  box-shadow: $iui-elevation-8;
 }

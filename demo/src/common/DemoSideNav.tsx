@@ -3,7 +3,11 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import { SvgFlag, SvgHome, SvgSettings } from '@itwin/itwinui-icons-react';
+import {
+  SvgHome,
+  SvgConfiguration,
+  SvgModel,
+} from '@itwin/itwinui-icons-react';
 import { SidenavButton, SideNavigation } from '@itwin/itwinui-react';
 
 export const DemoSideNav = () => {
@@ -13,15 +17,15 @@ export const DemoSideNav = () => {
       expanderPlacement='bottom'
       items={[
         <SidenavButton startIcon={<SvgHome />} key='Home'>
-          {'Home'}
+          Home
         </SidenavButton>,
-        <SidenavButton startIcon={<SvgFlag />} key='Manage Versions'>
-          {'Manage Versions'}
+        <SidenavButton startIcon={<SvgModel />} key='Model' isActive>
+          Model
         </SidenavButton>,
       ]}
       secondaryItems={[
-        <SidenavButton startIcon={<SvgSettings />} key='settings'>
-          Settings
+        <SidenavButton startIcon={<SvgConfiguration />} key='configuration'>
+          Configuration
         </SidenavButton>,
       ]}
     />

@@ -10,14 +10,21 @@ export type ContentProps = {
    */
   style?: React.CSSProperties;
   children: React.ReactNode;
+  /**
+   * Adds padding and max-width to content
+   * @default false
+   */
+  padded?: boolean;
 };
 
 export const Content = (props: ContentProps) => {
-  const { children, style } = props;
-  return (
-    <div className='iui-layouts-page-content' style={style}>
-      {children}
+  const { children, padded = false } = props;
+  return padded ? (
+    <div className='iui-layouts-page-content iui-layouts-page-content-padded'>
+      <div className='iui-layouts-page-content-centered'>{children}</div>
     </div>
+  ) : (
+    <div className='iui-layouts-page-content'>{children}</div>
   );
 };
 

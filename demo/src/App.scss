@@ -5,5 +5,11 @@
 @import '@itwin/itwinui-css/scss/variables';
 
 .app {
-  padding: 2 * $iui-baseline $iui-l;
+  padding: $iui-line-height $iui-l;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--iui-color-background-5);
+  margin: $iui-baseline 0;
 }

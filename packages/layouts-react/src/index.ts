@@ -5,5 +5,5 @@
 export { PageLayout } from './components/PageLayout';
 export type { PageLayoutProps } from './components/PageLayout';
 
-export { Grid, Grid1, Grid2, Card } from './components/Grid';
-export type { GridProps, CardProps } from './components/Grid';
+export { FluidGrid } from './components/Grid';
+export type { FluidGridProps } from './components/Grid';
