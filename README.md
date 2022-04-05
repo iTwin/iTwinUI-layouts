@@ -42,6 +42,20 @@ yarn add @itwin/itwinui-layouts
 
 Import the component you want and start using it!
 
+```jsx
+import { PageLayout } from '@itwin/itwinui-layouts-react';
+
+const App = () => (
+  <PageLayout>
+    <PageLayout.Header>{header}</PageLayout.Header>
+
+    <PageLayout.SideNavigation>{sideNavigation}</PageLayout.SideNavigation>
+
+    <PageLayout.Content>{content}</PageLayout.Content>
+  </PageLayout>
+);
+```
+
 ---
 
 ## Contributing
