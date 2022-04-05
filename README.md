@@ -22,6 +22,31 @@
 
 ## Key features
 
-While the iTwinUI-React package makes it easy to place singular components, that’s only half of the struggle when trying to deliver a beautiful, consistent, and accessible web interface.  
-iTwinUI-Layouts takes those components and places them accordingly within the page with minimal effort on the development side.
+iTwinUI-Layouts takes iTwinUI-React components and places them accordingly within the page with minimal effort on the development side.
+
+---
+
+## Installation
+
+```
+npm install @itwin/itwinui-layouts
+```
+
+```
+yarn add @itwin/itwinui-layouts
+```
+
+---
+
+## Usage
+
+Import the component you want and start using it!
+
+---
+
+## Contributing
+
+We welcome you to contribute and make this UI design system better. You can submit feature requests or bugs by creating an [issue](https://github.com/iTwin/iTwinUI-react/issues).
+Please read our [CONTRIBUTING.md](https://github.com/iTwin/iTwinUI-react/blob/main/CONTRIBUTING.md) for more information.
+
 ---
