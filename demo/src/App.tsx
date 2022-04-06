@@ -6,7 +6,7 @@ import React from 'react';
 import './App.scss';
 import '@codesandbox/sandpack-react/dist/index.css';
 import '@itwin/itwinui-layouts-css/styles.css';
-import { Anchor, Text, Body, Tile, Button } from '@itwin/itwinui-react';
+import { Anchor, Text, Body, Tile } from '@itwin/itwinui-react';
 import { FluidGrid } from '@itwin/itwinui-layouts-react';
 import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
@@ -14,8 +14,10 @@ import '@fontsource/open-sans/300.css';
 import '@fontsource/open-sans/400.css';
 import '@fontsource/open-sans/600.css';
 import '@fontsource/open-sans/700.css';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
+  const navigate = useNavigate();
   return (
     <div className='app'>
       <GitHubBanner />
@@ -37,17 +39,13 @@ const App = () => {
       <hr />
       <FluidGrid>
         {DEMOS_LIST.map(({ path, name, description, icon }) => (
-          <Tile
+          <div
             key={name}
-            name={name}
-            description={description}
-            thumbnail={icon}
-            buttons={[
-              <Button key='1' onClick={() => open(`#/${path}`, '_self')}>
-                View
-              </Button>,
-            ]}
-          />
+            onClick={() => navigate(path)}
+            className='tile-wrapper'
+          >
+            <Tile name={name} description={description} thumbnail={icon} />
+          </div>
         ))}
       </FluidGrid>
     </div>
