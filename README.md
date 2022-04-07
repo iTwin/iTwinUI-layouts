@@ -22,7 +22,7 @@
 
 ## Key features
 
-iTwinUI-Layouts places given React (eg. (iTWinUI-react)[https://github.com/iTwin/iTwinUI-react]) components accordingly within the page with minimal effort on the development side.
+iTwinUI-Layouts places given React (eg. [iTWinUI-react](https://github.com/iTwin/iTwinUI-react)) components accordingly within the page with minimal effort on the development side.
 
 ---
 
