@@ -10,9 +10,13 @@ export type GridProps = {
 
 export const Grid = (props: GridProps) => {
   const { children } = props;
-  return <div className='iui-layouts-grid'>{children}</div>;
+  return <div className='iui-layouts-grid1'>{children}</div>;
 };
 
 Grid.displayName = 'PageLayout.Grid';
 
 export default Grid;
+
+// add grid item (hight and width props)
+// expose breakpoints
+//
