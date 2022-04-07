@@ -28,11 +28,11 @@ iTwinUI-Layouts places given React (eg. [iTWinUI-react](https://github.com/iTwin
 
 ## Installation
 
-### CSS package
+#### CSS package
 
 TBD
 
-### React package
+#### React package
 
 ```
 npm install @itwin/itwinui-layouts-react
@@ -45,6 +45,8 @@ yarn add @itwin/itwinui-layouts-react
 ---
 
 ## Usage
+
+#### React package
 
 Import the component you want and start using it!
 
