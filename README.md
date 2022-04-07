@@ -16,24 +16,30 @@
 
 <div align="center">
   
-  [Key features](#key-features) • [Install](#install) • [Use](#use) • [Contributing](#contributing)
+  [Key features](#key-features) • [Installation](#Installation) • [Usage](#Usage) • [Contributing](#contributing)
 
 </div>
 
 ## Key features
 
-iTwinUI-Layouts takes iTwinUI-React components and places them accordingly within the page with minimal effort on the development side.
+iTwinUI-Layouts places given React (eg. (iTWinUI-react)[https://github.com/iTwin/iTwinUI-react]) components accordingly within the page with minimal effort on the development side.
 
 ---
 
 ## Installation
 
+### CSS package
+
+TBD
+
+### React package
+
 ```
-npm install @itwin/itwinui-layouts
+npm install @itwin/itwinui-layouts-react
 ```
 
 ```
-yarn add @itwin/itwinui-layouts
+yarn add @itwin/itwinui-layouts-react
 ```
 
 ---
@@ -60,7 +66,7 @@ const App = () => (
 
 ## Contributing
 
-We welcome you to contribute and make this UI design system better. You can submit feature requests or bugs by creating an [issue](https://github.com/iTwin/iTwinUI-layouts/issues).
+We welcome you to contribute and make this layouts library better. You can submit feature requests or bugs by creating an [issue](https://github.com/iTwin/iTwinUI-layouts/issues).
 Please read our [CONTRIBUTING.md](https://github.com/iTwin/iTwinUI-layouts/blob/main/CONTRIBUTING.md) for more information.
 
 ---
