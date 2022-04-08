@@ -1,0 +1,32 @@
+.mobile-menu-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+.iui-information-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.iui-header-split-button.iui-button-split-menu {
+  > div:first-child {
+    flex-grow: 1;
+
+    > button {
+      justify-content: flex-start;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .iui-page-header .iui-left .iui-header-logo > .iui-label {
+    display: unset;
+  }
+  .iui-page-header .iui-divider {
+    display: none;
+  }
+}

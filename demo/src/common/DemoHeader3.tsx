@@ -35,9 +35,12 @@ import {
   SvgProject,
   SvgMenu,
   SvgChevronLeft,
+  SvgHome,
+  SvgConfiguration,
 } from '@itwin/itwinui-icons-react';
 import './DemoHeader.scss';
 import DemoMobileHeaderMenuItem from './DemoMobileMenuItem';
+import DemoPopupMenu from './DemoPopupMenu';
 import { useMobile } from './useMobile';
 
 export const DemoHeader = () => {
@@ -47,7 +50,7 @@ export const DemoHeader = () => {
 
   const [isSecondaryMenuOpen, setIsSecondaryMenuOpen] = React.useState(false);
   const secondaryMenuContent = (
-    <ul style={{ listStyle: 'none', padding: 0 }}>
+    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
       <MenuItem
         key='projectA'
         sublabel='0x0123456789'
@@ -60,17 +63,30 @@ export const DemoHeader = () => {
         }
         badge={<SvgCheckmark />}
         isSelected
+        onClick={() => setIsSecondaryMenuOpen(false)}
       >
         Project Alpha
       </MenuItem>
-      <MenuItem key='projectB' sublabel='0x0987654321' icon={<SvgProject />}>
+      <MenuItem
+        key='projectB'
+        sublabel='0x0987654321'
+        icon={<SvgProject />}
+        onClick={() => setIsSecondaryMenuOpen(false)}
+      >
         Project Beta
       </MenuItem>
-      <MenuItem key='projectC' sublabel='0x0001337420' icon={<SvgProject />}>
+      <MenuItem
+        key='projectC'
+        sublabel='0x0001337420'
+        icon={<SvgProject />}
+        onClick={() => setIsSecondaryMenuOpen(false)}
+      >
         Project Charlie
       </MenuItem>
       <MenuDivider key='divider' />
-      <MenuItem key='myProjects'>My projects</MenuItem>
+      <MenuItem key='myProjects' onClick={() => setIsSecondaryMenuOpen(false)}>
+        My projects
+      </MenuItem>
     </ul>
   );
 
@@ -78,178 +94,75 @@ export const DemoHeader = () => {
     <>
       {isMobile && (
         <>
-          {isMenuOpen && <div className='mobile-menu-overlay' />}
-          <InformationPanel
-            isOpen={isMenuOpen}
-            style={{ position: 'fixed', overflow: 'hidden' }}
+          <DemoPopupMenu
+            isOpen={isSecondaryMenuOpen}
+            onClose={() => setIsSecondaryMenuOpen(false)}
           >
+            {secondaryMenuContent}
+          </DemoPopupMenu>
+          {isMenuOpen && <div className='mobile-menu-overlay' />}
+          <InformationPanel isOpen={isMenuOpen}>
             <InformationPanelHeader onClose={() => setIsMenuOpen(false)}>
-              {isSecondaryMenuOpen && (
-                <>
-                  <IconButton
-                    styleType='borderless'
-                    onClick={() => setIsSecondaryMenuOpen(false)}
-                  >
-                    <SvgChevronLeft style={{ width: 16, height: 16 }} />
-                  </IconButton>
-                  <Text variant='subheading'>Project selection</Text>
-                </>
-              )}
-
-              {!isSecondaryMenuOpen && (
-                <>
-                  <SvgImodelHollow />
-                  <Text variant='subheading'>iTwin Services</Text>
-                </>
-              )}
+              <SvgImodelHollow style={{ marginLeft: 12, marginRight: 24 }} />
+              <Text variant='subheading'>iTwin Services</Text>
             </InformationPanelHeader>
-            <div
-              style={{
-                width: '200%',
-                display: 'flex',
-                transform: isSecondaryMenuOpen ? 'translate(-50%)' : undefined,
-                transition: 'transform 0.2s ease-out, opacity 0.2s ease',
-              }}
-            >
-              <InformationPanelBody style={{ width: '50%' }}>
-                {!isSecondaryMenuOpen && (
-                  <>
-                    <DemoMobileHeaderMenuItem
-                      startIcon={
-                        <img
-                          src='https://itwinplatformcdn.azureedge.net/iTwinUI/stadium.png'
-                          alt='Project thumbnail'
-                          draggable='false'
-                        />
-                      }
-                      title='Project Alpha'
-                      description='0x0123456789'
-                      showChevron
-                      onChevronClick={() => setIsSecondaryMenuOpen(true)}
-                    />
-                    <hr />
-                    <DemoMobileHeaderMenuItem
-                      startIcon={<SvgModel />}
-                      title='iModel Beta'
-                      description='0x0987654321'
-                      showChevron
-                      onChevronClick={() => setIsSecondaryMenuOpen(true)}
-                    />
-                    <hr />
-                    <DemoMobileHeaderMenuItem
-                      title='Settings'
-                      startIcon={<SvgSettings />}
-                    />
-                    <hr />
-                    <DemoMobileHeaderMenuItem
-                      title='Feedback'
-                      startIcon={<SvgSmileyHappy />}
-                    />
-                    <hr />
-                    <DemoMobileHeaderMenuItem
-                      title={`What's new`}
-                      startIcon={<SvgNews />}
-                    />
-                    <hr />
-                    <DemoMobileHeaderMenuItem
-                      title='About'
-                      startIcon={<SvgInfoCircular />}
-                    />
-                    <hr />
-                    {/* <HeaderButton
-                      key='projectBreadcrumb'
-                      name='Project Alpha'
-                      description='0x0123456789'
-                      startIcon={
-                        <img
-                          src='https://itwinplatformcdn.azureedge.net/iTwinUI/stadium.png'
-                          alt='Project thumbnail'
-                          draggable='false'
-                        />
-                      }
-                      onClick={() => {}}
-                      menuItems={() => [
-                        <MenuItem
-                          key='projectA'
-                          sublabel='0x0123456789'
-                          icon={
-                            <img
-                              src='https://itwinplatformcdn.azureedge.net/iTwinUI/stadium.png'
-                              alt='Project thumbnail'
-                              draggable='false'
-                            />
-                          }
-                          badge={<SvgCheckmark />}
-                          isSelected
-                        >
-                          Project Alpha
-                        </MenuItem>,
-                        <MenuItem
-                          key='projectB'
-                          sublabel='0x0987654321'
-                          icon={<SvgProject />}
-                        >
-                          Project Beta
-                        </MenuItem>,
-                        <MenuItem
-                          key='projectC'
-                          sublabel='0x0001337420'
-                          icon={<SvgProject />}
-                        >
-                          Project Charlie
-                        </MenuItem>,
-                        <MenuDivider key='divider' />,
-                        <MenuItem key='myProjects'>My projects</MenuItem>,
-                      ]}
-                    />
-                    <hr /> */}
-                    {/* <HeaderButton
-                      key='iModelBreadcrumb'
-                      name='iModel Beta'
-                      description='0x0987654321'
-                      startIcon={<SvgModel />}
-                      onClick={() => {}}
-                      isActive
-                      menuItems={() => [
-                        <MenuItem
-                          key='iModelA'
-                          sublabel='0x0123456789'
-                          icon={<SvgModel />}
-                        >
-                          iModel Alpha
-                        </MenuItem>,
-                        <MenuItem
-                          key='iModelB'
-                          sublabel='0x0987654321'
-                          icon={<SvgModel />}
-                          isSelected
-                          badge={<SvgCheckmark />}
-                        >
-                          iModel Beta
-                        </MenuItem>,
-                        <MenuItem
-                          key='iModelC'
-                          sublabel='0x0001337420'
-                          icon={<SvgModel />}
-                        >
-                          iModel Charlie
-                        </MenuItem>,
-                        <MenuDivider key='divider' />,
-                        <MenuItem key='myiModels'>My iModels</MenuItem>,
-                      ]}
-                    />
-                    <hr /> */}
-                  </>
-                )}
-              </InformationPanelBody>
-              <InformationPanelBody
-                style={{
-                  width: '50%',
-                }}
-              >
-                {secondaryMenuContent}
-              </InformationPanelBody>
-            </div>
+            <InformationPanelBody>
+              <DemoMobileHeaderMenuItem
+                startIcon={
+                  <img
+                    src='https://itwinplatformcdn.azureedge.net/iTwinUI/stadium.png'
+                    alt='Project thumbnail'
+                    draggable='false'
+                  />
+                }
+                title='Project Alpha'
+                description='0x0123456789'
+                showChevron
+                onChevronClick={() => setIsSecondaryMenuOpen(true)}
+              />
+              <hr />
+              <DemoMobileHeaderMenuItem
+                startIcon={<SvgModel />}
+                title='iModel Beta'
+                description='0x0987654321'
+                showChevron
+                onChevronClick={() => setIsSecondaryMenuOpen(true)}
+              />
+              <hr />
+              <DemoMobileHeaderMenuItem startIcon={<SvgHome />} title='Home' />
+              <hr />
+              <DemoMobileHeaderMenuItem
+                startIcon={<SvgModel />}
+                title='Model'
+                isActive
+              />
+              <hr />
+              <DemoMobileHeaderMenuItem
+                startIcon={<SvgConfiguration />}
+                title='Configuration'
+              />
+              <hr />
+              <DemoMobileHeaderMenuItem
+                title='Settings'
+                startIcon={<SvgSettings />}
+              />
+              <hr />
+              <DemoMobileHeaderMenuItem
+                title='Feedback'
+                startIcon={<SvgSmileyHappy />}
+              />
+              <hr />
+              <DemoMobileHeaderMenuItem
+                title={`What's new`}
+                startIcon={<SvgNews />}
+              />
+              <hr />
+              <DemoMobileHeaderMenuItem
+                title='About'
+                startIcon={<SvgInfoCircular />}
+              />
+              <hr />
+            </InformationPanelBody>
           </InformationPanel>
         </>
       )}

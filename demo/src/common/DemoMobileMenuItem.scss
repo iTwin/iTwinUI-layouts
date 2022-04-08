@@ -1,0 +1,16 @@
+.demo-header-menu-item-button {
+  > div:first-child {
+    flex-grow: 1;
+
+    > button {
+      flex-grow: 1;
+      justify-content: flex-start;
+      --_iui-button-active-stripe-inset: unset;
+    }
+  }
+
+  .iui-description {
+    height: 22px;
+    opacity: 0.6;
+  }
+}
