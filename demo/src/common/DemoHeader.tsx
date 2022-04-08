@@ -44,7 +44,7 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
           logo={<SvgImodelHollow />}
           onClick={() => open(`#/`, '_self')}
         >
-          iTwin Services
+          iTwinUI-layouts
         </HeaderLogo>
       }
       breadcrumbs={
