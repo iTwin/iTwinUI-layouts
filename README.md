@@ -72,7 +72,7 @@ import "@itwin/itwinui-layouts-css";
 </div>
 ```
 
-#### React package..
+#### React package
 
 Import the component you want and start using it!
 
