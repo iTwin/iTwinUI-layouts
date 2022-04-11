@@ -61,13 +61,13 @@ import "@itwin/itwinui-layouts-css";
 <! --- app.html--->
 <div class="iui-layouts-page">
   <div class="iui-layouts-page-header">
-    <header>Your header code</header>
+    <!-- Your header code -->
   </div>
   <div class="iui-layouts-page-sidenav">
-    <div>Your side navigation</div>
+    <!-- Your side navigation -->
   </div>
   <div class="iui-layouts-page-content iui-layouts-page-content-padded">
-    <div>Your padded content</div>
+    <!-- Your content (will be padded) -->
   </div>
 </div>
 ```
@@ -81,11 +81,13 @@ import { PageLayout } from '@itwin/itwinui-layouts-react';
 
 const App = () => (
   <PageLayout>
-    <PageLayout.Header>{header}</PageLayout.Header>
+    <PageLayout.Header>{/* Your header code */}</PageLayout.Header>
 
-    <PageLayout.SideNavigation>{sideNavigation}</PageLayout.SideNavigation>
+    <PageLayout.SideNavigation>
+      {/* Add side navigation here */}
+    </PageLayout.SideNavigation>
 
-    <PageLayout.Content>{content}</PageLayout.Content>
+    <PageLayout.Content>{/* Main page content goes here */}</PageLayout.Content>
   </PageLayout>
 );
 ```
