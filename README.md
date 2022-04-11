@@ -8,7 +8,6 @@
   
   [![itwinui-layouts on npm](https://img.shields.io/npm/v/@itwin/itwinui-layouts)](https://www.npmjs.com/package/@itwin/itwinui-layouts)
   [![Build status](https://github.com/iTwin/iTwinUI-layouts/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/iTwin/iTwinUI-layouts/actions/workflows/build.yml?query=branch%3Amain)
-  [![Dependencies Status](https://img.shields.io/badge/dependencies-none-brightgreen)](https://www.npmjs.com/package/@itwin/itwinui-layouts?activeTab=dependencies)
 
 </div>
 <div align="center">
