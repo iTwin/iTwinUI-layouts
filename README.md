@@ -58,7 +58,7 @@ import "@itwin/itwinui-layouts-css";
 ```
 
 ```html
-<! --- app.html--->
+<! -- app.html -->
 <div class="iui-layouts-page">
   <div class="iui-layouts-page-header">
     <!-- Your header code -->
