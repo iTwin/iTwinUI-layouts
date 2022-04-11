@@ -5,7 +5,6 @@
 import React from 'react';
 import AppLayoutDemo from './AppLayoutDemo';
 import GridLayoutDemo from './GridLayoutDemo';
-import { SvgImodelHollow, SvgGrid } from '@itwin/itwinui-icons-react';
 
 /**
  * List of all demos. It is used to dynamically populate the home page and react-router.
@@ -15,14 +14,14 @@ export const DEMOS_LIST = [
     path: 'app-layout',
     name: 'App',
     description: 'Display an iTwin.js frame within the content area.',
-    icon: <SvgImodelHollow />,
+    icon: 'src/assets/LayoutsThumbnails/AppLayout.png',
     component: AppLayoutDemo,
   },
   {
     path: 'grid-layout',
     name: 'Tiles grid',
     description: 'A responsive grid of tiles.',
-    icon: <SvgGrid />,
+    icon: 'src/assets/LayoutsThumbnails/TileGridLayout.png',
     component: GridLayoutDemo,
   },
 ];
