@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/assets/logo.png" alt="iTwinUI Layouts logo" style="width: 300px;"/>
+  <img src="itwin.github.com/itwinui-layout/logo.png" alt="iTwinUI Layouts logo" style="width: 300px;"/>
 </p>
 
 <p align="center">An open-source design system that helps us build a unified web experience.</p>
