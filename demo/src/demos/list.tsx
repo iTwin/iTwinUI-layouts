@@ -13,7 +13,7 @@ export const DEMOS_LIST = [
     path: 'app-layout',
     name: 'App',
     description: 'Display an iTwin.js frame within the content area.',
-    icon: '/layoutsThumbnails/AppUI.png',
+    icon: '/layoutsThumbnails/AppLayout.png',
     component: AppLayoutDemo,
   },
   {
