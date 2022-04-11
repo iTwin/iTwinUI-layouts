@@ -13,14 +13,14 @@ export const DEMOS_LIST = [
     path: 'app-layout',
     name: 'App',
     description: 'Display an iTwin.js frame within the content area.',
-    icon: 'src/assets/LayoutsThumbnails/AppLayout.png',
+    icon: '/layoutsThumbnails/AppUI.png',
     component: AppLayoutDemo,
   },
   {
     path: 'grid-layout',
     name: 'Tiles grid',
     description: 'A responsive grid of tiles.',
-    icon: 'src/assets/LayoutsThumbnails/TileGridLayout.png',
+    icon: '/layoutsThumbnails/TileGridLayout.png',
     component: GridLayoutDemo,
   },
 ];
