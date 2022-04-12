@@ -1,4 +1,4 @@
-import { j as jsx, H as Header$1, a as HeaderLogo, S as SvgImodelHollow, b as HeaderBreadcrumbs, c as HeaderButton, M as MenuItem, d as SvgCheckmark, e as SvgProject, f as MenuDivider, g as SvgModel, I as IconButton, h as SvgNotification, D as DropdownMenu, i as SvgHelpCircular, k as MenuExtraContent, l as jsxs, F as Fragment, T as Text, m as Select, n as SvgExit, U as UserIcon, o as SvgSettings, p as SvgSmileyHappy, q as SvgNews, r as SvgInfoCircular, s as SideNavigation$1, t as SidenavButton, u as SvgHome, v as SvgConfiguration, R as React, w as useTheme, x as SvgMoon, y as SvgSun, z as reactElementToJsxString, A as cx, B as ButtonGroup, C as SvgWindowCollapse, E as SvgWindowFullScreen, L as Link, G as SvgDockRight, J as SvgDockBottom, K as Button, N as SandpackProvider, O as SandpackLayout, P as SandpackCodeViewer, Q as Headline, V as SvgAdd, W as LabeledInput, X as SvgSearch, Y as Tile, Z as Body, _ as Anchor, $ as ReactDOM, a0 as HashRouter, a1 as Routes, a2 as Route } from "./vendor.cb330440.js";
+import { R as React, u as useNavigate, j as jsx, H as Header$1, a as HeaderLogo, S as SvgImodelHollow, b as HeaderBreadcrumbs, c as HeaderButton, M as MenuItem, d as SvgCheckmark, e as SvgProject, f as MenuDivider, g as SvgModel, I as IconButton, h as SvgNotification, D as DropdownMenu, i as SvgHelpCircular, k as MenuExtraContent, l as jsxs, F as Fragment, T as Text, m as Select, n as SvgExit, U as UserIcon, o as SvgSettings, p as SvgSmileyHappy, q as SvgNews, r as SvgInfoCircular, s as SideNavigation$1, t as SidenavButton, v as SvgHome, w as SvgFolder, x as SvgConfiguration, y as useTheme, z as SvgMoon, A as SvgSun, B as reactElementToJsxString, C as cx, E as ButtonGroup, G as SvgWindowCollapse, J as SvgWindowFullScreen, L as Link, K as SvgDockRight, N as SvgDockBottom, O as Button, P as SandpackProvider, Q as SandpackLayout, V as SandpackCodeViewer, W as Headline, X as SvgAdd, Y as LabeledInput, Z as SvgSearch, _ as Tile, $ as Body, a0 as Anchor, a1 as ReactDOM, a2 as HashRouter, a3 as Routes, a4 as Route } from "./vendor.14d44cbe.js";
 const p = function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -45,11 +45,56 @@ var index$1 = "";
 var App$1 = "";
 var index = "";
 var styles = "";
-const DemoHeader = () => {
+var Content = function(props) {
+  var children = props.children, _a = props.padded, padded = _a === void 0 ? false : _a;
+  return padded ? React.createElement("div", { className: "iui-layouts-page-content iui-layouts-page-content-padded" }, React.createElement("div", { className: "iui-layouts-page-content-centered" }, children)) : React.createElement("div", { className: "iui-layouts-page-content" }, children);
+};
+Content.displayName = "PageLayout.Content";
+var ToolsArea = function(props) {
+  var left = props.left, right = props.right;
+  return React.createElement("div", { className: "iui-layouts-page-content-tools" }, left && React.createElement("div", { className: "iui-layouts-page-content-tools-left" }, left), right && React.createElement("div", { className: "iui-layouts-page-content-tools-right" }, right));
+};
+ToolsArea.displayName = "PageLayout.ToolsArea";
+var Header = function(props) {
+  var children = props.children;
+  return React.createElement("div", { className: "iui-layouts-page-header" }, children);
+};
+Header.displayName = "PageLayout.Header";
+var SideNavigation = function(props) {
+  var children = props.children;
+  return React.createElement("div", { className: "iui-layouts-page-sidenav" }, children);
+};
+SideNavigation.displayName = "PageLayout.SideNavigation";
+var TitleArea = function(props) {
+  var children = props.children;
+  return React.createElement("div", { className: "iui-layouts-page-content-title-area" }, children);
+};
+TitleArea.displayName = "PageLayout.TitleArea";
+var PageLayout = function(props) {
+  var children = props.children;
+  return React.createElement("div", { className: "iui-layouts-page" }, children);
+};
+PageLayout.Header = Header;
+PageLayout.SideNavigation = SideNavigation;
+PageLayout.Content = Content;
+PageLayout.ToolsArea = ToolsArea;
+PageLayout.TitleArea = TitleArea;
+var FluidGrid = function(props) {
+  var children = props.children, _a = props.minItemWidth, minItemWidth = _a === void 0 ? 256 : _a;
+  return React.createElement("div", { className: "iui-layouts-fluid-grid", style: {
+    "--_iui-grid-item-min-width": "".concat(minItemWidth, "px")
+  } }, children);
+};
+const DemoHeader = ({
+  isSlim = false
+}) => {
+  const navigate = useNavigate();
   return /* @__PURE__ */ jsx(Header$1, {
+    isSlim,
     appLogo: /* @__PURE__ */ jsx(HeaderLogo, {
       logo: /* @__PURE__ */ jsx(SvgImodelHollow, {}),
-      children: "iTwin Services"
+      onClick: () => navigate("/"),
+      children: "iTwinUI-layouts"
     }),
     breadcrumbs: /* @__PURE__ */ jsx(HeaderBreadcrumbs, {
       items: [/* @__PURE__ */ jsx(HeaderButton, {
@@ -184,18 +229,28 @@ const DemoHeader = () => {
     }, "about")]
   });
 };
-const DemoSideNav = () => {
+const DemoSideNav = ({
+  activeItemKey = "Home"
+}) => {
+  const navigate = useNavigate();
   return /* @__PURE__ */ jsx(SideNavigation$1, {
     className: "app-sidenav",
     expanderPlacement: "bottom",
     items: [/* @__PURE__ */ jsx(SidenavButton, {
       startIcon: /* @__PURE__ */ jsx(SvgHome, {}),
+      isActive: activeItemKey === "Home",
       children: "Home"
     }, "Home"), /* @__PURE__ */ jsx(SidenavButton, {
       startIcon: /* @__PURE__ */ jsx(SvgModel, {}),
-      isActive: true,
+      isActive: activeItemKey === "Model",
+      onClick: () => navigate("/app-layout"),
       children: "Model"
-    }, "Model")],
+    }, "Model"), /* @__PURE__ */ jsx(SidenavButton, {
+      startIcon: /* @__PURE__ */ jsx(SvgFolder, {}),
+      isActive: activeItemKey === "Browse",
+      onClick: () => navigate("/grid-layout"),
+      children: "Browse"
+    }, "Browse")],
     secondaryItems: [/* @__PURE__ */ jsx(SidenavButton, {
       startIcon: /* @__PURE__ */ jsx(SvgConfiguration, {}),
       children: "Configuration"
@@ -287,54 +342,18 @@ const DemoTemplate = (props) => {
     })]
   });
 };
-var Content = function(props) {
-  var children = props.children, _a = props.padded, padded = _a === void 0 ? false : _a;
-  return padded ? React.createElement("div", { className: "iui-layouts-page-content iui-layouts-page-content-padded" }, React.createElement("div", { className: "iui-layouts-page-content-centered" }, children)) : React.createElement("div", { className: "iui-layouts-page-content" }, children);
-};
-Content.displayName = "PageLayout.Content";
-var ToolsArea = function(props) {
-  var left = props.left, right = props.right;
-  return React.createElement("div", { className: "iui-layouts-page-content-tools" }, left && React.createElement("div", { className: "iui-layouts-page-content-tools-left" }, left), right && React.createElement("div", { className: "iui-layouts-page-content-tools-right" }, right));
-};
-ToolsArea.displayName = "PageLayout.ToolsArea";
-var Header = function(props) {
-  var children = props.children;
-  return React.createElement("div", { className: "iui-layouts-page-header" }, children);
-};
-Header.displayName = "PageLayout.Header";
-var SideNavigation = function(props) {
-  var children = props.children;
-  return React.createElement("div", { className: "iui-layouts-page-sidenav" }, children);
-};
-SideNavigation.displayName = "PageLayout.SideNavigation";
-var TitleArea = function(props) {
-  var children = props.children;
-  return React.createElement("div", { className: "iui-layouts-page-content-title-area" }, children);
-};
-TitleArea.displayName = "PageLayout.TitleArea";
-var PageLayout = function(props) {
-  var children = props.children;
-  return React.createElement("div", { className: "iui-layouts-page" }, children);
-};
-PageLayout.Header = Header;
-PageLayout.SideNavigation = SideNavigation;
-PageLayout.Content = Content;
-PageLayout.ToolsArea = ToolsArea;
-PageLayout.TitleArea = TitleArea;
-var FluidGrid = function(props) {
-  var children = props.children, _a = props.minItemWidth, minItemWidth = _a === void 0 ? 256 : _a;
-  return React.createElement("div", { className: "iui-layouts-fluid-grid", style: {
-    "--_iui-grid-item-min-width": "".concat(minItemWidth, "px")
-  } }, children);
-};
-const PageLayoutDemo = () => {
+const AppLayoutDemo = () => {
   return /* @__PURE__ */ jsx(DemoTemplate, {
-    title: "Page Layout",
+    title: "App",
     children: /* @__PURE__ */ jsxs(PageLayout, {
       children: [/* @__PURE__ */ jsx(PageLayout.Header, {
-        children: /* @__PURE__ */ jsx(DemoHeader, {})
+        children: /* @__PURE__ */ jsx(DemoHeader, {
+          isSlim: true
+        })
       }), /* @__PURE__ */ jsx(PageLayout.SideNavigation, {
-        children: /* @__PURE__ */ jsx(DemoSideNav, {})
+        children: /* @__PURE__ */ jsx(DemoSideNav, {
+          activeItemKey: "Model"
+        })
       }), /* @__PURE__ */ jsx(PageLayout.Content, {
         children: /* @__PURE__ */ jsx("iframe", {
           src: "https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-Layouts%20demo?editorPane=Hide&headers=Hide",
@@ -358,7 +377,9 @@ const GridLayoutDemo = () => {
       children: [/* @__PURE__ */ jsx(PageLayout.Header, {
         children: /* @__PURE__ */ jsx(DemoHeader, {})
       }), /* @__PURE__ */ jsx(PageLayout.SideNavigation, {
-        children: /* @__PURE__ */ jsx(DemoSideNav, {})
+        children: /* @__PURE__ */ jsx(DemoSideNav, {
+          activeItemKey: "Browse"
+        })
       }), /* @__PURE__ */ jsxs(PageLayout.Content, {
         padded: true,
         children: [/* @__PURE__ */ jsxs(PageLayout.TitleArea, {
@@ -389,14 +410,16 @@ const GridLayoutDemo = () => {
   });
 };
 const DEMOS_LIST = [{
-  path: "page-layout",
-  name: "Page layout",
-  description: "Basic layout with header and side navigation.",
-  component: PageLayoutDemo
+  path: "app-layout",
+  name: "App",
+  description: "Display an iTwin.js frame within the content area.",
+  icon: "/layouts-thumbnails/AppLayout.png",
+  component: AppLayoutDemo
 }, {
   path: "grid-layout",
-  name: "Grid layout",
-  description: "Grid layout to display array of tiles.",
+  name: "Tiles grid",
+  description: "A responsive grid of tiles.",
+  icon: "/layouts-thumbnails/TileGridLayout.png",
   component: GridLayoutDemo
 }];
 var GitHubBanner$1 = "";
@@ -442,6 +465,7 @@ var _400 = "";
 var _600 = "";
 var _700 = "";
 const App = () => {
+  const navigate = useNavigate();
   return /* @__PURE__ */ jsxs("div", {
     className: "app",
     children: [/* @__PURE__ */ jsx(GitHubBanner, {}), /* @__PURE__ */ jsx(Text, {
@@ -456,17 +480,21 @@ const App = () => {
     }), /* @__PURE__ */ jsx("img", {
       alt: "GitHub last commit",
       src: "https://img.shields.io/github/last-commit/itwin/iTwinUI-layouts"
-    }), /* @__PURE__ */ jsx("hr", {}), /* @__PURE__ */ jsx("ul", {
+    }), /* @__PURE__ */ jsx("hr", {}), /* @__PURE__ */ jsx(FluidGrid, {
       children: DEMOS_LIST.map(({
         path,
-        name
-      }) => /* @__PURE__ */ jsx("li", {
-        children: /* @__PURE__ */ jsx(Link, {
-          to: path,
-          className: "iui-anchor",
-          children: name
+        name,
+        description,
+        icon
+      }) => /* @__PURE__ */ jsx("div", {
+        onClick: () => navigate(path),
+        className: "tile-wrapper",
+        children: /* @__PURE__ */ jsx(Tile, {
+          name,
+          description,
+          thumbnail: icon
         })
-      }, path))
+      }, name))
     })]
   });
 };

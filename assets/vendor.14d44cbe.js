@@ -14595,6 +14595,9 @@ var __assign$3R = globalThis && globalThis.__assign || function() {
   };
   return __assign$3R.apply(this, arguments);
 };
+function SvgFolder(props) {
+  return react.exports.createElement("svg", __assign$3R({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16" }, props), react.exports.createElement("path", { d: "M1,13a1,1,0,0,0,1,1H14a1,1,0,0,0,1-1V5a1,1,0,0,0-1-1H7V3A1,1,0,0,0,6,2H2A1,1,0,0,0,1,3Z" }));
+}
 var __assign$3Q = globalThis && globalThis.__assign || function() {
   __assign$3Q = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -39460,4 +39463,4 @@ var reactElementToJsxString = function reactElementToJsxString2(element) {
   };
   return formatTree(parseReactElement(element, options), options);
 };
-export { ReactDOM as $, cx as A, ButtonGroup as B, SvgWindowCollapse as C, DropdownMenu as D, SvgWindowFullScreen as E, Fragment as F, SvgDockRight as G, Header as H, IconButton as I, SvgDockBottom as J, Button as K, Link as L, MenuItem as M, SandpackProvider as N, SandpackLayout as O, SandpackCodeViewer as P, Headline as Q, React$c as R, SvgImodelHollow as S, Text$1 as T, UserIcon as U, SvgAdd as V, LabeledInput as W, SvgSearch as X, Tile as Y, Body as Z, Anchor as _, HeaderLogo as a, HashRouter as a0, Routes as a1, Route as a2, HeaderBreadcrumbs as b, HeaderButton as c, SvgCheckmark as d, SvgProject as e, MenuDivider as f, SvgModel as g, SvgNotification as h, SvgHelpCircular as i, jsx as j, MenuExtraContent as k, jsxs as l, Select as m, SvgExit as n, SvgSettings as o, SvgSmileyHappy as p, SvgNews as q, SvgInfoCircular as r, SideNavigation as s, SidenavButton as t, SvgHome as u, SvgConfiguration as v, useTheme as w, SvgMoon as x, SvgSun as y, reactElementToJsxString as z };
+export { Body as $, SvgSun as A, reactElementToJsxString as B, cx as C, DropdownMenu as D, ButtonGroup as E, Fragment as F, SvgWindowCollapse as G, Header as H, IconButton as I, SvgWindowFullScreen as J, SvgDockRight as K, Link as L, MenuItem as M, SvgDockBottom as N, Button as O, SandpackProvider as P, SandpackLayout as Q, React$c as R, SvgImodelHollow as S, Text$1 as T, UserIcon as U, SandpackCodeViewer as V, Headline as W, SvgAdd as X, LabeledInput as Y, SvgSearch as Z, Tile as _, HeaderLogo as a, Anchor as a0, ReactDOM as a1, HashRouter as a2, Routes as a3, Route as a4, HeaderBreadcrumbs as b, HeaderButton as c, SvgCheckmark as d, SvgProject as e, MenuDivider as f, SvgModel as g, SvgNotification as h, SvgHelpCircular as i, jsx as j, MenuExtraContent as k, jsxs as l, Select as m, SvgExit as n, SvgSettings as o, SvgSmileyHappy as p, SvgNews as q, SvgInfoCircular as r, SideNavigation as s, SidenavButton as t, useNavigate as u, SvgHome as v, SvgFolder as w, SvgConfiguration as x, useTheme as y, SvgMoon as z };
