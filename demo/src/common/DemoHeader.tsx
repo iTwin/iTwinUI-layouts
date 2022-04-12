@@ -30,12 +30,22 @@ import {
   SvgNews,
   SvgProject,
 } from '@itwin/itwinui-icons-react';
+import { useNavigate } from 'react-router-dom';
 
-export const DemoHeader = () => {
+export type DemoHeaderProps = {
+  isSlim?: boolean;
+};
+
+export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
+  const navigate = useNavigate();
+
   return (
     <Header
+      isSlim={isSlim}
       appLogo={
-        <HeaderLogo logo={<SvgImodelHollow />}>iTwin Services</HeaderLogo>
+        <HeaderLogo logo={<SvgImodelHollow />} onClick={() => navigate('/')}>
+          iTwinUI-layouts
+        </HeaderLogo>
       }
       breadcrumbs={
         <HeaderBreadcrumbs
