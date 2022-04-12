@@ -2,7 +2,7 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-import PageLayoutDemo from './PageLayoutDemo';
+import AppLayoutDemo from './AppLayoutDemo';
 import GridLayoutDemo from './GridLayoutDemo';
 import HomePageDemo from './HomePageDemo';
 
@@ -11,15 +11,17 @@ import HomePageDemo from './HomePageDemo';
  */
 export const DEMOS_LIST = [
   {
-    path: 'page-layout',
-    name: 'Page layout',
-    description: 'Basic layout with header and side navigation.',
-    component: PageLayoutDemo,
+    path: 'app-layout',
+    name: 'App',
+    description: 'Display an iTwin.js frame within the content area.',
+    icon: '/layouts-thumbnails/AppLayout.png',
+    component: AppLayoutDemo,
   },
   {
     path: 'grid-layout',
-    name: 'Grid layout',
-    description: 'Grid layout to display array of tiles.',
+    name: 'Tiles grid',
+    description: 'A responsive grid of tiles.',
+    icon: '/layouts-thumbnails/TileGridLayout.png',
     component: GridLayoutDemo,
   },
   {
