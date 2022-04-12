@@ -8,16 +8,16 @@ import { DemoSideNav } from '../common/DemoSideNav';
 import { DemoTemplate } from '../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
 
-export const PageLayoutDemo = () => {
+export const AppLayoutDemo = () => {
   return (
-    <DemoTemplate title='Page Layout'>
+    <DemoTemplate title='App'>
       <PageLayout>
         <PageLayout.Header>
-          <DemoHeader />
+          <DemoHeader isSlim />
         </PageLayout.Header>
 
         <PageLayout.SideNavigation>
-          <DemoSideNav />
+          <DemoSideNav activeItemKey='Model' />
         </PageLayout.SideNavigation>
 
         <PageLayout.Content>
@@ -38,4 +38,4 @@ export const PageLayoutDemo = () => {
   );
 };
 
-export default PageLayoutDemo;
+export default AppLayoutDemo;

@@ -7,20 +7,40 @@ import {
   SvgHome,
   SvgConfiguration,
   SvgModel,
+  SvgFolder,
 } from '@itwin/itwinui-icons-react';
 import { SidenavButton, SideNavigation } from '@itwin/itwinui-react';
+import { useNavigate } from 'react-router-dom';
 
-export const DemoSideNav = () => {
+export const DemoSideNav = ({ activeItemKey = 'Home' }) => {
+  const navigate = useNavigate();
   return (
     <SideNavigation
       className='app-sidenav'
       expanderPlacement='bottom'
       items={[
-        <SidenavButton startIcon={<SvgHome />} key='Home'>
+        <SidenavButton
+          startIcon={<SvgHome />}
+          key='Home'
+          isActive={activeItemKey === 'Home'}
+        >
           Home
         </SidenavButton>,
-        <SidenavButton startIcon={<SvgModel />} key='Model' isActive>
+        <SidenavButton
+          startIcon={<SvgModel />}
+          key='Model'
+          isActive={activeItemKey === 'Model'}
+          onClick={() => navigate('/app-layout')}
+        >
           Model
+        </SidenavButton>,
+        <SidenavButton
+          startIcon={<SvgFolder />}
+          key='Browse'
+          isActive={activeItemKey === 'Browse'}
+          onClick={() => navigate('/grid-layout')}
+        >
+          Browse
         </SidenavButton>,
       ]}
       secondaryItems={[
