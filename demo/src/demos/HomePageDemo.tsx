@@ -29,11 +29,11 @@ export const HomePageDemo = () => {
         <PageLayout.Content padded>
           <Grid>
             <GridItem key={1} gridColumnSpan={'full'} />
-            <GridItem key={2} gridColumnSpan={4} gridRowSpan={3} />
-            <GridItem key={3} gridColumnSpan={4} gridRowSpan={3} />
-            <GridItem key={4} gridColumnSpan={4} gridRowSpan={3} />
-            <GridItem key={5} gridColumnSpan={2} gridRowSpan={4} />
-            <GridItem key={5} gridColumnSpan={10} gridRowSpan={4}>
+            <GridItem key={2} gridColumnSpan={4} />
+            <GridItem key={3} gridColumnSpan={4} />
+            <GridItem key={4} gridColumnSpan={4} />
+            <GridItem key={5} gridColumnSpan={2} />
+            <GridItem key={5} gridColumnSpan={10}>
               <FluidGrid>
                 {Array(6)
                   .fill(null)
