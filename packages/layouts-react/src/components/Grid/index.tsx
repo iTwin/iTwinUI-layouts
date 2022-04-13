@@ -3,6 +3,7 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 export { FluidGrid } from './FluidGrid';
-export { Grid } from './Grid';
-export { Card } from './Card';
 export type { FluidGridProps } from './FluidGrid';
+
+export { Grid } from './Grid';
+export { GridItem } from './GridItem';

@@ -1,67 +1,39 @@
+@import './breakpoints';
+
 .iui-layouts-grid {
-  //margin: 32px 64px;
-  --_iui-grid-item-min-width: 288px;
-  max-width: 1920px;
   width: 100%;
-
-  /* autoprefixer grid: no-autoplace */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
-  grid-gap: 22px 24px;
-  grid-auto-rows: 144px;
-
-  > * {
-    width: 100%;
-  }
-}
-
-.iui-layouts-grid1 {
-  width: 100%;
-  //margin: 32px 64px;
   --_iui-grid-item-min-width: 288px;
   max-width: 1920px;
 
   /* autoprefixer grid: no-autoplace */
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 22px 24px;
-  grid-auto-rows: 144px;
 
-  .iui-layouts-card {
-    background-color: aquamarine;
-    grid-column: span 2;
+  grid-gap: 22px 24px;
+  //grid-auto-rows: 78px;
+
+  @include large-monitor {
+    grid-template-columns: repeat(12, 1fr);
   }
 
-  @media screen and (max-width: 1400px) {
+  @include small-monitor {
     grid-template-columns: repeat(8, 1fr);
-
-    .iui-layouts-card {
-      grid-row: span 1;
-    }
   }
 
-  @media screen and (max-width: 800px) {
+  @include tablet {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  @include mobile {
     grid-template-columns: repeat(4, 1fr);
   }
+  @include small-mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.iui-layouts-grid2 {
-  width: 100%;
-  max-width: 1920px;
-
-  --w: 1200px;
-  --n: 4;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(100%/(var(--n) + 1) + 0.1%, (var(--w) - 100vw)*1000, 100%), 1fr));
-  grid-gap: 22px 24px;
-  grid-auto-rows: 144px;
-
-  .iui-layouts-card {
-    background-color: seagreen;
-    grid-column: span 1;
-  }
-
-  > * {
-    width: 100%;
-  }
+.iui-layouts-grid-item {
+  --_iui-grid-item-column-span: span 2;
+  background-color: lightgray;
+  min-height: 64px;
+  grid-column: var(--_iui-grid-item-column-span);
 }

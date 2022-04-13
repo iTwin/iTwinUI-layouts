@@ -7,19 +7,12 @@ import { DemoHeader } from '../common/DemoHeader';
 import { DemoSideNav } from '../common/DemoSideNav';
 import { DemoTemplate } from '../common/DemoTemplate';
 import {
-  FluidGrid,
   PageLayout,
   Grid,
-  Card,
+  GridItem,
+  FluidGrid,
 } from '@itwin/itwinui-layouts-react';
-import {
-  Tile,
-  Headline,
-  Text,
-  LabeledInput,
-  Button,
-} from '@itwin/itwinui-react';
-import { SvgImodelHollow, SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
+import { Tile } from '@itwin/itwinui-react';
 
 export const HomePageDemo = () => {
   return (
@@ -35,12 +28,25 @@ export const HomePageDemo = () => {
 
         <PageLayout.Content padded>
           <Grid>
-            {Array(5)
-              .fill(null)
-              .map((_, index) => (
-                <Card key={index} />
-              ))}
-          </Grid1>
+            <GridItem key={1} gridColumnSpan={'full'} />
+            <GridItem key={2} gridColumnSpan={4} gridRowSpan={3} />
+            <GridItem key={3} gridColumnSpan={4} gridRowSpan={3} />
+            <GridItem key={4} gridColumnSpan={4} gridRowSpan={3} />
+            <GridItem key={5} gridColumnSpan={2} gridRowSpan={4} />
+            <GridItem key={5} gridColumnSpan={10} gridRowSpan={4}>
+              <FluidGrid>
+                {Array(6)
+                  .fill(null)
+                  .map((_, index) => (
+                    <Tile
+                      key={index}
+                      name={`Item #${index}`}
+                      description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.'
+                    />
+                  ))}
+              </FluidGrid>
+            </GridItem>
+          </Grid>
         </PageLayout.Content>
       </PageLayout>
     </DemoTemplate>

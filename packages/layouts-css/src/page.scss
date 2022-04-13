@@ -43,6 +43,10 @@
       @include mobile {
         padding: $iui-s $iui-l;
       }
+
+      @include small-mobile {
+        padding: $iui-s $iui-l;
+      }
     }
 
     &-centered {

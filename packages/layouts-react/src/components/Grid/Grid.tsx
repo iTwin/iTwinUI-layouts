@@ -10,10 +10,10 @@ export type GridProps = {
 
 export const Grid = (props: GridProps) => {
   const { children } = props;
-  return <div className='iui-layouts-grid1'>{children}</div>;
+  return <div className='iui-layouts-grid'>{children}</div>;
 };
 
-Grid.displayName = 'PageLayout.Grid';
+Grid.displayName = 'Grid';
 
 export default Grid;
 

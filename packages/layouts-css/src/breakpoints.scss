@@ -1,8 +1,13 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
 
+@mixin small-mobile {
+  @media (max-width: 486px) {
+    @content;
+  }
+}
 @mixin mobile {
-  @media (max-width: 768px) {
+  @media (min-width: 486px) and (max-width: 768px) {
     @content;
   }
 }
