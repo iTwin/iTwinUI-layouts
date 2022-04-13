@@ -5,8 +5,9 @@
 <p align="center">An open-source design system that helps us build a unified web experience.</p>
   
 <div align="center">
-
-[![Build status](https://github.com/iTwin/iTwinUI-layouts/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/iTwin/iTwinUI-layouts/actions/workflows/build.yml?query=branch%3Amain)
+  
+  [![itwinui-layouts on npm](https://img.shields.io/npm/v/@itwin/itwinui-layouts-react)](https://www.npmjs.com/package/@itwin/itwinui-layouts-react)
+  [![Build status](https://github.com/iTwin/iTwinUI-layouts/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/iTwin/iTwinUI-layouts/actions/workflows/build.yml?query=branch%3Amain)
 
 </div>
 <div align="center">
@@ -23,18 +24,6 @@ iTwinUI-Layouts places given React (eg. [iTwinUI-react](https://github.com/iTwin
 
 ## Installation
 
-#### CSS package
-
-```
-npm install @itwin/itwinui-layouts-css
-```
-
-```
-yarn add @itwin/itwinui-layouts-css
-```
-
-#### React package
-
 ```
 npm install @itwin/itwinui-layouts-react
 ```
@@ -46,30 +35,6 @@ yarn add @itwin/itwinui-layouts-react
 ---
 
 ## Usage
-
-#### CSS package
-
-```css
-// app.css
-import "@itwin/itwinui-layouts-css";
-```
-
-```html
-<!-- app.html -->
-<div class="iui-layouts-page">
-  <div class="iui-layouts-page-header">
-    <!-- Your header code -->
-  </div>
-  <div class="iui-layouts-page-sidenav">
-    <!-- Your side navigation -->
-  </div>
-  <div class="iui-layouts-page-content iui-layouts-page-content-padded">
-    <!-- Your content (will be padded) -->
-  </div>
-</div>
-```
-
-#### React package
 
 Import the component you want and start using it!
 
