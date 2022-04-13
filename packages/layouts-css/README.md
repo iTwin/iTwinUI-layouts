@@ -18,7 +18,7 @@
 
 ## Key features
 
-iTwinUI-Layouts places given React (eg. [iTwinUI-react](https://github.com/iTwin/iTwinUI-react)) components accordingly within the page with minimal effort on the development side.
+iTwinUI-Layouts places given elements (eg. [iTwinUI](https://github.com/iTwin/iTwinUI)) accordingly within the page with minimal effort on the development side.
 
 ---
 
