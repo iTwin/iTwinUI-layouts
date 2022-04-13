@@ -413,13 +413,13 @@ const DEMOS_LIST = [{
   path: "app-layout",
   name: "App",
   description: "Display an iTwin.js frame within the content area.",
-  icon: "/layouts-thumbnails/AppLayout.png",
+  icon: "layouts-thumbnails/AppLayout.png",
   component: AppLayoutDemo
 }, {
   path: "grid-layout",
   name: "Tiles grid",
   description: "A responsive grid of tiles.",
-  icon: "/layouts-thumbnails/TileGridLayout.png",
+  icon: "layouts-thumbnails/TileGridLayout.png",
   component: GridLayoutDemo
 }];
 var GitHubBanner$1 = "";
