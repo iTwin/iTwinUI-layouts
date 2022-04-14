@@ -13,3 +13,12 @@ hr {
   border-top: 1px solid var(--iui-color-background-5);
   margin: $iui-baseline 0;
 }
+
+.tile-wrapper {
+  display: flex;
+  cursor: pointer;
+
+  .iui-tile {
+    width: 100%;
+  }
+}
