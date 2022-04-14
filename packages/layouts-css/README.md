@@ -18,7 +18,7 @@
 
 ## Key features
 
-iTwinUI-Layouts places given elements (eg. [iTwinUI](https://github.com/iTwin/iTwinUI)) accordingly within the page with minimal effort on the development side.
+iTwinUI-layouts places given elements (eg. [iTwinUI](https://github.com/iTwin/iTwinUI)) accordingly within the page with minimal effort on the development side.
 
 ---
 

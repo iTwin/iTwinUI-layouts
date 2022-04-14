@@ -18,7 +18,7 @@ import { SvgImodelHollow, SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
 
 export const GridLayoutDemo = () => {
   return (
-    <DemoTemplate title='Grid Layout'>
+    <DemoTemplate title='Tiles grid'>
       <PageLayout>
         <PageLayout.Header>
           <DemoHeader />
@@ -30,7 +30,7 @@ export const GridLayoutDemo = () => {
 
         <PageLayout.Content padded>
           <PageLayout.TitleArea>
-            <Headline>This is grid layout</Headline>
+            <Headline>Browse</Headline>
             <Text>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -54,6 +54,7 @@ export const GridLayoutDemo = () => {
             right={
               <LabeledInput
                 key='search'
+                placeholder='Search…'
                 iconDisplayStyle='inline'
                 svgIcon={<SvgSearch />}
               />

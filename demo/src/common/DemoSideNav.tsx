@@ -30,7 +30,7 @@ export const DemoSideNav = ({ activeItemKey = 'Home' }) => {
           startIcon={<SvgModel />}
           key='Model'
           isActive={activeItemKey === 'Model'}
-          onClick={() => navigate('/app-layout')}
+          onClick={() => navigate('/app')}
         >
           Model
         </SidenavButton>,
@@ -38,7 +38,7 @@ export const DemoSideNav = ({ activeItemKey = 'Home' }) => {
           startIcon={<SvgFolder />}
           key='Browse'
           isActive={activeItemKey === 'Browse'}
-          onClick={() => navigate('/grid-layout')}
+          onClick={() => navigate('/tiles-grid')}
         >
           Browse
         </SidenavButton>,

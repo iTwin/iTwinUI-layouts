@@ -10,14 +10,14 @@ import GridLayoutDemo from './GridLayoutDemo';
  */
 export const DEMOS_LIST = [
   {
-    path: 'app-layout',
+    path: 'app',
     name: 'App',
     description: 'Display an iTwin.js frame within the content area.',
     icon: 'layouts-thumbnails/AppLayout.png',
     component: AppLayoutDemo,
   },
   {
-    path: 'grid-layout',
+    path: 'tiles-grid',
     name: 'Tiles grid',
     description: 'A responsive grid of tiles.',
     icon: 'layouts-thumbnails/TileGridLayout.png',
