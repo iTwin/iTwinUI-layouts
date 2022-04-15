@@ -215,7 +215,8 @@ const DemoHeader = ({
         style: {
           position: "fixed",
           overflow: "hidden",
-          height: "100vh"
+          height: "100vh",
+          width: "100%"
         },
         children: [/* @__PURE__ */ jsxs(InformationPanelHeader, {
           onClose: () => setIsMenuOpen(false),
