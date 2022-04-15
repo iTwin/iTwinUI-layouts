@@ -10,15 +10,23 @@
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-height: fill-available;
+}
+
+html {
+  height: fill-available;
 }/*---------------------------------------------------------------------------------------------
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 .app {
-  padding: 22px 24px;
+  padding: 22px max(24px, 24px + env(safe-area-inset-left)) 22px max(24px, 24px + env(safe-area-inset-right));
 }
 hr {
   border: none;
@@ -39,7 +47,7 @@ hr {
 .iui-layouts-page{
   height:100%;
   display:grid;
-  grid-template:"header header" auto "sidenav content" 1fr/auto 1fr;
+  grid-template:"header header" auto "sidenav content" 1fr "footer footer"/auto 1fr auto;
 }
 .iui-layouts-page-header{
   -ms-grid-row:1;
@@ -121,7 +129,62 @@ hr {
 .iui-layouts-fluid-grid.iui-layouts-fluid-grid > *{
   width:100%;
 }
-.demo-template-container {
+.mobile-menu-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.iui-information-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.iui-header-split-button.iui-button-split-menu > div:first-child {
+  flex-grow: 1;
+}
+.iui-header-split-button.iui-button-split-menu > div:first-child > button {
+  justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+  .iui-page-header .iui-left .iui-header-logo > .iui-label {
+    display: unset;
+  }
+
+  .iui-page-header .iui-divider {
+    display: none;
+  }
+}.demo-header-menu-item-button button {
+  height: 55px !important;
+}
+.demo-header-menu-item-button > div:first-child {
+  flex-grow: 1;
+}
+.demo-header-menu-item-button > div:first-child > button {
+  flex-grow: 1;
+  justify-content: flex-start;
+  --_iui-button-active-stripe-inset: unset;
+  padding-left: 15px;
+}
+.demo-header-menu-item-button .demo-menu-item-button-title {
+  text-align: left;
+}
+.demo-header-menu-item-button .iui-description {
+  height: 22px;
+  opacity: 0.6;
+}
+.demo-header-menu-item-button .iui-user-icon.iui-small {
+  width: 16px;
+  height: 16px;
+}
+.demo-header-menu-item-button .iui-user-icon.iui-small .iui-initials {
+  font-size: 8px;
+}.demo-template-container {
   display: flex;
   height: 100vh;
   background-color: var(--iui-color-background-4);
@@ -130,10 +193,13 @@ hr {
   flex-direction: column;
 }
 .demo-template-container-vertical .demo-template-code {
-  max-width: revert;
+  width: revert;
   max-height: 25%;
   border-left: none;
   border-top: 2px solid var(--iui-color-background-5);
+}
+.demo-template-container-vertical .demo-template-code-header {
+  padding: 0 12px;
 }
 .demo-template-content {
   position: relative;
@@ -152,7 +218,7 @@ hr {
   gap: 8px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 12px;
+  padding: 0 max(12px, 2px + env(safe-area-inset-right)) 0 12px;
   height: 57px;
   border-bottom: 2px solid var(--iui-color-background-5);
 }
@@ -186,8 +252,17 @@ hr {
 .demo-template-code .sp-stack {
   overflow: auto;
 }
+.demo-template-code .sp-cm {
+  padding: 0;
+}
+.demo-template-code .cm-scroller {
+  padding: 11px 0;
+}
 .demo-template-code .sp-wrapper {
   flex: 1;
+}
+.demo-template-code .sp-layout {
+  padding-right: env(safe-area-inset-right);
 }
 .demo-template-code .sp-stack {
   min-width: auto;
@@ -203,6 +278,45 @@ hr {
   bottom: 11px;
   right: 12px;
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.25);
+}.demo-mobile-navigation-bar {
+  grid-area: footer;
+  width: 100%;
+  display: flex;
+  padding-inline: 16px;
+  justify-content: space-between;
+  background-color: #fff;
+  border-top: 2px solid var(--iui-color-background-border);
+}
+
+.demo-mobile-navigation-bar-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 75px;
+  padding-block: 8px 4px;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.demo-mobile-navigation-bar-item svg {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+}
+
+.demo-mobile-navigation-bar-item.active {
+  color: #008be1;
+}
+
+.demo-mobile-navigation-bar-item.active::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  width: 70%;
+  height: 2px;
+  background-color: #008be1;
 }/*---------------------------------------------------------------------------------------------
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
