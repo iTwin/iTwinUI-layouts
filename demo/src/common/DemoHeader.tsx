@@ -18,7 +18,6 @@ import {
   Text,
   InformationPanel,
   InformationPanelBody,
-  InformationPanelContent,
   InformationPanelHeader,
   getUserColor,
 } from '@itwin/itwinui-react';
@@ -38,7 +37,6 @@ import {
   SvgChevronLeft,
   SvgFeedback,
   SvgChat,
-  SvgUser,
 } from '@itwin/itwinui-icons-react';
 import './DemoHeader.scss';
 import DemoMobileHeaderMenuItem from './DemoMobileMenuItem';
@@ -140,7 +138,12 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
           {isMenuOpen && <div className='mobile-menu-overlay' />}
           <InformationPanel
             isOpen={isMenuOpen}
-            style={{ position: 'fixed', overflow: 'hidden', height: '100vh' }}
+            style={{
+              position: 'fixed',
+              overflow: 'hidden',
+              height: '100vh',
+              width: '100%',
+            }}
           >
             <InformationPanelHeader onClose={() => setIsMenuOpen(false)}>
               {!!secondaryMenuContent && (
