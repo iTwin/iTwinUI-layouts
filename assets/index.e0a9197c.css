@@ -84,7 +84,7 @@ hr {
 }
 @media (min-width: 769px) and (max-width: 991px){
   .iui-layouts-page-content-padded{
-    padding:16px 32px;
+    padding:16px max(32px, 32px + env(safe-area-inset-right)) 16px 32px;
   }
 }
 @media (max-width: 768px){
@@ -186,6 +186,7 @@ hr {
   font-size: 8px;
 }.demo-template-container {
   display: flex;
+  align-items: stretch;
   height: 100vh;
   background-color: var(--iui-color-background-4);
 }
@@ -193,32 +194,31 @@ hr {
   flex-direction: column;
 }
 .demo-template-container-vertical .demo-template-code {
-  width: revert;
-  max-height: 25%;
   border-left: none;
   border-top: 2px solid var(--iui-color-background-5);
+  flex: 2;
 }
-.demo-template-container-vertical .demo-template-code-header {
-  padding: 0 12px;
+.demo-template-container > * {
+  flex-basis: 100%;
+  overflow: hidden;
 }
 .demo-template-content {
   position: relative;
-  width: 100%;
-  height: 100%;
+  flex: 3;
 }
 .demo-template-code {
   position: relative;
   display: flex;
   flex-direction: column;
   border-left: 2px solid var(--iui-color-background-5);
-  max-width: 40%;
+  flex: 1;
 }
 .demo-template-code-header {
   display: flex;
   gap: 8px;
   align-items: center;
   justify-content: space-between;
-  padding: 0 max(12px, 2px + env(safe-area-inset-right)) 0 12px;
+  padding: 0 max(12px, 2px + env(safe-area-inset-right)) 0 max(12px, 2px + env(safe-area-inset-left));
   height: 57px;
   border-bottom: 2px solid var(--iui-color-background-5);
 }
@@ -250,6 +250,7 @@ hr {
 }
 .demo-template-code .sp-wrapper,
 .demo-template-code .sp-stack {
+  height: 100%;
   overflow: auto;
 }
 .demo-template-code .sp-cm {
@@ -276,7 +277,7 @@ hr {
 .demo-template-button-overlay {
   position: absolute;
   bottom: 11px;
-  right: 12px;
+  right: max(12px, env(safe-area-inset-left));
   box-shadow: 0 3px 14px rgba(0, 0, 0, 0.25);
 }.demo-mobile-navigation-bar {
   grid-area: footer;
@@ -284,7 +285,7 @@ hr {
   display: flex;
   padding-inline: 16px;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: var(--iui-color-background-1);
   border-top: 2px solid var(--iui-color-background-border);
 }
 
@@ -298,6 +299,11 @@ hr {
   flex-shrink: 0;
   font-size: 12px;
   cursor: pointer;
+  transition: background-color 0.2s ease-out;
+}
+
+.demo-mobile-navigation-bar-item:hover, .demo-mobile-navigation-bar-item.active {
+  background-color: rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6));
 }
 
 .demo-mobile-navigation-bar-item svg {
@@ -307,16 +313,16 @@ hr {
 }
 
 .demo-mobile-navigation-bar-item.active {
-  color: #008be1;
+  color: var(--iui-color-foreground-primary);
 }
 
 .demo-mobile-navigation-bar-item.active::before {
   content: "";
   position: absolute;
   top: -2px;
-  width: 70%;
+  width: 100%;
   height: 2px;
-  background-color: #008be1;
+  background-color: var(--iui-color-foreground-primary);
 }/*---------------------------------------------------------------------------------------------
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
