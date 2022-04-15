@@ -50,7 +50,7 @@ const DemoMobileNavigationBar = ({ activeItem = 'Browse' }) => {
       <DemoNavigationBarItem
         title='Browse'
         icon={<SvgFolder />}
-        url='/grid-layout7'
+        url='/grid-layout'
         isActive={activeItem === 'Browse'}
       />
       <DemoNavigationBarItem
