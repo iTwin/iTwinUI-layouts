@@ -28,7 +28,7 @@ const DemoMobileHeaderMenuItem = (props: DemoMobileHeaderMenuItemProps) => {
         startIcon={startIcon}
         className={isActive ? 'iui-active' : ''}
       >
-        <div>{title}</div>
+        <div className='demo-menu-item-button-title'>{title}</div>
         {description && <div className='iui-description'>{description}</div>}
       </Button>
       {showChevron && (

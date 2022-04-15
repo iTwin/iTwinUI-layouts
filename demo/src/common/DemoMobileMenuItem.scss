@@ -1,4 +1,8 @@
 .demo-header-menu-item-button {
+  button {
+    height: 55px !important;
+  }
+
   > div:first-child {
     flex-grow: 1;
 
@@ -7,6 +11,10 @@
       justify-content: flex-start;
       --_iui-button-active-stripe-inset: unset;
     }
+  }
+
+  .demo-menu-item-button-title {
+    text-align: left;
   }
 
   .iui-description {
