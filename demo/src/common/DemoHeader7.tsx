@@ -43,6 +43,7 @@ import './DemoHeader.scss';
 import DemoMobileHeaderMenuItem from './DemoMobileMenuItem';
 import { useMobile } from './useMobile';
 import { useNavigate } from 'react-router-dom';
+import Hammer from 'hammerjs';
 
 const projectsMenuContent = (
   <ul style={{ listStyle: 'none', padding: 0 }}>
@@ -119,6 +120,29 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
 
   const [secondaryMenuContent, setSecondaryMenuContent] =
     React.useState<JSX.Element | null>(null);
+
+  React.useEffect(() => {
+    const content = document.querySelector(
+      '.iui-layouts-page-content',
+    ) as HTMLElement;
+    const openHammer = new Hammer(content);
+    openHammer.on('swipeleft', () => {
+      setIsMenuOpen(true);
+    });
+  }, []);
+
+  React.useEffect(() => {
+    const infoPanel = document.querySelector(
+      '.iui-information-body',
+    ) as HTMLElement;
+    if (!infoPanel) {
+      return;
+    }
+    const closeHammer = new Hammer(infoPanel);
+    closeHammer.on('swiperight', () => {
+      setIsMenuOpen(false);
+    });
+  }, [isMenuOpen]);
 
   return (
     <>
