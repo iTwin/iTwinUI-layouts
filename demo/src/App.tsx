@@ -6,7 +6,7 @@ import React from 'react';
 import './App.scss';
 import '@codesandbox/sandpack-react/dist/index.css';
 import '@itwin/itwinui-layouts-css/styles.css';
-import { Anchor, Text, Body, Tile } from '@itwin/itwinui-react';
+import { Anchor, Text, Body, Tile, ToggleSwitch } from '@itwin/itwinui-react';
 import { FluidGrid } from '@itwin/itwinui-layouts-react';
 import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
@@ -15,12 +15,14 @@ import '@fontsource/open-sans/400.css';
 import '@fontsource/open-sans/600.css';
 import '@fontsource/open-sans/700.css';
 import { useNavigate } from 'react-router-dom';
+import { useMobile } from './common/useMobile';
 
 const App = () => {
   const [isTestRun, setIsTestRun] = React.useState(
     () => window.localStorage.getItem('testRun') === 'true',
   );
   const navigate = useNavigate();
+  const isMobile = useMobile();
   return (
     <div className='app'>
       <GitHubBanner />
@@ -60,7 +62,12 @@ const App = () => {
             onClick={() => navigate(path)}
             className='tile-wrapper'
           >
-            <Tile name={name} description={description} thumbnail={icon} />
+            <Tile
+              name={name}
+              description={description}
+              thumbnail={icon}
+              variant={isMobile ? 'folder' : 'default'}
+            />
           </div>
         ))}
       </FluidGrid>

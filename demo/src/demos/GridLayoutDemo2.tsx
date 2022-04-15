@@ -26,9 +26,9 @@ import DemoMobileNavigationBar from '../common/DemoMobileNavigationBar';
 import { useMobile } from '../common/useMobile';
 
 const mobileNavigationItems = [
-  { title: 'Home', icon: <SvgHome /> },
-  { title: 'Model', icon: <SvgModel />, isActive: true },
-  { title: 'Configuration', icon: <SvgConfiguration /> },
+  { title: 'Home', icon: <SvgHome />, url: '/' },
+  { title: 'Model', icon: <SvgModel />, isActive: true, url: '/grid-layout7' },
+  { title: 'Configuration', icon: <SvgConfiguration />, url: '/' },
 ];
 
 export const GridLayoutDemo2 = () => {

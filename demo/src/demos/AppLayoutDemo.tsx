@@ -3,12 +3,16 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import { DemoHeader } from '../common/DemoHeader';
+import { DemoHeader } from '../common/DemoHeader7';
 import { DemoSideNav } from '../common/DemoSideNav';
 import { DemoTemplate } from '../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
+import { useMobile } from '../common/useMobile';
+import DemoMobileNavigationBar from '../common/DemoMobileNavigationBar2';
 
 export const AppLayoutDemo = () => {
+  const isMobile = useMobile();
+
   return (
     <DemoTemplate title='App'>
       <PageLayout>
@@ -16,9 +20,12 @@ export const AppLayoutDemo = () => {
           <DemoHeader isSlim />
         </PageLayout.Header>
 
-        <PageLayout.SideNavigation>
-          <DemoSideNav activeItemKey='Model' />
-        </PageLayout.SideNavigation>
+        {!isMobile && (
+          <PageLayout.SideNavigation>
+            <DemoSideNav activeItemKey='Model' />
+          </PageLayout.SideNavigation>
+        )}
+        {isMobile && <DemoMobileNavigationBar activeItem='Model' />}
 
         <PageLayout.Content>
           <iframe

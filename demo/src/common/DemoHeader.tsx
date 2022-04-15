@@ -260,10 +260,12 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
           </InformationPanel>
         </>
       )}
-          <Header
-              isSlim={isSlim}
+      <Header
+        isSlim={isSlim}
         appLogo={
-            <HeaderLogo logo={<SvgImodelHollow />} onClick={() => navigate('/')} >iTwin Services</HeaderLogo>
+          <HeaderLogo logo={<SvgImodelHollow />} onClick={() => navigate('/')}>
+            iTwin Services
+          </HeaderLogo>
         }
         breadcrumbs={
           <>

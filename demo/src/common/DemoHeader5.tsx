@@ -42,9 +42,11 @@ import {
 import './DemoHeader.scss';
 import DemoMobileHeaderMenuItem from './DemoMobileMenuItem';
 import { useMobile } from './useMobile';
+import { useNavigate } from 'react-router-dom';
 
 export const DemoHeader = () => {
   const isMobile = useMobile();
+  const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -200,7 +202,9 @@ export const DemoHeader = () => {
       )}
       <Header
         appLogo={
-          <HeaderLogo logo={<SvgImodelHollow />}>iTwin Services</HeaderLogo>
+          <HeaderLogo logo={<SvgImodelHollow />} onClick={() => navigate('/')}>
+            iTwin Services
+          </HeaderLogo>
         }
         breadcrumbs={
           <>

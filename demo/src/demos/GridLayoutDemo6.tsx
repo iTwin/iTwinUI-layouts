@@ -28,11 +28,10 @@ import DemoHeader5 from '../common/DemoHeader5';
 import DemoHeader6 from '../common/DemoHeader6';
 
 const mobileNavigationItems = [
-  { title: 'Home', icon: <SvgHome /> },
-  { title: 'Model', icon: <SvgModel />, isActive: true },
-  { title: 'Configuration', icon: <SvgConfiguration /> },
+  { title: 'Home', icon: <SvgHome />, url: '/' },
+  { title: 'Model', icon: <SvgModel />, isActive: true, url: '/grid-layout7' },
+  { title: 'Configuration', icon: <SvgConfiguration />, url: '/' },
 ];
-
 export const GridLayoutDemo = () => {
   const isMobile = useMobile();
   return (
@@ -44,7 +43,7 @@ export const GridLayoutDemo = () => {
 
         {!isMobile && (
           <PageLayout.SideNavigation>
-            <DemoSideNav />
+            <DemoSideNav activeItemKey='Browse' />
           </PageLayout.SideNavigation>
         )}
         {isMobile && <DemoMobileNavigationBar items={mobileNavigationItems} />}
@@ -87,7 +86,7 @@ export const GridLayoutDemo = () => {
                 <Tile
                   key={index}
                   name={`Item #${index}`}
-                  variant='folder'
+                  variant={isMobile ? 'folder' : 'default'}
                   thumbnail={<SvgImodelHollow />}
                   description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.'
                 />

@@ -13,23 +13,10 @@ import {
   LabeledInput,
   Button,
 } from '@itwin/itwinui-react';
-import {
-  SvgImodelHollow,
-  SvgSearch,
-  SvgAdd,
-  SvgHome,
-  SvgConfiguration,
-  SvgModel,
-} from '@itwin/itwinui-icons-react';
+import { SvgImodelHollow, SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
 import { useMobile } from '../common/useMobile';
-import DemoMobileNavigationBar from '../common/DemoMobileNavigationBar';
 import DemoHeader7 from '../common/DemoHeader7';
-
-const mobileNavigationItems = [
-  { title: 'Home', icon: <SvgHome /> },
-  { title: 'Model', icon: <SvgModel />, isActive: true },
-  { title: 'Configuration', icon: <SvgConfiguration /> },
-];
+import DemoMobileNavigationBar from '../common/DemoMobileNavigationBar2';
 
 export const GridLayoutDemo = () => {
   const isMobile = useMobile();
@@ -42,10 +29,10 @@ export const GridLayoutDemo = () => {
 
         {!isMobile && (
           <PageLayout.SideNavigation>
-            <DemoSideNav />
+            <DemoSideNav activeItemKey='Browse' />
           </PageLayout.SideNavigation>
         )}
-        {isMobile && <DemoMobileNavigationBar items={mobileNavigationItems} />}
+        {isMobile && <DemoMobileNavigationBar activeItem='Browse' />}
 
         <PageLayout.Content padded>
           <PageLayout.TitleArea>
@@ -85,7 +72,7 @@ export const GridLayoutDemo = () => {
                 <Tile
                   key={index}
                   name={`Item #${index}`}
-                  variant='folder'
+                  variant={isMobile ? 'folder' : 'default'}
                   thumbnail={<SvgImodelHollow />}
                   description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.'
                 />
