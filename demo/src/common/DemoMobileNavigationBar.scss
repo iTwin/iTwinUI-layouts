@@ -6,7 +6,7 @@
   display: flex;
   padding-inline: 16px;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: var(--iui-color-background-1);
   border-top: 2px solid var(--iui-color-background-border);
 }
 
@@ -20,6 +20,12 @@
   flex-shrink: 0;
   font-size: $iui-font-size-small;
   cursor: pointer;
+  transition: background-color $iui-speed-fast ease-out;
+
+  &:hover,
+  &.active {
+    background-color: rgba(var(--iui-color-foreground-primary-rgb), var(--iui-opacity-6));
+  }
 
   svg {
     fill: currentColor;
@@ -28,15 +34,15 @@
   }
 
   &.active {
-    color: #008be1;
+    color: var(--iui-color-foreground-primary);
 
     &::before {
       content: '';
       position: absolute;
       top: -2px;
-      width: 70%;
+      width: 100%;
       height: 2px;
-      background-color: #008be1;
+      background-color: var(--iui-color-foreground-primary);
     }
   }
 }

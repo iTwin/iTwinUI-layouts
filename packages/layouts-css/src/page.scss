@@ -38,7 +38,7 @@
       }
 
       @include tablet {
-        padding: $iui-m $iui-xl;
+        padding: $iui-m unquote('max(#{$iui-xl}, #{$iui-xl} + env(safe-area-inset-right))') $iui-m $iui-xl;
       }
 
       @include mobile {
