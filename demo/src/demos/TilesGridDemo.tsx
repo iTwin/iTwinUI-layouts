@@ -16,7 +16,7 @@ import {
 } from '@itwin/itwinui-react';
 import { SvgImodelHollow, SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
 
-export const GridLayoutDemo = () => {
+export const TilesGridDemo = () => {
   return (
     <DemoTemplate title='Tiles grid'>
       <PageLayout>
@@ -78,4 +78,4 @@ export const GridLayoutDemo = () => {
   );
 };
 
-export default GridLayoutDemo;
+export default TilesGridDemo;

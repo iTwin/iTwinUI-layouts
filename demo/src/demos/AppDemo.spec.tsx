@@ -4,9 +4,11 @@
  *--------------------------------------------------------------------------------------------*/
 import { layoutDescribe } from '../../cypress/common/layoutDescribe';
 
-layoutDescribe('GridLayoutDemo', (screenSize) => {
-  it('should render GridLayoutDemo', () => {
-    cy.visit('grid-layout');
+layoutDescribe('AppDemo', (screenSize) => {
+  it('should render AppDemo', () => {
+    cy.visit('app');
+    // Hiding iTwin.js viewer to avoid flakiness
+    cy.get('iframe').hide();
     cy.compareSnapshot(`basic-${screenSize.width}x${screenSize.height}`);
   });
 });
