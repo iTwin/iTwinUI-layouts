@@ -10,6 +10,7 @@
       flex-grow: 1;
       justify-content: flex-start;
       --_iui-button-active-stripe-inset: unset;
+      padding-left: 15px;
     }
   }
 
@@ -20,5 +21,14 @@
   .iui-description {
     height: 22px;
     opacity: 0.6;
+  }
+
+  .iui-user-icon.iui-small {
+    width: 16px;
+    height: 16px;
+
+    .iui-initials {
+      font-size: 8px;
+    }
   }
 }

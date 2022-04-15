@@ -3,7 +3,6 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import { DemoHeader } from '../common/DemoHeader';
 import { DemoSideNav } from '../common/DemoSideNav';
 import { DemoTemplate } from '../common/DemoTemplate';
 import { FluidGrid, PageLayout } from '@itwin/itwinui-layouts-react';
@@ -15,18 +14,25 @@ import {
   Button,
 } from '@itwin/itwinui-react';
 import { SvgImodelHollow, SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
+import { useMobile } from '../common/useMobile';
+import DemoHeader7 from '../common/DemoHeader';
+import DemoMobileNavigationBar from '../common/DemoMobileNavigationBar';
 
 export const GridLayoutDemo = () => {
+  const isMobile = useMobile();
   return (
     <DemoTemplate title='Grid Layout'>
       <PageLayout>
         <PageLayout.Header>
-          <DemoHeader />
+          <DemoHeader7 />
         </PageLayout.Header>
 
-        <PageLayout.SideNavigation>
-          <DemoSideNav activeItemKey='Browse' />
-        </PageLayout.SideNavigation>
+        {!isMobile && (
+          <PageLayout.SideNavigation>
+            <DemoSideNav activeItemKey='Browse' />
+          </PageLayout.SideNavigation>
+        )}
+        {isMobile && <DemoMobileNavigationBar activeItem='Browse' />}
 
         <PageLayout.Content padded>
           <PageLayout.TitleArea>
@@ -66,6 +72,7 @@ export const GridLayoutDemo = () => {
                 <Tile
                   key={index}
                   name={`Item #${index}`}
+                  variant={isMobile ? 'folder' : 'default'}
                   thumbnail={<SvgImodelHollow />}
                   description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.'
                 />
