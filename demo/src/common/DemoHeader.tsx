@@ -39,8 +39,15 @@ import {
 import './DemoHeader.scss';
 import DemoMobileHeaderMenuItem from './DemoMobileMenuItem';
 import { useMobile } from './useMobile';
+import { useNavigate } from 'react-router-dom';
 
-export const DemoHeader = () => {
+export type DemoHeaderProps = {
+  isSlim?: boolean;
+};
+
+export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
+  const navigate = useNavigate();
+
   const isMobile = useMobile();
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -253,9 +260,10 @@ export const DemoHeader = () => {
           </InformationPanel>
         </>
       )}
-      <Header
+          <Header
+              isSlim={isSlim}
         appLogo={
-          <HeaderLogo logo={<SvgImodelHollow />}>iTwin Services</HeaderLogo>
+            <HeaderLogo logo={<SvgImodelHollow />} onClick={() => navigate('/')} >iTwin Services</HeaderLogo>
         }
         breadcrumbs={
           <>

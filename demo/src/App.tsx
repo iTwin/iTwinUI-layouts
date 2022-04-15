@@ -6,19 +6,21 @@ import React from 'react';
 import './App.scss';
 import '@codesandbox/sandpack-react/dist/index.css';
 import '@itwin/itwinui-layouts-css/styles.css';
-import { Anchor, Text, Body, ToggleSwitch } from '@itwin/itwinui-react';
-import { Link } from 'react-router-dom';
+import { Anchor, Text, Body, Tile } from '@itwin/itwinui-react';
+import { FluidGrid } from '@itwin/itwinui-layouts-react';
 import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
 import '@fontsource/open-sans/300.css';
 import '@fontsource/open-sans/400.css';
 import '@fontsource/open-sans/600.css';
 import '@fontsource/open-sans/700.css';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
   const [isTestRun, setIsTestRun] = React.useState(
     () => window.localStorage.getItem('testRun') === 'true',
   );
+  const navigate = useNavigate();
   return (
     <div className='app'>
       <GitHubBanner />
@@ -51,15 +53,17 @@ const App = () => {
         />
       </div>
       <hr />
-      <ul>
-        {DEMOS_LIST.map(({ path, name }) => (
-          <li key={path}>
-            <Link to={path} className='iui-anchor'>
-              {name}
-            </Link>
-          </li>
+      <FluidGrid>
+        {DEMOS_LIST.map(({ path, name, description, icon }) => (
+          <div
+            key={name}
+            onClick={() => navigate(path)}
+            className='tile-wrapper'
+          >
+            <Tile name={name} description={description} thumbnail={icon} />
+          </div>
         ))}
-      </ul>
+      </FluidGrid>
     </div>
   );
 };
