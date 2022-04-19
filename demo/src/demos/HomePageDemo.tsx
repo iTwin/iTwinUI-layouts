@@ -28,18 +28,72 @@ export const HomePageDemo = () => {
 
         <PageLayout.Content padded>
           <Grid>
-            <GridItem key={1} gridColumnSpan={'full'} />
-            <GridItem key={2} gridColumnSpan={4} />
-            <GridItem key={3} gridColumnSpan={4} />
-            <GridItem key={4} gridColumnSpan={4} />
-            <GridItem key={5} gridColumnSpan={2} />
-            <GridItem key={5} gridColumnSpan={10}>
-              <FluidGrid>
+            <GridItem
+              key={1}
+              columnSpan={{
+                largeMonitor: 12,
+                smallMonitor: 8,
+                tablet: 8,
+                mobile: 4,
+                smallMobile: 1,
+              }}
+            />
+            <GridItem
+              key={2}
+              columnSpan={{
+                largeMonitor: 4,
+                smallMonitor: 2,
+                tablet: 2,
+                mobile: 1,
+                smallMobile: 1,
+              }}
+            />
+            <GridItem
+              key={3}
+              columnSpan={{
+                largeMonitor: 4,
+                smallMonitor: 2,
+                tablet: 2,
+                mobile: 1,
+                smallMobile: 1,
+              }}
+            />
+            <GridItem
+              key={4}
+              columnSpan={{
+                largeMonitor: 4,
+                smallMonitor: 2,
+                tablet: 2,
+                mobile: 1,
+                smallMobile: 1,
+              }}
+            />
+            <GridItem
+              key={5}
+              columnSpan={{
+                largeMonitor: 4,
+                smallMonitor: 2,
+                tablet: 2,
+                mobile: 2,
+                smallMobile: 1,
+              }}
+            />
+            <GridItem
+              key={6}
+              columnSpan={{
+                largeMonitor: 8,
+                smallMonitor: 6,
+                tablet: 6,
+                mobile: 2,
+                smallMobile: 1,
+              }}
+            >
+              <FluidGrid style={{ padding: '16px' }}>
                 {Array(6)
                   .fill(null)
                   .map((_, index) => (
                     <Tile
-                      key={index}
+                      key={`Item #${index}`}
                       name={`Item #${index}`}
                       description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.'
                     />

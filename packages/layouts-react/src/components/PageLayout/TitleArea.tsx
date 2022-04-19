@@ -3,14 +3,23 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
+import cx from 'classnames';
+import { StylingProps } from '../../utils/props';
 
 export type TitleAreaProps = {
   children: React.ReactNode;
-};
+} & StylingProps;
 
 export const TitleArea = (props: TitleAreaProps) => {
-  const { children } = props;
-  return <div className='iui-layouts-page-content-title-area'>{children}</div>;
+  const { className, style, children } = props;
+  return (
+    <div
+      className={cx('iui-layouts-page-content-title-area', className)}
+      style={style}
+    >
+      {children}
+    </div>
+  );
 };
 
 TitleArea.displayName = 'PageLayout.TitleArea';

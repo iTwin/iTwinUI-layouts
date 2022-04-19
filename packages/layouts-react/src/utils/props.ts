@@ -2,11 +2,18 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-import { layoutDescribe } from '../../cypress/common/layoutDescribe';
+import React from 'react';
 
-layoutDescribe('HomePageDemo', (screenSize) => {
-  it('should render HomePageDemo', () => {
-    cy.visit('home-layout');
-    cy.compareSnapshot(`basic-${screenSize.width}x${screenSize.height}`);
-  });
-});
+export type ClassNameProps = {
+  /**
+   * Custom CSS class name.
+   */
+  className?: string;
+};
+
+export type StylingProps = {
+  /**
+   * Custom CSS style properties.
+   */
+  style?: React.CSSProperties;
+} & ClassNameProps;

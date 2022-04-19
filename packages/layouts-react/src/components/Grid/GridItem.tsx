@@ -4,30 +4,52 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import cx from 'classnames';
+import { StylingProps } from '../../utils/props';
+
+export type screenSizesColumns = {
+  smallMobile?: number;
+  mobile?: number;
+  tablet?: number;
+  smallMonitor?: number;
+  largeMonitor?: number;
+};
 
 export type GridItemProps = {
-  children?: React.ReactNode;
-  /**
-   * Custom CSS style properties.
-   */
-  style?: React.CSSProperties;
   /**
    *
    */
-  gridColumnSpan?: 'full' | number;
-};
+  children?: React.ReactNode;
+  /**
+   *
+   */
+  columnSpan?: screenSizesColumns;
+} & StylingProps;
 
 export const GridItem = (props: GridItemProps) => {
-  const { children, style, gridColumnSpan = 2 } = props;
+  const {
+    className,
+    children,
+    style,
+    columnSpan = {
+      smallMobile: 1,
+      mobile: 1,
+      tablet: 1,
+      smallMonitor: 1,
+      largeMonitor: 1,
+    },
+  } = props;
+
   return (
     <div
-      className={cx('iui-layouts-grid-item')}
+      className={cx('iui-layouts-grid-item', className)}
       style={
         {
-          style,
-          '--_iui-grid-item-column-span': `${
-            gridColumnSpan === 'full' ? '1 / -1' : `span ${gridColumnSpan}`
-          }`,
+          ...style,
+          '--_iui-grid-item-column-span-smobile': `span ${columnSpan.smallMobile}`,
+          '--_iui-grid-item-column-span-mobile': `span ${columnSpan.mobile}`,
+          '--_iui-grid-item-column-span-tablet': `span ${columnSpan.tablet}`,
+          '--_iui-grid-item-column-span-smonitor': `span ${columnSpan.smallMonitor}`,
+          '--_iui-grid-item-column-span-lmonitor': `span ${columnSpan.largeMonitor}`,
         } as React.CSSProperties
       }
     >

@@ -1,15 +1,11 @@
 @import './breakpoints';
+@import '@itwin/itwinui-css/scss/variables';
 
 .iui-layouts-grid {
-  width: 100%;
-  --_iui-grid-item-min-width: 288px;
-  max-width: 1920px;
-
   /* autoprefixer grid: no-autoplace */
   display: grid;
 
-  grid-gap: 22px 24px;
-  //grid-auto-rows: 78px;
+  grid-gap: $iui-l;
 
   @include large-monitor {
     grid-template-columns: repeat(12, 1fr);
@@ -32,8 +28,32 @@
 }
 
 .iui-layouts-grid-item {
-  --_iui-grid-item-column-span: span 2;
-  background-color: #F2F2F2;
+  --_iui-grid-item-column-span-smobile: span 1;
+  --_iui-grid-item-column-span-mobile: span 1;
+  --_iui-grid-item-column-span-tablet: span 1;
+  --_iui-grid-item-column-span-smonitor: span 1;
+  --_iui-grid-item-column-span-lmonitor: span 1;
+
+  background-color: rgb(69, 133, 165);
   min-height: 64px;
-  grid-column: var(--_iui-grid-item-column-span);
+
+  @include large-monitor {
+    grid-column: var(--_iui-grid-item-column-span-lmonitor);
+  }
+
+  @include small-monitor {
+    grid-column: var(--_iui-grid-item-column-span-smonitor);
+  }
+
+  @include tablet {
+    grid-column: var(--_iui-grid-item-column-span-tablet);
+  }
+
+  @include mobile {
+    grid-column: var(--_iui-grid-item-column-span-mobile);
+  }
+
+  @include small-mobile {
+    grid-column: var(--_iui-grid-item-column-span-smobile);
+  }
 }

@@ -3,20 +3,20 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
+import cx from 'classnames';
+import { StylingProps } from '../../utils/props';
 
 export type GridProps = {
   children: React.ReactNode;
-};
+} & StylingProps;
 
 export const Grid = (props: GridProps) => {
-  const { children } = props;
-  return <div className='iui-layouts-grid'>{children}</div>;
+  const { className, style, children } = props;
+  return (
+    <div className={cx('iui-layouts-grid', className)} style={style}>
+      {children}
+    </div>
+  );
 };
 
-Grid.displayName = 'Grid';
-
 export default Grid;
-
-// add grid item (hight and width props)
-// expose breakpoints
-//
