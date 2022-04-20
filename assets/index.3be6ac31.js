@@ -771,7 +771,7 @@ const App = () => {
     children: [/* @__PURE__ */ jsx(GitHubBanner, {}), /* @__PURE__ */ jsx(Text, {
       as: "h1",
       variant: "headline",
-      children: "iTwinUI-Layouts"
+      children: "iTwinUI-layouts"
     }), /* @__PURE__ */ jsxs(Body, {
       children: ["An open-source common UI layouts library used to display", " ", /* @__PURE__ */ jsx(Anchor, {
         href: "https://itwin.github.io/iTwinUI-react/",
