@@ -164,7 +164,7 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
                   <SvgImodelHollow
                     style={{ marginLeft: 12, marginRight: 24, flexShrink: 0 }}
                   />
-                  <Text variant='leading'>iTwin Services</Text>
+                  <Text variant='leading'>iTwinUI-layouts</Text>
                 </>
               )}
             </InformationPanelHeader>
@@ -277,7 +277,7 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
         isSlim={isSlim}
         appLogo={
           <HeaderLogo logo={<SvgImodelHollow />} onClick={() => navigate('/')}>
-            iTwin Services
+            iTwinUI-layouts
           </HeaderLogo>
         }
         breadcrumbs={
