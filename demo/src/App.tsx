@@ -28,7 +28,7 @@ const App = () => {
       <GitHubBanner />
 
       <Text as='h1' variant='headline'>
-        iTwinUI-Layouts
+        iTwinUI-layouts
       </Text>
       <Body>
         An open-source common UI layouts library used to display{' '}
