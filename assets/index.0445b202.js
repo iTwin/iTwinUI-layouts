@@ -242,7 +242,7 @@ const DemoHeader = ({
               }
             }), /* @__PURE__ */ jsx(Text, {
               variant: "leading",
-              children: "iTwin Services"
+              children: "iTwinUI-layouts"
             })]
           })]
         }), /* @__PURE__ */ jsxs("div", {
@@ -330,7 +330,7 @@ const DemoHeader = ({
       appLogo: /* @__PURE__ */ jsx(HeaderLogo, {
         logo: /* @__PURE__ */ jsx(SvgImodelHollow, {}),
         onClick: () => navigate("/"),
-        children: "iTwin Services"
+        children: "iTwinUI-layouts"
       }),
       breadcrumbs: /* @__PURE__ */ jsx(Fragment, {
         children: !isMobile && /* @__PURE__ */ jsx(HeaderBreadcrumbs, {
