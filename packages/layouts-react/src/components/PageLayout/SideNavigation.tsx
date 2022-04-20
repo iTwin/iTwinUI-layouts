@@ -7,6 +7,9 @@ import cx from 'classnames';
 import { StylingProps } from '../../utils/props';
 
 export type SideNavigationProps = {
+  /**
+   * Children of the element
+   */
   children: React.ReactNode;
 } & StylingProps;
 

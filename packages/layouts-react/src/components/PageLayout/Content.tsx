@@ -7,6 +7,9 @@ import cx from 'classnames';
 import { StylingProps } from '../../utils/props';
 
 export type ContentProps = {
+  /**
+   * Children of the element
+   */
   children: React.ReactNode;
   /**
    * Adds padding and max-width to content

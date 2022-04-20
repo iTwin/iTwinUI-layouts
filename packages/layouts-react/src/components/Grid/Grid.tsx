@@ -4,16 +4,20 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import cx from 'classnames';
-import { CommonProps } from '../../utils/props';
-import { screenSizesColumns } from './types';
+import { StylingProps } from '../../utils/props';
+import { screenSizes } from './types';
 
 export type GridProps = {
+  /**
+   * Children of the element
+   */
+  children: React.ReactNode;
   /**
    * Grid column count on different screen sizes.
    * @default {smallMobile:2,mobile:4,tablet:8,smallMonitor:8,largeMonitor:12}
    */
-  columnCount?: screenSizesColumns;
-} & CommonProps;
+  columnCount?: screenSizes;
+} & StylingProps;
 
 export const Grid = (props: GridProps) => {
   const {

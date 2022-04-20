@@ -12,6 +12,9 @@ import SideNavigation from './SideNavigation';
 import TitleArea from './TitleArea';
 
 export type PageLayoutProps = {
+  /**
+   * Children of the element
+   */
   children: React.ReactNode;
 } & StylingProps;
 
