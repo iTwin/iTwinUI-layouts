@@ -4,19 +4,15 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import cx from 'classnames';
-import { StylingProps } from '../../utils/props';
+import { CommonProps } from '../../utils/props';
 
 export type FluidGridProps = {
-  /**
-   *
-   */
-  children: React.ReactNode;
   /**
    * Minimum grid item width.
    * default: 256
    */
   minItemWidth?: number;
-} & StylingProps;
+} & CommonProps;
 
 export const FluidGrid = (props: FluidGridProps) => {
   const { className, style, children, minItemWidth = 256 } = props;

@@ -17,3 +17,10 @@ export type StylingProps = {
    */
   style?: React.CSSProperties;
 } & ClassNameProps;
+
+export type CommonProps = {
+  /**
+   * Children of the element
+   */
+  children: React.ReactNode;
+} & StylingProps;

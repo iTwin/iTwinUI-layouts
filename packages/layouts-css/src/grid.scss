@@ -2,28 +2,33 @@
 @import '@itwin/itwinui-css/scss/variables';
 
 .iui-layouts-grid {
-  /* autoprefixer grid: no-autoplace */
+  --_iui-grid-column-count-smobile: 12;
+  --_iui-grid-column-count-mobile: 8;
+  --_iui-grid-column-count-tablet: 8;
+  --_iui-grid-column-count-smonitor: 4;
+  --_iui-grid-column-count-lmonitor: 2;
+
   display: grid;
 
   grid-gap: $iui-l;
 
   @include large-monitor {
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(var(--_iui-grid-column-count-smobile), 1fr);
   }
 
   @include small-monitor {
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(var(--_iui-grid-column-count-mobile), 1fr);
   }
 
   @include tablet {
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(var(--_iui-grid-column-count-tablet), 1fr);
   }
 
   @include mobile {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(var(--_iui-grid-column-count-smonitor), 1fr);
   }
   @include small-mobile {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(var(--_iui-grid-column-count-lmonitor), 1fr);
   }
 }
 

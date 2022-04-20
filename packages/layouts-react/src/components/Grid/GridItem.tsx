@@ -4,26 +4,16 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import cx from 'classnames';
-import { StylingProps } from '../../utils/props';
-
-export type screenSizesColumns = {
-  smallMobile?: number;
-  mobile?: number;
-  tablet?: number;
-  smallMonitor?: number;
-  largeMonitor?: number;
-};
+import { CommonProps } from '../../utils/props';
+import { screenSizesColumns } from './types';
 
 export type GridItemProps = {
   /**
-   *
-   */
-  children?: React.ReactNode;
-  /**
-   *
+   * Column span for grid item
+   * @default {smallMobile:1,mobile:1,tablet:1,smallMonitor:1,largeMonitor:1}
    */
   columnSpan?: screenSizesColumns;
-} & StylingProps;
+} & CommonProps;
 
 export const GridItem = (props: GridItemProps) => {
   const {
