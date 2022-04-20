@@ -22,5 +22,5 @@ export type CommonProps = {
   /**
    * Children of the element
    */
-  children: React.ReactNode;
+  children?: React.ReactNode;
 } & StylingProps;
