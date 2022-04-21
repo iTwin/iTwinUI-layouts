@@ -3,10 +3,11 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 
-export type ScreenSizes = {
-  smallMobile?: number;
-  mobile?: number;
-  tablet?: number;
-  smallMonitor?: number;
-  largeMonitor?: number;
+export const styleKeysValues = (key: string, value: number | undefined) => {
+  if (value) {
+    return {
+      [key]: `span ${value}`,
+    };
+  }
+  return null;
 };

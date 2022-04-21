@@ -12,7 +12,12 @@ import {
   GridItem,
   FluidGrid,
 } from '@itwin/itwinui-layouts-react';
-import { Tile } from '@itwin/itwinui-react';
+import {
+  FileUpload,
+  FileUploadTemplate,
+  Surface,
+  Tile,
+} from '@itwin/itwinui-react';
 
 export const HomePageDemo = () => {
   return (
@@ -31,33 +36,55 @@ export const HomePageDemo = () => {
             <GridItem
               key={1}
               columnSpan={{
-                largeMonitor: 12,
-                smallMonitor: 8,
-                tablet: 8,
-                mobile: 4,
-                smallMobile: 1,
+                largeMonitor: 4,
+                smallMonitor: 3,
+                tablet: 3,
+                mobile: 2,
+                smallMobile: 2,
               }}
-            />
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '33px',
+                }}
+              >
+                <Surface elevation={1}>
+                  <FileUpload onFileDropped={() => {}}>
+                    <FileUploadTemplate />
+                  </FileUpload>
+                </Surface>
+              </div>
+            </GridItem>
             <GridItem
               key={2}
               columnSpan={{
-                largeMonitor: 4,
-                smallMonitor: 2,
-                tablet: 2,
-                mobile: 1,
-                smallMobile: 1,
+                largeMonitor: 8,
+                smallMonitor: 5,
+                tablet: 5,
+                mobile: 2,
+                smallMobile: 2,
               }}
-            />
+            >
+              <Surface elevation={1} style={{ width: '100%', height: '100%' }}>
+                <div />
+              </Surface>
+            </GridItem>
             <GridItem
               key={3}
               columnSpan={{
                 largeMonitor: 4,
-                smallMonitor: 2,
-                tablet: 2,
-                mobile: 1,
-                smallMobile: 1,
+                smallMonitor: 4,
+                tablet: 4,
+                mobile: 2,
+                smallMobile: 2,
               }}
-            />
+            >
+              <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
+                <div />
+              </Surface>
+            </GridItem>
             <GridItem
               key={4}
               columnSpan={{
@@ -67,28 +94,36 @@ export const HomePageDemo = () => {
                 mobile: 1,
                 smallMobile: 1,
               }}
-            />
+            >
+              <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
+                <div />
+              </Surface>
+            </GridItem>
             <GridItem
               key={5}
               columnSpan={{
                 largeMonitor: 4,
                 smallMonitor: 2,
                 tablet: 2,
-                mobile: 2,
-                smallMobile: 1,
-              }}
-            />
-            <GridItem
-              key={6}
-              columnSpan={{
-                largeMonitor: 8,
-                smallMonitor: 6,
-                tablet: 6,
-                mobile: 2,
+                mobile: 1,
                 smallMobile: 1,
               }}
             >
-              <FluidGrid style={{ padding: '16px' }}>
+              <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
+                <div />
+              </Surface>
+            </GridItem>
+            <GridItem
+              key={6}
+              columnSpan={{
+                largeMonitor: 12,
+                smallMonitor: 8,
+                tablet: 8,
+                mobile: 4,
+                smallMobile: 2,
+              }}
+            >
+              <FluidGrid>
                 {Array(6)
                   .fill(null)
                   .map((_, index) => (

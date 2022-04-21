@@ -9,7 +9,6 @@
   --_iui-grid-column-count-lmonitor: 12;
 
   display: grid;
-
   grid-gap: $iui-l;
 
   @include large-monitor {
@@ -39,26 +38,36 @@
   --_iui-grid-item-column-span-smonitor: span 1;
   --_iui-grid-item-column-span-lmonitor: span 1;
 
-  background-color: rgb(69, 133, 165);
+  --_iui-grid-item-column-start-smobile: auto;
+  --_iui-grid-item-column-start-mobile: auto;
+  --_iui-grid-item-column-start-tablet: auto;
+  --_iui-grid-item-column-start-smonitor: auto;
+  --_iui-grid-item-column-start-lmonitor: auto;
+
   min-height: 64px;
 
   @include large-monitor {
-    grid-column: var(--_iui-grid-item-column-span-lmonitor);
+    grid-column: var(--_iui-grid-item-column-start-lmonitor) /
+      var(--_iui-grid-item-column-span-lmonitor);
   }
 
   @include small-monitor {
-    grid-column: var(--_iui-grid-item-column-span-smonitor);
+    grid-column: var(--_iui-grid-item-column-start-smonitor) /
+      var(--_iui-grid-item-column-span-smonitor);
   }
 
   @include tablet {
-    grid-column: var(--_iui-grid-item-column-span-tablet);
+    grid-column: var(--_iui-grid-item-column-start-tablet) /
+      var(--_iui-grid-item-column-span-tablet);
   }
 
   @include mobile {
-    grid-column: var(--_iui-grid-item-column-span-mobile);
+    grid-column: var(--_iui-grid-item-column-start-mobile) /
+      var(--_iui-grid-item-column-span-mobile);
   }
 
   @include small-mobile {
-    grid-column: var(--_iui-grid-item-column-span-smobile);
+    grid-column: var(--_iui-grid-item-column-start-smobile) /
+      var(--_iui-grid-item-column-span-smobile);
   }
 }
