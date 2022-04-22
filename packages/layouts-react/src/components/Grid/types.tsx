@@ -4,9 +4,17 @@
  *--------------------------------------------------------------------------------------------*/
 
 export type ScreenSizes = {
-  smallMobile?: number;
-  mobile?: number;
-  tablet?: number;
-  smallMonitor?: number;
-  largeMonitor?: number;
+  mobile: number;
+  landscapeMobile: number;
+  tablet: number;
+  smallMonitor: number;
+  monitor: number;
+};
+
+export type ScreenSizesOffset = {
+  mobile: 'auto' | number;
+  landscapeMobile: 'auto' | number;
+  tablet: 'auto' | number;
+  smallMonitor: 'auto' | number;
+  monitor: 'auto' | number;
 };

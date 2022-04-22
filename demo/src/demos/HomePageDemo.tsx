@@ -6,18 +6,11 @@ import React from 'react';
 import { DemoHeader } from '../common/DemoHeader';
 import { DemoSideNav } from '../common/DemoSideNav';
 import { DemoTemplate } from '../common/DemoTemplate';
-import {
-  PageLayout,
-  Grid,
-  GridItem,
-  FluidGrid,
-} from '@itwin/itwinui-layouts-react';
-import {
-  FileUpload,
-  FileUploadTemplate,
-  Surface,
-  Tile,
-} from '@itwin/itwinui-react';
+import { DemoSurfaceCard } from '../common/DemoSurfaceCard';
+import { DemoHomePageHeader } from '../common/DemoHomePageHeader';
+import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
+import { Surface, Text } from '@itwin/itwinui-react';
+import { SvgImodelHollow } from '@itwin/itwinui-icons-react';
 
 export const HomePageDemo = () => {
   return (
@@ -33,108 +26,97 @@ export const HomePageDemo = () => {
 
         <PageLayout.Content padded>
           <Grid>
-            <GridItem
-              key={1}
-              columnSpan={{
-                largeMonitor: 4,
-                smallMonitor: 3,
-                tablet: 3,
-                mobile: 2,
-                smallMobile: 2,
-              }}
-            >
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: '33px',
-                }}
-              >
-                <Surface elevation={1}>
-                  <FileUpload onFileDropped={() => {}}>
-                    <FileUploadTemplate />
-                  </FileUpload>
-                </Surface>
-              </div>
-            </GridItem>
-            <GridItem
-              key={2}
-              columnSpan={{
-                largeMonitor: 8,
-                smallMonitor: 5,
-                tablet: 5,
-                mobile: 2,
-                smallMobile: 2,
-              }}
-            >
-              <Surface elevation={1} style={{ width: '100%', height: '100%' }}>
-                <div />
+            <Grid.Item key={1} columnSpan={12}>
+              <Surface elevation={1}>
+                <DemoHomePageHeader
+                  icon={<SvgImodelHollow />}
+                  centerArea={
+                    <div>
+                      <Text variant='title'>This is title</Text>
+                      <Text variant='leading'>Subheading is the best</Text>
+                    </div>
+                  }
+                  rightArea={<div />}
+                />
               </Surface>
-            </GridItem>
-            <GridItem
+            </Grid.Item>
+            <Grid.Item
               key={3}
               columnSpan={{
-                largeMonitor: 4,
+                monitor: 4,
                 smallMonitor: 4,
                 tablet: 4,
-                mobile: 2,
-                smallMobile: 2,
+                landscapeMobile: 12,
+                mobile: 12,
               }}
             >
-              <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
-                <div />
+              <Surface elevation={1}>
+                <DemoSurfaceCard title='Demo'>blablabla</DemoSurfaceCard>
               </Surface>
-            </GridItem>
-            <GridItem
+            </Grid.Item>
+            <Grid.Item
               key={4}
               columnSpan={{
-                largeMonitor: 4,
-                smallMonitor: 2,
-                tablet: 2,
-                mobile: 1,
-                smallMobile: 1,
+                monitor: 4,
+                smallMonitor: 4,
+                tablet: 4,
+                landscapeMobile: 12,
+                mobile: 12,
               }}
             >
-              <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
-                <div />
+              <Surface
+                elevation={1}
+                style={{
+                  width: '100%',
+                  height: 'fit-content',
+                  minHeight: '350px',
+                }}
+              >
+                <DemoSurfaceCard title='Demo'>blablabla</DemoSurfaceCard>
               </Surface>
-            </GridItem>
-            <GridItem
+            </Grid.Item>
+            <Grid.Item
               key={5}
               columnSpan={{
-                largeMonitor: 4,
-                smallMonitor: 2,
-                tablet: 2,
-                mobile: 1,
-                smallMobile: 1,
+                monitor: 4,
+                smallMonitor: 4,
+                tablet: 4,
+                landscapeMobile: 12,
+                mobile: 12,
+              }}
+            >
+              <Surface elevation={1} style={{ width: '100%', height: '350px' }}>
+                <DemoSurfaceCard title='Demo'>blablabla</DemoSurfaceCard>
+              </Surface>
+            </Grid.Item>
+            <Grid.Item
+              key={6}
+              columnSpan={{
+                monitor: 4,
+                smallMonitor: 4,
+                tablet: 4,
+                landscapeMobile: 12,
+                mobile: 12,
               }}
             >
               <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
-                <div />
+                <DemoSurfaceCard title='Demo'>blablabla</DemoSurfaceCard>
               </Surface>
-            </GridItem>
-            <GridItem
-              key={6}
+            </Grid.Item>
+            <Grid.Item
+              key={7}
               columnSpan={{
-                largeMonitor: 12,
+                monitor: 8,
                 smallMonitor: 8,
                 tablet: 8,
-                mobile: 4,
-                smallMobile: 2,
+                landscapeMobile: 12,
+                mobile: 12,
               }}
             >
-              <FluidGrid>
-                {Array(6)
-                  .fill(null)
-                  .map((_, index) => (
-                    <Tile
-                      key={`Item #${index}`}
-                      name={`Item #${index}`}
-                      description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.'
-                    />
-                  ))}
-              </FluidGrid>
-            </GridItem>
+              <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
+                <DemoSurfaceCard title='Demo'>blablabla</DemoSurfaceCard>
+              </Surface>
+            </Grid.Item>
           </Grid>
         </PageLayout.Content>
       </PageLayout>

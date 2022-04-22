@@ -4,56 +4,44 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import cx from 'classnames';
-import { StylingProps, styleKeysValues } from '../../utils';
-import { ScreenSizes } from './types';
+import { StylingProps } from '../../utils';
+import { GridItem } from './GridItem';
 
 export type GridProps = {
   /**
    * Children of the element
    */
   children: React.ReactNode;
-  /**
-   * Grid column count on different screen sizes.
-   * @default {smallMobile:2,mobile:4,tablet:8,smallMonitor:8,largeMonitor:12}
-   */
-  columnCount?: ScreenSizes;
 } & StylingProps;
 
+export type GridType = (props: GridProps) => JSX.Element & {
+  Item: typeof GridItem;
+};
+
+/**
+ * Grid component based on CSS grid.
+ * Grid has 12 columns across all screen breakpoints to keep consistent layouts.
+ * Recommended to use `GridItem` components as children but can take any `ReactNode` components.
+ *
+ * @example
+ *
+ * <Grid>
+ *   <GridItem />
+ *   <GridItem />
+ * </Grid>
+ */
 export const Grid = (props: GridProps) => {
-  const { className, style, children, columnCount } = props;
+  const { className, style, children } = props;
 
   return (
-    <div
-      className={cx('iui-layouts-grid', className)}
-      style={
-        {
-          ...style,
-          ...styleKeysValues(
-            '--_iui-grid-column-count-smobile',
-            columnCount?.smallMobile,
-          ),
-          ...styleKeysValues(
-            '--_iui-grid-column-count-mobile',
-            columnCount?.mobile,
-          ),
-          ...styleKeysValues(
-            '--_iui-grid-column-count-tablet',
-            columnCount?.tablet,
-          ),
-          ...styleKeysValues(
-            '--_iui-grid-column-count-smonitor',
-            columnCount?.smallMonitor,
-          ),
-          ...styleKeysValues(
-            '--_iui-grid-column-count-lmonitor',
-            columnCount?.largeMonitor,
-          ),
-        } as React.CSSProperties
-      }
-    >
+    <div className={cx('iui-layouts-grid', className)} style={style}>
       {children}
     </div>
   );
 };
+
+Grid.displayName = 'Grid';
+
+Grid.Item = GridItem;
 
 export default Grid;

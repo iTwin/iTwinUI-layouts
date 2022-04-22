@@ -18,6 +18,10 @@ export type FluidGridProps = {
   minItemWidth?: number;
 } & StylingProps;
 
+/**
+ * Fluid grid automatically positions children to screen width.
+ * Children count per row calculation is based on `minItemWidth` which by default is 256px.
+ */
 export const FluidGrid = (props: FluidGridProps) => {
   const { className, style, children, minItemWidth = 256 } = props;
   return (
@@ -34,5 +38,7 @@ export const FluidGrid = (props: FluidGridProps) => {
     </div>
   );
 };
+
+FluidGrid.displayName = 'FluidGrid';
 
 export default FluidGrid;

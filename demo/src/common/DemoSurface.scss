@@ -1,0 +1,20 @@
+// Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+// See LICENSE.md in the project root for license terms and full copyright notice.
+@import '@itwin/itwinui-css/scss/variables';
+
+.demo-surface-card {
+  height: 350px;
+  width: 100%;
+}
+
+.demo-surface-title-bar {
+  display: flex;
+  align-items: center;
+  height: 4 * $iui-baseline;
+  border-bottom: 1px solid var(--iui-color-background-5);
+  padding: 0 12px;
+}
+
+.demo-surface-content {
+  padding: 11px 12px;
+}

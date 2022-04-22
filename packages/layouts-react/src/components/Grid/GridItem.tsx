@@ -4,8 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import cx from 'classnames';
-import { StylingProps, styleKeysValues } from '../../utils';
-import { ScreenSizes } from './types';
+import { StylingProps } from '../../utils';
+import { ScreenSizes, ScreenSizesOffset } from './types';
 
 export type GridItemProps = {
   /**
@@ -14,64 +14,141 @@ export type GridItemProps = {
   children?: React.ReactNode;
   /**
    * Column span for grid item
-   * @default {smallMobile:1,mobile:1,tablet:1,smallMonitor:1,largeMonitor:1}
+   * @default 1
    */
-  columnSpan?: ScreenSizes;
+  columnSpan?: number | ScreenSizes;
   /**
-   * Column span for grid item
-   * @default {smallMobile:0,mobile:0,tablet:0,smallMonitor:0,largeMonitor:0}
+   * Column offset for grid item
+   * @default 'auto'
    */
-  columnOffset?: ScreenSizes;
+  columnOffset?: 'auto' | number | ScreenSizesOffset;
 } & StylingProps;
 
+const columnSpanProps = (key: string, value: number | undefined) => {
+  if (value) {
+    return {
+      [key]: `span ${value}`,
+    };
+  }
+  return {};
+};
+
+const columnProps = (key: string, value: number | string | undefined) => {
+  if (value) {
+    return {
+      [key]: `${value}`,
+    };
+  }
+  return {};
+};
+
+const columnSpanTypeGuard = (
+  columnSpan: number | ScreenSizes,
+  accessor: keyof ScreenSizes,
+) => {
+  if (typeof columnSpan === 'number') {
+    return columnSpan;
+  }
+  return columnSpan[accessor];
+};
+
+const columnOffsetTypeGuard = (
+  columnOffset: 'auto' | number | ScreenSizesOffset,
+  accessor: keyof ScreenSizesOffset,
+) => {
+  if (typeof columnOffset === 'number' || typeof columnOffset === 'string') {
+    return columnOffset;
+  }
+  return columnOffset[accessor];
+};
+
+/**
+ * Grid item component to use with our `Grid`.
+ * Default size is 1 column. You can change this by providing `columnSpan` prop.
+ * Grid item starts at the next available position in grid. To change that provide `columnOffset` prop.
+ *
+ * @example
+ * <GridItem
+ *   columnSpan={12}
+ * />
+ * <GridItem
+ *   columnSpan={{
+                monitor: 8,
+                smallMonitor: 6,
+                tablet: 4,
+                landscapeMobile: 12,
+                mobile: 12,
+              }}
+ * />  
+ * <GridItem
+ *   columnSpan={4}
+ *   columnOffset={2}
+ * />
+ * <GridItem
+ *   columnSpan={4}
+ *   columnOffset={{
+                monitor: 2,
+                smallMonitor: 2,
+                tablet: 1,
+                landscapeMobile: 'auto',
+                mobile: 'auto',
+              }}
+ * />
+ */
 export const GridItem = (props: GridItemProps) => {
-  const { className, children, style, columnSpan, columnOffset } = props;
+  const {
+    className,
+    style,
+    children,
+    columnSpan = 1,
+    columnOffset = 'auto',
+  } = props;
 
   return (
     <div
       className={cx('iui-layouts-grid-item', className)}
       style={{
         // Column span values
-        ...styleKeysValues(
-          '--_iui-grid-item-column-span-smobile',
-          columnSpan?.smallMobile,
-        ),
-        ...styleKeysValues(
+        ...columnSpanProps(
           '--_iui-grid-item-column-span-mobile',
-          columnSpan?.mobile,
+          columnSpanTypeGuard(columnSpan, 'mobile'),
         ),
-        ...styleKeysValues(
+        ...columnSpanProps(
+          '--_iui-grid-item-column-span-landscape-mobile',
+          columnSpanTypeGuard(columnSpan, 'landscapeMobile'),
+        ),
+        ...columnSpanProps(
           '--_iui-grid-item-column-span-tablet',
-          columnSpan?.tablet,
+          columnSpanTypeGuard(columnSpan, 'tablet'),
         ),
-        ...styleKeysValues(
-          '--_iui-grid-item-column-span-smonitor',
-          columnSpan?.smallMonitor,
+        ...columnSpanProps(
+          '--_iui-grid-item-column-span-small-monitor',
+          columnSpanTypeGuard(columnSpan, 'smallMonitor'),
         ),
-        ...styleKeysValues(
-          '--_iui-grid-item-column-span-lmonitor',
-          columnSpan?.largeMonitor,
+        ...columnSpanProps(
+          '--_iui-grid-item-column-span-monitor',
+          columnSpanTypeGuard(columnSpan, 'monitor'),
         ),
         // Column offset value
-        ...styleKeysValues(
-          '--_iui-grid-item-column-start-smobile',
-          columnOffset?.smallMobile,
-        ),
-        ...styleKeysValues(
+        ...columnProps(
           '--_iui-grid-item-column-start-mobile',
-          columnOffset?.mobile,
+          columnOffsetTypeGuard(columnOffset, 'mobile'),
         ),
-        ...styleKeysValues(
+        ...columnProps(
+          '--_iui-grid-item-column-start-landscape-mobile',
+          columnOffsetTypeGuard(columnOffset, 'landscapeMobile'),
+        ),
+        ...columnProps(
           '--_iui-grid-item-column-start-tablet',
-          columnOffset?.tablet,
+          columnOffsetTypeGuard(columnOffset, 'tablet'),
         ),
-        ...styleKeysValues(
-          '--_iui-grid-item-column-start-smonitor',
-          columnOffset?.smallMonitor,
+        ...columnProps(
+          '--_iui-grid-item-column-start-small-monitor',
+          columnOffsetTypeGuard(columnOffset, 'smallMonitor'),
         ),
-        ...styleKeysValues(
-          '--_iui-grid-item-column-start-lmonitor',
-          columnOffset?.largeMonitor,
+        ...columnProps(
+          '--_iui-grid-item-column-start-monitor',
+          columnOffsetTypeGuard(columnOffset, 'monitor'),
         ),
         // User styles
         ...style,
@@ -82,6 +159,6 @@ export const GridItem = (props: GridItemProps) => {
   );
 };
 
-GridItem.displayName = 'GridItem';
+GridItem.displayName = 'Grid.Item';
 
 export default GridItem;

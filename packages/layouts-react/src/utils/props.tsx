@@ -4,16 +4,13 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 
-export type ClassNameProps = {
+export type StylingProps = {
   /**
    * Custom CSS class name.
    */
   className?: string;
-};
-
-export type StylingProps = {
   /**
    * Custom CSS style properties.
    */
   style?: React.CSSProperties;
-} & ClassNameProps;
+};
