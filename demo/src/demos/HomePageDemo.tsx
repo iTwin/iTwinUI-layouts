@@ -70,7 +70,8 @@ export const HomePageDemo = () => {
                 elevation={1}
                 style={{
                   width: '100%',
-                  height: '350px',
+                  minHeight: '400px',
+                  height: '100%',
                 }}
               >
                 <DemoSurfaceCard title='Demo group 1'>
@@ -101,7 +102,8 @@ export const HomePageDemo = () => {
                 elevation={1}
                 style={{
                   width: '100%',
-                  height: '350px',
+                  minHeight: '400px',
+                  height: '100%',
                 }}
               >
                 <DemoSurfaceCard title='Demo group 2'>
@@ -128,7 +130,10 @@ export const HomePageDemo = () => {
                 mobile: 12,
               }}
             >
-              <Surface elevation={1} style={{ width: '100%', height: '350px' }}>
+              <Surface
+                elevation={1}
+                style={{ width: '100%', minHeight: '400px', height: '100%' }}
+              >
                 <DemoSurfaceCard title='Demo group 3'>
                   <div
                     style={{
@@ -153,7 +158,10 @@ export const HomePageDemo = () => {
                 mobile: 12,
               }}
             >
-              <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
+              <Surface
+                elevation={1}
+                style={{ width: '100%', minHeight: '250px', height: '100%' }}
+              >
                 <DemoSurfaceCard title='Example card'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -172,7 +180,10 @@ export const HomePageDemo = () => {
                 mobile: 12,
               }}
             >
-              <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
+              <Surface
+                elevation={1}
+                style={{ width: '100%', minHeight: '250px', height: '100%' }}
+              >
                 <DemoSurfaceCard title='List of products'>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
