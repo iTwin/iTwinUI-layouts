@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import { Text } from '@itwin/itwinui-react';
-import './DemoSurface.scss';
+import './DemoSurfaceCard.scss';
 
 type DemoSurfaceCardProps = {
   /**

@@ -9,7 +9,7 @@ import { DemoTemplate } from '../common/DemoTemplate';
 import { DemoSurfaceCard } from '../common/DemoSurfaceCard';
 import { DemoHomePageHeader } from '../common/DemoHomePageHeader';
 import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
-import { Surface, Text } from '@itwin/itwinui-react';
+import { Surface, Text, UserIcon, UserIconGroup } from '@itwin/itwinui-react';
 import { SvgImodelHollow } from '@itwin/itwinui-icons-react';
 
 export const HomePageDemo = () => {
@@ -32,11 +32,27 @@ export const HomePageDemo = () => {
                   icon={<SvgImodelHollow />}
                   centerArea={
                     <div>
-                      <Text variant='title'>This is title</Text>
-                      <Text variant='leading'>Subheading is the best</Text>
+                      <Text variant='title'>This is app title</Text>
+                      <Text variant='leading'>
+                        This subheading is the best. Giving description to the
+                        title of the app.
+                      </Text>
                     </div>
                   }
-                  rightArea={<div />}
+                  rightArea={
+                    <UserIconGroup animated iconSize='medium'>
+                      {Array(6)
+                        .fill(null)
+                        .map((_, index) => (
+                          <UserIcon
+                            key={`user${index}`}
+                            title='Terry Rivers'
+                            abbreviation='TR'
+                            backgroundColor='#5e5e5e'
+                          />
+                        ))}
+                    </UserIconGroup>
+                  }
                 />
               </Surface>
             </Grid.Item>
@@ -50,8 +66,25 @@ export const HomePageDemo = () => {
                 mobile: 12,
               }}
             >
-              <Surface elevation={1}>
-                <DemoSurfaceCard title='Demo'>blablabla</DemoSurfaceCard>
+              <Surface
+                elevation={1}
+                style={{
+                  width: '100%',
+                  height: '350px',
+                }}
+              >
+                <DemoSurfaceCard title='Demo group 1'>
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      height: '100%',
+                    }}
+                  >
+                    No data
+                  </div>
+                </DemoSurfaceCard>
               </Surface>
             </Grid.Item>
             <Grid.Item
@@ -68,11 +101,21 @@ export const HomePageDemo = () => {
                 elevation={1}
                 style={{
                   width: '100%',
-                  height: 'fit-content',
-                  minHeight: '350px',
+                  height: '350px',
                 }}
               >
-                <DemoSurfaceCard title='Demo'>blablabla</DemoSurfaceCard>
+                <DemoSurfaceCard title='Demo group 2'>
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      height: '100%',
+                    }}
+                  >
+                    No data
+                  </div>
+                </DemoSurfaceCard>
               </Surface>
             </Grid.Item>
             <Grid.Item
@@ -86,7 +129,18 @@ export const HomePageDemo = () => {
               }}
             >
               <Surface elevation={1} style={{ width: '100%', height: '350px' }}>
-                <DemoSurfaceCard title='Demo'>blablabla</DemoSurfaceCard>
+                <DemoSurfaceCard title='Demo group 3'>
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      height: '100%',
+                    }}
+                  >
+                    No data
+                  </div>
+                </DemoSurfaceCard>
               </Surface>
             </Grid.Item>
             <Grid.Item
@@ -100,7 +154,12 @@ export const HomePageDemo = () => {
               }}
             >
               <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
-                <DemoSurfaceCard title='Demo'>blablabla</DemoSurfaceCard>
+                <DemoSurfaceCard title='Example card'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </DemoSurfaceCard>
               </Surface>
             </Grid.Item>
             <Grid.Item
@@ -114,7 +173,12 @@ export const HomePageDemo = () => {
               }}
             >
               <Surface elevation={1} style={{ width: '100%', height: '250px' }}>
-                <DemoSurfaceCard title='Demo'>blablabla</DemoSurfaceCard>
+                <DemoSurfaceCard title='List of products'>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </DemoSurfaceCard>
               </Surface>
             </Grid.Item>
           </Grid>

@@ -3,7 +3,7 @@
 @import '@itwin/itwinui-css/scss/variables';
 
 .demo-surface-card {
-  height: 350px;
+  height: 100%;
   width: 100%;
 }
 
@@ -17,4 +17,5 @@
 
 .demo-surface-content {
   padding: 11px 12px;
+  height: calc(100% - 4 * $iui-baseline);
 }

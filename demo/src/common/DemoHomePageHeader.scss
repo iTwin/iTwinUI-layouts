@@ -4,7 +4,8 @@
 
 .demo-home-page-header {
   display: flex;
-  height: 12 * $iui-baseline;
+  min-height: 12 * $iui-baseline;
+  height: fit-content;
 
   &-icon {
     width: 20%;
@@ -33,5 +34,7 @@
     padding: 11px 12px;
     width: 30%;
     justify-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
   }
 }
