@@ -9,7 +9,6 @@
   --_iui-grid-column-count-monitor: 12;
 
   display: grid;
-
   @include monitor {
     grid-template-columns: repeat(var(--_iui-grid-column-count-monitor), 1fr);
     grid-gap: $iui-l;

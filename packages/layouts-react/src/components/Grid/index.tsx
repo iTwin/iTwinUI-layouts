@@ -7,3 +7,5 @@ export type { FluidGridProps } from './FluidGrid';
 
 export { Grid } from './Grid';
 export { GridItem } from './GridItem';
+
+export type { ScreenSizes, ScreenSizesOffset } from './types';
