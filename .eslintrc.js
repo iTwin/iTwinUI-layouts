@@ -38,7 +38,9 @@ module.exports = {
     "react/self-closing-comp": [1],
     "curly": "error",
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "no-restricted-imports": ["error", ".."]
+    "no-restricted-imports": ["error", ".."],
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
   },
   ignorePatterns: ["**/dist/*", "**/node_modules/*", "**/*.js"]
 };
