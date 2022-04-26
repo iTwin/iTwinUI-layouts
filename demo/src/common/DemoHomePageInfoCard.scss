@@ -22,12 +22,12 @@
   }
 
   &-center {
-    padding: $iui-baseline $iui-baseline + 1;
+    padding: $iui-baseline $iui-sm;
     width: 50%;
   }
 
   &-right {
-    padding: $iui-baseline $iui-baseline + 1;
+    padding: $iui-baseline $iui-sm;
     width: 30%;
     display: flex;
     justify-content: flex-end;

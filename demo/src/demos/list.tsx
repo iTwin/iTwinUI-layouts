@@ -27,7 +27,7 @@ export const DEMOS_LIST = [
   {
     path: 'home-layout',
     name: 'Home page',
-    description: 'Grid layout to display array of tiles.',
+    description: 'Grid layout example for home page.',
     icon: '/layouts-thumbnails/HomeLayout.png',
     component: HomePageDemo,
   },

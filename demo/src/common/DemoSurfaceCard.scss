@@ -16,7 +16,7 @@
 }
 
 .demo-surface-content {
-  padding: $iui-baseline $iui-baseline + 1;
+  padding: $iui-baseline $iui-sm;
   height: calc(100% - 4 * $iui-baseline);
 
   &-centered {
