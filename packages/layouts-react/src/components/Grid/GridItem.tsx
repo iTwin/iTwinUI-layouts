@@ -86,6 +86,8 @@ const columnOffsetTypeGuard = (
        mobile: 12,
      }}
  * />  
+ *    
+ * @example
  * <GridItem
  *   columnSpan={4}
  *   columnOffset={2}

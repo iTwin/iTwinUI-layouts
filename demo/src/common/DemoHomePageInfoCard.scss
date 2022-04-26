@@ -32,4 +32,26 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  @media (max-width: 486px) {
+    flex-direction: column;
+
+    &-icon {
+      width: 100%;
+      height: $iui-xxl;
+
+      svg {
+        width: $iui-xl;
+        height: $iui-xl;
+      }
+    }
+
+    &-center {
+      width: 100%;
+    }
+
+    &-right {
+      width: 100%;
+    }
+  }
 }
