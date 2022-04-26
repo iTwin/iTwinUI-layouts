@@ -79,12 +79,12 @@ const columnOffsetTypeGuard = (
  * />
  * <GridItem
  *   columnSpan={{
-                monitor: 8,
-                smallMonitor: 6,
-                tablet: 4,
-                landscapeMobile: 12,
-                mobile: 12,
-              }}
+       monitor: 8,
+       smallMonitor: 6,
+       tablet: 4,
+       landscapeMobile: 12,
+       mobile: 12,
+     }}
  * />  
  * <GridItem
  *   columnSpan={4}
@@ -93,12 +93,12 @@ const columnOffsetTypeGuard = (
  * <GridItem
  *   columnSpan={4}
  *   columnOffset={{
-                monitor: 2,
-                smallMonitor: 2,
-                tablet: 1,
-                landscapeMobile: 'auto',
-                mobile: 'auto',
-              }}
+       monitor: 2,
+       smallMonitor: 2,
+       tablet: 1,
+       landscapeMobile: 'auto',
+       mobile: 'auto',
+      }}
  * />
  */
 export const GridItem = (props: GridItemProps) => {
