@@ -16,6 +16,12 @@
 }
 
 .demo-surface-content {
-  padding: 11px 12px;
+  padding: $iui-baseline $iui-baseline + 1;
   height: calc(100% - 4 * $iui-baseline);
+
+  &-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

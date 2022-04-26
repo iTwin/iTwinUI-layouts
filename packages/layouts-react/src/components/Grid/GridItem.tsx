@@ -30,36 +30,42 @@ const columnSpanProps = (key: string, value: number | undefined) => {
       [key]: `span ${value}`,
     };
   }
-  return {};
+  return undefined;
 };
 
 const columnProps = (key: string, value: number | string | undefined) => {
   if (value) {
     return {
-      [key]: `${value}`,
+      [key]: value,
     };
   }
-  return {};
+  return undefined;
 };
 
 const columnSpanTypeGuard = (
-  columnSpan: number | ScreenSizes,
+  columnSpan: number | ScreenSizes | undefined,
   accessor: keyof ScreenSizes,
 ) => {
   if (typeof columnSpan === 'number') {
     return columnSpan;
   }
-  return columnSpan[accessor];
+  if (columnSpan) {
+    return columnSpan[accessor];
+  }
+  return undefined;
 };
 
 const columnOffsetTypeGuard = (
-  columnOffset: 'auto' | number | ScreenSizesOffset,
+  columnOffset: 'auto' | number | ScreenSizesOffset | undefined,
   accessor: keyof ScreenSizesOffset,
 ) => {
   if (typeof columnOffset === 'number' || typeof columnOffset === 'string') {
     return columnOffset;
   }
-  return columnOffset[accessor];
+  if (columnOffset) {
+    return columnOffset[accessor];
+  }
+  return undefined;
 };
 
 /**
@@ -96,13 +102,7 @@ const columnOffsetTypeGuard = (
  * />
  */
 export const GridItem = (props: GridItemProps) => {
-  const {
-    className,
-    style,
-    children,
-    columnSpan = 1,
-    columnOffset = 'auto',
-  } = props;
+  const { className, style, children, columnSpan, columnOffset } = props;
 
   return (
     <div

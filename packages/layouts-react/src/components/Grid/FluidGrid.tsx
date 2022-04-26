@@ -29,8 +29,8 @@ export const FluidGrid = (props: FluidGridProps) => {
       className={cx('iui-layouts-fluid-grid', className)}
       style={
         {
-          ...style,
           '--_iui-grid-item-min-width': `${minItemWidth}px`,
+          ...style,
         } as React.CSSProperties
       }
     >
@@ -38,7 +38,5 @@ export const FluidGrid = (props: FluidGridProps) => {
     </div>
   );
 };
-
-FluidGrid.displayName = 'FluidGrid';
 
 export default FluidGrid;

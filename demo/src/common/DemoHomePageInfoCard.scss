@@ -2,14 +2,12 @@
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import '@itwin/itwinui-css/scss/variables';
 
-.demo-home-page-header {
+.demo-home-page-info-card {
   display: flex;
   min-height: 12 * $iui-baseline;
-  height: fit-content;
 
   &-icon {
     width: 20%;
-    justify-self: flex-start;
     background-color: var(--iui-color-background-3);
     border-right: 1px solid var(--iui-color-background-5);
     display: flex;
@@ -18,22 +16,19 @@
 
     svg {
       fill: var(--iui-icons-color);
-      display: inline-flex;
-      width: 64px;
-      height: 64px;
+      width: $iui-xxl;
+      height: $iui-xxl;
     }
   }
 
   &-center {
-    padding: 11px 12px;
+    padding: $iui-baseline $iui-baseline + 1;
     width: 50%;
-    justify-self: center;
   }
 
   &-right {
-    padding: 11px 12px;
+    padding: $iui-baseline $iui-baseline + 1;
     width: 30%;
-    justify-self: flex-end;
     display: flex;
     justify-content: flex-end;
   }

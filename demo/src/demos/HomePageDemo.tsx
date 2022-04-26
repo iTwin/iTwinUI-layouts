@@ -7,12 +7,26 @@ import { DemoHeader } from '../common/DemoHeader';
 import { DemoSideNav } from '../common/DemoSideNav';
 import { DemoTemplate } from '../common/DemoTemplate';
 import { DemoSurfaceCard } from '../common/DemoSurfaceCard';
-import { DemoHomePageHeader } from '../common/DemoHomePageHeader';
+import { DemoHomePageInfoCard } from '../common/DemoHomePageInfoCard';
 import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
-import { Surface, Text, UserIcon, UserIconGroup } from '@itwin/itwinui-react';
+import {
+  Button,
+  Surface,
+  Text,
+  UserIcon,
+  UserIconGroup,
+} from '@itwin/itwinui-react';
 import { SvgImodelHollow } from '@itwin/itwinui-icons-react';
 
 export const HomePageDemo = () => {
+  const userNames = [
+    { name: 'Terry Rivers', abbreviation: 'TR', color: '#56AA1C' },
+    { name: 'Mark Robbers', abbreviation: 'MR', color: '#2C9B6B' },
+    { name: 'Kayla Smith', abbreviation: 'KS', color: '#2B9CA7' },
+    { name: 'Anthony Li', abbreviation: 'AL', color: '#0273BA' },
+    { name: 'Celine Adams', abbreviation: 'CA', color: '#00426B' },
+  ];
+
   return (
     <DemoTemplate title='Home Page'>
       <PageLayout>
@@ -28,7 +42,7 @@ export const HomePageDemo = () => {
           <Grid>
             <Grid.Item key={1} columnSpan={12}>
               <Surface elevation={1}>
-                <DemoHomePageHeader
+                <DemoHomePageInfoCard
                   icon={<SvgImodelHollow />}
                   centerArea={
                     <div>
@@ -41,16 +55,14 @@ export const HomePageDemo = () => {
                   }
                   rightArea={
                     <UserIconGroup animated iconSize='medium'>
-                      {Array(6)
-                        .fill(null)
-                        .map((_, index) => (
-                          <UserIcon
-                            key={`user${index}`}
-                            title='Terry Rivers'
-                            abbreviation='TR'
-                            backgroundColor='#5e5e5e'
-                          />
-                        ))}
+                      {userNames.map((user, index) => (
+                        <UserIcon
+                          key={`user${index}`}
+                          title={user.name}
+                          abbreviation={user.abbreviation}
+                          backgroundColor={user.color}
+                        />
+                      ))}
                     </UserIconGroup>
                   }
                 />
@@ -62,7 +74,7 @@ export const HomePageDemo = () => {
                 monitor: 4,
                 smallMonitor: 4,
                 tablet: 4,
-                landscapeMobile: 12,
+                landscapeMobile: 6,
                 mobile: 12,
               }}
             >
@@ -74,17 +86,8 @@ export const HomePageDemo = () => {
                   height: '100%',
                 }}
               >
-                <DemoSurfaceCard title='Demo group 1'>
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      height: '100%',
-                    }}
-                  >
-                    No data
-                  </div>
+                <DemoSurfaceCard title='Demo group 1' centeredContent>
+                  No data
                 </DemoSurfaceCard>
               </Surface>
             </Grid.Item>
@@ -94,7 +97,7 @@ export const HomePageDemo = () => {
                 monitor: 4,
                 smallMonitor: 4,
                 tablet: 4,
-                landscapeMobile: 12,
+                landscapeMobile: 6,
                 mobile: 12,
               }}
             >
@@ -106,17 +109,8 @@ export const HomePageDemo = () => {
                   height: '100%',
                 }}
               >
-                <DemoSurfaceCard title='Demo group 2'>
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      height: '100%',
-                    }}
-                  >
-                    No data
-                  </div>
+                <DemoSurfaceCard title='Demo group 2' centeredContent>
+                  No data
                 </DemoSurfaceCard>
               </Surface>
             </Grid.Item>
@@ -134,19 +128,18 @@ export const HomePageDemo = () => {
                 elevation={1}
                 style={{ width: '100%', minHeight: '400px', height: '100%' }}
               >
-                <DemoSurfaceCard title='Demo group 3'>
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'center',
-                      height: '100%',
-                    }}
-                  >
-                    No data
-                  </div>
+                <DemoSurfaceCard title='Demo group 3' centeredContent>
+                  No data
                 </DemoSurfaceCard>
               </Surface>
+            </Grid.Item>
+            <Grid.Item
+              key={9}
+              columnSpan={3}
+              columnOffset={10}
+              style={{ display: 'flex', justifyContent: 'flex-end' }}
+            >
+              <Button>Button</Button>
             </Grid.Item>
             <Grid.Item
               key={6}

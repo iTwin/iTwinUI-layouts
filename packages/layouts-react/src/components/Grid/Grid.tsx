@@ -27,7 +27,8 @@ export type GridType = (props: GridProps) => JSX.Element & {
  *
  * <Grid>
  *   <GridItem />
- *   <GridItem />
+ *   <GridItem columnSpan={6}/>
+ *   <GridItem columnSpan={6}/>
  * </Grid>
  */
 export const Grid = (props: GridProps) => {
@@ -39,8 +40,6 @@ export const Grid = (props: GridProps) => {
     </div>
   );
 };
-
-Grid.displayName = 'Grid';
 
 Grid.Item = GridItem;
 
