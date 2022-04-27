@@ -8,7 +8,7 @@
 }
 
 @mixin landscape-mobile {
-  @media (min-width: 486px) and (max-width: 768px) {
+  @media (min-width: 487px) and (max-width: 768px) {
     @content;
   }
 }
