@@ -40,7 +40,7 @@ export const HomePageDemo = () => {
 
         <PageLayout.Content padded>
           <Grid>
-            <Grid.Item key={1} columnSpan={12}>
+            <Grid.Item key={'info-card'} columnSpan={12}>
               <Surface elevation={1}>
                 <DemoHomePageInfoCard
                   icon={<SvgImodelHollow />}
@@ -69,7 +69,7 @@ export const HomePageDemo = () => {
               </Surface>
             </Grid.Item>
             <Grid.Item
-              key={3}
+              key={'demo-group-1'}
               columnSpan={{
                 monitor: 4,
                 smallMonitor: 4,
@@ -92,7 +92,7 @@ export const HomePageDemo = () => {
               </Surface>
             </Grid.Item>
             <Grid.Item
-              key={4}
+              key={'demo-group-2'}
               columnSpan={{
                 monitor: 4,
                 smallMonitor: 4,
@@ -115,7 +115,7 @@ export const HomePageDemo = () => {
               </Surface>
             </Grid.Item>
             <Grid.Item
-              key={5}
+              key={'demo-group-3'}
               columnSpan={{
                 monitor: 4,
                 smallMonitor: 4,
@@ -134,7 +134,7 @@ export const HomePageDemo = () => {
               </Surface>
             </Grid.Item>
             <Grid.Item
-              key={9}
+              key={'offset-button'}
               columnSpan={3}
               columnOffset={10}
               style={{ display: 'flex', justifyContent: 'flex-end' }}
@@ -142,7 +142,7 @@ export const HomePageDemo = () => {
               <Button>Button</Button>
             </Grid.Item>
             <Grid.Item
-              key={6}
+              key={'example-card-1'}
               columnSpan={{
                 monitor: 4,
                 smallMonitor: 4,
@@ -164,7 +164,7 @@ export const HomePageDemo = () => {
               </Surface>
             </Grid.Item>
             <Grid.Item
-              key={7}
+              key={'example-card-2'}
               columnSpan={{
                 monitor: 8,
                 smallMonitor: 8,
