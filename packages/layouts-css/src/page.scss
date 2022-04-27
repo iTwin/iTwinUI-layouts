@@ -56,6 +56,17 @@
       margin-bottom: $iui-baseline * 3;
     }
 
+    &-data-area {
+      margin-bottom: $iui-baseline * 3;
+
+      &-sticky {
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        display: sticky;
+      }
+    }
+
     &-tools {
       display: flex;
       flex-direction: row;

@@ -2,7 +2,7 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import './index.scss';
@@ -14,8 +14,8 @@ ReactDOM.render(
     <HashRouter>
       <Routes>
         <Route path='/' element={<App />} />
-        {DEMOS_LIST.map(({ path, component }) => (
-          <Route key={path} path={path} element={component()} />
+        {DEMOS_LIST.map(({ path, component: Component }) => (
+          <Route key={path} path={path} element={<Component />} />
         ))}
       </Routes>
     </HashRouter>

@@ -8,6 +8,7 @@ import ToolsArea from './ToolsArea';
 import { Header } from './Header';
 import SideNavigation from './SideNavigation';
 import TitleArea from './TitleArea';
+import DataArea from './DataArea';
 
 export type PageLayoutProps = {
   children: React.ReactNode;
@@ -19,6 +20,7 @@ export type PageLayoutType = (props: PageLayoutProps) => JSX.Element & {
   Content: typeof Content;
   ToolsArea: typeof ToolsArea;
   TitleArea: typeof TitleArea;
+  DataArea: typeof DataArea;
 };
 
 export const PageLayout = (props: PageLayoutProps) => {
@@ -31,5 +33,6 @@ PageLayout.SideNavigation = SideNavigation;
 PageLayout.Content = Content;
 PageLayout.ToolsArea = ToolsArea;
 PageLayout.TitleArea = TitleArea;
+PageLayout.DataArea = DataArea;
 
 export default PageLayout;

@@ -18,8 +18,8 @@ import {
 } from '@itwin/itwinui-react';
 import { SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
 
-export const TableLayoutDemo = () => {
-  const onClickHandler = () => console.log('blablabla');
+export const TableLayoutDemo = (): JSX.Element => {
+  const onClickHandler = React.useCallback(() => console.log('blablabla'), []);
 
   const columns = React.useMemo(
     () => [
@@ -50,8 +50,9 @@ export const TableLayoutDemo = () => {
         ],
       },
     ],
-    [],
+    [onClickHandler],
   );
+
   const data = Array(24)
     .fill(null)
     .map((_, index) => ({
@@ -101,15 +102,17 @@ export const TableLayoutDemo = () => {
               />
             }
           />
-          <Surface elevation={1}>
-            <Table
-              columns={columns}
-              data={data}
-              emptyTableContent='No data.'
-              isLoading={false}
-              isSortable={true}
-            />
-          </Surface>
+          <PageLayout.DataArea>
+            <Surface elevation={1}>
+              <Table
+                columns={columns}
+                data={data}
+                emptyTableContent='No data.'
+                isLoading={false}
+                isSortable={true}
+              />
+            </Surface>
+          </PageLayout.DataArea>
         </PageLayout.Content>
       </PageLayout>
     </DemoTemplate>
