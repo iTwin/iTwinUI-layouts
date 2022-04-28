@@ -3,7 +3,7 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 
-export type ScreenSizes = {
+export type ResponsiveColumnSpan = {
   mobile: number; // screen < 486px
   landscapeMobile: number; // 487px < screen < 768px
   tablet: number; // 769px < screen < 991px
@@ -11,7 +11,7 @@ export type ScreenSizes = {
   monitor: number; // 1400px < screen
 };
 
-export type ScreenSizesOffset = {
+export type ResponsiveColumnStart = {
   mobile: 'auto' | number; // screen < 486px
   landscapeMobile: 'auto' | number; // 487px < screen < 768px
   tablet: 'auto' | number; // 769px < screen < 991px

@@ -5,7 +5,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { StylingProps } from '../../utils';
-import { ScreenSizes, ScreenSizesOffset } from './types';
+import { ResponsiveColumnSpan, ResponsiveColumnStart } from './types';
 
 export type GridItemProps = {
   /**
@@ -13,15 +13,17 @@ export type GridItemProps = {
    */
   children?: React.ReactNode;
   /**
-   * Column span for grid item
+   * Sets column count for grid item - how many columns this item spans.
+   * Max columnSpan is 12.
    * @default 1
    */
-  columnSpan?: number | ScreenSizes;
+  columnSpan?: number | ResponsiveColumnSpan;
   /**
-   * Column offset for grid item
+   * Sets on which column grid item starts.
+   * Eg. When set to 10, grid item starts on 10th column.
    * @default 'auto'
    */
-  columnOffset?: 'auto' | number | ScreenSizesOffset;
+  columnStart?: 'auto' | number | ResponsiveColumnStart;
 } & StylingProps;
 
 const columnSpanProps = (key: string, value: number | undefined) => {
@@ -43,8 +45,8 @@ const columnProps = (key: string, value: number | string | undefined) => {
 };
 
 const columnSpanTypeGuard = (
-  columnSpan: number | ScreenSizes | undefined,
-  accessor: keyof ScreenSizes,
+  columnSpan: number | ResponsiveColumnSpan | undefined,
+  accessor: keyof ResponsiveColumnSpan,
 ) => {
   if (typeof columnSpan === 'number') {
     return columnSpan;
@@ -56,8 +58,8 @@ const columnSpanTypeGuard = (
 };
 
 const columnOffsetTypeGuard = (
-  columnOffset: 'auto' | number | ScreenSizesOffset | undefined,
-  accessor: keyof ScreenSizesOffset,
+  columnOffset: 'auto' | number | ResponsiveColumnStart | undefined,
+  accessor: keyof ResponsiveColumnStart,
 ) => {
   if (typeof columnOffset === 'number' || typeof columnOffset === 'string') {
     return columnOffset;
@@ -104,7 +106,7 @@ const columnOffsetTypeGuard = (
  * />
  */
 export const GridItem = (props: GridItemProps) => {
-  const { className, style, children, columnSpan, columnOffset } = props;
+  const { className, style, children, columnSpan, columnStart } = props;
 
   return (
     <div
@@ -134,23 +136,23 @@ export const GridItem = (props: GridItemProps) => {
         // Column offset value
         ...columnProps(
           '--_iui-grid-item-column-start-mobile',
-          columnOffsetTypeGuard(columnOffset, 'mobile'),
+          columnOffsetTypeGuard(columnStart, 'mobile'),
         ),
         ...columnProps(
           '--_iui-grid-item-column-start-landscape-mobile',
-          columnOffsetTypeGuard(columnOffset, 'landscapeMobile'),
+          columnOffsetTypeGuard(columnStart, 'landscapeMobile'),
         ),
         ...columnProps(
           '--_iui-grid-item-column-start-tablet',
-          columnOffsetTypeGuard(columnOffset, 'tablet'),
+          columnOffsetTypeGuard(columnStart, 'tablet'),
         ),
         ...columnProps(
           '--_iui-grid-item-column-start-small-monitor',
-          columnOffsetTypeGuard(columnOffset, 'smallMonitor'),
+          columnOffsetTypeGuard(columnStart, 'smallMonitor'),
         ),
         ...columnProps(
           '--_iui-grid-item-column-start-monitor',
-          columnOffsetTypeGuard(columnOffset, 'monitor'),
+          columnOffsetTypeGuard(columnStart, 'monitor'),
         ),
         // User styles
         ...style,

@@ -21,9 +21,7 @@ import { SvgImodelHollow } from '@itwin/itwinui-icons-react';
 export const HomePageDemo = () => {
   const userNames = [
     { name: 'Terry Rivers', abbreviation: 'TR', color: '#56AA1C' },
-    { name: 'Mark Robbers', abbreviation: 'MR', color: '#2C9B6B' },
     { name: 'Kayla Smith', abbreviation: 'KS', color: '#2B9CA7' },
-    { name: 'Anthony Li', abbreviation: 'AL', color: '#0273BA' },
     { name: 'Celine Adams', abbreviation: 'CA', color: '#00426B' },
   ];
 
@@ -136,7 +134,7 @@ export const HomePageDemo = () => {
             <Grid.Item
               key={'offset-button'}
               columnSpan={3}
-              columnOffset={10}
+              columnStart={10}
               style={{ display: 'flex', justifyContent: 'flex-end' }}
             >
               <Button>Button</Button>
