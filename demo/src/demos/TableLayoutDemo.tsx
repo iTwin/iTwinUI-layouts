@@ -19,46 +19,84 @@ import {
 import { SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
 
 export const TableLayoutDemo = (): JSX.Element => {
-  const onClickHandler = React.useCallback(() => console.log('blablabla'), []);
+  type TableStoryDataType = {
+    index: number;
+    name: string;
+    description: string;
+    id: string;
+    startDate: Date;
+    endDate: Date;
+  };
 
   const columns = React.useMemo(
-    () => [
+    (): any[] => [
       {
-        Header: 'Header name',
+        Header: 'Table',
         columns: [
+          {
+            id: 'index',
+            Header: '#',
+            accessor: 'index',
+            width: 80,
+            disableResizing: true,
+          },
           {
             id: 'name',
             Header: 'Name',
             accessor: 'name',
-            width: 90,
           },
           {
             id: 'description',
-            Header: 'description',
+            Header: 'Description',
             accessor: 'description',
-            maxWidth: 200,
+            fieldType: 'text',
+            minWidth: 100,
           },
           {
-            id: 'click-me',
-            Header: 'Click',
+            id: 'id',
+            Header: 'ID',
+            accessor: 'id',
             width: 100,
-            Cell: () => {
-              const onClick = () => onClickHandler();
-              return <Anchor onClick={onClick}>Click me!</Anchor>;
+            disableResizing: true,
+          },
+          {
+            id: 'startDate',
+            Header: 'Start date',
+            accessor: 'startDate',
+            Cell: (props: any) => {
+              return props.row.original.startDate.toLocaleDateString('en-US');
             },
+            width: 100,
+            disableResizing: true,
+          },
+          {
+            id: 'endDate',
+            Header: 'End date',
+            Cell: (props: any) => {
+              return props.row.original.endDate.toLocaleDateString('en-US');
+            },
+            maxWidth: 200,
           },
         ],
       },
     ],
-    [onClickHandler],
+    [],
   );
 
-  const data = Array(24)
-    .fill(null)
-    .map((_, index) => ({
-      name: `Name${index}`,
-      description: `Description${index}`,
-    }));
+  const data = React.useMemo(
+    () =>
+      Array(24)
+        .fill(null)
+        .map((_, index) => ({
+          index: index + 1,
+          name: `Name${index + 1}`,
+          description: `Description${index + 1}`,
+          id: `11${index}`,
+          startDate: new Date(`May ${index + 1}, 2021`),
+          endDate: new Date(`Jun ${index + 1}, 2021`),
+        })),
+    [],
+  );
 
   return (
     <DemoTemplate title='Table layout'>
@@ -102,17 +140,16 @@ export const TableLayoutDemo = (): JSX.Element => {
               />
             }
           />
-          <PageLayout.DataArea>
-            <Surface elevation={1}>
-              <Table
-                columns={columns}
-                data={data}
-                emptyTableContent='No data.'
-                isLoading={false}
-                isSortable={true}
-              />
-            </Surface>
-          </PageLayout.DataArea>
+          <Surface elevation={1}>
+            <Table
+              columns={columns}
+              data={data}
+              emptyTableContent='No data.'
+              isLoading={false}
+              isSortable={true}
+              style={{ maxHeight: '70vh' }}
+            />
+          </Surface>
         </PageLayout.Content>
       </PageLayout>
     </DemoTemplate>
