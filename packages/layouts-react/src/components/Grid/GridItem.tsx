@@ -44,7 +44,7 @@ const columnProps = (key: string, value: number | string | undefined) => {
   return undefined;
 };
 
-const columnSpanTypeGuard = (
+const getColumnSpan = (
   columnSpan: number | ResponsiveColumnSpan | undefined,
   accessor: keyof ResponsiveColumnSpan,
 ) => {
@@ -57,7 +57,7 @@ const columnSpanTypeGuard = (
   return undefined;
 };
 
-const columnOffsetTypeGuard = (
+const getColumnStart = (
   columnOffset: 'auto' | number | ResponsiveColumnStart | undefined,
   accessor: keyof ResponsiveColumnStart,
 ) => {
@@ -73,7 +73,7 @@ const columnOffsetTypeGuard = (
 /**
  * Grid item component to use with our `Grid`.
  * Default size is 1 column. You can change this by providing `columnSpan` prop.
- * Grid item starts at the next available position in grid. To change that provide `columnOffset` prop.
+ * Grid item starts at the next available position in grid. To change that provide `columnStart` prop.
  *
  * @example
  * <GridItem
@@ -92,11 +92,11 @@ const columnOffsetTypeGuard = (
  * @example
  * <GridItem
  *   columnSpan={4}
- *   columnOffset={2}
+ *   columnStart={2}
  * />
  * <GridItem
  *   columnSpan={4}
- *   columnOffset={{
+ *   columnStart={{
        monitor: 2,
        smallMonitor: 2,
        tablet: 1,
@@ -115,44 +115,44 @@ export const GridItem = (props: GridItemProps) => {
         // Column span values
         ...columnSpanProps(
           '--_iui-grid-item-column-span-mobile',
-          columnSpanTypeGuard(columnSpan, 'mobile'),
+          getColumnSpan(columnSpan, 'mobile'),
         ),
         ...columnSpanProps(
           '--_iui-grid-item-column-span-landscape-mobile',
-          columnSpanTypeGuard(columnSpan, 'landscapeMobile'),
+          getColumnSpan(columnSpan, 'landscapeMobile'),
         ),
         ...columnSpanProps(
           '--_iui-grid-item-column-span-tablet',
-          columnSpanTypeGuard(columnSpan, 'tablet'),
+          getColumnSpan(columnSpan, 'tablet'),
         ),
         ...columnSpanProps(
           '--_iui-grid-item-column-span-small-monitor',
-          columnSpanTypeGuard(columnSpan, 'smallMonitor'),
+          getColumnSpan(columnSpan, 'smallMonitor'),
         ),
         ...columnSpanProps(
           '--_iui-grid-item-column-span-monitor',
-          columnSpanTypeGuard(columnSpan, 'monitor'),
+          getColumnSpan(columnSpan, 'monitor'),
         ),
         // Column offset value
         ...columnProps(
           '--_iui-grid-item-column-start-mobile',
-          columnOffsetTypeGuard(columnStart, 'mobile'),
+          getColumnStart(columnStart, 'mobile'),
         ),
         ...columnProps(
           '--_iui-grid-item-column-start-landscape-mobile',
-          columnOffsetTypeGuard(columnStart, 'landscapeMobile'),
+          getColumnStart(columnStart, 'landscapeMobile'),
         ),
         ...columnProps(
           '--_iui-grid-item-column-start-tablet',
-          columnOffsetTypeGuard(columnStart, 'tablet'),
+          getColumnStart(columnStart, 'tablet'),
         ),
         ...columnProps(
           '--_iui-grid-item-column-start-small-monitor',
-          columnOffsetTypeGuard(columnStart, 'smallMonitor'),
+          getColumnStart(columnStart, 'smallMonitor'),
         ),
         ...columnProps(
           '--_iui-grid-item-column-start-monitor',
-          columnOffsetTypeGuard(columnStart, 'monitor'),
+          getColumnStart(columnStart, 'monitor'),
         ),
         // User styles
         ...style,

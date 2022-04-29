@@ -14,14 +14,10 @@ export type GridProps = {
   children: React.ReactNode;
 } & StylingProps;
 
-export type GridType = (props: GridProps) => JSX.Element & {
-  Item: typeof GridItem;
-};
-
 /**
  * Grid component based on CSS grid.
  * Grid has 12 columns across all screen breakpoints to keep consistent layouts.
- * Recommended to use `GridItem` components as children but can take any `ReactNode` components.
+ * Recommended to use `GridItem` components as children but can take any `ReactNode` component.
  *
  * @example
  *

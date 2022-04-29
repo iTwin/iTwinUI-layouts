@@ -18,14 +18,6 @@ export type PageLayoutProps = {
   children: React.ReactNode;
 } & StylingProps;
 
-export type PageLayoutType = (props: PageLayoutProps) => JSX.Element & {
-  Header: typeof Header;
-  SideNavigation: typeof SideNavigation;
-  Content: typeof Content;
-  ToolsArea: typeof ToolsArea;
-  TitleArea: typeof TitleArea;
-};
-
 export const PageLayout = (props: PageLayoutProps) => {
   const { className, style, children } = props;
   return (
