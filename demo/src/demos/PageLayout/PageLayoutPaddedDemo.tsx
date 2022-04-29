@@ -13,6 +13,7 @@ import {
   Button,
   LabeledInput,
   Code,
+  Surface,
 } from '@itwin/itwinui-react';
 
 export const PageLayoutPaddedDemo = () => {
@@ -33,7 +34,7 @@ export const PageLayoutPaddedDemo = () => {
             <Text>
               This page layout has padded content. You can use it for Home page,
               dashboards, tables, settings and other content that does not need
-              full frame content.
+              to be full frame.
             </Text>
             <br />
             <Text>
@@ -45,15 +46,20 @@ export const PageLayoutPaddedDemo = () => {
               Page title and this description is positioned in{' '}
               <Code>PageLayout.TitleArea</Code> component.
             </Text>
+            <Text>
+              Buttons bellow are positioned in <Code>PageLayout.ToolsArea</Code>{' '}
+              component. It has <Code>left</Code> and <Code>right</Code> props
+              to place tools accordingly. You can add anything you want in this
+              area - search bar, filters, button groups, etc.
+            </Text>
           </PageLayout.TitleArea>
           <PageLayout.ToolsArea
-            left={
-              <Button styleType='high-visibility' key='new'>
-                New
-              </Button>
-            }
-            right={<LabeledInput key='search' iconDisplayStyle='inline' />}
+            left={<Button key='new'>Left tools</Button>}
+            right={<Button key='new'>Right tools</Button>}
           />
+          <Surface elevation={1} style={{ width: '100%', height: '100%' }}>
+            <div />
+          </Surface>
         </PageLayout.Content>
       </PageLayout>
     </DemoTemplate>

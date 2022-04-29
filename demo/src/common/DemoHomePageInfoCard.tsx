@@ -21,10 +21,9 @@ export const DemoHomePageInfoCard = () => {
           <SvgImodelHollow />
         </div>
         <div className='demo-home-page-info-card-center'>
-          <Text variant='title'>This is app title</Text>
+          <Text variant='title'>Grid</Text>
           <Text variant='leading'>
-            This subheading is the best. Giving description to the title of the
-            app.
+            This is example of how to use grid for Home page.
           </Text>
         </div>
         <div className='demo-home-page-info-card-right'>

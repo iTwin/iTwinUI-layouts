@@ -13,7 +13,7 @@ import { Button } from '@itwin/itwinui-react';
 
 export const HomePageDemo = () => {
   return (
-    <DemoTemplate title='Home Page'>
+    <DemoTemplate title='Grid'>
       <PageLayout>
         <PageLayout.Header>
           <DemoHeader />
