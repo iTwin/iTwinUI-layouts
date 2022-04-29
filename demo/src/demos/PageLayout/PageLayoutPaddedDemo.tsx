@@ -7,14 +7,7 @@ import { DemoHeader } from '../../common/DemoHeader';
 import { DemoSideNav } from '../../common/DemoSideNav';
 import { DemoTemplate } from '../../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
-import {
-  Headline,
-  Text,
-  Button,
-  LabeledInput,
-  Code,
-  Surface,
-} from '@itwin/itwinui-react';
+import { Headline, Text, Button, Code, Surface } from '@itwin/itwinui-react';
 
 export const PageLayoutPaddedDemo = () => {
   return (
