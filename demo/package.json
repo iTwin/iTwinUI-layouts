@@ -35,7 +35,7 @@
     "@itwin/itwinui-icons-react": "^1.7.0",
     "@itwin/itwinui-layouts-css": "workspace:*",
     "@itwin/itwinui-layouts-react": "workspace:*",
-    "@itwin/itwinui-react": "^1.34.2",
+    "@itwin/itwinui-react": "^1.37.0",
     "react-element-to-jsx-string": "^14.3.4",
     "react-router-dom": "6",
     "vite-plugin-svgr": "^1.0.1"

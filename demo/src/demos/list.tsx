@@ -4,6 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 import AppLayoutDemo from './AppLayoutDemo';
 import GridLayoutDemo from './GridLayoutDemo';
+import HomePageDemo from './HomePageDemo';
 
 /**
  * List of all demos. It is used to dynamically populate the home page and react-router.
@@ -22,5 +23,12 @@ export const DEMOS_LIST = [
     description: 'A responsive grid of tiles.',
     icon: 'layouts-thumbnails/TileGridLayout.png',
     component: GridLayoutDemo,
+  },
+  {
+    path: 'home-layout',
+    name: 'Home page',
+    description: 'Grid layout example for home page.',
+    icon: '/layouts-thumbnails/HomeLayout.png',
+    component: HomePageDemo,
   },
 ];

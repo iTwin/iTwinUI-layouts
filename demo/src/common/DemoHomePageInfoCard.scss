@@ -1,0 +1,57 @@
+// Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+// See LICENSE.md in the project root for license terms and full copyright notice.
+@import '@itwin/itwinui-css/scss/variables';
+
+.demo-home-page-info-card {
+  display: flex;
+  min-height: 12 * $iui-baseline;
+
+  &-icon {
+    width: 20%;
+    background-color: var(--iui-color-background-3);
+    border-right: 1px solid var(--iui-color-background-5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: var(--iui-icons-color);
+      width: $iui-xxl;
+      height: $iui-xxl;
+    }
+  }
+
+  &-center {
+    padding: $iui-baseline $iui-sm;
+    width: 50%;
+  }
+
+  &-right {
+    padding: $iui-baseline $iui-sm;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 486px) {
+    flex-direction: column;
+
+    &-icon {
+      width: 100%;
+      height: $iui-xxl;
+
+      svg {
+        width: $iui-xl;
+        height: $iui-xl;
+      }
+    }
+
+    &-center {
+      width: 100%;
+    }
+
+    &-right {
+      width: 100%;
+    }
+  }
+}

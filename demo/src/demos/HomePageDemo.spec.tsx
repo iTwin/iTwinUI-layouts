@@ -2,10 +2,11 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-export { FluidGrid } from './FluidGrid';
-export type { FluidGridProps } from './FluidGrid';
+import { layoutDescribe } from '../../cypress/common/layoutDescribe';
 
-export { Grid } from './Grid';
-export type { GridProps } from './Grid';
-
-export type { ResponsiveColumnSpan, ResponsiveColumnStart } from './types';
+layoutDescribe('HomePageDemo', (screenSize) => {
+  it('should render HomePageDemo', () => {
+    cy.visit('home-layout');
+    cy.compareSnapshot(`basic-${screenSize.width}x${screenSize.height}`);
+  });
+});

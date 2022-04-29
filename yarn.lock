@@ -706,10 +706,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-css@npm:^0.52.0":
-  version: 0.52.0
-  resolution: "@itwin/itwinui-css@npm:0.52.0"
-  checksum: 03f5fb29bb47cfc885df97e7c6158174d2884203be8663170cc85d47eaab62f27eccb178f529fc7c623cd53f539c69758682273358aeaed12b90ef764043c500
+"@itwin/itwinui-css@npm:^0.55.0":
+  version: 0.55.0
+  resolution: "@itwin/itwinui-css@npm:0.55.0"
+  checksum: 93d760f3f5c8c224d49d26926215bb9826d5589d288dfee93a6536aecc9d17c8e2b918dd20afc791b6d2694e67a0ac016a494f6982453acb60277461aa74c2f3
   languageName: node
   linkType: hard
 
@@ -766,7 +766,7 @@ __metadata:
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
-    "@itwin/itwinui-react": ^1.34.2
+    "@itwin/itwinui-react": ^1.37.0
     "@types/react": ^17.0.33
     "@types/react-dom": ^17.0.10
     "@vitejs/plugin-react": ^1.0.7
@@ -813,6 +813,7 @@ __metadata:
     "@types/react": ^17.0.33
     "@types/react-dom": ^17.0.10
     chokidar-cli: ^3.0.0
+    classnames: ^2.3.1
     react: ^17.0.2
     react-dom: ^17.0.2
     typescript: ^4.4.4
@@ -822,11 +823,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@itwin/itwinui-react@npm:^1.34.2":
-  version: 1.34.2
-  resolution: "@itwin/itwinui-react@npm:1.34.2"
+"@itwin/itwinui-react@npm:^1.37.0":
+  version: 1.37.0
+  resolution: "@itwin/itwinui-react@npm:1.37.0"
   dependencies:
-    "@itwin/itwinui-css": ^0.52.0
+    "@itwin/itwinui-css": ^0.55.0
     "@itwin/itwinui-icons-react": ^1.5.0
     "@itwin/itwinui-illustrations-react": ^1.0.1
     "@tippyjs/react": ^4.2.5
@@ -837,7 +838,7 @@ __metadata:
   peerDependencies:
     react: ^16.8.6 || ^17.0.0
     react-dom: ^16.8.6 || ^17.0.0
-  checksum: f319f9a7964b21c6616e84a80ecee67c3ab54006633ada97d41eabab36d29b16590c75b203da14762a725c414eb840436f6b93630650ceee10be4cd79105882e
+  checksum: 22461d9cc1892e37e070e5b9a14469740faa96f4fba0da30c0c61e5e2274938f35c8b5be80ab54c057d14bb5a5772b5ba545b8125b4a9aa4255171b5362ee28c
   languageName: node
   linkType: hard
 
@@ -1930,7 +1931,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.2.6":
+"classnames@npm:^2.2.6, classnames@npm:^2.3.1":
   version: 2.3.1
   resolution: "classnames@npm:2.3.1"
   checksum: 14db8889d56c267a591f08b0834989fe542d47fac659af5a539e110cc4266694e8de86e4e3bbd271157dbd831361310a8293e0167141e80b0f03a0f175c80960
