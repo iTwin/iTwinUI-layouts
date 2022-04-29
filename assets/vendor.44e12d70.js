@@ -392,7 +392,7 @@ react_production_min.version = "17.0.2";
 {
   react.exports = react_production_min;
 }
-var React$d = react.exports;
+var React$c = react.exports;
 var reactDom = { exports: {} };
 var reactDom_production_min = {};
 var scheduler = { exports: {} };
@@ -7682,53 +7682,6 @@ function useLinkClickHandler(to, _temp) {
     }
   }, [location, navigate, path, replaceProp, state, target, to]);
 }
-var CloseSmall = {};
-var __assign$6w = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6w = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$6w.apply(this, arguments);
-};
-var __createBinding$c = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
-  if (k22 === void 0)
-    k22 = k2;
-  Object.defineProperty(o, k22, { enumerable: true, get: function() {
-    return m2[k2];
-  } });
-} : function(o, m2, k2, k22) {
-  if (k22 === void 0)
-    k22 = k2;
-  o[k22] = m2[k2];
-});
-var __setModuleDefault$c = commonjsGlobal && commonjsGlobal.__setModuleDefault || (Object.create ? function(o, v2) {
-  Object.defineProperty(o, "default", { enumerable: true, value: v2 });
-} : function(o, v2) {
-  o["default"] = v2;
-});
-var __importStar$c = commonjsGlobal && commonjsGlobal.__importStar || function(mod) {
-  if (mod && mod.__esModule)
-    return mod;
-  var result = {};
-  if (mod != null) {
-    for (var k2 in mod)
-      if (k2 !== "default" && Object.prototype.hasOwnProperty.call(mod, k2))
-        __createBinding$c(result, mod, k2);
-  }
-  __setModuleDefault$c(result, mod);
-  return result;
-};
-Object.defineProperty(CloseSmall, "__esModule", { value: true });
-var React$c = __importStar$c(react.exports);
-function SvgCloseSmall(props) {
-  return React$c.createElement("svg", __assign$6w({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$c.createElement("path", { d: "m12.5 2-4.5 4.5-4.5-4.5-1.5 1.5 4.5 4.5-4.5 4.5 1.5 1.5 4.5-4.5 4.5 4.5 1.5-1.5-4.5-4.5 4.5-4.5z" }));
-}
-var _default$c = CloseSmall.default = SvgCloseSmall;
 var classnames = { exports: {} };
 /*!
   Copyright (c) 2018 Jed Watson.
@@ -7783,28 +7736,6 @@ var getDocument = function() {
 var getWindow$1 = function() {
   return typeof window === "undefined" ? void 0 : window;
 };
-var USER_COLORS = [
-  "#6AB9EC",
-  "#B1C854",
-  "#F7706C",
-  "#4585A5",
-  "#FFC335",
-  "#F7963E",
-  "#73C7C1",
-  "#85A9CF",
-  "#A3779F",
-  "#C8C2B4",
-  "#A47854"
-];
-var getUserColor = function(emailOrName) {
-  var normalizedString = emailOrName.trim().toLowerCase();
-  var hash2 = 0;
-  for (var i = 0; i < normalizedString.length; i++) {
-    var charCode = normalizedString.charCodeAt(i);
-    hash2 = (hash2 + charCode) % USER_COLORS.length;
-  }
-  return USER_COLORS[hash2];
-};
 var tabbableElementsSelector = 'a[href], button, input, textarea, select, details, audio[controls], video[controls], [contenteditable]:not([contenteditable="false"]), [tabindex]:not([tabindex="-1"])';
 var getFocusableElements = function(container) {
   if (!container) {
@@ -7846,11 +7777,11 @@ var useMergedRefs = function() {
   for (var _i = 0; _i < arguments.length; _i++) {
     refs[_i] = arguments[_i];
   }
-  return React$d.useCallback(mergeRefs.apply(void 0, refs), __spreadArray$2([], refs, true));
+  return React$c.useCallback(mergeRefs.apply(void 0, refs), __spreadArray$2([], refs, true));
 };
 var useResizeObserver = function(onResize) {
-  var resizeObserver = React$d.useRef();
-  var elementRef = React$d.useCallback(function(element) {
+  var resizeObserver = React$c.useRef();
+  var elementRef = React$c.useCallback(function(element) {
     var _a, _b, _c;
     if (!((_a = getWindow$1()) === null || _a === void 0 ? void 0 : _a.ResizeObserver)) {
       return;
@@ -7874,20 +7805,20 @@ var useOverflow = function(items, disabled, orientation) {
   if (orientation === void 0) {
     orientation = "horizontal";
   }
-  var containerRef = React$d.useRef(null);
-  var _a = React$d.useState(function() {
+  var containerRef = React$c.useRef(null);
+  var _a = React$c.useState(function() {
     return disabled ? items.length : Math.min(items.length, STARTING_MAX_ITEMS_COUNT);
   }), visibleCount = _a[0], setVisibleCount = _a[1];
-  var needsFullRerender = React$d.useRef(true);
-  var _b = React$d.useState(0), containerSize = _b[0], setContainerSize = _b[1];
-  var previousContainerSize = React$d.useRef(0);
-  var updateContainerSize = React$d.useCallback(function(_a2) {
+  var needsFullRerender = React$c.useRef(true);
+  var _b = React$c.useState(0), containerSize = _b[0], setContainerSize = _b[1];
+  var previousContainerSize = React$c.useRef(0);
+  var updateContainerSize = React$c.useCallback(function(_a2) {
     var width = _a2.width, height = _a2.height;
     return setContainerSize(orientation === "horizontal" ? width : height);
   }, [orientation]);
   var _c = useResizeObserver(updateContainerSize), resizeRef = _c[0], observer = _c[1];
-  var resizeObserverRef = React$d.useRef(observer);
-  React$d.useLayoutEffect(function() {
+  var resizeObserverRef = React$c.useRef(observer);
+  React$c.useLayoutEffect(function() {
     if (disabled) {
       setVisibleCount(items.length);
     } else {
@@ -7896,7 +7827,7 @@ var useOverflow = function(items, disabled, orientation) {
     }
   }, [containerSize, disabled, items]);
   var mergedRefs = useMergedRefs(containerRef, resizeRef);
-  React$d.useLayoutEffect(function() {
+  React$c.useLayoutEffect(function() {
     var _a2;
     if (!containerRef.current || disabled) {
       (_a2 = resizeObserverRef.current) === null || _a2 === void 0 ? void 0 : _a2.disconnect();
@@ -7919,15 +7850,15 @@ var useOverflow = function(items, disabled, orientation) {
     }
     needsFullRerender.current = false;
   }, [containerSize, visibleCount, disabled, items.length, orientation]);
-  React$d.useLayoutEffect(function() {
+  React$c.useLayoutEffect(function() {
     previousContainerSize.current = containerSize;
   }, [containerSize]);
   return [mergedRefs, visibleCount];
 };
 var global$1 = "";
 var useMediaQuery = function(queryString) {
-  var _a = React$d.useState(), matches = _a[0], setMatches = _a[1];
-  React$d.useLayoutEffect(function() {
+  var _a = React$c.useState(), matches = _a[0], setMatches = _a[1];
+  React$c.useLayoutEffect(function() {
     var _a2, _b, _c;
     var mediaQueryList = (_b = (_a2 = getWindow$1()) === null || _a2 === void 0 ? void 0 : _a2.matchMedia) === null || _b === void 0 ? void 0 : _b.call(_a2, queryString);
     var handleChange = function(_a3) {
@@ -7957,16 +7888,16 @@ var useTheme = function(theme2, themeOptions) {
   var _a;
   var ownerDocument = (_a = themeOptions === null || themeOptions === void 0 ? void 0 : themeOptions.ownerDocument) !== null && _a !== void 0 ? _a : getDocument();
   var prefersHighContrast = useMediaQuery("(prefers-contrast: more)");
-  var highContrast = React$d.useMemo(function() {
+  var highContrast = React$c.useMemo(function() {
     var _a2;
     return !!((_a2 = themeOptions === null || themeOptions === void 0 ? void 0 : themeOptions.highContrast) !== null && _a2 !== void 0 ? _a2 : prefersHighContrast);
   }, [prefersHighContrast, themeOptions === null || themeOptions === void 0 ? void 0 : themeOptions.highContrast]);
-  React$d.useLayoutEffect(function() {
+  React$c.useLayoutEffect(function() {
     if (!(ownerDocument === null || ownerDocument === void 0 ? void 0 : ownerDocument.body.classList.contains("iui-body"))) {
       ownerDocument === null || ownerDocument === void 0 ? void 0 : ownerDocument.body.classList.add("iui-body");
     }
   }, [ownerDocument]);
-  React$d.useLayoutEffect(function() {
+  React$c.useLayoutEffect(function() {
     var _a2, _b, _c, _d, _e;
     if (!ownerDocument) {
       return;
@@ -10807,8 +10738,8 @@ var forwardRef = function(Tippy2, defaultProps2) {
 var index = /* @__PURE__ */ forwardRef(/* @__PURE__ */ TippyGenerator(tippy));
 var Tippy = index;
 var popover = "";
-var __assign$6v = globalThis && globalThis.__assign || function() {
-  __assign$6v = Object.assign || function(t2) {
+var __assign$6t = globalThis && globalThis.__assign || function() {
+  __assign$6t = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -10817,7 +10748,7 @@ var __assign$6v = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6v.apply(this, arguments);
+  return __assign$6t.apply(this, arguments);
 };
 var __spreadArray$1 = globalThis && globalThis.__spreadArray || function(to, from, pack) {
   if (pack || arguments.length === 2)
@@ -10830,10 +10761,10 @@ var __spreadArray$1 = globalThis && globalThis.__spreadArray || function(to, fro
     }
   return to.concat(ar || Array.prototype.slice.call(from));
 };
-var Popover = React$d.forwardRef(function(props, ref) {
+var Popover = React$c.forwardRef(function(props, ref) {
   var _a;
-  var _b = React$d.useState(false), mounted = _b[0], setMounted = _b[1];
-  var tippyRef = React$d.useRef(null);
+  var _b = React$c.useState(false), mounted = _b[0], setMounted = _b[1];
+  var tippyRef = React$c.useRef(null);
   var refs = useMergedRefs(tippyRef, ref);
   var lazyLoad = {
     fn: function() {
@@ -10857,13 +10788,13 @@ var Popover = React$d.forwardRef(function(props, ref) {
       };
     }
   };
-  var computedProps = __assign$6v(__assign$6v({ allowHTML: true, animation: false, appendTo: function(el) {
+  var computedProps = __assign$6t(__assign$6t({ allowHTML: true, animation: false, appendTo: function(el) {
     return el.ownerDocument.body;
   }, arrow: false, duration: 0, interactive: true, role: void 0, offset: [0, 0], maxWidth: "", zIndex: 99999 }, props), { className: cx("iui-popover", props.className), plugins: __spreadArray$1([
     lazyLoad,
     removeTabIndex,
     hideOnEscOrTab
-  ], props.plugins || [], true), popperOptions: __assign$6v(__assign$6v({ strategy: "fixed" }, props.popperOptions), { modifiers: __spreadArray$1([
+  ], props.plugins || [], true), popperOptions: __assign$6t(__assign$6t({ strategy: "fixed" }, props.popperOptions), { modifiers: __spreadArray$1([
     { name: "flip" },
     { name: "preventOverflow", options: { padding: 0 } }
   ], ((_a = props.popperOptions) === null || _a === void 0 ? void 0 : _a.modifiers) || [], true) }) });
@@ -10877,9 +10808,16 @@ var Popover = React$d.forwardRef(function(props, ref) {
       return mounted ? render_1.apply(void 0, args) : "";
     };
   } else {
-    computedProps.content = mounted ? props.content : "";
+    var clonedContent = React$c.isValidElement(props.content) ? React$c.cloneElement(props.content, {
+      onClick: function(e2) {
+        var _a2, _b2;
+        e2.stopPropagation();
+        (_b2 = (_a2 = props.content.props).onClick) === null || _b2 === void 0 ? void 0 : _b2.call(_a2, e2);
+      }
+    }) : props.content;
+    computedProps.content = mounted ? clonedContent : "";
   }
-  return React$d.createElement(Tippy, __assign$6v({}, computedProps, { ref: refs }));
+  return React$c.createElement(Tippy, __assign$6t({}, computedProps, { ref: refs }));
 });
 var hideOnEscOrTab = {
   fn: function(instance) {
@@ -10912,8 +10850,8 @@ var hideOnEscOrTab = {
     };
   }
 };
-var __assign$6u = globalThis && globalThis.__assign || function() {
-  __assign$6u = Object.assign || function(t2) {
+var __assign$6s = globalThis && globalThis.__assign || function() {
+  __assign$6s = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -10922,9 +10860,9 @@ var __assign$6u = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6u.apply(this, arguments);
+  return __assign$6s.apply(this, arguments);
 };
-var __rest$v = globalThis && globalThis.__rest || function(s, e2) {
+var __rest$t = globalThis && globalThis.__rest || function(s, e2) {
   var t2 = {};
   for (var p2 in s)
     if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
@@ -10939,18 +10877,18 @@ var __rest$v = globalThis && globalThis.__rest || function(s, e2) {
 var InputContainer = function(props) {
   var _a;
   var _b;
-  var _c = props.as, Element2 = _c === void 0 ? "div" : _c, label = props.label, disabled = props.disabled, required = props.required, status = props.status, message = props.message, icon = props.icon, isLabelInline = props.isLabelInline, isIconInline = props.isIconInline, children = props.children, className = props.className, style = props.style, statusMessage = props.statusMessage, rest = __rest$v(props, ["as", "label", "disabled", "required", "status", "message", "icon", "isLabelInline", "isIconInline", "children", "className", "style", "statusMessage"]);
-  return React$d.createElement(Element2, __assign$6u({ className: cx("iui-input-container", (_a = {
+  var _c = props.as, Element2 = _c === void 0 ? "div" : _c, label = props.label, disabled = props.disabled, required = props.required, status = props.status, message = props.message, icon = props.icon, isLabelInline = props.isLabelInline, isIconInline = props.isIconInline, children = props.children, className = props.className, style = props.style, statusMessage = props.statusMessage, rest = __rest$t(props, ["as", "label", "disabled", "required", "status", "message", "icon", "isLabelInline", "isIconInline", "children", "className", "style", "statusMessage"]);
+  return React$c.createElement(Element2, __assign$6s({ className: cx("iui-input-container", (_a = {
     "iui-disabled": disabled
-  }, _a["iui-" + status] = !!status, _a["iui-inline-label"] = isLabelInline, _a["iui-inline-icon"] = isIconInline, _a["iui-with-message"] = (!!message || !!icon || !!statusMessage) && !isLabelInline, _a), className), style }, rest), label && React$d.createElement("div", { className: cx("iui-label", {
+  }, _a["iui-" + status] = !!status, _a["iui-inline-label"] = isLabelInline, _a["iui-inline-icon"] = isIconInline, _a["iui-with-message"] = (!!message || !!icon || !!statusMessage) && !isLabelInline, _a), className), style }, rest), label && React$c.createElement("div", { className: cx("iui-label", {
     "iui-required": required
-  }) }, label), children, statusMessage ? statusMessage : React$d.createElement(React$d.Fragment, null, icon && React$d.cloneElement(icon, {
+  }) }, label), children, statusMessage ? statusMessage : React$c.createElement(React$c.Fragment, null, icon && React$c.cloneElement(icon, {
     className: cx("iui-input-icon", (_b = icon.props) === null || _b === void 0 ? void 0 : _b.className)
-  }), message && !isLabelInline && React$d.createElement("div", { className: "iui-message" }, message)));
+  }), message && !isLabelInline && React$c.createElement("div", { className: "iui-message" }, message)));
 };
 var InfoCircular = {};
-var __assign$6t = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6t = Object.assign || function(t2) {
+var __assign$6r = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6r = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -10959,7 +10897,7 @@ var __assign$6t = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6t.apply(this, arguments);
+  return __assign$6r.apply(this, arguments);
 };
 var __createBinding$b = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -10992,12 +10930,12 @@ var __importStar$b = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(InfoCircular, "__esModule", { value: true });
 var React$b = __importStar$b(react.exports);
 function SvgInfoCircular$1(props) {
-  return React$b.createElement("svg", __assign$6t({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$b.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm1.2 3.2a.92336.92336 0 0 1 .997.8433q.00235.02829.003.0567a1.30936 1.30936 0 0 1 -1.3 1.2.94477.94477 0 0 1 -1-1 1.22815 1.22815 0 0 1 1.3-1.1zm-2 9.6c-.5 0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5 0-.5-.2-.1-.9.2-1.3.5l-.2-.5a6.49722 6.49722 0 0 1 3.3-1.6c.5 0 .6.6.3 1.6l-.7 2.6c-.1.5-.1.6.1.6a2.00287 2.00287 0 0 0 1.1-.6l.3.4a5.76881 5.76881 0 0 1 -3 1.6z" }));
+  return React$b.createElement("svg", __assign$6r({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$b.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm1.2 3.2a.92336.92336 0 0 1 .997.8433q.00235.02829.003.0567a1.30936 1.30936 0 0 1 -1.3 1.2.94477.94477 0 0 1 -1-1 1.22815 1.22815 0 0 1 1.3-1.1zm-2 9.6c-.5 0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5 0-.5-.2-.1-.9.2-1.3.5l-.2-.5a6.49722 6.49722 0 0 1 3.3-1.6c.5 0 .6.6.3 1.6l-.7 2.6c-.1.5-.1.6.1.6a2.00287 2.00287 0 0 0 1.1-.6l.3.4a5.76881 5.76881 0 0 1 -3 1.6z" }));
 }
 var _default$b = InfoCircular.default = SvgInfoCircular$1;
 var StatusError = {};
-var __assign$6s = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6s = Object.assign || function(t2) {
+var __assign$6q = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6q = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11006,7 +10944,7 @@ var __assign$6s = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6s.apply(this, arguments);
+  return __assign$6q.apply(this, arguments);
 };
 var __createBinding$a = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -11039,12 +10977,12 @@ var __importStar$a = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(StatusError, "__esModule", { value: true });
 var React$a = __importStar$a(react.exports);
 function SvgStatusError(props) {
-  return React$a.createElement("svg", __assign$6s({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$a.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm1 12h-2v-2h2zm0-3h-2v-5h2z" }));
+  return React$a.createElement("svg", __assign$6q({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$a.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm1 12h-2v-2h2zm0-3h-2v-5h2z" }));
 }
 var _default$a = StatusError.default = SvgStatusError;
 var StatusSuccess = {};
-var __assign$6r = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6r = Object.assign || function(t2) {
+var __assign$6p = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6p = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11053,7 +10991,7 @@ var __assign$6r = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6r.apply(this, arguments);
+  return __assign$6p.apply(this, arguments);
 };
 var __createBinding$9 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -11086,12 +11024,12 @@ var __importStar$9 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(StatusSuccess, "__esModule", { value: true });
 var React$9 = __importStar$9(react.exports);
 function SvgStatusSuccess(props) {
-  return React$9.createElement("svg", __assign$6r({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$9.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm-1.35 12-3.65-3.41 1.4-1.3 2.36 2.2 4.83-4.49 1.41 1.29z" }));
+  return React$9.createElement("svg", __assign$6p({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$9.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm-1.35 12-3.65-3.41 1.4-1.3 2.36 2.2 4.83-4.49 1.41 1.29z" }));
 }
 var _default$9 = StatusSuccess.default = SvgStatusSuccess;
 var StatusWarning = {};
-var __assign$6q = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6q = Object.assign || function(t2) {
+var __assign$6o = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6o = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11100,7 +11038,7 @@ var __assign$6q = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6q.apply(this, arguments);
+  return __assign$6o.apply(this, arguments);
 };
 var __createBinding$8 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -11133,11 +11071,11 @@ var __importStar$8 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(StatusWarning, "__esModule", { value: true });
 var React$8 = __importStar$8(react.exports);
 function SvgStatusWarning(props) {
-  return React$8.createElement("svg", __assign$6q({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$8.createElement("path", { d: "m15.86807 13.26721-6.77-11.62a1.15 1.15 0 0 0 -1.1-.67 1.17 1.17 0 0 0 -1.1.69l-6.77 11.59a1.2 1.2 0 0 0 1.1 1.72h13.45a1.19 1.19 0 0 0 1.19-1.71zm-6.87-.29h-2v-2h2zm0-3h-2v-5h2z" }));
+  return React$8.createElement("svg", __assign$6o({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$8.createElement("path", { d: "m15.86807 13.26721-6.77-11.62a1.15 1.15 0 0 0 -1.1-.67 1.17 1.17 0 0 0 -1.1.69l-6.77 11.59a1.2 1.2 0 0 0 1.1 1.72h13.45a1.19 1.19 0 0 0 1.19-1.71zm-6.87-.29h-2v-2h2zm0-3h-2v-5h2z" }));
 }
 var _default$8 = StatusWarning.default = SvgStatusWarning;
-var __assign$6p = globalThis && globalThis.__assign || function() {
-  __assign$6p = Object.assign || function(t2) {
+var __assign$6n = globalThis && globalThis.__assign || function() {
+  __assign$6n = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11146,20 +11084,20 @@ var __assign$6p = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6p.apply(this, arguments);
+  return __assign$6n.apply(this, arguments);
 };
 var StatusIconMap = {
   negative: function(args) {
-    return React$d.createElement(_default$a, __assign$6p({ "aria-hidden": true }, args));
+    return React$c.createElement(_default$a, __assign$6n({ "aria-hidden": true }, args));
   },
   positive: function(args) {
-    return React$d.createElement(_default$9, __assign$6p({ "aria-hidden": true }, args));
+    return React$c.createElement(_default$9, __assign$6n({ "aria-hidden": true }, args));
   },
   warning: function(args) {
-    return React$d.createElement(_default$8, __assign$6p({ "aria-hidden": true }, args));
+    return React$c.createElement(_default$8, __assign$6n({ "aria-hidden": true }, args));
   },
   informational: function(args) {
-    return React$d.createElement(_default$b, __assign$6p({ "aria-hidden": true }, args));
+    return React$c.createElement(_default$b, __assign$6n({ "aria-hidden": true }, args));
   }
 };
 function _extends() {
@@ -11231,7 +11169,7 @@ function removeClass$1(element, className) {
 var config$1 = {
   disabled: false
 };
-var TransitionGroupContext = React$d.createContext(null);
+var TransitionGroupContext = React$c.createContext(null);
 var UNMOUNTED = "unmounted";
 var EXITED = "exited";
 var ENTERING = "entering";
@@ -11449,12 +11387,12 @@ var Transition = /* @__PURE__ */ function(_React$Component) {
     _this$props.onExited;
     _this$props.nodeRef;
     var childProps = _objectWithoutPropertiesLoose(_this$props, ["children", "in", "mountOnEnter", "unmountOnExit", "appear", "enter", "exit", "timeout", "addEndListener", "onEnter", "onEntering", "onEntered", "onExit", "onExiting", "onExited", "nodeRef"]);
-    return /* @__PURE__ */ React$d.createElement(TransitionGroupContext.Provider, {
+    return /* @__PURE__ */ React$c.createElement(TransitionGroupContext.Provider, {
       value: null
-    }, typeof children === "function" ? children(status, childProps) : React$d.cloneElement(React$d.Children.only(children), childProps));
+    }, typeof children === "function" ? children(status, childProps) : React$c.cloneElement(React$c.Children.only(children), childProps));
   };
   return Transition2;
-}(React$d.Component);
+}(React$c.Component);
 Transition.contextType = TransitionGroupContext;
 Transition.propTypes = {};
 function noop() {
@@ -11601,7 +11539,7 @@ var CSSTransition = /* @__PURE__ */ function(_React$Component) {
     var _this$props = this.props;
     _this$props.classNames;
     var props = _objectWithoutPropertiesLoose(_this$props, ["classNames"]);
-    return /* @__PURE__ */ React$d.createElement(Transition$1, _extends({}, props, {
+    return /* @__PURE__ */ React$c.createElement(Transition$1, _extends({}, props, {
       onEnter: this.onEnter,
       onEntered: this.onEntered,
       onEntering: this.onEntering,
@@ -11611,14 +11549,14 @@ var CSSTransition = /* @__PURE__ */ function(_React$Component) {
     }));
   };
   return CSSTransition2;
-}(React$d.Component);
+}(React$c.Component);
 CSSTransition.defaultProps = {
   classNames: ""
 };
 CSSTransition.propTypes = {};
 var CSSTransition$1 = CSSTransition;
-var __assign$6o = globalThis && globalThis.__assign || function() {
-  __assign$6o = Object.assign || function(t2) {
+var __assign$6m = globalThis && globalThis.__assign || function() {
+  __assign$6m = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11627,9 +11565,9 @@ var __assign$6o = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6o.apply(this, arguments);
+  return __assign$6m.apply(this, arguments);
 };
-var __rest$u = globalThis && globalThis.__rest || function(s, e2) {
+var __rest$s = globalThis && globalThis.__rest || function(s, e2) {
   var t2 = {};
   for (var p2 in s)
     if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
@@ -11642,10 +11580,10 @@ var __rest$u = globalThis && globalThis.__rest || function(s, e2) {
   return t2;
 };
 var WithCSSTransition = function(props) {
-  var visible = props.in, _a = props.dimension, dimension = _a === void 0 ? "height" : _a, children = props.children, rest = __rest$u(props, ["in", "dimension", "children"]);
-  var expandedSize = React$d.useRef(0);
+  var visible = props.in, _a = props.dimension, dimension = _a === void 0 ? "height" : _a, children = props.children, rest = __rest$s(props, ["in", "dimension", "children"]);
+  var expandedSize = React$c.useRef(0);
   var dimensionCamelCase = dimension === "height" ? "Height" : "Width";
-  return React$d.createElement(CSSTransition$1, __assign$6o({ in: visible, timeout: 200, unmountOnExit: true, onEnter: function(node) {
+  return React$c.createElement(CSSTransition$1, __assign$6m({ in: visible, timeout: 200, unmountOnExit: true, onEnter: function(node) {
     node.style["min" + dimensionCamelCase] = "initial";
     node.style[dimension] = "0px";
   }, onEntering: function(node) {
@@ -11658,7 +11596,7 @@ var WithCSSTransition = function(props) {
   }, onExiting: function(node) {
     node.style["min" + dimensionCamelCase] = "initial";
     node.style[dimension] = "0px";
-  }, classNames: "iui" }, rest), React$d.cloneElement(children, {
+  }, classNames: "iui" }, rest), React$c.cloneElement(children, {
     ref: function(el) {
       if (el) {
         expandedSize.current = el.getBoundingClientRect()[dimension];
@@ -11667,8 +11605,8 @@ var WithCSSTransition = function(props) {
   }));
 };
 var button = "";
-var __assign$6n = globalThis && globalThis.__assign || function() {
-  __assign$6n = Object.assign || function(t2) {
+var __assign$6l = globalThis && globalThis.__assign || function() {
+  __assign$6l = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11677,9 +11615,9 @@ var __assign$6n = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6n.apply(this, arguments);
+  return __assign$6l.apply(this, arguments);
 };
-var __rest$t = globalThis && globalThis.__rest || function(s, e2) {
+var __rest$r = globalThis && globalThis.__rest || function(s, e2) {
   var t2 = {};
   for (var p2 in s)
     if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
@@ -11691,18 +11629,18 @@ var __rest$t = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var IconButton = React$d.forwardRef(function(props, ref) {
+var IconButton = React$c.forwardRef(function(props, ref) {
   var _a;
-  var isActive = props.isActive, children = props.children, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, size = props.size, _c = props.type, type = _c === void 0 ? "button" : _c, className = props.className, _d = props.as, Element2 = _d === void 0 ? "button" : _d, rest = __rest$t(props, ["isActive", "children", "styleType", "size", "type", "className", "as"]);
+  var isActive = props.isActive, children = props.children, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, size = props.size, _c = props.type, type = _c === void 0 ? "button" : _c, className = props.className, _d = props.as, Element2 = _d === void 0 ? "button" : _d, rest = __rest$r(props, ["isActive", "children", "styleType", "size", "type", "className", "as"]);
   useTheme();
-  return React$d.createElement(Element2, __assign$6n({ ref, className: cx("iui-button", "iui-" + styleType, (_a = {}, _a["iui-" + size] = !!size, _a["iui-active"] = isActive, _a), className), type }, rest), React$d.cloneElement(children, {
+  return React$c.createElement(Element2, __assign$6l({ ref, className: cx("iui-button", "iui-" + styleType, (_a = {}, _a["iui-" + size] = !!size, _a["iui-active"] = isActive, _a), className), type }, rest), React$c.cloneElement(children, {
     className: cx("iui-button-icon", children.props.className),
     "aria-hidden": true
   }));
 });
 var ChevronRight = {};
-var __assign$6m = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6m = Object.assign || function(t2) {
+var __assign$6k = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6k = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11711,7 +11649,7 @@ var __assign$6m = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6m.apply(this, arguments);
+  return __assign$6k.apply(this, arguments);
 };
 var __createBinding$7 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -11743,12 +11681,12 @@ var __importStar$7 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 };
 Object.defineProperty(ChevronRight, "__esModule", { value: true });
 var React$7 = __importStar$7(react.exports);
-function SvgChevronRight$1(props) {
-  return React$7.createElement("svg", __assign$6m({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$7.createElement("path", { d: "m4.7 0-1.4 1.4 6.6 6.6-6.6 6.6 1.4 1.4 8-8z" }));
+function SvgChevronRight(props) {
+  return React$7.createElement("svg", __assign$6k({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$7.createElement("path", { d: "m4.7 0-1.4 1.4 6.6 6.6-6.6 6.6 1.4 1.4 8-8z" }));
 }
-var _default$7 = ChevronRight.default = SvgChevronRight$1;
-var __assign$6l = globalThis && globalThis.__assign || function() {
-  __assign$6l = Object.assign || function(t2) {
+var _default$7 = ChevronRight.default = SvgChevronRight;
+var __assign$6j = globalThis && globalThis.__assign || function() {
+  __assign$6j = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11757,9 +11695,9 @@ var __assign$6l = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6l.apply(this, arguments);
+  return __assign$6j.apply(this, arguments);
 };
-var __rest$s = globalThis && globalThis.__rest || function(s, e2) {
+var __rest$q = globalThis && globalThis.__rest || function(s, e2) {
   var t2 = {};
   for (var p2 in s)
     if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
@@ -11771,19 +11709,19 @@ var __rest$s = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Button = React$d.forwardRef(function(props, ref) {
+var Button = React$c.forwardRef(function(props, ref) {
   var _a;
-  var children = props.children, className = props.className, size = props.size, style = props.style, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, _c = props.type, type = _c === void 0 ? "button" : _c, startIcon = props.startIcon, endIcon = props.endIcon, _d = props.as, Element2 = _d === void 0 ? "button" : _d, rest = __rest$s(props, ["children", "className", "size", "style", "styleType", "type", "startIcon", "endIcon", "as"]);
+  var children = props.children, className = props.className, size = props.size, style = props.style, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, _c = props.type, type = _c === void 0 ? "button" : _c, startIcon = props.startIcon, endIcon = props.endIcon, _d = props.as, Element2 = _d === void 0 ? "button" : _d, rest = __rest$q(props, ["children", "className", "size", "style", "styleType", "type", "startIcon", "endIcon", "as"]);
   useTheme();
-  return React$d.createElement(Element2, __assign$6l({ ref, className: cx("iui-button", "iui-" + styleType, (_a = {}, _a["iui-" + size] = !!size, _a), className), style, type }, rest), startIcon && React$d.cloneElement(startIcon, {
+  return React$c.createElement(Element2, __assign$6j({ ref, className: cx("iui-button", "iui-" + styleType, (_a = {}, _a["iui-" + size] = !!size, _a), className), style, type }, rest), startIcon && React$c.cloneElement(startIcon, {
     className: cx("iui-button-icon", startIcon.props.className)
-  }), children && React$d.createElement("span", { className: "iui-button-label" }, children), endIcon && React$d.cloneElement(endIcon, {
+  }), children && React$c.createElement("span", { className: "iui-button-label" }, children), endIcon && React$c.cloneElement(endIcon, {
     className: cx("iui-button-icon", endIcon.props.className)
   }));
 });
 var menu = "";
-var __assign$6k = globalThis && globalThis.__assign || function() {
-  __assign$6k = Object.assign || function(t2) {
+var __assign$6i = globalThis && globalThis.__assign || function() {
+  __assign$6i = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11792,9 +11730,9 @@ var __assign$6k = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6k.apply(this, arguments);
+  return __assign$6i.apply(this, arguments);
 };
-var __rest$r = globalThis && globalThis.__rest || function(s, e2) {
+var __rest$p = globalThis && globalThis.__rest || function(s, e2) {
   var t2 = {};
   for (var p2 in s)
     if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
@@ -11806,18 +11744,26 @@ var __rest$r = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Menu = React$d.forwardRef(function(props, ref) {
-  var children = props.children, _a = props.role, role = _a === void 0 ? "menu" : _a, _b = props.setFocus, setFocus = _b === void 0 ? true : _b, className = props.className, style = props.style, rest = __rest$r(props, ["children", "role", "setFocus", "className", "style"]);
+var Menu = React$c.forwardRef(function(props, ref) {
+  var children = props.children, _a = props.role, role = _a === void 0 ? "menu" : _a, _b = props.setFocus, setFocus = _b === void 0 ? true : _b, className = props.className, style = props.style, rest = __rest$p(props, ["children", "role", "setFocus", "className", "style"]);
   useTheme();
-  var _c = React$d.useState(), focusedIndex = _c[0], setFocusedIndex = _c[1];
-  var menuRef = React$d.useRef(null);
+  var _c = React$c.useState(), focusedIndex = _c[0], setFocusedIndex = _c[1];
+  var menuRef = React$c.useRef(null);
   var refs = useMergedRefs(menuRef, ref);
-  React$d.useEffect(function() {
+  React$c.useEffect(function() {
     setFocusedIndex(null);
   }, [children]);
-  React$d.useEffect(function() {
+  var getFocusableNodes = React$c.useCallback(function() {
+    var focusableItems = getFocusableElements(menuRef.current);
+    return focusableItems.filter(function(i) {
+      return !focusableItems.some(function(p2) {
+        return p2.contains(i.parentElement);
+      });
+    });
+  }, []);
+  React$c.useEffect(function() {
     var _a2;
-    var items = getFocusableElements(menuRef.current);
+    var items = getFocusableNodes();
     if (focusedIndex != null) {
       (_a2 = items === null || items === void 0 ? void 0 : items[focusedIndex]) === null || _a2 === void 0 ? void 0 : _a2.focus();
       return;
@@ -11828,9 +11774,9 @@ var Menu = React$d.forwardRef(function(props, ref) {
     if (setFocus) {
       setFocusedIndex(selectedIndex > -1 ? selectedIndex : 0);
     }
-  }, [setFocus, focusedIndex]);
+  }, [setFocus, focusedIndex, getFocusableNodes]);
   var onKeyDown = function(event) {
-    var items = getFocusableElements(menuRef.current);
+    var items = getFocusableNodes();
     if (!(items === null || items === void 0 ? void 0 : items.length)) {
       return;
     }
@@ -11850,11 +11796,11 @@ var Menu = React$d.forwardRef(function(props, ref) {
       }
     }
   };
-  return React$d.createElement("ul", __assign$6k({ className: cx("iui-menu", className), style, role, onKeyDown, ref: refs }, rest), children);
+  return React$c.createElement("ul", __assign$6i({ className: cx("iui-menu", className), style, role, onKeyDown, ref: refs }, rest), children);
 });
 var CaretRightSmall = {};
-var __assign$6j = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6j = Object.assign || function(t2) {
+var __assign$6h = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6h = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11863,7 +11809,7 @@ var __assign$6j = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6j.apply(this, arguments);
+  return __assign$6h.apply(this, arguments);
 };
 var __createBinding$6 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -11896,11 +11842,11 @@ var __importStar$6 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(CaretRightSmall, "__esModule", { value: true });
 var React$6 = __importStar$6(react.exports);
 function SvgCaretRightSmall(props) {
-  return React$6.createElement("svg", __assign$6j({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$6.createElement("path", { d: "m6.00263 4.80681v6.39946a.27938.27938 0 0 0 .44292.24059l3.45479-3.17567a.34022.34022 0 0 0 .00046-.4807l-.00046-.00044-3.45479-3.22382a.269.269 0 0 0 -.44292.24058z" }));
+  return React$6.createElement("svg", __assign$6h({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$6.createElement("path", { d: "m6.00263 4.80681v6.39946a.27938.27938 0 0 0 .44292.24059l3.45479-3.17567a.34022.34022 0 0 0 .00046-.4807l-.00046-.00044-3.45479-3.22382a.269.269 0 0 0 -.44292.24058z" }));
 }
 var _default$6 = CaretRightSmall.default = SvgCaretRightSmall;
-var __assign$6i = globalThis && globalThis.__assign || function() {
-  __assign$6i = Object.assign || function(t2) {
+var __assign$6g = globalThis && globalThis.__assign || function() {
+  __assign$6g = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11909,9 +11855,9 @@ var __assign$6i = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6i.apply(this, arguments);
+  return __assign$6g.apply(this, arguments);
 };
-var __rest$q = globalThis && globalThis.__rest || function(s, e2) {
+var __rest$o = globalThis && globalThis.__rest || function(s, e2) {
   var t2 = {};
   for (var p2 in s)
     if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
@@ -11923,15 +11869,15 @@ var __rest$q = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var MenuItemContext = React$d.createContext({ ref: void 0 });
-var MenuItem = React$d.forwardRef(function(props, ref) {
-  var children = props.children, isSelected = props.isSelected, disabled = props.disabled, value = props.value, onClick = props.onClick, sublabel = props.sublabel, _a = props.size, size = _a === void 0 ? !!sublabel ? "large" : "default" : _a, icon = props.icon, badge = props.badge, className = props.className, style = props.style, _b = props.role, role = _b === void 0 ? "menuitem" : _b, _c = props.subMenuItems, subMenuItems = _c === void 0 ? [] : _c, rest = __rest$q(props, ["children", "isSelected", "disabled", "value", "onClick", "sublabel", "size", "icon", "badge", "className", "style", "role", "subMenuItems"]);
+var MenuItemContext = React$c.createContext({ ref: void 0 });
+var MenuItem = React$c.forwardRef(function(props, ref) {
+  var children = props.children, isSelected = props.isSelected, disabled = props.disabled, value = props.value, onClick = props.onClick, sublabel = props.sublabel, _a = props.size, size = _a === void 0 ? !!sublabel ? "large" : "default" : _a, icon = props.icon, badge = props.badge, className = props.className, style = props.style, _b = props.role, role = _b === void 0 ? "menuitem" : _b, _c = props.subMenuItems, subMenuItems = _c === void 0 ? [] : _c, rest = __rest$o(props, ["children", "isSelected", "disabled", "value", "onClick", "sublabel", "size", "icon", "badge", "className", "style", "role", "subMenuItems"]);
   useTheme();
-  var menuItemRef = React$d.useRef(null);
+  var menuItemRef = React$c.useRef(null);
   var refs = useMergedRefs(menuItemRef, ref);
-  var parentMenuItemRef = React$d.useContext(MenuItemContext).ref;
-  var subMenuRef = React$d.useRef(null);
-  var _d = React$d.useState(false), isSubmenuVisible = _d[0], setIsSubmenuVisible = _d[1];
+  var parentMenuItemRef = React$c.useContext(MenuItemContext).ref;
+  var subMenuRef = React$c.useRef(null);
+  var _d = React$c.useState(false), isSubmenuVisible = _d[0], setIsSubmenuVisible = _d[1];
   var onKeyDown = function(event) {
     var _a2;
     if (event.altKey) {
@@ -11961,7 +11907,7 @@ var MenuItem = React$d.forwardRef(function(props, ref) {
       }
     }
   };
-  var listItem = React$d.createElement("li", __assign$6i({ className: cx("iui-menu-item", {
+  var listItem = React$c.createElement("li", __assign$6g({ className: cx("iui-menu-item", {
     "iui-large": size === "large",
     "iui-active": isSelected,
     "iui-disabled": disabled
@@ -11974,76 +11920,18 @@ var MenuItem = React$d.forwardRef(function(props, ref) {
     if (!(e2.relatedTarget instanceof Node) || !((_a2 = subMenuRef.current) === null || _a2 === void 0 ? void 0 : _a2.contains(e2.relatedTarget))) {
       setIsSubmenuVisible(false);
     }
-  } }, rest), icon && React$d.cloneElement(icon, {
+  } }, rest), icon && React$c.cloneElement(icon, {
     className: cx(icon.props.className, "iui-icon")
-  }), React$d.createElement("span", { className: "iui-content" }, React$d.createElement("div", { className: "iui-menu-label" }, children), sublabel && React$d.createElement("div", { className: "iui-menu-description" }, sublabel)), !badge && subMenuItems.length > 0 && React$d.createElement(_default$6, { className: "iui-icon" }), badge && React$d.cloneElement(badge, {
+  }), React$c.createElement("span", { className: "iui-content" }, React$c.createElement("div", { className: "iui-menu-label" }, children), sublabel && React$c.createElement("div", { className: "iui-menu-description" }, sublabel)), !badge && subMenuItems.length > 0 && React$c.createElement(_default$6, { className: "iui-icon" }), badge && React$c.cloneElement(badge, {
     className: cx(badge.props.className, "iui-icon")
   }));
-  return subMenuItems.length === 0 ? listItem : React$d.createElement(MenuItemContext.Provider, { value: { ref: menuItemRef } }, React$d.createElement(Popover, { placement: "right-start", visible: isSubmenuVisible, appendTo: "parent", content: React$d.createElement("div", { onMouseLeave: function() {
+  return subMenuItems.length === 0 ? listItem : React$c.createElement(MenuItemContext.Provider, { value: { ref: menuItemRef } }, React$c.createElement(Popover, { placement: "right-start", visible: isSubmenuVisible, appendTo: "parent", content: React$c.createElement("div", { onMouseLeave: function() {
     return setIsSubmenuVisible(false);
   }, onBlur: function(e2) {
     var _a2, _b2;
     !!(e2.relatedTarget instanceof Node) && !((_a2 = subMenuRef.current) === null || _a2 === void 0 ? void 0 : _a2.contains(e2.relatedTarget)) && !((_b2 = subMenuRef.current) === null || _b2 === void 0 ? void 0 : _b2.isEqualNode(e2.relatedTarget)) && setIsSubmenuVisible(false);
-  } }, React$d.createElement(Menu, { ref: subMenuRef }, subMenuItems)) }, listItem));
+  } }, React$c.createElement(Menu, { ref: subMenuRef }, subMenuItems)) }, listItem));
 });
-var __assign$6h = globalThis && globalThis.__assign || function() {
-  __assign$6h = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$6h.apply(this, arguments);
-};
-var __rest$p = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
-var MenuDivider = function(props) {
-  var className = props.className, rest = __rest$p(props, ["className"]);
-  useTheme();
-  return React$d.createElement("li", __assign$6h({ role: "separator", className: cx("iui-menu-divider", className) }, rest));
-};
-var __assign$6g = globalThis && globalThis.__assign || function() {
-  __assign$6g = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$6g.apply(this, arguments);
-};
-var __rest$o = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
-var MenuExtraContent = function(props) {
-  var children = props.children, className = props.className, rest = __rest$o(props, ["children", "className"]);
-  useTheme();
-  return React$d.createElement("li", __assign$6g({ className: cx("iui-menu-content", className), role: "presentation" }, rest), children);
-};
 var __assign$6f = globalThis && globalThis.__assign || function() {
   __assign$6f = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12068,43 +11956,12 @@ var __rest$n = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var DropdownMenu = function(props) {
-  var menuItems = props.menuItems, children = props.children, className = props.className, style = props.style, _a = props.role, role = _a === void 0 ? "menu" : _a, visible = props.visible, _b = props.placement, placement = _b === void 0 ? "bottom-start" : _b, onShow2 = props.onShow, onHide2 = props.onHide, trigger = props.trigger, id2 = props.id, rest = __rest$n(props, ["menuItems", "children", "className", "style", "role", "visible", "placement", "onShow", "onHide", "trigger", "id"]);
-  var _c = React$d.useState(visible !== null && visible !== void 0 ? visible : false), isVisible = _c[0], setIsVisible = _c[1];
-  React$d.useEffect(function() {
-    setIsVisible(visible !== null && visible !== void 0 ? visible : false);
-  }, [visible]);
-  var open = React$d.useCallback(function() {
-    return setIsVisible(true);
-  }, []);
-  var close = React$d.useCallback(function() {
-    return setIsVisible(false);
-  }, []);
-  var targetRef = React$d.useRef(null);
-  var onShowHandler = React$d.useCallback(function(instance) {
-    setIsVisible(true);
-    onShow2 === null || onShow2 === void 0 ? void 0 : onShow2(instance);
-  }, [onShow2]);
-  var onHideHandler = React$d.useCallback(function(instance) {
-    var _a2;
-    setIsVisible(false);
-    (_a2 = targetRef.current) === null || _a2 === void 0 ? void 0 : _a2.focus();
-    onHide2 === null || onHide2 === void 0 ? void 0 : onHide2(instance);
-  }, [onHide2]);
+var MenuDivider = function(props) {
+  var className = props.className, rest = __rest$n(props, ["className"]);
   useTheme();
-  return React$d.createElement(Popover, __assign$6f({ content: React$d.createElement(Menu, { className, style, role, id: id2 }, React$d.useMemo(function() {
-    return menuItems(close);
-  }, [menuItems, close])), visible: trigger === void 0 ? isVisible : void 0, onClickOutside: close, placement, onShow: onShowHandler, onHide: onHideHandler, trigger: visible === void 0 ? trigger : void 0 }, rest), React$d.cloneElement(children, {
-    ref: mergeRefs(targetRef, props.children.ref),
-    onClick: function(args) {
-      var _a2, _b2;
-      trigger === void 0 && (isVisible ? close() : open());
-      (_b2 = (_a2 = children.props).onClick) === null || _b2 === void 0 ? void 0 : _b2.call(_a2, args);
-    }
-  }));
+  return React$c.createElement("li", __assign$6f({ role: "separator", className: cx("iui-menu-divider", className) }, rest));
 };
-var CaretDownSmall = {};
-var __assign$6e = commonjsGlobal && commonjsGlobal.__assign || function() {
+var __assign$6e = globalThis && globalThis.__assign || function() {
   __assign$6e = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
@@ -12115,6 +11972,95 @@ var __assign$6e = commonjsGlobal && commonjsGlobal.__assign || function() {
     return t2;
   };
   return __assign$6e.apply(this, arguments);
+};
+var __rest$m = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var MenuExtraContent = function(props) {
+  var children = props.children, className = props.className, rest = __rest$m(props, ["children", "className"]);
+  useTheme();
+  return React$c.createElement("li", __assign$6e({ className: cx("iui-menu-content", className), role: "presentation" }, rest), children);
+};
+var __assign$6d = globalThis && globalThis.__assign || function() {
+  __assign$6d = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$6d.apply(this, arguments);
+};
+var __rest$l = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var DropdownMenu = function(props) {
+  var menuItems = props.menuItems, children = props.children, className = props.className, style = props.style, _a = props.role, role = _a === void 0 ? "menu" : _a, visible = props.visible, _b = props.placement, placement = _b === void 0 ? "bottom-start" : _b, onShow2 = props.onShow, onHide2 = props.onHide, trigger = props.trigger, id2 = props.id, rest = __rest$l(props, ["menuItems", "children", "className", "style", "role", "visible", "placement", "onShow", "onHide", "trigger", "id"]);
+  var _c = React$c.useState(visible !== null && visible !== void 0 ? visible : false), isVisible = _c[0], setIsVisible = _c[1];
+  React$c.useEffect(function() {
+    setIsVisible(visible !== null && visible !== void 0 ? visible : false);
+  }, [visible]);
+  var open = React$c.useCallback(function() {
+    return setIsVisible(true);
+  }, []);
+  var close = React$c.useCallback(function() {
+    return setIsVisible(false);
+  }, []);
+  var targetRef = React$c.useRef(null);
+  var onShowHandler = React$c.useCallback(function(instance) {
+    setIsVisible(true);
+    onShow2 === null || onShow2 === void 0 ? void 0 : onShow2(instance);
+  }, [onShow2]);
+  var onHideHandler = React$c.useCallback(function(instance) {
+    var _a2;
+    setIsVisible(false);
+    (_a2 = targetRef.current) === null || _a2 === void 0 ? void 0 : _a2.focus();
+    onHide2 === null || onHide2 === void 0 ? void 0 : onHide2(instance);
+  }, [onHide2]);
+  useTheme();
+  return React$c.createElement(Popover, __assign$6d({ content: React$c.createElement(Menu, { className, style, role, id: id2 }, React$c.useMemo(function() {
+    return menuItems(close);
+  }, [menuItems, close])), visible: trigger === void 0 ? isVisible : void 0, onClickOutside: close, placement, onShow: onShowHandler, onHide: onHideHandler, trigger: visible === void 0 ? trigger : void 0 }, rest), React$c.cloneElement(children, {
+    ref: mergeRefs(targetRef, props.children.ref),
+    onClick: function(args) {
+      var _a2, _b2;
+      trigger === void 0 && (isVisible ? close() : open());
+      (_b2 = (_a2 = children.props).onClick) === null || _b2 === void 0 ? void 0 : _b2.call(_a2, args);
+    }
+  }));
+};
+var CaretDownSmall = {};
+var __assign$6c = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6c = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$6c.apply(this, arguments);
 };
 var __createBinding$5 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -12147,12 +12093,12 @@ var __importStar$5 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(CaretDownSmall, "__esModule", { value: true });
 var React$5 = __importStar$5(react.exports);
 function SvgCaretDownSmall(props) {
-  return React$5.createElement("svg", __assign$6e({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$5.createElement("path", { d: "m4.8067 6h6.3953a.27961.27961 0 0 1 .24043.44321l-3.1736 3.45707a.33969.33969 0 0 1 -.48085 0l-3.2217-3.45707a.26909.26909 0 0 1 .24042-.44321z" }));
+  return React$5.createElement("svg", __assign$6c({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$5.createElement("path", { d: "m4.8067 6h6.3953a.27961.27961 0 0 1 .24043.44321l-3.1736 3.45707a.33969.33969 0 0 1 -.48085 0l-3.2217-3.45707a.26909.26909 0 0 1 .24042-.44321z" }));
 }
 var _default$5 = CaretDownSmall.default = SvgCaretDownSmall;
 var CaretUpSmall = {};
-var __assign$6d = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6d = Object.assign || function(t2) {
+var __assign$6b = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6b = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -12161,7 +12107,7 @@ var __assign$6d = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6d.apply(this, arguments);
+  return __assign$6b.apply(this, arguments);
 };
 var __createBinding$4 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -12194,94 +12140,9 @@ var __importStar$4 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(CaretUpSmall, "__esModule", { value: true });
 var React$4 = __importStar$4(react.exports);
 function SvgCaretUpSmall(props) {
-  return React$4.createElement("svg", __assign$6d({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$4.createElement("path", { d: "m4.8067 9.99737h6.3953a.27961.27961 0 0 0 .24043-.44321l-3.1736-3.45707a.33969.33969 0 0 0 -.48039-.00046l-.00044.00046-3.22172 3.45707a.26909.26909 0 0 0 .24042.44321z" }));
+  return React$4.createElement("svg", __assign$6b({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$4.createElement("path", { d: "m4.8067 9.99737h6.3953a.27961.27961 0 0 0 .24043-.44321l-3.1736-3.45707a.33969.33969 0 0 0 -.48039-.00046l-.00044.00046-3.22172 3.45707a.26909.26909 0 0 0 .24042.44321z" }));
 }
 var _default$4 = CaretUpSmall.default = SvgCaretUpSmall;
-var __assign$6c = globalThis && globalThis.__assign || function() {
-  __assign$6c = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$6c.apply(this, arguments);
-};
-var __rest$m = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
-var DropdownButton = React$d.forwardRef(function(props, ref) {
-  var menuItems = props.menuItems, className = props.className, size = props.size, styleType = props.styleType, children = props.children, rest = __rest$m(props, ["menuItems", "className", "size", "styleType", "children"]);
-  useTheme();
-  var _a = React$d.useState(false), isMenuOpen = _a[0], setIsMenuOpen = _a[1];
-  var _b = React$d.useState(0), menuWidth = _b[0], setMenuWidth = _b[1];
-  var buttonRef = React$d.useRef(null);
-  var refs = useMergedRefs(ref, buttonRef);
-  React$d.useEffect(function() {
-    if (buttonRef.current) {
-      setMenuWidth(buttonRef.current.offsetWidth);
-    }
-  }, [children, size, styleType]);
-  return React$d.createElement(DropdownMenu, { menuItems, style: { minWidth: menuWidth }, onShow: function() {
-    return setIsMenuOpen(true);
-  }, onHide: function() {
-    return setIsMenuOpen(false);
-  } }, React$d.createElement(Button, __assign$6c({ className: cx("iui-dropdown", className), size, styleType, endIcon: isMenuOpen ? React$d.createElement(_default$4, { "aria-hidden": true }) : React$d.createElement(_default$5, { "aria-hidden": true }), ref: refs, "aria-label": "Dropdown" }, rest), children));
-});
-var __assign$6b = globalThis && globalThis.__assign || function() {
-  __assign$6b = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$6b.apply(this, arguments);
-};
-var __rest$l = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
-var SplitButton = React$d.forwardRef(function(props, forwardedRef) {
-  var onClick = props.onClick, menuItems = props.menuItems, className = props.className, _a = props.menuPlacement, menuPlacement = _a === void 0 ? "bottom-end" : _a, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, size = props.size, children = props.children, style = props.style, title = props.title, rest = __rest$l(props, ["onClick", "menuItems", "className", "menuPlacement", "styleType", "size", "children", "style", "title"]);
-  useTheme();
-  var _c = React$d.useState(false), isMenuOpen = _c[0], setIsMenuOpen = _c[1];
-  var _d = React$d.useState(0), menuWidth = _d[0], setMenuWidth = _d[1];
-  var ref = React$d.useRef(null);
-  React$d.useEffect(function() {
-    if (ref.current) {
-      setMenuWidth(ref.current.offsetWidth);
-    }
-  }, [children, size]);
-  return React$d.createElement("span", { className: cx(className, "iui-button-split-menu", {
-    "iui-disabled": props.disabled
-  }), style, title, ref }, React$d.createElement("div", null, React$d.createElement(Button, __assign$6b({ styleType, size, onClick, ref: forwardedRef }, rest), children)), React$d.createElement("div", null, React$d.createElement(DropdownMenu, { placement: menuPlacement, menuItems, style: { minWidth: menuWidth }, onShow: React$d.useCallback(function() {
-    return setIsMenuOpen(true);
-  }, []), onHide: React$d.useCallback(function() {
-    return setIsMenuOpen(false);
-  }, []) }, React$d.createElement(IconButton, { styleType, size, disabled: props.disabled }, isMenuOpen ? React$d.createElement(_default$4, null) : React$d.createElement(_default$5, null)))));
-});
 var __assign$6a = globalThis && globalThis.__assign || function() {
   __assign$6a = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12306,25 +12167,24 @@ var __rest$k = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var ButtonGroup = React$d.forwardRef(function(props, ref) {
-  var children = props.children, className = props.className, overflowButton = props.overflowButton, _a = props.overflowPlacement, overflowPlacement = _a === void 0 ? "end" : _a, _b = props.orientation, orientation = _b === void 0 ? "horizontal" : _b, rest = __rest$k(props, ["children", "className", "overflowButton", "overflowPlacement", "orientation"]);
-  var items = React$d.useMemo(function() {
-    var _a2;
-    return (_a2 = React$d.Children.map(children, function(child) {
-      return React$d.createElement("div", null, child);
-    })) !== null && _a2 !== void 0 ? _a2 : [];
-  }, [children]);
+var DropdownButton = React$c.forwardRef(function(props, ref) {
+  var menuItems = props.menuItems, className = props.className, size = props.size, styleType = props.styleType, children = props.children, rest = __rest$k(props, ["menuItems", "className", "size", "styleType", "children"]);
   useTheme();
-  var _c = useOverflow(items, !overflowButton, orientation), overflowRef = _c[0], visibleCount = _c[1];
-  var refs = useMergedRefs(overflowRef, ref);
-  return React$d.createElement("div", __assign$6a({ className: cx({
-    "iui-button-group": orientation === "horizontal",
-    "iui-button-group-vertical": orientation === "vertical",
-    "iui-button-group-overflow-x": !!overflowButton && orientation === "horizontal"
-  }, className), "aria-orientation": orientation, ref: refs }, rest), !!overflowButton && visibleCount < items.length ? React$d.createElement(React$d.Fragment, null, overflowButton && overflowPlacement === "start" && React$d.createElement("div", null, overflowButton(visibleCount)), items.slice(0, visibleCount - 1), overflowButton && overflowPlacement === "end" && React$d.createElement("div", null, overflowButton(visibleCount))) : items);
+  var _a = React$c.useState(false), isMenuOpen = _a[0], setIsMenuOpen = _a[1];
+  var _b = React$c.useState(0), menuWidth = _b[0], setMenuWidth = _b[1];
+  var buttonRef = React$c.useRef(null);
+  var refs = useMergedRefs(ref, buttonRef);
+  React$c.useEffect(function() {
+    if (buttonRef.current) {
+      setMenuWidth(buttonRef.current.offsetWidth);
+    }
+  }, [children, size, styleType]);
+  return React$c.createElement(DropdownMenu, { menuItems, style: { minWidth: menuWidth }, onShow: function() {
+    return setIsMenuOpen(true);
+  }, onHide: function() {
+    return setIsMenuOpen(false);
+  } }, React$c.createElement(Button, __assign$6a({ className: cx("iui-dropdown", className), size, styleType, endIcon: isMenuOpen ? React$c.createElement(_default$4, { "aria-hidden": true }) : React$c.createElement(_default$5, { "aria-hidden": true }), ref: refs, "aria-label": "Dropdown" }, rest), children));
 });
-var inputs = "";
-var tooltip = "";
 var __assign$69 = globalThis && globalThis.__assign || function() {
   __assign$69 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12349,11 +12209,25 @@ var __rest$j = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Tooltip = function(props) {
-  var content2 = props.content, children = props.children, className = props.className, style = props.style, visible = props.visible, ref = props.ref, id2 = props.id, rest = __rest$j(props, ["content", "children", "className", "style", "visible", "ref", "id"]);
+var SplitButton = React$c.forwardRef(function(props, forwardedRef) {
+  var onClick = props.onClick, menuItems = props.menuItems, className = props.className, _a = props.menuPlacement, menuPlacement = _a === void 0 ? "bottom-end" : _a, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, size = props.size, children = props.children, style = props.style, title = props.title, rest = __rest$j(props, ["onClick", "menuItems", "className", "menuPlacement", "styleType", "size", "children", "style", "title"]);
   useTheme();
-  return React$d.createElement(Popover, __assign$69({ visible, interactive: false, content: React$d.createElement("div", { className: cx("iui-tooltip", className), style, role: "tooltip", id: id2 }, content2), offset: [0, 4], ref }, rest), children && React$d.cloneElement(children, { title: void 0 }));
-};
+  var _c = React$c.useState(false), isMenuOpen = _c[0], setIsMenuOpen = _c[1];
+  var _d = React$c.useState(0), menuWidth = _d[0], setMenuWidth = _d[1];
+  var ref = React$c.useRef(null);
+  React$c.useEffect(function() {
+    if (ref.current) {
+      setMenuWidth(ref.current.offsetWidth);
+    }
+  }, [children, size]);
+  return React$c.createElement("span", { className: cx(className, "iui-button-split-menu", {
+    "iui-disabled": props.disabled
+  }), style, title, ref }, React$c.createElement("div", null, React$c.createElement(Button, __assign$69({ styleType, size, onClick, ref: forwardedRef }, rest), children)), React$c.createElement("div", null, React$c.createElement(DropdownMenu, { placement: menuPlacement, menuItems, style: { minWidth: menuWidth }, onShow: React$c.useCallback(function() {
+    return setIsMenuOpen(true);
+  }, []), onHide: React$c.useCallback(function() {
+    return setIsMenuOpen(false);
+  }, []) }, React$c.createElement(IconButton, { styleType, size, disabled: props.disabled }, isMenuOpen ? React$c.createElement(_default$4, null) : React$c.createElement(_default$5, null)))));
+});
 var __assign$68 = globalThis && globalThis.__assign || function() {
   __assign$68 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12378,19 +12252,25 @@ var __rest$i = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Input = React$d.forwardRef(function(props, ref) {
-  var _a;
-  var _b = props.setFocus, setFocus = _b === void 0 ? false : _b, size = props.size, className = props.className, rest = __rest$i(props, ["setFocus", "size", "className"]);
+var ButtonGroup = React$c.forwardRef(function(props, ref) {
+  var children = props.children, className = props.className, overflowButton = props.overflowButton, _a = props.overflowPlacement, overflowPlacement = _a === void 0 ? "end" : _a, _b = props.orientation, orientation = _b === void 0 ? "horizontal" : _b, rest = __rest$i(props, ["children", "className", "overflowButton", "overflowPlacement", "orientation"]);
+  var items = React$c.useMemo(function() {
+    var _a2;
+    return (_a2 = React$c.Children.map(children, function(child) {
+      return React$c.createElement("div", null, child);
+    })) !== null && _a2 !== void 0 ? _a2 : [];
+  }, [children]);
   useTheme();
-  var inputRef = React$d.useRef(null);
-  var refs = useMergedRefs(inputRef, ref);
-  React$d.useEffect(function() {
-    if (inputRef.current && setFocus) {
-      inputRef.current.focus();
-    }
-  }, [setFocus]);
-  return React$d.createElement("input", __assign$68({ className: cx("iui-input", (_a = {}, _a["iui-" + size] = !!size, _a), className), ref: refs }, rest));
+  var _c = useOverflow(items, !overflowButton, orientation), overflowRef = _c[0], visibleCount = _c[1];
+  var refs = useMergedRefs(overflowRef, ref);
+  return React$c.createElement("div", __assign$68({ className: cx({
+    "iui-button-group": orientation === "horizontal",
+    "iui-button-group-vertical": orientation === "vertical",
+    "iui-button-group-overflow-x": !!overflowButton && orientation === "horizontal"
+  }, className), "aria-orientation": orientation, ref: refs }, rest), !!overflowButton && visibleCount < items.length ? React$c.createElement(React$c.Fragment, null, overflowButton && overflowPlacement === "start" && React$c.createElement("div", null, overflowButton(visibleCount)), items.slice(0, visibleCount - 1), overflowButton && overflowPlacement === "end" && React$c.createElement("div", null, overflowButton(visibleCount))) : items);
 });
+var inputs = "";
+var tooltip = "";
 var __assign$67 = globalThis && globalThis.__assign || function() {
   __assign$67 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12415,12 +12295,11 @@ var __rest$h = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Anchor = React$d.forwardRef(function(_a, ref) {
-  var className = _a.className, rest = __rest$h(_a, ["className"]);
+var Tooltip = function(props) {
+  var content2 = props.content, children = props.children, className = props.className, style = props.style, visible = props.visible, ref = props.ref, id2 = props.id, rest = __rest$h(props, ["content", "children", "className", "style", "visible", "ref", "id"]);
   useTheme();
-  return React$d.createElement("a", __assign$67({ className: cx("iui-anchor", className), ref }, rest));
-});
-var text = "";
+  return React$c.createElement(Popover, __assign$67({ visible, interactive: false, content: React$c.createElement("div", { className: cx("iui-tooltip", className), style, role: "tooltip", id: id2 }, content2), offset: [0, 4], ref }, rest), children && React$c.cloneElement(children, { title: void 0 }));
+};
 var __assign$66 = globalThis && globalThis.__assign || function() {
   __assign$66 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12445,11 +12324,20 @@ var __rest$g = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Headline = React$d.forwardRef(function(props, ref) {
-  var className = props.className, _a = props.isMuted, isMuted = _a === void 0 ? false : _a, rest = __rest$g(props, ["className", "isMuted"]);
+var Input = React$c.forwardRef(function(props, ref) {
+  var _a;
+  var _b = props.setFocus, setFocus = _b === void 0 ? false : _b, size = props.size, className = props.className, rest = __rest$g(props, ["setFocus", "size", "className"]);
   useTheme();
-  return React$d.createElement("h1", __assign$66({ ref, className: cx("iui-text-headline", "iui-text-spacing", { "iui-text-muted": isMuted }, className) }, rest));
+  var inputRef = React$c.useRef(null);
+  var refs = useMergedRefs(inputRef, ref);
+  React$c.useEffect(function() {
+    if (inputRef.current && setFocus) {
+      inputRef.current.focus();
+    }
+  }, [setFocus]);
+  return React$c.createElement("input", __assign$66({ className: cx("iui-input", (_a = {}, _a["iui-" + size] = !!size, _a), className), ref: refs }, rest));
 });
+var anchor = "";
 var __assign$65 = globalThis && globalThis.__assign || function() {
   __assign$65 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12474,14 +12362,12 @@ var __rest$f = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Body = React$d.forwardRef(function(props, ref) {
-  var className = props.className, _a = props.isMuted, isMuted = _a === void 0 ? false : _a, _b = props.isSkeleton, isSkeleton = _b === void 0 ? false : _b, rest = __rest$f(props, ["className", "isMuted", "isSkeleton"]);
+var Anchor = React$c.forwardRef(function(_a, ref) {
+  var className = _a.className, rest = __rest$f(_a, ["className"]);
   useTheme();
-  return React$d.createElement("p", __assign$65({ ref, className: cx("iui-text-block", "iui-text-spacing", {
-    "iui-text-muted": isMuted,
-    "iui-skeleton": isSkeleton
-  }, className) }, rest));
+  return React$c.createElement("a", __assign$65({ className: cx("iui-anchor", className), ref }, rest));
 });
+var text = "";
 var __assign$64 = globalThis && globalThis.__assign || function() {
   __assign$64 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12506,14 +12392,12 @@ var __rest$e = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Text$1 = React$d.forwardRef(function(props, ref) {
-  var _a;
-  var _b = props.variant, variant = _b === void 0 ? "body" : _b, _c = props.as, Element2 = _c === void 0 ? "div" : _c, className = props.className, _d = props.isMuted, isMuted = _d === void 0 ? false : _d, _e = props.isSkeleton, isSkeleton = _e === void 0 ? false : _e, rest = __rest$e(props, ["variant", "as", "className", "isMuted", "isSkeleton"]);
+var Headline = React$c.forwardRef(function(props, ref) {
+  var className = props.className, _a = props.isMuted, isMuted = _a === void 0 ? false : _a, rest = __rest$e(props, ["className", "isMuted"]);
   useTheme();
-  return React$d.createElement(Element2, __assign$64({ className: cx((_a = {}, _a["iui-text-" + variant] = variant !== "body", _a["iui-text-block"] = variant === "body", _a["iui-text-muted"] = isMuted, _a["iui-skeleton"] = isSkeleton, _a), className), ref }, rest));
+  return React$c.createElement("h1", __assign$64({ ref, className: cx("iui-text-headline", "iui-text-spacing", { "iui-text-muted": isMuted }, className) }, rest));
 });
-var MoreVertical = {};
-var __assign$63 = commonjsGlobal && commonjsGlobal.__assign || function() {
+var __assign$63 = globalThis && globalThis.__assign || function() {
   __assign$63 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
@@ -12524,6 +12408,69 @@ var __assign$63 = commonjsGlobal && commonjsGlobal.__assign || function() {
     return t2;
   };
   return __assign$63.apply(this, arguments);
+};
+var __rest$d = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var Body = React$c.forwardRef(function(props, ref) {
+  var className = props.className, _a = props.isMuted, isMuted = _a === void 0 ? false : _a, _b = props.isSkeleton, isSkeleton = _b === void 0 ? false : _b, rest = __rest$d(props, ["className", "isMuted", "isSkeleton"]);
+  useTheme();
+  return React$c.createElement("p", __assign$63({ ref, className: cx("iui-text-block", "iui-text-spacing", {
+    "iui-text-muted": isMuted,
+    "iui-skeleton": isSkeleton
+  }, className) }, rest));
+});
+var __assign$62 = globalThis && globalThis.__assign || function() {
+  __assign$62 = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$62.apply(this, arguments);
+};
+var __rest$c = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var Text$1 = React$c.forwardRef(function(props, ref) {
+  var _a;
+  var _b = props.variant, variant = _b === void 0 ? "body" : _b, _c = props.as, Element2 = _c === void 0 ? "div" : _c, className = props.className, _d = props.isMuted, isMuted = _d === void 0 ? false : _d, _e = props.isSkeleton, isSkeleton = _e === void 0 ? false : _e, rest = __rest$c(props, ["variant", "as", "className", "isMuted", "isSkeleton"]);
+  useTheme();
+  return React$c.createElement(Element2, __assign$62({ className: cx((_a = {}, _a["iui-text-" + variant] = variant !== "body", _a["iui-text-block"] = variant === "body", _a["iui-text-muted"] = isMuted, _a["iui-skeleton"] = isSkeleton, _a), className), ref }, rest));
+});
+var MoreVertical = {};
+var __assign$61 = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$61 = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$61.apply(this, arguments);
 };
 var __createBinding$3 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -12556,91 +12503,10 @@ var __importStar$3 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(MoreVertical, "__esModule", { value: true });
 var React$3 = __importStar$3(react.exports);
 function SvgMoreVertical(props) {
-  return React$3.createElement("svg", __assign$63({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$3.createElement("path", { d: "m8 4a2 2 0 1 1 2-2 2 2 0 0 1 -2 2zm2 4a2 2 0 1 0 -2 2 2 2 0 0 0 2-2zm0 6a2 2 0 1 0 -2 2 2 2 0 0 0 2-2z" }));
+  return React$3.createElement("svg", __assign$61({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$3.createElement("path", { d: "m8 4a2 2 0 1 1 2-2 2 2 0 0 1 -2 2zm2 4a2 2 0 1 0 -2 2 2 2 0 0 0 2-2zm0 6a2 2 0 1 0 -2 2 2 2 0 0 0 2-2z" }));
 }
 var _default$3 = MoreVertical.default = SvgMoreVertical;
 var header = "";
-var __assign$62 = globalThis && globalThis.__assign || function() {
-  __assign$62 = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$62.apply(this, arguments);
-};
-var __rest$d = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
-var defaultTranslations = {
-  moreOptions: "More options"
-};
-var Header = function(props) {
-  var appLogo = props.appLogo, breadcrumbs = props.breadcrumbs, _a = props.isSlim, isSlim = _a === void 0 ? false : _a, actions = props.actions, userIcon2 = props.userIcon, menuItems = props.menuItems, translatedStrings = props.translatedStrings, className = props.className, children = props.children, rest = __rest$d(props, ["appLogo", "breadcrumbs", "isSlim", "actions", "userIcon", "menuItems", "translatedStrings", "className", "children"]);
-  useTheme();
-  var headerTranslations = __assign$62(__assign$62({}, defaultTranslations), translatedStrings);
-  return React$d.createElement("header", __assign$62({ className: cx("iui-page-header", { "iui-slim": isSlim }, className) }, rest), React$d.createElement("div", { className: "iui-left" }, appLogo, breadcrumbs && React$d.createElement("div", { className: "iui-divider" }), breadcrumbs), children && React$d.createElement("div", { className: "iui-center" }, children), React$d.createElement("div", { className: "iui-right" }, actions, userIcon2, menuItems && React$d.createElement(DropdownMenu, { menuItems }, React$d.createElement(IconButton, { styleType: "borderless", "aria-label": headerTranslations.moreOptions }, React$d.createElement(_default$3, { "aria-hidden": true })))));
-};
-var __assign$61 = globalThis && globalThis.__assign || function() {
-  __assign$61 = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$61.apply(this, arguments);
-};
-var __rest$c = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
-var isSplitButton = function(props) {
-  return !!props.menuItems && !!props.onClick;
-};
-var isDropdownButton = function(props) {
-  return !!props.menuItems;
-};
-var HeaderButton = React$d.forwardRef(function(props, ref) {
-  var name2 = props.name, description = props.description, _a = props.isActive, isActive = _a === void 0 ? false : _a, className = props.className, startIcon = props.startIcon, menuItems = props.menuItems, rest = __rest$c(props, ["name", "description", "isActive", "className", "startIcon", "menuItems"]);
-  useTheme();
-  var buttonProps = __assign$61(__assign$61({ startIcon: React$d.isValidElement(startIcon) ? React$d.cloneElement(startIcon, {
-    className: cx("iui-header-button-icon", startIcon.props.className)
-  }) : void 0, styleType: "borderless", className: cx({
-    "iui-header-button": !isSplitButton(props),
-    "iui-header-split-button": isSplitButton(props),
-    "iui-active": isActive
-  }, className), "aria-current": isActive ? "location" : void 0, children: React$d.createElement(React$d.Fragment, null, React$d.createElement("div", null, name2), description && React$d.createElement("div", { className: "iui-description" }, description)), ref }, !!menuItems && { menuItems }), rest);
-  if (isSplitButton(buttonProps)) {
-    return React$d.createElement(SplitButton, __assign$61({}, buttonProps));
-  }
-  if (isDropdownButton(buttonProps)) {
-    return React$d.createElement(DropdownButton, __assign$61({}, buttonProps));
-  }
-  return React$d.createElement(Button, __assign$61({}, buttonProps));
-});
 var __assign$60 = globalThis && globalThis.__assign || function() {
   __assign$60 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12665,18 +12531,14 @@ var __rest$b = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var HeaderLogo = function(props) {
-  var className = props.className, children = props.children, logo = props.logo, onClick = props.onClick, rest = __rest$b(props, ["className", "children", "logo", "onClick"]);
-  var keyDownHandler = function(e2) {
-    if (onClick && (e2.key === "Enter" || e2.key === " " || e2.key === "Spacebar")) {
-      e2.preventDefault();
-      onClick();
-    }
-  };
+var defaultTranslations = {
+  moreOptions: "More options"
+};
+var Header = function(props) {
+  var appLogo = props.appLogo, breadcrumbs = props.breadcrumbs, _a = props.isSlim, isSlim = _a === void 0 ? false : _a, actions = props.actions, userIcon2 = props.userIcon, menuItems = props.menuItems, translatedStrings = props.translatedStrings, className = props.className, children = props.children, rest = __rest$b(props, ["appLogo", "breadcrumbs", "isSlim", "actions", "userIcon", "menuItems", "translatedStrings", "className", "children"]);
   useTheme();
-  return React$d.createElement("div", __assign$60({ className: cx("iui-header-logo", className), role: onClick && "button", tabIndex: onClick && 0, onKeyDown: keyDownHandler, onClick }, rest), React$d.isValidElement(logo) ? React$d.cloneElement(logo, {
-    className: cx("iui-header-button-icon", logo.props.className)
-  }) : void 0, children && React$d.createElement("span", { className: "iui-label" }, children));
+  var headerTranslations = __assign$60(__assign$60({}, defaultTranslations), translatedStrings);
+  return React$c.createElement("header", __assign$60({ className: cx("iui-page-header", { "iui-slim": isSlim }, className) }, rest), React$c.createElement("div", { className: "iui-left" }, appLogo, breadcrumbs && React$c.createElement("div", { className: "iui-divider" }), breadcrumbs), children && React$c.createElement("div", { className: "iui-center" }, children), React$c.createElement("div", { className: "iui-right" }, actions, userIcon2, menuItems && React$c.createElement(DropdownMenu, { menuItems }, React$c.createElement(IconButton, { styleType: "borderless", "aria-label": headerTranslations.moreOptions }, React$c.createElement(_default$3, { "aria-hidden": true })))));
 };
 var __assign$5$ = globalThis && globalThis.__assign || function() {
   __assign$5$ = Object.assign || function(t2) {
@@ -12702,28 +12564,31 @@ var __rest$a = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var __spreadArray = globalThis && globalThis.__spreadArray || function(to, from, pack) {
-  if (pack || arguments.length === 2)
-    for (var i = 0, l2 = from.length, ar; i < l2; i++) {
-      if (ar || !(i in from)) {
-        if (!ar)
-          ar = Array.prototype.slice.call(from, 0, i);
-        ar[i] = from[i];
-      }
-    }
-  return to.concat(ar || Array.prototype.slice.call(from));
+var isSplitButton = function(props) {
+  return !!props.menuItems && !!props.onClick;
 };
-var HeaderBreadcrumbs = function(props) {
-  var items = props.items, rest = __rest$a(props, ["items"]);
+var isDropdownButton = function(props) {
+  return !!props.menuItems;
+};
+var HeaderButton = React$c.forwardRef(function(props, ref) {
+  var name2 = props.name, description = props.description, _a = props.isActive, isActive = _a === void 0 ? false : _a, className = props.className, startIcon = props.startIcon, menuItems = props.menuItems, rest = __rest$a(props, ["name", "description", "isActive", "className", "startIcon", "menuItems"]);
   useTheme();
-  return React$d.createElement("nav", __assign$5$({ "aria-label": "breadcrumbs" }, rest), items.reduce(function(previous, current, index2) {
-    return __spreadArray(__spreadArray([], previous, true), [
-      current,
-      index2 !== items.length - 1 && React$d.createElement(_default$7, { key: "chevron" + index2, "aria-hidden": true, className: "iui-chevron" })
-    ], false);
-  }, []));
-};
-var informationPanel = "";
+  var buttonProps = __assign$5$(__assign$5$({ startIcon: React$c.isValidElement(startIcon) ? React$c.cloneElement(startIcon, {
+    className: cx("iui-header-button-icon", startIcon.props.className)
+  }) : void 0, styleType: "borderless", className: cx({
+    "iui-header-button": !isSplitButton(props),
+    "iui-header-split-button": isSplitButton(props),
+    "iui-header-dropdown-button": !isSplitButton(props) && isDropdownButton(props),
+    "iui-active": isActive
+  }, className), "aria-current": isActive ? "location" : void 0, children: React$c.createElement(React$c.Fragment, null, React$c.createElement("div", null, name2), description && React$c.createElement("div", { className: "iui-description" }, description)), ref }, !!menuItems && { menuItems }), rest);
+  if (isSplitButton(buttonProps)) {
+    return React$c.createElement(SplitButton, __assign$5$({}, buttonProps));
+  }
+  if (isDropdownButton(buttonProps)) {
+    return React$c.createElement(DropdownButton, __assign$5$({}, buttonProps));
+  }
+  return React$c.createElement(Button, __assign$5$({}, buttonProps));
+});
 var __assign$5_ = globalThis && globalThis.__assign || function() {
   __assign$5_ = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12748,44 +12613,19 @@ var __rest$9 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var InformationPanel = React$d.forwardRef(function(props, ref) {
-  var className = props.className, _a = props.isOpen, isOpen = _a === void 0 ? false : _a, _b = props.orientation, orientation = _b === void 0 ? "vertical" : _b, _c = props.resizable, resizable = _c === void 0 ? true : _c, children = props.children, rest = __rest$9(props, ["className", "isOpen", "orientation", "resizable", "children"]);
-  useTheme();
-  var infoPanelRef = React$d.useRef(null);
-  var refs = useMergedRefs(ref, infoPanelRef);
-  var startResize = function(e2) {
-    if (!infoPanelRef.current) {
-      return;
+var HeaderLogo = function(props) {
+  var className = props.className, children = props.children, logo = props.logo, onClick = props.onClick, rest = __rest$9(props, ["className", "children", "logo", "onClick"]);
+  var keyDownHandler = function(e2) {
+    if (onClick && (e2.key === "Enter" || e2.key === " " || e2.key === "Spacebar")) {
+      e2.preventDefault();
+      onClick();
     }
-    if (e2.button != void 0 && e2.button !== 0) {
-      return;
-    }
-    e2.preventDefault();
-    e2.stopPropagation();
-    infoPanelRef.current.ownerDocument.addEventListener("pointermove", onResize);
-    infoPanelRef.current.ownerDocument.addEventListener("pointerup", function() {
-      var _a2;
-      return (_a2 = infoPanelRef.current) === null || _a2 === void 0 ? void 0 : _a2.ownerDocument.removeEventListener("pointermove", onResize);
-    }, { once: true });
   };
-  var onResize = React$d.useCallback(function(e2) {
-    e2.preventDefault();
-    if (!infoPanelRef.current) {
-      return;
-    }
-    var _a2 = infoPanelRef.current.getBoundingClientRect(), right2 = _a2.right, bottom2 = _a2.bottom;
-    if (orientation === "vertical") {
-      infoPanelRef.current.style.width = right2 - e2.clientX + "px";
-    } else {
-      infoPanelRef.current.style.height = bottom2 - e2.clientY + "px";
-    }
-  }, [orientation]);
-  return React$d.createElement("div", __assign$5_({ className: cx("iui-information-panel", {
-    "iui-right": orientation === "vertical",
-    "iui-bottom": orientation === "horizontal",
-    "iui-visible": isOpen
-  }, className), ref: refs }, rest), resizable && React$d.createElement("div", { className: "iui-resizer", onPointerDown: startResize }, React$d.createElement("div", { className: "iui-resizer-bar" })), children);
-});
+  useTheme();
+  return React$c.createElement("div", __assign$5_({ className: cx("iui-header-logo", className), role: onClick && "button", tabIndex: onClick && 0, onKeyDown: keyDownHandler, onClick }, rest), React$c.isValidElement(logo) ? React$c.cloneElement(logo, {
+    className: cx("iui-header-button-icon", logo.props.className)
+  }) : void 0, children && React$c.createElement("span", { className: "iui-label" }, children));
+};
 var __assign$5Z = globalThis && globalThis.__assign || function() {
   __assign$5Z = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12810,10 +12650,26 @@ var __rest$8 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var InformationPanelHeader = function(props) {
-  var children = props.children, onClose = props.onClose, actions = props.actions, className = props.className, rest = __rest$8(props, ["children", "onClose", "actions", "className"]);
+var __spreadArray = globalThis && globalThis.__spreadArray || function(to, from, pack) {
+  if (pack || arguments.length === 2)
+    for (var i = 0, l2 = from.length, ar; i < l2; i++) {
+      if (ar || !(i in from)) {
+        if (!ar)
+          ar = Array.prototype.slice.call(from, 0, i);
+        ar[i] = from[i];
+      }
+    }
+  return to.concat(ar || Array.prototype.slice.call(from));
+};
+var HeaderBreadcrumbs = function(props) {
+  var items = props.items, rest = __rest$8(props, ["items"]);
   useTheme();
-  return React$d.createElement("div", __assign$5Z({ className: cx("iui-information-header", className) }, rest), React$d.createElement("span", { className: "iui-information-header-label" }, children), React$d.createElement("div", { className: "iui-information-header-actions" }, actions, onClose && React$d.createElement(IconButton, { styleType: "borderless", onClick: onClose, "aria-label": "Close" }, React$d.createElement(_default$c, { "aria-hidden": true }))));
+  return React$c.createElement("nav", __assign$5Z({ "aria-label": "breadcrumbs" }, rest), items.reduce(function(previous, current, index2) {
+    return __spreadArray(__spreadArray([], previous, true), [
+      current,
+      index2 !== items.length - 1 && React$c.createElement(_default$7, { key: "chevron" + index2, "aria-hidden": true, className: "iui-chevron" })
+    ], false);
+  }, []));
 };
 var __assign$5Y = globalThis && globalThis.__assign || function() {
   __assign$5Y = Object.assign || function(t2) {
@@ -12839,11 +12695,12 @@ var __rest$7 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var InformationPanelBody = function(props) {
-  var className = props.className, children = props.children, rest = __rest$7(props, ["className", "children"]);
+var LabeledInput = React$c.forwardRef(function(props, ref) {
+  var className = props.className, _a = props.disabled, disabled = _a === void 0 ? false : _a, label = props.label, message = props.message, status = props.status, svgIcon = props.svgIcon, style = props.style, inputClassName = props.inputClassName, inputStyle = props.inputStyle, _b = props.displayStyle, displayStyle = _b === void 0 ? "default" : _b, _c = props.iconDisplayStyle, iconDisplayStyle = _c === void 0 ? displayStyle === "default" ? "block" : "inline" : _c, _d = props.required, required = _d === void 0 ? false : _d, rest = __rest$7(props, ["className", "disabled", "label", "message", "status", "svgIcon", "style", "inputClassName", "inputStyle", "displayStyle", "iconDisplayStyle", "required"]);
   useTheme();
-  return React$d.createElement("div", __assign$5Y({ className: cx("iui-information-body", className) }, rest), children);
-};
+  var icon = svgIcon !== null && svgIcon !== void 0 ? svgIcon : status && StatusIconMap[status]();
+  return React$c.createElement(InputContainer, { as: "label", label, disabled, required, status, message, icon, isLabelInline: displayStyle === "inline", isIconInline: iconDisplayStyle === "inline", className, style }, React$c.createElement(Input, __assign$5Y({ disabled, className: inputClassName, style: inputStyle, required, ref }, rest)));
+});
 var __assign$5X = globalThis && globalThis.__assign || function() {
   __assign$5X = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12868,70 +12725,40 @@ var __rest$6 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var LabeledInput = React$d.forwardRef(function(props, ref) {
-  var className = props.className, _a = props.disabled, disabled = _a === void 0 ? false : _a, label = props.label, message = props.message, status = props.status, svgIcon = props.svgIcon, style = props.style, inputClassName = props.inputClassName, inputStyle = props.inputStyle, _b = props.displayStyle, displayStyle = _b === void 0 ? "default" : _b, _c = props.iconDisplayStyle, iconDisplayStyle = _c === void 0 ? displayStyle === "default" ? "block" : "inline" : _c, _d = props.required, required = _d === void 0 ? false : _d, rest = __rest$6(props, ["className", "disabled", "label", "message", "status", "svgIcon", "style", "inputClassName", "inputStyle", "displayStyle", "iconDisplayStyle", "required"]);
-  useTheme();
-  var icon = svgIcon !== null && svgIcon !== void 0 ? svgIcon : status && StatusIconMap[status]();
-  return React$d.createElement(InputContainer, { as: "label", label, disabled, required, status, message, icon, isLabelInline: displayStyle === "inline", isIconInline: iconDisplayStyle === "inline", className, style }, React$d.createElement(Input, __assign$5X({ disabled, className: inputClassName, style: inputStyle, required, ref }, rest)));
-});
-var __assign$5W = globalThis && globalThis.__assign || function() {
-  __assign$5W = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$5W.apply(this, arguments);
-};
-var __rest$5 = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
 var Select = function(props) {
   var _a;
   var _b;
-  var options = props.options, value = props.value, onChange = props.onChange, placeholder = props.placeholder, _c = props.disabled, disabled = _c === void 0 ? false : _c, size = props.size, _d = props.setFocus, setFocus = _d === void 0 ? false : _d, itemRenderer = props.itemRenderer, selectedItemRenderer = props.selectedItemRenderer, className = props.className, style = props.style, menuClassName = props.menuClassName, menuStyle = props.menuStyle, onShow2 = props.onShow, onHide2 = props.onHide, popoverProps = props.popoverProps, rest = __rest$5(props, ["options", "value", "onChange", "placeholder", "disabled", "size", "setFocus", "itemRenderer", "selectedItemRenderer", "className", "style", "menuClassName", "menuStyle", "onShow", "onHide", "popoverProps"]);
+  var options = props.options, value = props.value, onChange = props.onChange, placeholder = props.placeholder, _c = props.disabled, disabled = _c === void 0 ? false : _c, size = props.size, _d = props.setFocus, setFocus = _d === void 0 ? false : _d, itemRenderer = props.itemRenderer, selectedItemRenderer = props.selectedItemRenderer, className = props.className, style = props.style, menuClassName = props.menuClassName, menuStyle = props.menuStyle, onShow2 = props.onShow, onHide2 = props.onHide, popoverProps = props.popoverProps, rest = __rest$6(props, ["options", "value", "onChange", "placeholder", "disabled", "size", "setFocus", "itemRenderer", "selectedItemRenderer", "className", "style", "menuClassName", "menuStyle", "onShow", "onHide", "popoverProps"]);
   useTheme();
-  var _e = React$d.useState((_b = popoverProps === null || popoverProps === void 0 ? void 0 : popoverProps.visible) !== null && _b !== void 0 ? _b : false), isOpen = _e[0], setIsOpen = _e[1];
-  React$d.useEffect(function() {
+  var _e = React$c.useState((_b = popoverProps === null || popoverProps === void 0 ? void 0 : popoverProps.visible) !== null && _b !== void 0 ? _b : false), isOpen = _e[0], setIsOpen = _e[1];
+  React$c.useEffect(function() {
     setIsOpen(function(open) {
       var _a2;
       return (_a2 = popoverProps === null || popoverProps === void 0 ? void 0 : popoverProps.visible) !== null && _a2 !== void 0 ? _a2 : open;
     });
   }, [popoverProps]);
-  var _f = React$d.useState(0), minWidth = _f[0], setMinWidth = _f[1];
+  var _f = React$c.useState(0), minWidth = _f[0], setMinWidth = _f[1];
   var toggle = function() {
     return setIsOpen(function(open) {
       return !open;
     });
   };
-  var selectRef = React$d.useRef(null);
-  var toggleButtonRef = React$d.useRef(null);
-  var onShowHandler = React$d.useCallback(function(instance) {
+  var selectRef = React$c.useRef(null);
+  var toggleButtonRef = React$c.useRef(null);
+  var onShowHandler = React$c.useCallback(function(instance) {
     setIsOpen(true);
     onShow2 === null || onShow2 === void 0 ? void 0 : onShow2(instance);
   }, [onShow2]);
-  var onHideHandler = React$d.useCallback(function(instance) {
+  var onHideHandler = React$c.useCallback(function(instance) {
     setIsOpen(false);
     onHide2 === null || onHide2 === void 0 ? void 0 : onHide2(instance);
   }, [onHide2]);
-  React$d.useEffect(function() {
+  React$c.useEffect(function() {
     if (selectRef.current && !disabled && setFocus) {
       selectRef.current.focus();
     }
   }, [setFocus, disabled]);
-  React$d.useEffect(function() {
+  React$c.useEffect(function() {
     if (selectRef.current) {
       setMinWidth(selectRef.current.offsetWidth);
     }
@@ -12946,11 +12773,11 @@ var Select = function(props) {
         break;
     }
   };
-  var menuItems = React$d.useCallback(function(close) {
+  var menuItems = React$c.useCallback(function(close) {
     return options.map(function(option, index2) {
       var isSelected = value === option.value;
-      var menuItem = itemRenderer ? itemRenderer(option, { close, isSelected }) : React$d.createElement(MenuItem, null, option.label);
-      return React$d.cloneElement(menuItem, __assign$5W(__assign$5W({ key: option.label + "-" + index2, isSelected, onClick: function() {
+      var menuItem = itemRenderer ? itemRenderer(option, { close, isSelected }) : React$c.createElement(MenuItem, null, option.label);
+      return React$c.cloneElement(menuItem, __assign$5X(__assign$5X({ key: option.label + "-" + index2, isSelected, onClick: function() {
         !option.disabled && (onChange === null || onChange === void 0 ? void 0 : onChange(option.value));
         close();
       }, ref: function(el) {
@@ -12958,7 +12785,7 @@ var Select = function(props) {
       }, role: "option" }, option), menuItem.props));
     });
   }, [itemRenderer, onChange, options, value]);
-  var selectedItem = React$d.useMemo(function() {
+  var selectedItem = React$c.useMemo(function() {
     if (value == null) {
       return void 0;
     }
@@ -12966,32 +12793,32 @@ var Select = function(props) {
       return option.value === value;
     });
   }, [options, value]);
-  return React$d.createElement("div", __assign$5W({ className: cx("iui-input-with-icon", className), "aria-expanded": isOpen, "aria-haspopup": "listbox", style }, rest), React$d.createElement(DropdownMenu, __assign$5W({ menuItems, placement: "bottom-start", className: cx("iui-scroll", menuClassName), style: __assign$5W({ minWidth, maxWidth: "min(" + minWidth * 2 + "px, 90vw)", maxHeight: "300px" }, menuStyle), role: "listbox", onShow: onShowHandler, onHide: onHideHandler, disabled }, popoverProps, { visible: isOpen, onClickOutside: function(_, _a2) {
+  return React$c.createElement("div", __assign$5X({ className: cx("iui-input-with-icon", className), "aria-expanded": isOpen, "aria-haspopup": "listbox", style }, rest), React$c.createElement(DropdownMenu, __assign$5X({ menuItems, placement: "bottom-start", className: cx("iui-scroll", menuClassName), style: __assign$5X({ minWidth, maxWidth: "min(" + minWidth * 2 + "px, 90vw)", maxHeight: "300px" }, menuStyle), role: "listbox", onShow: onShowHandler, onHide: onHideHandler, disabled }, popoverProps, { visible: isOpen, onClickOutside: function(_, _a2) {
     var _b2;
     var target = _a2.target;
     if (!((_b2 = toggleButtonRef.current) === null || _b2 === void 0 ? void 0 : _b2.contains(target))) {
       setIsOpen(false);
     }
-  } }), React$d.createElement("div", { ref: selectRef, className: cx("iui-select-button", (_a = {
+  } }), React$c.createElement("div", { ref: selectRef, className: cx("iui-select-button", (_a = {
     "iui-placeholder": !selectedItem && !!placeholder,
     "iui-disabled": disabled
   }, _a["iui-" + size] = !!size, _a)), onClick: function() {
     return !disabled && toggle();
   }, onKeyDown: function(e2) {
     return !disabled && onKeyDown(e2, toggle);
-  }, tabIndex: !disabled ? 0 : void 0 }, !selectedItem && React$d.createElement("span", { className: "iui-content" }, placeholder), selectedItem && selectedItemRenderer && selectedItemRenderer(selectedItem), selectedItem && !selectedItemRenderer && React$d.createElement(React$d.Fragment, null, (selectedItem === null || selectedItem === void 0 ? void 0 : selectedItem.icon) && React$d.cloneElement(selectedItem.icon, {
+  }, tabIndex: !disabled ? 0 : void 0 }, !selectedItem && React$c.createElement("span", { className: "iui-content" }, placeholder), selectedItem && selectedItemRenderer && selectedItemRenderer(selectedItem), selectedItem && !selectedItemRenderer && React$c.createElement(React$c.Fragment, null, (selectedItem === null || selectedItem === void 0 ? void 0 : selectedItem.icon) && React$c.cloneElement(selectedItem.icon, {
     className: cx(selectedItem === null || selectedItem === void 0 ? void 0 : selectedItem.icon.props.className, "iui-icon")
-  }), React$d.createElement("span", { className: "iui-content" }, selectedItem.label)))), React$d.createElement("span", { ref: toggleButtonRef, className: cx("iui-end-icon", {
+  }), React$c.createElement("span", { className: "iui-content" }, selectedItem.label)))), React$c.createElement("span", { ref: toggleButtonRef, className: cx("iui-end-icon", {
     "iui-actionable": !disabled,
     "iui-disabled": disabled,
     "iui-open": isOpen
   }), onClick: function() {
     return !disabled && toggle();
-  } }, React$d.createElement(_default$5, { "aria-hidden": true })));
+  } }, React$c.createElement(_default$5, { "aria-hidden": true })));
 };
 var Checkmark = {};
-var __assign$5V = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$5V = Object.assign || function(t2) {
+var __assign$5W = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$5W = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -13000,7 +12827,7 @@ var __assign$5V = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$5V.apply(this, arguments);
+  return __assign$5W.apply(this, arguments);
 };
 var __createBinding$2 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -13033,10 +12860,56 @@ var __importStar$2 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(Checkmark, "__esModule", { value: true });
 var React$2 = __importStar$2(react.exports);
 function SvgCheckmark$1(props) {
-  return React$2.createElement("svg", __assign$5V({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16" }, props), React$2.createElement("path", { d: "M6,14L0,8l2-2l4,4l8-8l2,2L6,14z" }));
+  return React$2.createElement("svg", __assign$5W({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16" }, props), React$2.createElement("path", { d: "M6,14L0,8l2-2l4,4l8-8l2,2L6,14z" }));
 }
 var _default$2 = Checkmark.default = SvgCheckmark$1;
 var sideNavigation = "";
+var __assign$5V = globalThis && globalThis.__assign || function() {
+  __assign$5V = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$5V.apply(this, arguments);
+};
+var __rest$5 = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var SideNavigation = function(props) {
+  var items = props.items, secondaryItems = props.secondaryItems, _a = props.expanderPlacement, expanderPlacement = _a === void 0 ? "top" : _a, className = props.className, _b = props.isExpanded, isExpanded = _b === void 0 ? false : _b, onExpanderClick = props.onExpanderClick, submenu = props.submenu, _c = props.isSubmenuOpen, isSubmenuOpen = _c === void 0 ? false : _c, rest = __rest$5(props, ["items", "secondaryItems", "expanderPlacement", "className", "isExpanded", "onExpanderClick", "submenu", "isSubmenuOpen"]);
+  useTheme();
+  var _d = React$c.useState(isExpanded), _isExpanded = _d[0], _setIsExpanded = _d[1];
+  React$c.useEffect(function() {
+    _setIsExpanded(isExpanded);
+  }, [isExpanded]);
+  var ExpandButton = React$c.createElement(IconButton, { className: "iui-sidenav-button iui-expand", onClick: React$c.useCallback(function() {
+    _setIsExpanded(function(expanded) {
+      return !expanded;
+    });
+    onExpanderClick === null || onExpanderClick === void 0 ? void 0 : onExpanderClick();
+  }, [onExpanderClick]) }, React$c.createElement(_default$7, null));
+  return React$c.createElement("div", __assign$5V({ className: cx("iui-side-navigation-wrapper", className) }, rest), React$c.createElement("div", { className: cx("iui-side-navigation", {
+    "iui-expanded": _isExpanded,
+    "iui-collapsed": !_isExpanded
+  }) }, expanderPlacement === "top" && ExpandButton, React$c.createElement("div", { className: "iui-sidenav-content" }, React$c.createElement("div", { className: "iui-top" }, items.map(function(sidenavButton, index2) {
+    return !_isExpanded ? React$c.createElement(Tooltip, { content: sidenavButton.props.children, placement: "right", key: index2 }, sidenavButton) : sidenavButton;
+  })), React$c.createElement("div", { className: "iui-bottom" }, secondaryItems === null || secondaryItems === void 0 ? void 0 : secondaryItems.map(function(sidenavButton, index2) {
+    return !_isExpanded ? React$c.createElement(Tooltip, { content: sidenavButton.props.children, placement: "right", key: index2 }, sidenavButton) : sidenavButton;
+  }))), expanderPlacement === "bottom" && ExpandButton), submenu && React$c.createElement(WithCSSTransition, { in: isSubmenuOpen, dimension: "width", timeout: 200, classNames: "iui" }, submenu));
+};
 var __assign$5U = globalThis && globalThis.__assign || function() {
   __assign$5U = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -13061,28 +12934,15 @@ var __rest$4 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var SideNavigation = function(props) {
-  var items = props.items, secondaryItems = props.secondaryItems, _a = props.expanderPlacement, expanderPlacement = _a === void 0 ? "top" : _a, className = props.className, _b = props.isExpanded, isExpanded = _b === void 0 ? false : _b, onExpanderClick = props.onExpanderClick, submenu = props.submenu, _c = props.isSubmenuOpen, isSubmenuOpen = _c === void 0 ? false : _c, rest = __rest$4(props, ["items", "secondaryItems", "expanderPlacement", "className", "isExpanded", "onExpanderClick", "submenu", "isSubmenuOpen"]);
+var SidenavButton = React$c.forwardRef(function(props, ref) {
+  var className = props.className, children = props.children, _a = props.isActive, isActive = _a === void 0 ? false : _a, _b = props.disabled, disabled = _b === void 0 ? false : _b, _c = props.isSubmenuOpen, isSubmenuOpen = _c === void 0 ? false : _c, rest = __rest$4(props, ["className", "children", "isActive", "disabled", "isSubmenuOpen"]);
   useTheme();
-  var _d = React$d.useState(isExpanded), _isExpanded = _d[0], _setIsExpanded = _d[1];
-  React$d.useEffect(function() {
-    _setIsExpanded(isExpanded);
-  }, [isExpanded]);
-  var ExpandButton = React$d.createElement(IconButton, { className: "iui-sidenav-button iui-expand", onClick: React$d.useCallback(function() {
-    _setIsExpanded(function(expanded) {
-      return !expanded;
-    });
-    onExpanderClick === null || onExpanderClick === void 0 ? void 0 : onExpanderClick();
-  }, [onExpanderClick]) }, React$d.createElement(_default$7, null));
-  return React$d.createElement("div", __assign$5U({ className: cx("iui-side-navigation-wrapper", className) }, rest), React$d.createElement("div", { className: cx("iui-side-navigation", {
-    "iui-expanded": _isExpanded,
-    "iui-collapsed": !_isExpanded
-  }) }, expanderPlacement === "top" && ExpandButton, React$d.createElement("div", { className: "iui-sidenav-content" }, React$d.createElement("div", { className: "iui-top" }, items.map(function(sidenavButton, index2) {
-    return !_isExpanded ? React$d.createElement(Tooltip, { content: sidenavButton.props.children, placement: "right", key: index2 }, sidenavButton) : sidenavButton;
-  })), React$d.createElement("div", { className: "iui-bottom" }, secondaryItems === null || secondaryItems === void 0 ? void 0 : secondaryItems.map(function(sidenavButton, index2) {
-    return !_isExpanded ? React$d.createElement(Tooltip, { content: sidenavButton.props.children, placement: "right", key: index2 }, sidenavButton) : sidenavButton;
-  }))), expanderPlacement === "bottom" && ExpandButton), submenu && React$d.createElement(WithCSSTransition, { in: isSubmenuOpen, dimension: "width", timeout: 200, classNames: "iui" }, submenu));
-};
+  return React$c.createElement(Button, __assign$5U({ className: cx("iui-sidenav-button", {
+    "iui-active": isActive,
+    "iui-submenu-open": isSubmenuOpen
+  }, className), size: "large", disabled, ref }, rest), children);
+});
+var surface = "";
 var __assign$5T = globalThis && globalThis.__assign || function() {
   __assign$5T = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -13107,13 +12967,28 @@ var __rest$3 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var SidenavButton = React$d.forwardRef(function(props, ref) {
-  var className = props.className, children = props.children, _a = props.isActive, isActive = _a === void 0 ? false : _a, _b = props.disabled, disabled = _b === void 0 ? false : _b, _c = props.isSubmenuOpen, isSubmenuOpen = _c === void 0 ? false : _c, rest = __rest$3(props, ["className", "children", "isActive", "disabled", "isSubmenuOpen"]);
+var getSurfaceElevationValue = function(elevation) {
+  switch (elevation) {
+    case 1:
+      return "0 1px 5px rgba(0, 0, 0, 0.25)";
+    case 2:
+      return "0 1px 10px rgba(0, 0, 0, 0.25)";
+    case 3:
+      return "0 3px 14px rgba(0, 0, 0, 0.25)";
+    case 4:
+      return "0 6px 30px rgba(0, 0, 0, 0.25)";
+    case 5:
+      return "0 9px 46px rgba(0, 0, 0, 0.25)";
+    default:
+      return "none";
+  }
+};
+var Surface = React$c.forwardRef(function(props, ref) {
+  var _a, _b, _c;
+  var _d = props.elevation, elevation = _d === void 0 ? 0 : _d, className = props.className, style = props.style, children = props.children, rest = __rest$3(props, ["elevation", "className", "style", "children"]);
   useTheme();
-  return React$d.createElement(Button, __assign$5T({ className: cx("iui-sidenav-button", {
-    "iui-active": isActive,
-    "iui-submenu-open": isSubmenuOpen
-  }, className), size: "large", disabled, ref }, rest), children);
+  var _style = ((_c = (_b = (_a = getWindow$1()) === null || _a === void 0 ? void 0 : _a.CSS) === null || _b === void 0 ? void 0 : _b.supports) === null || _c === void 0 ? void 0 : _c.call(_b, "--iui-surface-elevation: " + getSurfaceElevationValue(elevation))) ? __assign$5T({ "--iui-surface-elevation": getSurfaceElevationValue(elevation) }, style) : __assign$5T({ boxShadow: getSurfaceElevationValue(elevation) }, style);
+  return React$c.createElement("div", __assign$5T({ className: cx("iui-surface", className), style: _style, ref }, rest), children);
 });
 var More = {};
 var __assign$5S = commonjsGlobal && commonjsGlobal.__assign || function() {
@@ -13235,26 +13110,31 @@ var __rest$2 = globalThis && globalThis.__rest || function(s, e2) {
   return t2;
 };
 var Tile = function(props) {
-  var className = props.className, name2 = props.name, description = props.description, metadata = props.metadata, thumbnail = props.thumbnail, buttons = props.buttons, leftIcon = props.leftIcon, rightIcon = props.rightIcon, badge = props.badge, isNew = props.isNew, isSelected = props.isSelected, moreOptions = props.moreOptions, _a = props.variant, variant = _a === void 0 ? "default" : _a, children = props.children, rest = __rest$2(props, ["className", "name", "description", "metadata", "thumbnail", "buttons", "leftIcon", "rightIcon", "badge", "isNew", "isSelected", "moreOptions", "variant", "children"]);
+  var className = props.className, name2 = props.name, description = props.description, metadata = props.metadata, thumbnail = props.thumbnail, buttons = props.buttons, leftIcon = props.leftIcon, rightIcon = props.rightIcon, badge = props.badge, isNew = props.isNew, isSelected = props.isSelected, moreOptions = props.moreOptions, _a = props.variant, variant = _a === void 0 ? "default" : _a, children = props.children, isActionable = props.isActionable, rest = __rest$2(props, ["className", "name", "description", "metadata", "thumbnail", "buttons", "leftIcon", "rightIcon", "badge", "isNew", "isSelected", "moreOptions", "variant", "children", "isActionable"]);
   useTheme();
-  var _b = React$d.useState(false), isMenuVisible = _b[0], setIsMenuVisible = _b[1];
-  var showMenu = React$d.useCallback(function() {
+  var _b = React$c.useState(false), isMenuVisible = _b[0], setIsMenuVisible = _b[1];
+  var showMenu = React$c.useCallback(function() {
     return setIsMenuVisible(true);
   }, []);
-  var hideMenu = React$d.useCallback(function() {
+  var hideMenu = React$c.useCallback(function() {
     return setIsMenuVisible(false);
   }, []);
-  return React$d.createElement("div", __assign$5Q({ className: cx("iui-tile", { "iui-folder": variant === "folder" }, { "iui-new": isNew }, { "iui-selected": isSelected }, className) }, rest), thumbnail && React$d.createElement("div", { className: "iui-tile-thumbnail" }, typeof thumbnail === "string" ? React$d.createElement("div", { className: "iui-tile-thumbnail-picture", style: { backgroundImage: "url(" + thumbnail + ")" } }) : thumbnail && thumbnail.type === "img" ? React$d.cloneElement(thumbnail, {
+  return React$c.createElement("div", __assign$5Q({ className: cx("iui-tile", {
+    "iui-folder": variant === "folder",
+    "iui-new": isNew,
+    "iui-selected": isSelected,
+    "iui-actionable": isActionable
+  }, className), tabIndex: isActionable ? 0 : void 0 }, rest), thumbnail && React$c.createElement("div", { className: "iui-tile-thumbnail" }, typeof thumbnail === "string" ? React$c.createElement("div", { className: "iui-tile-thumbnail-picture", style: { backgroundImage: "url(" + thumbnail + ")" } }) : thumbnail && thumbnail.type === "img" ? React$c.cloneElement(thumbnail, {
     className: "iui-tile-thumbnail-picture"
-  }) : React$d.isValidElement(thumbnail) ? React$d.cloneElement(thumbnail, {
+  }) : React$c.isValidElement(thumbnail) ? React$c.cloneElement(thumbnail, {
     className: cx("iui-thumbnail-icon", thumbnail.props.className)
-  }) : thumbnail, leftIcon && React$d.cloneElement(leftIcon, {
+  }) : thumbnail, leftIcon && React$c.cloneElement(leftIcon, {
     className: "iui-small iui-tile-thumbnail-type-indicator"
-  }), rightIcon && React$d.cloneElement(rightIcon, {
+  }), rightIcon && React$c.cloneElement(rightIcon, {
     className: "iui-small iui-tile-thumbnail-quick-action"
-  }), badge && React$d.createElement("div", { className: "iui-tile-thumbnail-badge-container" }, badge)), React$d.createElement("div", { className: "iui-tile-content" }, React$d.createElement("div", { className: "iui-tile-name" }, isSelected && React$d.createElement(_default$2, { className: cx("iui-tile-status-icon", "iui-informational"), "aria-hidden": true }), isNew && React$d.createElement(_default, { className: cx("iui-tile-status-icon", "iui-positive"), "aria-hidden": true }), React$d.createElement("span", { className: "iui-tile-name-label" }, name2)), description != void 0 && React$d.createElement("div", { className: "iui-tile-description" }, description), metadata != void 0 && React$d.createElement("div", { className: "iui-tile-metadata" }, metadata), moreOptions && React$d.createElement(DropdownMenu, { onShow: showMenu, onHide: hideMenu, menuItems: function(close) {
+  }), badge && React$c.createElement("div", { className: "iui-tile-thumbnail-badge-container" }, badge)), React$c.createElement("div", { className: "iui-tile-content" }, React$c.createElement("div", { className: "iui-tile-name" }, isSelected && React$c.createElement(_default$2, { className: cx("iui-tile-status-icon", "iui-informational"), "aria-hidden": true }), isNew && React$c.createElement(_default, { className: cx("iui-tile-status-icon", "iui-positive"), "aria-hidden": true }), React$c.createElement("span", { className: "iui-tile-name-label" }, name2)), description != void 0 && React$c.createElement("div", { className: "iui-tile-description" }, description), metadata != void 0 && React$c.createElement("div", { className: "iui-tile-metadata" }, metadata), moreOptions && React$c.createElement(DropdownMenu, { onShow: showMenu, onHide: hideMenu, menuItems: function(close) {
     return moreOptions.map(function(option) {
-      return React$d.cloneElement(option, {
+      return React$c.cloneElement(option, {
         onClick: function(value) {
           var _a2, _b2;
           close();
@@ -13262,11 +13142,11 @@ var Tile = function(props) {
         }
       });
     });
-  } }, React$d.createElement("div", { className: cx("iui-tile-more-options", {
+  } }, React$c.createElement("div", { className: cx("iui-tile-more-options", {
     "iui-visible": isMenuVisible
-  }) }, React$d.createElement(IconButton, { styleType: "borderless", size: "small", "aria-label": "More options" }, React$d.createElement(_default$1, null)))), children), buttons && React$d.createElement("div", { className: "iui-tile-buttons" }, buttons));
+  }) }, React$c.createElement(IconButton, { styleType: "borderless", size: "small", "aria-label": "More options" }, React$c.createElement(_default$1, null)))), children), buttons && React$c.createElement("div", { className: "iui-tile-buttons" }, buttons));
 };
-var toggleSwitch = "";
+var userIcon = "";
 var __assign$5P = globalThis && globalThis.__assign || function() {
   __assign$5P = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -13291,27 +13171,19 @@ var __rest$1 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var ToggleSwitch = React$d.forwardRef(function(props, ref) {
-  var _a = props.disabled, disabled = _a === void 0 ? false : _a, _b = props.labelPosition, labelPosition = _b === void 0 ? "right" : _b, icon = props.icon, label = props.label, _c = props.setFocus, setFocus = _c === void 0 ? false : _c, className = props.className, style = props.style, rest = __rest$1(props, ["disabled", "labelPosition", "icon", "label", "setFocus", "className", "style"]);
+var defaultStatusTitles = {
+  away: "Away",
+  busy: "Busy",
+  offline: "Offline",
+  online: "Online"
+};
+var UserIcon = function(props) {
+  var _a, _b;
+  var _c = props.size, size = _c === void 0 ? "small" : _c, status = props.status, abbreviation = props.abbreviation, image = props.image, _d = props.backgroundColor, backgroundColor = _d === void 0 ? "white" : _d, title = props.title, translatedStatusTitles = props.translatedStatusTitles, className = props.className, style = props.style, rest = __rest$1(props, ["size", "status", "abbreviation", "image", "backgroundColor", "title", "translatedStatusTitles", "className", "style"]);
   useTheme();
-  var inputElementRef = React$d.useRef(null);
-  var refs = useMergedRefs(inputElementRef, ref);
-  var WrapperComponent = label ? "label" : "div";
-  React$d.useEffect(function() {
-    if (inputElementRef.current && setFocus) {
-      inputElementRef.current.focus();
-    }
-  }, [setFocus]);
-  return React$d.createElement(WrapperComponent, { className: cx("iui-toggle-switch-wrapper", {
-    "iui-disabled": disabled,
-    "iui-label-on-right": label && labelPosition === "right",
-    "iui-label-on-left": label && labelPosition === "left"
-  }, className), style }, React$d.createElement("input", __assign$5P({ className: "iui-toggle-switch", type: "checkbox", role: "switch", disabled, ref: refs }, rest)), icon && React$d.cloneElement(icon, {
-    className: cx("iui-toggle-switch-icon", icon.props.className),
-    "aria-hidden": true
-  }), label && React$d.createElement("span", { className: "iui-toggle-switch-label" }, label));
-});
-var userIcon = "";
+  var statusTitles = __assign$5P(__assign$5P({}, defaultStatusTitles), translatedStatusTitles);
+  return React$c.createElement("span", __assign$5P({ className: cx("iui-user-icon", (_a = {}, _a["iui-" + size] = size !== "medium", _a), className), title, style }, rest), image !== null && image !== void 0 ? image : React$c.createElement("abbr", { className: "iui-initials", style: { backgroundColor } }, abbreviation === null || abbreviation === void 0 ? void 0 : abbreviation.substring(0, 2)), React$c.createElement("span", { className: "iui-stroke" }), status && React$c.createElement("span", { title: statusTitles[status], className: cx("iui-status", (_b = {}, _b["iui-" + status] = !!status, _b)), "aria-label": statusTitles[status] }));
+};
 var __assign$5O = globalThis && globalThis.__assign || function() {
   __assign$5O = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -13336,18 +13208,25 @@ var __rest = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var defaultStatusTitles = {
-  away: "Away",
-  busy: "Busy",
-  offline: "Offline",
-  online: "Online"
-};
-var UserIcon = function(props) {
-  var _a, _b;
-  var _c = props.size, size = _c === void 0 ? "small" : _c, status = props.status, abbreviation = props.abbreviation, image = props.image, _d = props.backgroundColor, backgroundColor = _d === void 0 ? "white" : _d, title = props.title, translatedStatusTitles = props.translatedStatusTitles, className = props.className, style = props.style, rest = __rest(props, ["size", "status", "abbreviation", "image", "backgroundColor", "title", "translatedStatusTitles", "className", "style"]);
+var UserIconGroup = function(props) {
+  var _a;
+  var maxLength = 99;
+  var children = props.children, _b = props.animated, animated = _b === void 0 ? false : _b, _c = props.stacked, stacked = _c === void 0 ? true : _c, _d = props.maxIcons, maxIcons = _d === void 0 ? 5 : _d, _e = props.iconSize, iconSize = _e === void 0 ? "small" : _e, countIconProps = props.countIconProps, className = props.className, rest = __rest(props, ["children", "animated", "stacked", "maxIcons", "iconSize", "countIconProps", "className"]);
+  var childrenArray = React$c.Children.toArray(children);
+  var childrenLength = childrenArray.length;
   useTheme();
-  var statusTitles = __assign$5O(__assign$5O({}, defaultStatusTitles), translatedStatusTitles);
-  return React$d.createElement("span", __assign$5O({ className: cx("iui-user-icon", (_a = {}, _a["iui-" + size] = size !== "medium", _a), className), title, style }, rest), image !== null && image !== void 0 ? image : React$d.createElement("abbr", { className: "iui-initials", style: { backgroundColor } }, abbreviation === null || abbreviation === void 0 ? void 0 : abbreviation.substring(0, 2)), React$d.createElement("span", { className: "iui-stroke" }), status && React$d.createElement("span", { title: statusTitles[status], className: cx("iui-status", (_b = {}, _b["iui-" + status] = !!status, _b)), "aria-label": statusTitles[status] }));
+  var getUserIconList = function(count) {
+    return childrenArray.slice(0, count).map(function(child) {
+      return React$c.cloneElement(child, {
+        status: void 0,
+        size: iconSize
+      });
+    });
+  };
+  return React$c.createElement(React$c.Fragment, null, React$c.createElement("div", __assign$5O({ className: cx("iui-user-icon-list", {
+    "iui-animated": animated,
+    "iui-stacked": stacked
+  }, className) }, rest), childrenArray.length <= maxIcons + 1 && getUserIconList(maxIcons + 1), childrenArray.length > maxIcons + 1 && React$c.createElement(React$c.Fragment, null, getUserIconList(maxIcons), React$c.createElement("div", __assign$5O({}, countIconProps, { className: cx("iui-user-icon", (_a = {}, _a["iui-" + iconSize] = iconSize !== "medium", _a), "iui-user-icon-count", countIconProps === null || countIconProps === void 0 ? void 0 : countIconProps.className) }), React$c.createElement("abbr", { className: "iui-initials" }, childrenLength <= maxLength ? "" + (childrenLength - maxIcons) : maxLength + "+"), React$c.createElement("span", { className: "iui-stroke" })))));
 };
 var __assign$5N = globalThis && globalThis.__assign || function() {
   __assign$5N = Object.assign || function(t2) {
@@ -13844,9 +13723,6 @@ var __assign$59 = globalThis && globalThis.__assign || function() {
   };
   return __assign$59.apply(this, arguments);
 };
-function SvgChat(props) {
-  return react.exports.createElement("svg", __assign$59({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), react.exports.createElement("path", { d: "m5 7.1a.94477.94477 0 0 1 1 1c0 .6-.4.9-1 .9a.94477.94477 0 0 1 -1-1c0-.6.4-.9 1-.9m3 0a.94477.94477 0 0 1 1 1c0 .6-.4.9-1 .9a.94477.94477 0 0 1 -1-1c0-.6.4-.9 1-.9m3 0a.94477.94477 0 0 1 1 1 .94477.94477 0 0 1 -1 1 .94477.94477 0 0 1 -1-1 .94477.94477 0 0 1 1-1m-3-5.5a6.49628 6.49628 0 0 1 6.5 6.2v.3a6.487 6.487 0 0 1 -6.5 6.5 6.71029 6.71029 0 0 1 -2.8-.6l-.6-.3a4.61809 4.61809 0 0 1 -1.7.6 4.2214 4.2214 0 0 0 .5-1.6l-.5-.7a6.37207 6.37207 0 0 1 1-9 6.77315 6.77315 0 0 1 4.1-1.4m0-1.5a8.02352 8.02352 0 0 0 -8 8 7.681 7.681 0 0 0 1.8 5 6.49953 6.49953 0 0 1 -1.1 2.2.44193.44193 0 0 0 .3.7 6.61514 6.61514 0 0 0 3.5-.8 8.5251 8.5251 0 0 0 3.5.8 8.02352 8.02352 0 0 0 8-8 7.93842 7.93842 0 0 0 -8-7.9z" }));
-}
 var __assign$58 = globalThis && globalThis.__assign || function() {
   __assign$58 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -13910,9 +13786,6 @@ var __assign$54 = globalThis && globalThis.__assign || function() {
   };
   return __assign$54.apply(this, arguments);
 };
-function SvgChevronLeft(props) {
-  return react.exports.createElement("svg", __assign$54({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), react.exports.createElement("path", { d: "m11.3 0 1.4 1.4-6.6 6.6 6.6 6.6-1.4 1.4-8-8z" }));
-}
 var __assign$53 = globalThis && globalThis.__assign || function() {
   __assign$53 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -13937,9 +13810,6 @@ var __assign$52 = globalThis && globalThis.__assign || function() {
   };
   return __assign$52.apply(this, arguments);
 };
-function SvgChevronRight(props) {
-  return react.exports.createElement("svg", __assign$52({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), react.exports.createElement("path", { d: "m4.7 0-1.4 1.4 6.6 6.6-6.6 6.6 1.4 1.4 8-8z" }));
-}
 var __assign$51 = globalThis && globalThis.__assign || function() {
   __assign$51 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -14660,9 +14530,6 @@ var __assign$47 = globalThis && globalThis.__assign || function() {
   };
   return __assign$47.apply(this, arguments);
 };
-function SvgFeedback(props) {
-  return react.exports.createElement("svg", __assign$47({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), react.exports.createElement("path", { d: "m8.901 8.9186a.7076.7076 0 1 1 -.7076.7076.7076.7076 0 0 1 .7076-.7076zm3.5836.0711a.7076.7076 0 1 1 -.7076.7076.7076.7076 0 0 1 .7076-.7076zm-9.0187-5.8601a.6954.6954 0 1 1 -.6954.6954.6954.6954 0 0 1 .6954-.6954zm3.5219.0699a.6954.6954 0 1 1 -.6954.6954.6954.6954 0 0 1 .6954-.6954zm3.6983 10.3639a3.03132 3.03132 0 0 1 -2.6779-1.6395.33355.33355 0 0 1 .5937-.3042 2.39619 2.39619 0 0 0 2.1436 1.2768 2.34262 2.34262 0 0 0 2.0386-1.3077.33358.33358 0 0 1 .5979.296 3.00627 3.00627 0 0 1 -2.6184 1.6769c-.0262.0009-.0515.0017-.0775.0017zm.01281-8.1734c-.08679 0-.1676.02143-.25335.02552.00177-.03986.00738-.07831.00842-.11841v-.07873a5.22115 5.22115 0 1 0 -5.21619 5.20862c.0597 0 .11719-.00738.17633-.0094-.00494.09381-.028.18238-.028.27741a5.31281 5.31281 0 1 0 5.3128-5.305zm-5.3233 3.956a.656.656 0 0 1 -.13782.00976 4.14227 4.14227 0 1 1 4.1435-4.13739 1.33354 1.33354 0 0 1 -.00971.1966c-.0014.05749-.01416.11127-.01819.168a5.26789 5.26789 0 0 0 -2.04388 1.0582c-.055-.05419-.10352-.11651-.16242-.16479a2.89594 2.89594 0 0 0 -1.929-.73706h-.07869a2.95471 2.95471 0 0 0 -2.57861 1.651.32608.32608 0 0 0 .14758.43237.31909.31909 0 0 0 .44281-.1474 2.29469 2.29469 0 0 1 3.51361-.75671c.06012.048.10962.10773.1648.1615a5.2742 5.2742 0 0 0 -1.24213 2.24524c-.07122.00537-.1394.01898-.21185.02068zm5.3233 5.65332a4.30433 4.30433 0 1 1 4.312-4.30432 4.31307 4.31307 0 0 1 -4.312 4.30433z" }));
-}
 var __assign$46 = globalThis && globalThis.__assign || function() {
   __assign$46 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -15662,9 +15529,6 @@ var __assign$2R = globalThis && globalThis.__assign || function() {
   };
   return __assign$2R.apply(this, arguments);
 };
-function SvgMenu(props) {
-  return react.exports.createElement("svg", __assign$2R({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16" }, props), react.exports.createElement("g", { fillRule: "evenodd" }, react.exports.createElement("path", { d: "M0,12h16v2H0V12z" }), react.exports.createElement("path", { d: "M0,7h16v2H0V7z" }), react.exports.createElement("path", { d: "M0,2h16v2H0V2z" })));
-}
 var __assign$2Q = globalThis && globalThis.__assign || function() {
   __assign$2Q = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -17846,1503 +17710,6 @@ var __assign$2 = globalThis && globalThis.__assign || function() {
   };
   return __assign$2.apply(this, arguments);
 };
-var hammer = { exports: {} };
-/*! Hammer.JS - v2.0.7 - 2016-04-22
- * http://hammerjs.github.io/
- *
- * Copyright (c) 2016 Jorik Tangelder;
- * Licensed under the MIT license */
-(function(module) {
-  (function(window2, document2, exportName, undefined$1) {
-    var VENDOR_PREFIXES = ["", "webkit", "Moz", "MS", "ms", "o"];
-    var TEST_ELEMENT = document2.createElement("div");
-    var TYPE_FUNCTION = "function";
-    var round2 = Math.round;
-    var abs = Math.abs;
-    var now = Date.now;
-    function setTimeoutContext(fn3, timeout, context) {
-      return setTimeout(bindFn(fn3, context), timeout);
-    }
-    function invokeArrayArg(arg, fn3, context) {
-      if (Array.isArray(arg)) {
-        each(arg, context[fn3], context);
-        return true;
-      }
-      return false;
-    }
-    function each(obj, iterator, context) {
-      var i;
-      if (!obj) {
-        return;
-      }
-      if (obj.forEach) {
-        obj.forEach(iterator, context);
-      } else if (obj.length !== undefined$1) {
-        i = 0;
-        while (i < obj.length) {
-          iterator.call(context, obj[i], i, obj);
-          i++;
-        }
-      } else {
-        for (i in obj) {
-          obj.hasOwnProperty(i) && iterator.call(context, obj[i], i, obj);
-        }
-      }
-    }
-    function deprecate(method, name2, message) {
-      var deprecationMessage = "DEPRECATED METHOD: " + name2 + "\n" + message + " AT \n";
-      return function() {
-        var e2 = new Error("get-stack-trace");
-        var stack = e2 && e2.stack ? e2.stack.replace(/^[^\(]+?[\n$]/gm, "").replace(/^\s+at\s+/gm, "").replace(/^Object.<anonymous>\s*\(/gm, "{anonymous}()@") : "Unknown Stack Trace";
-        var log = window2.console && (window2.console.warn || window2.console.log);
-        if (log) {
-          log.call(window2.console, deprecationMessage, stack);
-        }
-        return method.apply(this, arguments);
-      };
-    }
-    var assign;
-    if (typeof Object.assign !== "function") {
-      assign = function assign2(target) {
-        if (target === undefined$1 || target === null) {
-          throw new TypeError("Cannot convert undefined or null to object");
-        }
-        var output = Object(target);
-        for (var index2 = 1; index2 < arguments.length; index2++) {
-          var source = arguments[index2];
-          if (source !== undefined$1 && source !== null) {
-            for (var nextKey in source) {
-              if (source.hasOwnProperty(nextKey)) {
-                output[nextKey] = source[nextKey];
-              }
-            }
-          }
-        }
-        return output;
-      };
-    } else {
-      assign = Object.assign;
-    }
-    var extend2 = deprecate(function extend3(dest, src, merge2) {
-      var keys = Object.keys(src);
-      var i = 0;
-      while (i < keys.length) {
-        if (!merge2 || merge2 && dest[keys[i]] === undefined$1) {
-          dest[keys[i]] = src[keys[i]];
-        }
-        i++;
-      }
-      return dest;
-    }, "extend", "Use `assign`.");
-    var merge = deprecate(function merge2(dest, src) {
-      return extend2(dest, src, true);
-    }, "merge", "Use `assign`.");
-    function inherit(child, base2, properties2) {
-      var baseP = base2.prototype, childP;
-      childP = child.prototype = Object.create(baseP);
-      childP.constructor = child;
-      childP._super = baseP;
-      if (properties2) {
-        assign(childP, properties2);
-      }
-    }
-    function bindFn(fn3, context) {
-      return function boundFn() {
-        return fn3.apply(context, arguments);
-      };
-    }
-    function boolOrFn(val, args) {
-      if (typeof val == TYPE_FUNCTION) {
-        return val.apply(args ? args[0] || undefined$1 : undefined$1, args);
-      }
-      return val;
-    }
-    function ifUndefined(val1, val2) {
-      return val1 === undefined$1 ? val2 : val1;
-    }
-    function addEventListeners(target, types2, handler) {
-      each(splitStr(types2), function(type) {
-        target.addEventListener(type, handler, false);
-      });
-    }
-    function removeEventListeners(target, types2, handler) {
-      each(splitStr(types2), function(type) {
-        target.removeEventListener(type, handler, false);
-      });
-    }
-    function hasParent(node, parent) {
-      while (node) {
-        if (node == parent) {
-          return true;
-        }
-        node = node.parentNode;
-      }
-      return false;
-    }
-    function inStr(str, find2) {
-      return str.indexOf(find2) > -1;
-    }
-    function splitStr(str) {
-      return str.trim().split(/\s+/g);
-    }
-    function inArray(src, find2, findByKey) {
-      if (src.indexOf && !findByKey) {
-        return src.indexOf(find2);
-      } else {
-        var i = 0;
-        while (i < src.length) {
-          if (findByKey && src[i][findByKey] == find2 || !findByKey && src[i] === find2) {
-            return i;
-          }
-          i++;
-        }
-        return -1;
-      }
-    }
-    function toArray(obj) {
-      return Array.prototype.slice.call(obj, 0);
-    }
-    function uniqueArray(src, key, sort) {
-      var results = [];
-      var values2 = [];
-      var i = 0;
-      while (i < src.length) {
-        var val = key ? src[i][key] : src[i];
-        if (inArray(values2, val) < 0) {
-          results.push(src[i]);
-        }
-        values2[i] = val;
-        i++;
-      }
-      if (sort) {
-        if (!key) {
-          results = results.sort();
-        } else {
-          results = results.sort(function sortUniqueArray(a, b2) {
-            return a[key] > b2[key];
-          });
-        }
-      }
-      return results;
-    }
-    function prefixed(obj, property) {
-      var prefix, prop;
-      var camelProp = property[0].toUpperCase() + property.slice(1);
-      var i = 0;
-      while (i < VENDOR_PREFIXES.length) {
-        prefix = VENDOR_PREFIXES[i];
-        prop = prefix ? prefix + camelProp : property;
-        if (prop in obj) {
-          return prop;
-        }
-        i++;
-      }
-      return undefined$1;
-    }
-    var _uniqueId = 1;
-    function uniqueId() {
-      return _uniqueId++;
-    }
-    function getWindowForElement(element) {
-      var doc2 = element.ownerDocument || element;
-      return doc2.defaultView || doc2.parentWindow || window2;
-    }
-    var MOBILE_REGEX = /mobile|tablet|ip(ad|hone|od)|android/i;
-    var SUPPORT_TOUCH = "ontouchstart" in window2;
-    var SUPPORT_POINTER_EVENTS = prefixed(window2, "PointerEvent") !== undefined$1;
-    var SUPPORT_ONLY_TOUCH = SUPPORT_TOUCH && MOBILE_REGEX.test(navigator.userAgent);
-    var INPUT_TYPE_TOUCH = "touch";
-    var INPUT_TYPE_PEN = "pen";
-    var INPUT_TYPE_MOUSE = "mouse";
-    var INPUT_TYPE_KINECT = "kinect";
-    var COMPUTE_INTERVAL = 25;
-    var INPUT_START = 1;
-    var INPUT_MOVE = 2;
-    var INPUT_END = 4;
-    var INPUT_CANCEL = 8;
-    var DIRECTION_NONE = 1;
-    var DIRECTION_LEFT = 2;
-    var DIRECTION_RIGHT = 4;
-    var DIRECTION_UP = 8;
-    var DIRECTION_DOWN = 16;
-    var DIRECTION_HORIZONTAL = DIRECTION_LEFT | DIRECTION_RIGHT;
-    var DIRECTION_VERTICAL = DIRECTION_UP | DIRECTION_DOWN;
-    var DIRECTION_ALL = DIRECTION_HORIZONTAL | DIRECTION_VERTICAL;
-    var PROPS_XY = ["x", "y"];
-    var PROPS_CLIENT_XY = ["clientX", "clientY"];
-    function Input2(manager, callback) {
-      var self2 = this;
-      this.manager = manager;
-      this.callback = callback;
-      this.element = manager.element;
-      this.target = manager.options.inputTarget;
-      this.domHandler = function(ev) {
-        if (boolOrFn(manager.options.enable, [manager])) {
-          self2.handler(ev);
-        }
-      };
-      this.init();
-    }
-    Input2.prototype = {
-      handler: function() {
-      },
-      init: function() {
-        this.evEl && addEventListeners(this.element, this.evEl, this.domHandler);
-        this.evTarget && addEventListeners(this.target, this.evTarget, this.domHandler);
-        this.evWin && addEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
-      },
-      destroy: function() {
-        this.evEl && removeEventListeners(this.element, this.evEl, this.domHandler);
-        this.evTarget && removeEventListeners(this.target, this.evTarget, this.domHandler);
-        this.evWin && removeEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
-      }
-    };
-    function createInputInstance(manager) {
-      var Type;
-      var inputClass = manager.options.inputClass;
-      if (inputClass) {
-        Type = inputClass;
-      } else if (SUPPORT_POINTER_EVENTS) {
-        Type = PointerEventInput;
-      } else if (SUPPORT_ONLY_TOUCH) {
-        Type = TouchInput;
-      } else if (!SUPPORT_TOUCH) {
-        Type = MouseInput;
-      } else {
-        Type = TouchMouseInput;
-      }
-      return new Type(manager, inputHandler2);
-    }
-    function inputHandler2(manager, eventType, input) {
-      var pointersLen = input.pointers.length;
-      var changedPointersLen = input.changedPointers.length;
-      var isFirst = eventType & INPUT_START && pointersLen - changedPointersLen === 0;
-      var isFinal = eventType & (INPUT_END | INPUT_CANCEL) && pointersLen - changedPointersLen === 0;
-      input.isFirst = !!isFirst;
-      input.isFinal = !!isFinal;
-      if (isFirst) {
-        manager.session = {};
-      }
-      input.eventType = eventType;
-      computeInputData(manager, input);
-      manager.emit("hammer.input", input);
-      manager.recognize(input);
-      manager.session.prevInput = input;
-    }
-    function computeInputData(manager, input) {
-      var session = manager.session;
-      var pointers = input.pointers;
-      var pointersLength = pointers.length;
-      if (!session.firstInput) {
-        session.firstInput = simpleCloneInputData(input);
-      }
-      if (pointersLength > 1 && !session.firstMultiple) {
-        session.firstMultiple = simpleCloneInputData(input);
-      } else if (pointersLength === 1) {
-        session.firstMultiple = false;
-      }
-      var firstInput = session.firstInput;
-      var firstMultiple = session.firstMultiple;
-      var offsetCenter = firstMultiple ? firstMultiple.center : firstInput.center;
-      var center = input.center = getCenter(pointers);
-      input.timeStamp = now();
-      input.deltaTime = input.timeStamp - firstInput.timeStamp;
-      input.angle = getAngle(offsetCenter, center);
-      input.distance = getDistance(offsetCenter, center);
-      computeDeltaXY(session, input);
-      input.offsetDirection = getDirection(input.deltaX, input.deltaY);
-      var overallVelocity = getVelocity(input.deltaTime, input.deltaX, input.deltaY);
-      input.overallVelocityX = overallVelocity.x;
-      input.overallVelocityY = overallVelocity.y;
-      input.overallVelocity = abs(overallVelocity.x) > abs(overallVelocity.y) ? overallVelocity.x : overallVelocity.y;
-      input.scale = firstMultiple ? getScale(firstMultiple.pointers, pointers) : 1;
-      input.rotation = firstMultiple ? getRotation(firstMultiple.pointers, pointers) : 0;
-      input.maxPointers = !session.prevInput ? input.pointers.length : input.pointers.length > session.prevInput.maxPointers ? input.pointers.length : session.prevInput.maxPointers;
-      computeIntervalInputData(session, input);
-      var target = manager.element;
-      if (hasParent(input.srcEvent.target, target)) {
-        target = input.srcEvent.target;
-      }
-      input.target = target;
-    }
-    function computeDeltaXY(session, input) {
-      var center = input.center;
-      var offset2 = session.offsetDelta || {};
-      var prevDelta = session.prevDelta || {};
-      var prevInput = session.prevInput || {};
-      if (input.eventType === INPUT_START || prevInput.eventType === INPUT_END) {
-        prevDelta = session.prevDelta = {
-          x: prevInput.deltaX || 0,
-          y: prevInput.deltaY || 0
-        };
-        offset2 = session.offsetDelta = {
-          x: center.x,
-          y: center.y
-        };
-      }
-      input.deltaX = prevDelta.x + (center.x - offset2.x);
-      input.deltaY = prevDelta.y + (center.y - offset2.y);
-    }
-    function computeIntervalInputData(session, input) {
-      var last = session.lastInterval || input, deltaTime = input.timeStamp - last.timeStamp, velocity, velocityX, velocityY, direction;
-      if (input.eventType != INPUT_CANCEL && (deltaTime > COMPUTE_INTERVAL || last.velocity === undefined$1)) {
-        var deltaX = input.deltaX - last.deltaX;
-        var deltaY = input.deltaY - last.deltaY;
-        var v2 = getVelocity(deltaTime, deltaX, deltaY);
-        velocityX = v2.x;
-        velocityY = v2.y;
-        velocity = abs(v2.x) > abs(v2.y) ? v2.x : v2.y;
-        direction = getDirection(deltaX, deltaY);
-        session.lastInterval = input;
-      } else {
-        velocity = last.velocity;
-        velocityX = last.velocityX;
-        velocityY = last.velocityY;
-        direction = last.direction;
-      }
-      input.velocity = velocity;
-      input.velocityX = velocityX;
-      input.velocityY = velocityY;
-      input.direction = direction;
-    }
-    function simpleCloneInputData(input) {
-      var pointers = [];
-      var i = 0;
-      while (i < input.pointers.length) {
-        pointers[i] = {
-          clientX: round2(input.pointers[i].clientX),
-          clientY: round2(input.pointers[i].clientY)
-        };
-        i++;
-      }
-      return {
-        timeStamp: now(),
-        pointers,
-        center: getCenter(pointers),
-        deltaX: input.deltaX,
-        deltaY: input.deltaY
-      };
-    }
-    function getCenter(pointers) {
-      var pointersLength = pointers.length;
-      if (pointersLength === 1) {
-        return {
-          x: round2(pointers[0].clientX),
-          y: round2(pointers[0].clientY)
-        };
-      }
-      var x = 0, y2 = 0, i = 0;
-      while (i < pointersLength) {
-        x += pointers[i].clientX;
-        y2 += pointers[i].clientY;
-        i++;
-      }
-      return {
-        x: round2(x / pointersLength),
-        y: round2(y2 / pointersLength)
-      };
-    }
-    function getVelocity(deltaTime, x, y2) {
-      return {
-        x: x / deltaTime || 0,
-        y: y2 / deltaTime || 0
-      };
-    }
-    function getDirection(x, y2) {
-      if (x === y2) {
-        return DIRECTION_NONE;
-      }
-      if (abs(x) >= abs(y2)) {
-        return x < 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
-      }
-      return y2 < 0 ? DIRECTION_UP : DIRECTION_DOWN;
-    }
-    function getDistance(p1, p2, props) {
-      if (!props) {
-        props = PROPS_XY;
-      }
-      var x = p2[props[0]] - p1[props[0]], y2 = p2[props[1]] - p1[props[1]];
-      return Math.sqrt(x * x + y2 * y2);
-    }
-    function getAngle(p1, p2, props) {
-      if (!props) {
-        props = PROPS_XY;
-      }
-      var x = p2[props[0]] - p1[props[0]], y2 = p2[props[1]] - p1[props[1]];
-      return Math.atan2(y2, x) * 180 / Math.PI;
-    }
-    function getRotation(start2, end2) {
-      return getAngle(end2[1], end2[0], PROPS_CLIENT_XY) + getAngle(start2[1], start2[0], PROPS_CLIENT_XY);
-    }
-    function getScale(start2, end2) {
-      return getDistance(end2[0], end2[1], PROPS_CLIENT_XY) / getDistance(start2[0], start2[1], PROPS_CLIENT_XY);
-    }
-    var MOUSE_INPUT_MAP = {
-      mousedown: INPUT_START,
-      mousemove: INPUT_MOVE,
-      mouseup: INPUT_END
-    };
-    var MOUSE_ELEMENT_EVENTS = "mousedown";
-    var MOUSE_WINDOW_EVENTS = "mousemove mouseup";
-    function MouseInput() {
-      this.evEl = MOUSE_ELEMENT_EVENTS;
-      this.evWin = MOUSE_WINDOW_EVENTS;
-      this.pressed = false;
-      Input2.apply(this, arguments);
-    }
-    inherit(MouseInput, Input2, {
-      handler: function MEhandler(ev) {
-        var eventType = MOUSE_INPUT_MAP[ev.type];
-        if (eventType & INPUT_START && ev.button === 0) {
-          this.pressed = true;
-        }
-        if (eventType & INPUT_MOVE && ev.which !== 1) {
-          eventType = INPUT_END;
-        }
-        if (!this.pressed) {
-          return;
-        }
-        if (eventType & INPUT_END) {
-          this.pressed = false;
-        }
-        this.callback(this.manager, eventType, {
-          pointers: [ev],
-          changedPointers: [ev],
-          pointerType: INPUT_TYPE_MOUSE,
-          srcEvent: ev
-        });
-      }
-    });
-    var POINTER_INPUT_MAP = {
-      pointerdown: INPUT_START,
-      pointermove: INPUT_MOVE,
-      pointerup: INPUT_END,
-      pointercancel: INPUT_CANCEL,
-      pointerout: INPUT_CANCEL
-    };
-    var IE10_POINTER_TYPE_ENUM = {
-      2: INPUT_TYPE_TOUCH,
-      3: INPUT_TYPE_PEN,
-      4: INPUT_TYPE_MOUSE,
-      5: INPUT_TYPE_KINECT
-    };
-    var POINTER_ELEMENT_EVENTS = "pointerdown";
-    var POINTER_WINDOW_EVENTS = "pointermove pointerup pointercancel";
-    if (window2.MSPointerEvent && !window2.PointerEvent) {
-      POINTER_ELEMENT_EVENTS = "MSPointerDown";
-      POINTER_WINDOW_EVENTS = "MSPointerMove MSPointerUp MSPointerCancel";
-    }
-    function PointerEventInput() {
-      this.evEl = POINTER_ELEMENT_EVENTS;
-      this.evWin = POINTER_WINDOW_EVENTS;
-      Input2.apply(this, arguments);
-      this.store = this.manager.session.pointerEvents = [];
-    }
-    inherit(PointerEventInput, Input2, {
-      handler: function PEhandler(ev) {
-        var store = this.store;
-        var removePointer = false;
-        var eventTypeNormalized = ev.type.toLowerCase().replace("ms", "");
-        var eventType = POINTER_INPUT_MAP[eventTypeNormalized];
-        var pointerType = IE10_POINTER_TYPE_ENUM[ev.pointerType] || ev.pointerType;
-        var isTouch = pointerType == INPUT_TYPE_TOUCH;
-        var storeIndex = inArray(store, ev.pointerId, "pointerId");
-        if (eventType & INPUT_START && (ev.button === 0 || isTouch)) {
-          if (storeIndex < 0) {
-            store.push(ev);
-            storeIndex = store.length - 1;
-          }
-        } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
-          removePointer = true;
-        }
-        if (storeIndex < 0) {
-          return;
-        }
-        store[storeIndex] = ev;
-        this.callback(this.manager, eventType, {
-          pointers: store,
-          changedPointers: [ev],
-          pointerType,
-          srcEvent: ev
-        });
-        if (removePointer) {
-          store.splice(storeIndex, 1);
-        }
-      }
-    });
-    var SINGLE_TOUCH_INPUT_MAP = {
-      touchstart: INPUT_START,
-      touchmove: INPUT_MOVE,
-      touchend: INPUT_END,
-      touchcancel: INPUT_CANCEL
-    };
-    var SINGLE_TOUCH_TARGET_EVENTS = "touchstart";
-    var SINGLE_TOUCH_WINDOW_EVENTS = "touchstart touchmove touchend touchcancel";
-    function SingleTouchInput() {
-      this.evTarget = SINGLE_TOUCH_TARGET_EVENTS;
-      this.evWin = SINGLE_TOUCH_WINDOW_EVENTS;
-      this.started = false;
-      Input2.apply(this, arguments);
-    }
-    inherit(SingleTouchInput, Input2, {
-      handler: function TEhandler(ev) {
-        var type = SINGLE_TOUCH_INPUT_MAP[ev.type];
-        if (type === INPUT_START) {
-          this.started = true;
-        }
-        if (!this.started) {
-          return;
-        }
-        var touches = normalizeSingleTouches.call(this, ev, type);
-        if (type & (INPUT_END | INPUT_CANCEL) && touches[0].length - touches[1].length === 0) {
-          this.started = false;
-        }
-        this.callback(this.manager, type, {
-          pointers: touches[0],
-          changedPointers: touches[1],
-          pointerType: INPUT_TYPE_TOUCH,
-          srcEvent: ev
-        });
-      }
-    });
-    function normalizeSingleTouches(ev, type) {
-      var all = toArray(ev.touches);
-      var changed = toArray(ev.changedTouches);
-      if (type & (INPUT_END | INPUT_CANCEL)) {
-        all = uniqueArray(all.concat(changed), "identifier", true);
-      }
-      return [all, changed];
-    }
-    var TOUCH_INPUT_MAP = {
-      touchstart: INPUT_START,
-      touchmove: INPUT_MOVE,
-      touchend: INPUT_END,
-      touchcancel: INPUT_CANCEL
-    };
-    var TOUCH_TARGET_EVENTS = "touchstart touchmove touchend touchcancel";
-    function TouchInput() {
-      this.evTarget = TOUCH_TARGET_EVENTS;
-      this.targetIds = {};
-      Input2.apply(this, arguments);
-    }
-    inherit(TouchInput, Input2, {
-      handler: function MTEhandler(ev) {
-        var type = TOUCH_INPUT_MAP[ev.type];
-        var touches = getTouches.call(this, ev, type);
-        if (!touches) {
-          return;
-        }
-        this.callback(this.manager, type, {
-          pointers: touches[0],
-          changedPointers: touches[1],
-          pointerType: INPUT_TYPE_TOUCH,
-          srcEvent: ev
-        });
-      }
-    });
-    function getTouches(ev, type) {
-      var allTouches = toArray(ev.touches);
-      var targetIds = this.targetIds;
-      if (type & (INPUT_START | INPUT_MOVE) && allTouches.length === 1) {
-        targetIds[allTouches[0].identifier] = true;
-        return [allTouches, allTouches];
-      }
-      var i, targetTouches, changedTouches = toArray(ev.changedTouches), changedTargetTouches = [], target = this.target;
-      targetTouches = allTouches.filter(function(touch) {
-        return hasParent(touch.target, target);
-      });
-      if (type === INPUT_START) {
-        i = 0;
-        while (i < targetTouches.length) {
-          targetIds[targetTouches[i].identifier] = true;
-          i++;
-        }
-      }
-      i = 0;
-      while (i < changedTouches.length) {
-        if (targetIds[changedTouches[i].identifier]) {
-          changedTargetTouches.push(changedTouches[i]);
-        }
-        if (type & (INPUT_END | INPUT_CANCEL)) {
-          delete targetIds[changedTouches[i].identifier];
-        }
-        i++;
-      }
-      if (!changedTargetTouches.length) {
-        return;
-      }
-      return [
-        uniqueArray(targetTouches.concat(changedTargetTouches), "identifier", true),
-        changedTargetTouches
-      ];
-    }
-    var DEDUP_TIMEOUT = 2500;
-    var DEDUP_DISTANCE = 25;
-    function TouchMouseInput() {
-      Input2.apply(this, arguments);
-      var handler = bindFn(this.handler, this);
-      this.touch = new TouchInput(this.manager, handler);
-      this.mouse = new MouseInput(this.manager, handler);
-      this.primaryTouch = null;
-      this.lastTouches = [];
-    }
-    inherit(TouchMouseInput, Input2, {
-      handler: function TMEhandler(manager, inputEvent, inputData) {
-        var isTouch = inputData.pointerType == INPUT_TYPE_TOUCH, isMouse = inputData.pointerType == INPUT_TYPE_MOUSE;
-        if (isMouse && inputData.sourceCapabilities && inputData.sourceCapabilities.firesTouchEvents) {
-          return;
-        }
-        if (isTouch) {
-          recordTouches.call(this, inputEvent, inputData);
-        } else if (isMouse && isSyntheticEvent.call(this, inputData)) {
-          return;
-        }
-        this.callback(manager, inputEvent, inputData);
-      },
-      destroy: function destroy() {
-        this.touch.destroy();
-        this.mouse.destroy();
-      }
-    });
-    function recordTouches(eventType, eventData) {
-      if (eventType & INPUT_START) {
-        this.primaryTouch = eventData.changedPointers[0].identifier;
-        setLastTouch.call(this, eventData);
-      } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
-        setLastTouch.call(this, eventData);
-      }
-    }
-    function setLastTouch(eventData) {
-      var touch = eventData.changedPointers[0];
-      if (touch.identifier === this.primaryTouch) {
-        var lastTouch2 = { x: touch.clientX, y: touch.clientY };
-        this.lastTouches.push(lastTouch2);
-        var lts = this.lastTouches;
-        var removeLastTouch = function() {
-          var i = lts.indexOf(lastTouch2);
-          if (i > -1) {
-            lts.splice(i, 1);
-          }
-        };
-        setTimeout(removeLastTouch, DEDUP_TIMEOUT);
-      }
-    }
-    function isSyntheticEvent(eventData) {
-      var x = eventData.srcEvent.clientX, y2 = eventData.srcEvent.clientY;
-      for (var i = 0; i < this.lastTouches.length; i++) {
-        var t2 = this.lastTouches[i];
-        var dx = Math.abs(x - t2.x), dy = Math.abs(y2 - t2.y);
-        if (dx <= DEDUP_DISTANCE && dy <= DEDUP_DISTANCE) {
-          return true;
-        }
-      }
-      return false;
-    }
-    var PREFIXED_TOUCH_ACTION = prefixed(TEST_ELEMENT.style, "touchAction");
-    var NATIVE_TOUCH_ACTION = PREFIXED_TOUCH_ACTION !== undefined$1;
-    var TOUCH_ACTION_COMPUTE = "compute";
-    var TOUCH_ACTION_AUTO = "auto";
-    var TOUCH_ACTION_MANIPULATION = "manipulation";
-    var TOUCH_ACTION_NONE = "none";
-    var TOUCH_ACTION_PAN_X = "pan-x";
-    var TOUCH_ACTION_PAN_Y = "pan-y";
-    var TOUCH_ACTION_MAP = getTouchActionProps();
-    function TouchAction(manager, value) {
-      this.manager = manager;
-      this.set(value);
-    }
-    TouchAction.prototype = {
-      set: function(value) {
-        if (value == TOUCH_ACTION_COMPUTE) {
-          value = this.compute();
-        }
-        if (NATIVE_TOUCH_ACTION && this.manager.element.style && TOUCH_ACTION_MAP[value]) {
-          this.manager.element.style[PREFIXED_TOUCH_ACTION] = value;
-        }
-        this.actions = value.toLowerCase().trim();
-      },
-      update: function() {
-        this.set(this.manager.options.touchAction);
-      },
-      compute: function() {
-        var actions = [];
-        each(this.manager.recognizers, function(recognizer) {
-          if (boolOrFn(recognizer.options.enable, [recognizer])) {
-            actions = actions.concat(recognizer.getTouchAction());
-          }
-        });
-        return cleanTouchActions(actions.join(" "));
-      },
-      preventDefaults: function(input) {
-        var srcEvent = input.srcEvent;
-        var direction = input.offsetDirection;
-        if (this.manager.session.prevented) {
-          srcEvent.preventDefault();
-          return;
-        }
-        var actions = this.actions;
-        var hasNone = inStr(actions, TOUCH_ACTION_NONE) && !TOUCH_ACTION_MAP[TOUCH_ACTION_NONE];
-        var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_Y];
-        var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_X];
-        if (hasNone) {
-          var isTapPointer = input.pointers.length === 1;
-          var isTapMovement = input.distance < 2;
-          var isTapTouchTime = input.deltaTime < 250;
-          if (isTapPointer && isTapMovement && isTapTouchTime) {
-            return;
-          }
-        }
-        if (hasPanX && hasPanY) {
-          return;
-        }
-        if (hasNone || hasPanY && direction & DIRECTION_HORIZONTAL || hasPanX && direction & DIRECTION_VERTICAL) {
-          return this.preventSrc(srcEvent);
-        }
-      },
-      preventSrc: function(srcEvent) {
-        this.manager.session.prevented = true;
-        srcEvent.preventDefault();
-      }
-    };
-    function cleanTouchActions(actions) {
-      if (inStr(actions, TOUCH_ACTION_NONE)) {
-        return TOUCH_ACTION_NONE;
-      }
-      var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X);
-      var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y);
-      if (hasPanX && hasPanY) {
-        return TOUCH_ACTION_NONE;
-      }
-      if (hasPanX || hasPanY) {
-        return hasPanX ? TOUCH_ACTION_PAN_X : TOUCH_ACTION_PAN_Y;
-      }
-      if (inStr(actions, TOUCH_ACTION_MANIPULATION)) {
-        return TOUCH_ACTION_MANIPULATION;
-      }
-      return TOUCH_ACTION_AUTO;
-    }
-    function getTouchActionProps() {
-      if (!NATIVE_TOUCH_ACTION) {
-        return false;
-      }
-      var touchMap = {};
-      var cssSupports = window2.CSS && window2.CSS.supports;
-      ["auto", "manipulation", "pan-y", "pan-x", "pan-x pan-y", "none"].forEach(function(val) {
-        touchMap[val] = cssSupports ? window2.CSS.supports("touch-action", val) : true;
-      });
-      return touchMap;
-    }
-    var STATE_POSSIBLE = 1;
-    var STATE_BEGAN = 2;
-    var STATE_CHANGED = 4;
-    var STATE_ENDED = 8;
-    var STATE_RECOGNIZED = STATE_ENDED;
-    var STATE_CANCELLED = 16;
-    var STATE_FAILED = 32;
-    function Recognizer(options) {
-      this.options = assign({}, this.defaults, options || {});
-      this.id = uniqueId();
-      this.manager = null;
-      this.options.enable = ifUndefined(this.options.enable, true);
-      this.state = STATE_POSSIBLE;
-      this.simultaneous = {};
-      this.requireFail = [];
-    }
-    Recognizer.prototype = {
-      defaults: {},
-      set: function(options) {
-        assign(this.options, options);
-        this.manager && this.manager.touchAction.update();
-        return this;
-      },
-      recognizeWith: function(otherRecognizer) {
-        if (invokeArrayArg(otherRecognizer, "recognizeWith", this)) {
-          return this;
-        }
-        var simultaneous = this.simultaneous;
-        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
-        if (!simultaneous[otherRecognizer.id]) {
-          simultaneous[otherRecognizer.id] = otherRecognizer;
-          otherRecognizer.recognizeWith(this);
-        }
-        return this;
-      },
-      dropRecognizeWith: function(otherRecognizer) {
-        if (invokeArrayArg(otherRecognizer, "dropRecognizeWith", this)) {
-          return this;
-        }
-        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
-        delete this.simultaneous[otherRecognizer.id];
-        return this;
-      },
-      requireFailure: function(otherRecognizer) {
-        if (invokeArrayArg(otherRecognizer, "requireFailure", this)) {
-          return this;
-        }
-        var requireFail = this.requireFail;
-        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
-        if (inArray(requireFail, otherRecognizer) === -1) {
-          requireFail.push(otherRecognizer);
-          otherRecognizer.requireFailure(this);
-        }
-        return this;
-      },
-      dropRequireFailure: function(otherRecognizer) {
-        if (invokeArrayArg(otherRecognizer, "dropRequireFailure", this)) {
-          return this;
-        }
-        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
-        var index2 = inArray(this.requireFail, otherRecognizer);
-        if (index2 > -1) {
-          this.requireFail.splice(index2, 1);
-        }
-        return this;
-      },
-      hasRequireFailures: function() {
-        return this.requireFail.length > 0;
-      },
-      canRecognizeWith: function(otherRecognizer) {
-        return !!this.simultaneous[otherRecognizer.id];
-      },
-      emit: function(input) {
-        var self2 = this;
-        var state = this.state;
-        function emit(event) {
-          self2.manager.emit(event, input);
-        }
-        if (state < STATE_ENDED) {
-          emit(self2.options.event + stateStr(state));
-        }
-        emit(self2.options.event);
-        if (input.additionalEvent) {
-          emit(input.additionalEvent);
-        }
-        if (state >= STATE_ENDED) {
-          emit(self2.options.event + stateStr(state));
-        }
-      },
-      tryEmit: function(input) {
-        if (this.canEmit()) {
-          return this.emit(input);
-        }
-        this.state = STATE_FAILED;
-      },
-      canEmit: function() {
-        var i = 0;
-        while (i < this.requireFail.length) {
-          if (!(this.requireFail[i].state & (STATE_FAILED | STATE_POSSIBLE))) {
-            return false;
-          }
-          i++;
-        }
-        return true;
-      },
-      recognize: function(inputData) {
-        var inputDataClone = assign({}, inputData);
-        if (!boolOrFn(this.options.enable, [this, inputDataClone])) {
-          this.reset();
-          this.state = STATE_FAILED;
-          return;
-        }
-        if (this.state & (STATE_RECOGNIZED | STATE_CANCELLED | STATE_FAILED)) {
-          this.state = STATE_POSSIBLE;
-        }
-        this.state = this.process(inputDataClone);
-        if (this.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED | STATE_CANCELLED)) {
-          this.tryEmit(inputDataClone);
-        }
-      },
-      process: function(inputData) {
-      },
-      getTouchAction: function() {
-      },
-      reset: function() {
-      }
-    };
-    function stateStr(state) {
-      if (state & STATE_CANCELLED) {
-        return "cancel";
-      } else if (state & STATE_ENDED) {
-        return "end";
-      } else if (state & STATE_CHANGED) {
-        return "move";
-      } else if (state & STATE_BEGAN) {
-        return "start";
-      }
-      return "";
-    }
-    function directionStr(direction) {
-      if (direction == DIRECTION_DOWN) {
-        return "down";
-      } else if (direction == DIRECTION_UP) {
-        return "up";
-      } else if (direction == DIRECTION_LEFT) {
-        return "left";
-      } else if (direction == DIRECTION_RIGHT) {
-        return "right";
-      }
-      return "";
-    }
-    function getRecognizerByNameIfManager(otherRecognizer, recognizer) {
-      var manager = recognizer.manager;
-      if (manager) {
-        return manager.get(otherRecognizer);
-      }
-      return otherRecognizer;
-    }
-    function AttrRecognizer() {
-      Recognizer.apply(this, arguments);
-    }
-    inherit(AttrRecognizer, Recognizer, {
-      defaults: {
-        pointers: 1
-      },
-      attrTest: function(input) {
-        var optionPointers = this.options.pointers;
-        return optionPointers === 0 || input.pointers.length === optionPointers;
-      },
-      process: function(input) {
-        var state = this.state;
-        var eventType = input.eventType;
-        var isRecognized = state & (STATE_BEGAN | STATE_CHANGED);
-        var isValid = this.attrTest(input);
-        if (isRecognized && (eventType & INPUT_CANCEL || !isValid)) {
-          return state | STATE_CANCELLED;
-        } else if (isRecognized || isValid) {
-          if (eventType & INPUT_END) {
-            return state | STATE_ENDED;
-          } else if (!(state & STATE_BEGAN)) {
-            return STATE_BEGAN;
-          }
-          return state | STATE_CHANGED;
-        }
-        return STATE_FAILED;
-      }
-    });
-    function PanRecognizer() {
-      AttrRecognizer.apply(this, arguments);
-      this.pX = null;
-      this.pY = null;
-    }
-    inherit(PanRecognizer, AttrRecognizer, {
-      defaults: {
-        event: "pan",
-        threshold: 10,
-        pointers: 1,
-        direction: DIRECTION_ALL
-      },
-      getTouchAction: function() {
-        var direction = this.options.direction;
-        var actions = [];
-        if (direction & DIRECTION_HORIZONTAL) {
-          actions.push(TOUCH_ACTION_PAN_Y);
-        }
-        if (direction & DIRECTION_VERTICAL) {
-          actions.push(TOUCH_ACTION_PAN_X);
-        }
-        return actions;
-      },
-      directionTest: function(input) {
-        var options = this.options;
-        var hasMoved = true;
-        var distance = input.distance;
-        var direction = input.direction;
-        var x = input.deltaX;
-        var y2 = input.deltaY;
-        if (!(direction & options.direction)) {
-          if (options.direction & DIRECTION_HORIZONTAL) {
-            direction = x === 0 ? DIRECTION_NONE : x < 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
-            hasMoved = x != this.pX;
-            distance = Math.abs(input.deltaX);
-          } else {
-            direction = y2 === 0 ? DIRECTION_NONE : y2 < 0 ? DIRECTION_UP : DIRECTION_DOWN;
-            hasMoved = y2 != this.pY;
-            distance = Math.abs(input.deltaY);
-          }
-        }
-        input.direction = direction;
-        return hasMoved && distance > options.threshold && direction & options.direction;
-      },
-      attrTest: function(input) {
-        return AttrRecognizer.prototype.attrTest.call(this, input) && (this.state & STATE_BEGAN || !(this.state & STATE_BEGAN) && this.directionTest(input));
-      },
-      emit: function(input) {
-        this.pX = input.deltaX;
-        this.pY = input.deltaY;
-        var direction = directionStr(input.direction);
-        if (direction) {
-          input.additionalEvent = this.options.event + direction;
-        }
-        this._super.emit.call(this, input);
-      }
-    });
-    function PinchRecognizer() {
-      AttrRecognizer.apply(this, arguments);
-    }
-    inherit(PinchRecognizer, AttrRecognizer, {
-      defaults: {
-        event: "pinch",
-        threshold: 0,
-        pointers: 2
-      },
-      getTouchAction: function() {
-        return [TOUCH_ACTION_NONE];
-      },
-      attrTest: function(input) {
-        return this._super.attrTest.call(this, input) && (Math.abs(input.scale - 1) > this.options.threshold || this.state & STATE_BEGAN);
-      },
-      emit: function(input) {
-        if (input.scale !== 1) {
-          var inOut = input.scale < 1 ? "in" : "out";
-          input.additionalEvent = this.options.event + inOut;
-        }
-        this._super.emit.call(this, input);
-      }
-    });
-    function PressRecognizer() {
-      Recognizer.apply(this, arguments);
-      this._timer = null;
-      this._input = null;
-    }
-    inherit(PressRecognizer, Recognizer, {
-      defaults: {
-        event: "press",
-        pointers: 1,
-        time: 251,
-        threshold: 9
-      },
-      getTouchAction: function() {
-        return [TOUCH_ACTION_AUTO];
-      },
-      process: function(input) {
-        var options = this.options;
-        var validPointers = input.pointers.length === options.pointers;
-        var validMovement = input.distance < options.threshold;
-        var validTime = input.deltaTime > options.time;
-        this._input = input;
-        if (!validMovement || !validPointers || input.eventType & (INPUT_END | INPUT_CANCEL) && !validTime) {
-          this.reset();
-        } else if (input.eventType & INPUT_START) {
-          this.reset();
-          this._timer = setTimeoutContext(function() {
-            this.state = STATE_RECOGNIZED;
-            this.tryEmit();
-          }, options.time, this);
-        } else if (input.eventType & INPUT_END) {
-          return STATE_RECOGNIZED;
-        }
-        return STATE_FAILED;
-      },
-      reset: function() {
-        clearTimeout(this._timer);
-      },
-      emit: function(input) {
-        if (this.state !== STATE_RECOGNIZED) {
-          return;
-        }
-        if (input && input.eventType & INPUT_END) {
-          this.manager.emit(this.options.event + "up", input);
-        } else {
-          this._input.timeStamp = now();
-          this.manager.emit(this.options.event, this._input);
-        }
-      }
-    });
-    function RotateRecognizer() {
-      AttrRecognizer.apply(this, arguments);
-    }
-    inherit(RotateRecognizer, AttrRecognizer, {
-      defaults: {
-        event: "rotate",
-        threshold: 0,
-        pointers: 2
-      },
-      getTouchAction: function() {
-        return [TOUCH_ACTION_NONE];
-      },
-      attrTest: function(input) {
-        return this._super.attrTest.call(this, input) && (Math.abs(input.rotation) > this.options.threshold || this.state & STATE_BEGAN);
-      }
-    });
-    function SwipeRecognizer() {
-      AttrRecognizer.apply(this, arguments);
-    }
-    inherit(SwipeRecognizer, AttrRecognizer, {
-      defaults: {
-        event: "swipe",
-        threshold: 10,
-        velocity: 0.3,
-        direction: DIRECTION_HORIZONTAL | DIRECTION_VERTICAL,
-        pointers: 1
-      },
-      getTouchAction: function() {
-        return PanRecognizer.prototype.getTouchAction.call(this);
-      },
-      attrTest: function(input) {
-        var direction = this.options.direction;
-        var velocity;
-        if (direction & (DIRECTION_HORIZONTAL | DIRECTION_VERTICAL)) {
-          velocity = input.overallVelocity;
-        } else if (direction & DIRECTION_HORIZONTAL) {
-          velocity = input.overallVelocityX;
-        } else if (direction & DIRECTION_VERTICAL) {
-          velocity = input.overallVelocityY;
-        }
-        return this._super.attrTest.call(this, input) && direction & input.offsetDirection && input.distance > this.options.threshold && input.maxPointers == this.options.pointers && abs(velocity) > this.options.velocity && input.eventType & INPUT_END;
-      },
-      emit: function(input) {
-        var direction = directionStr(input.offsetDirection);
-        if (direction) {
-          this.manager.emit(this.options.event + direction, input);
-        }
-        this.manager.emit(this.options.event, input);
-      }
-    });
-    function TapRecognizer() {
-      Recognizer.apply(this, arguments);
-      this.pTime = false;
-      this.pCenter = false;
-      this._timer = null;
-      this._input = null;
-      this.count = 0;
-    }
-    inherit(TapRecognizer, Recognizer, {
-      defaults: {
-        event: "tap",
-        pointers: 1,
-        taps: 1,
-        interval: 300,
-        time: 250,
-        threshold: 9,
-        posThreshold: 10
-      },
-      getTouchAction: function() {
-        return [TOUCH_ACTION_MANIPULATION];
-      },
-      process: function(input) {
-        var options = this.options;
-        var validPointers = input.pointers.length === options.pointers;
-        var validMovement = input.distance < options.threshold;
-        var validTouchTime = input.deltaTime < options.time;
-        this.reset();
-        if (input.eventType & INPUT_START && this.count === 0) {
-          return this.failTimeout();
-        }
-        if (validMovement && validTouchTime && validPointers) {
-          if (input.eventType != INPUT_END) {
-            return this.failTimeout();
-          }
-          var validInterval = this.pTime ? input.timeStamp - this.pTime < options.interval : true;
-          var validMultiTap = !this.pCenter || getDistance(this.pCenter, input.center) < options.posThreshold;
-          this.pTime = input.timeStamp;
-          this.pCenter = input.center;
-          if (!validMultiTap || !validInterval) {
-            this.count = 1;
-          } else {
-            this.count += 1;
-          }
-          this._input = input;
-          var tapCount = this.count % options.taps;
-          if (tapCount === 0) {
-            if (!this.hasRequireFailures()) {
-              return STATE_RECOGNIZED;
-            } else {
-              this._timer = setTimeoutContext(function() {
-                this.state = STATE_RECOGNIZED;
-                this.tryEmit();
-              }, options.interval, this);
-              return STATE_BEGAN;
-            }
-          }
-        }
-        return STATE_FAILED;
-      },
-      failTimeout: function() {
-        this._timer = setTimeoutContext(function() {
-          this.state = STATE_FAILED;
-        }, this.options.interval, this);
-        return STATE_FAILED;
-      },
-      reset: function() {
-        clearTimeout(this._timer);
-      },
-      emit: function() {
-        if (this.state == STATE_RECOGNIZED) {
-          this._input.tapCount = this.count;
-          this.manager.emit(this.options.event, this._input);
-        }
-      }
-    });
-    function Hammer2(element, options) {
-      options = options || {};
-      options.recognizers = ifUndefined(options.recognizers, Hammer2.defaults.preset);
-      return new Manager(element, options);
-    }
-    Hammer2.VERSION = "2.0.7";
-    Hammer2.defaults = {
-      domEvents: false,
-      touchAction: TOUCH_ACTION_COMPUTE,
-      enable: true,
-      inputTarget: null,
-      inputClass: null,
-      preset: [
-        [RotateRecognizer, { enable: false }],
-        [PinchRecognizer, { enable: false }, ["rotate"]],
-        [SwipeRecognizer, { direction: DIRECTION_HORIZONTAL }],
-        [PanRecognizer, { direction: DIRECTION_HORIZONTAL }, ["swipe"]],
-        [TapRecognizer],
-        [TapRecognizer, { event: "doubletap", taps: 2 }, ["tap"]],
-        [PressRecognizer]
-      ],
-      cssProps: {
-        userSelect: "none",
-        touchSelect: "none",
-        touchCallout: "none",
-        contentZooming: "none",
-        userDrag: "none",
-        tapHighlightColor: "rgba(0,0,0,0)"
-      }
-    };
-    var STOP = 1;
-    var FORCED_STOP = 2;
-    function Manager(element, options) {
-      this.options = assign({}, Hammer2.defaults, options || {});
-      this.options.inputTarget = this.options.inputTarget || element;
-      this.handlers = {};
-      this.session = {};
-      this.recognizers = [];
-      this.oldCssProps = {};
-      this.element = element;
-      this.input = createInputInstance(this);
-      this.touchAction = new TouchAction(this, this.options.touchAction);
-      toggleCssProps(this, true);
-      each(this.options.recognizers, function(item) {
-        var recognizer = this.add(new item[0](item[1]));
-        item[2] && recognizer.recognizeWith(item[2]);
-        item[3] && recognizer.requireFailure(item[3]);
-      }, this);
-    }
-    Manager.prototype = {
-      set: function(options) {
-        assign(this.options, options);
-        if (options.touchAction) {
-          this.touchAction.update();
-        }
-        if (options.inputTarget) {
-          this.input.destroy();
-          this.input.target = options.inputTarget;
-          this.input.init();
-        }
-        return this;
-      },
-      stop: function(force) {
-        this.session.stopped = force ? FORCED_STOP : STOP;
-      },
-      recognize: function(inputData) {
-        var session = this.session;
-        if (session.stopped) {
-          return;
-        }
-        this.touchAction.preventDefaults(inputData);
-        var recognizer;
-        var recognizers = this.recognizers;
-        var curRecognizer = session.curRecognizer;
-        if (!curRecognizer || curRecognizer && curRecognizer.state & STATE_RECOGNIZED) {
-          curRecognizer = session.curRecognizer = null;
-        }
-        var i = 0;
-        while (i < recognizers.length) {
-          recognizer = recognizers[i];
-          if (session.stopped !== FORCED_STOP && (!curRecognizer || recognizer == curRecognizer || recognizer.canRecognizeWith(curRecognizer))) {
-            recognizer.recognize(inputData);
-          } else {
-            recognizer.reset();
-          }
-          if (!curRecognizer && recognizer.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED)) {
-            curRecognizer = session.curRecognizer = recognizer;
-          }
-          i++;
-        }
-      },
-      get: function(recognizer) {
-        if (recognizer instanceof Recognizer) {
-          return recognizer;
-        }
-        var recognizers = this.recognizers;
-        for (var i = 0; i < recognizers.length; i++) {
-          if (recognizers[i].options.event == recognizer) {
-            return recognizers[i];
-          }
-        }
-        return null;
-      },
-      add: function(recognizer) {
-        if (invokeArrayArg(recognizer, "add", this)) {
-          return this;
-        }
-        var existing = this.get(recognizer.options.event);
-        if (existing) {
-          this.remove(existing);
-        }
-        this.recognizers.push(recognizer);
-        recognizer.manager = this;
-        this.touchAction.update();
-        return recognizer;
-      },
-      remove: function(recognizer) {
-        if (invokeArrayArg(recognizer, "remove", this)) {
-          return this;
-        }
-        recognizer = this.get(recognizer);
-        if (recognizer) {
-          var recognizers = this.recognizers;
-          var index2 = inArray(recognizers, recognizer);
-          if (index2 !== -1) {
-            recognizers.splice(index2, 1);
-            this.touchAction.update();
-          }
-        }
-        return this;
-      },
-      on: function(events, handler) {
-        if (events === undefined$1) {
-          return;
-        }
-        if (handler === undefined$1) {
-          return;
-        }
-        var handlers2 = this.handlers;
-        each(splitStr(events), function(event) {
-          handlers2[event] = handlers2[event] || [];
-          handlers2[event].push(handler);
-        });
-        return this;
-      },
-      off: function(events, handler) {
-        if (events === undefined$1) {
-          return;
-        }
-        var handlers2 = this.handlers;
-        each(splitStr(events), function(event) {
-          if (!handler) {
-            delete handlers2[event];
-          } else {
-            handlers2[event] && handlers2[event].splice(inArray(handlers2[event], handler), 1);
-          }
-        });
-        return this;
-      },
-      emit: function(event, data) {
-        if (this.options.domEvents) {
-          triggerDomEvent(event, data);
-        }
-        var handlers2 = this.handlers[event] && this.handlers[event].slice();
-        if (!handlers2 || !handlers2.length) {
-          return;
-        }
-        data.type = event;
-        data.preventDefault = function() {
-          data.srcEvent.preventDefault();
-        };
-        var i = 0;
-        while (i < handlers2.length) {
-          handlers2[i](data);
-          i++;
-        }
-      },
-      destroy: function() {
-        this.element && toggleCssProps(this, false);
-        this.handlers = {};
-        this.session = {};
-        this.input.destroy();
-        this.element = null;
-      }
-    };
-    function toggleCssProps(manager, add) {
-      var element = manager.element;
-      if (!element.style) {
-        return;
-      }
-      var prop;
-      each(manager.options.cssProps, function(value, name2) {
-        prop = prefixed(element.style, name2);
-        if (add) {
-          manager.oldCssProps[prop] = element.style[prop];
-          element.style[prop] = value;
-        } else {
-          element.style[prop] = manager.oldCssProps[prop] || "";
-        }
-      });
-      if (!add) {
-        manager.oldCssProps = {};
-      }
-    }
-    function triggerDomEvent(event, data) {
-      var gestureEvent = document2.createEvent("Event");
-      gestureEvent.initEvent(event, true, true);
-      gestureEvent.gesture = data;
-      data.target.dispatchEvent(gestureEvent);
-    }
-    assign(Hammer2, {
-      INPUT_START,
-      INPUT_MOVE,
-      INPUT_END,
-      INPUT_CANCEL,
-      STATE_POSSIBLE,
-      STATE_BEGAN,
-      STATE_CHANGED,
-      STATE_ENDED,
-      STATE_RECOGNIZED,
-      STATE_CANCELLED,
-      STATE_FAILED,
-      DIRECTION_NONE,
-      DIRECTION_LEFT,
-      DIRECTION_RIGHT,
-      DIRECTION_UP,
-      DIRECTION_DOWN,
-      DIRECTION_HORIZONTAL,
-      DIRECTION_VERTICAL,
-      DIRECTION_ALL,
-      Manager,
-      Input: Input2,
-      TouchAction,
-      TouchInput,
-      MouseInput,
-      PointerEventInput,
-      TouchMouseInput,
-      SingleTouchInput,
-      Recognizer,
-      AttrRecognizer,
-      Tap: TapRecognizer,
-      Pan: PanRecognizer,
-      Swipe: SwipeRecognizer,
-      Pinch: PinchRecognizer,
-      Rotate: RotateRecognizer,
-      Press: PressRecognizer,
-      on: addEventListeners,
-      off: removeEventListeners,
-      each,
-      merge,
-      extend: extend2,
-      assign,
-      inherit,
-      bindFn,
-      prefixed
-    });
-    var freeGlobal = typeof window2 !== "undefined" ? window2 : typeof self !== "undefined" ? self : {};
-    freeGlobal.Hammer = Hammer2;
-    if (typeof undefined$1 === "function" && undefined$1.amd) {
-      undefined$1(function() {
-        return Hammer2;
-      });
-    } else if (module.exports) {
-      module.exports = Hammer2;
-    } else {
-      window2[exportName] = Hammer2;
-    }
-  })(window, document, "Hammer");
-})(hammer);
-var Hammer = hammer.exports;
 var __assign$1 = function() {
   __assign$1 = Object.assign || function __assign2(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -21661,8 +20028,8 @@ class EditorSelection {
       throw new RangeError("Invalid JSON representation for EditorSelection");
     return new EditorSelection(json.ranges.map((r2) => SelectionRange.fromJSON(r2)), json.main);
   }
-  static single(anchor, head = anchor) {
-    return new EditorSelection([EditorSelection.range(anchor, head)], 0);
+  static single(anchor2, head = anchor2) {
+    return new EditorSelection([EditorSelection.range(anchor2, head)], 0);
   }
   static create(ranges, mainIndex = 0) {
     if (ranges.length == 0)
@@ -21678,9 +20045,9 @@ class EditorSelection {
   static cursor(pos, assoc = 0, bidiLevel, goalColumn) {
     return new SelectionRange(pos, pos, (assoc == 0 ? 0 : assoc < 0 ? 4 : 8) | (bidiLevel == null ? 3 : Math.min(2, bidiLevel)) | (goalColumn !== null && goalColumn !== void 0 ? goalColumn : 33554431) << 5);
   }
-  static range(anchor, head, goalColumn) {
+  static range(anchor2, head, goalColumn) {
     let goal = (goalColumn !== null && goalColumn !== void 0 ? goalColumn : 33554431) << 5;
-    return head < anchor ? new SelectionRange(head, anchor, 16 | goal) : new SelectionRange(anchor, head, goal);
+    return head < anchor2 ? new SelectionRange(head, anchor2, 16 | goal) : new SelectionRange(anchor2, head, goal);
   }
 }
 function normalized(ranges, mainIndex = 0) {
@@ -25487,16 +23854,16 @@ class DocView extends ContentView {
     let force = this.forceSelection;
     this.forceSelection = false;
     let main2 = this.view.state.selection.main;
-    let anchor = this.domAtPos(main2.anchor);
-    let head = main2.empty ? anchor : this.domAtPos(main2.head);
-    if (browser.gecko && main2.empty && betweenUneditable(anchor)) {
+    let anchor2 = this.domAtPos(main2.anchor);
+    let head = main2.empty ? anchor2 : this.domAtPos(main2.head);
+    if (browser.gecko && main2.empty && betweenUneditable(anchor2)) {
       let dummy = document.createTextNode("");
-      this.view.observer.ignore(() => anchor.node.insertBefore(dummy, anchor.node.childNodes[anchor.offset] || null));
-      anchor = head = new DOMPos(dummy, 0);
+      this.view.observer.ignore(() => anchor2.node.insertBefore(dummy, anchor2.node.childNodes[anchor2.offset] || null));
+      anchor2 = head = new DOMPos(dummy, 0);
       force = true;
     }
     let domSel = this.view.observer.selectionRange;
-    if (force || !domSel.focusNode || !isEquivalentPosition(anchor.node, anchor.offset, domSel.anchorNode, domSel.anchorOffset) || !isEquivalentPosition(head.node, head.offset, domSel.focusNode, domSel.focusOffset)) {
+    if (force || !domSel.focusNode || !isEquivalentPosition(anchor2.node, anchor2.offset, domSel.anchorNode, domSel.anchorOffset) || !isEquivalentPosition(head.node, head.offset, domSel.focusNode, domSel.focusOffset)) {
       this.view.observer.ignore(() => {
         if (browser.android && browser.chrome && this.dom.contains(domSel.focusNode) && inUneditable(domSel.focusNode, this.dom)) {
           this.dom.blur();
@@ -25505,32 +23872,32 @@ class DocView extends ContentView {
         let rawSel = getSelection(this.root);
         if (main2.empty) {
           if (browser.gecko) {
-            let nextTo = nextToUneditable(anchor.node, anchor.offset);
+            let nextTo = nextToUneditable(anchor2.node, anchor2.offset);
             if (nextTo && nextTo != (1 | 2)) {
-              let text2 = nearbyTextNode(anchor.node, anchor.offset, nextTo == 1 ? 1 : -1);
+              let text2 = nearbyTextNode(anchor2.node, anchor2.offset, nextTo == 1 ? 1 : -1);
               if (text2)
-                anchor = new DOMPos(text2, nextTo == 1 ? 0 : text2.nodeValue.length);
+                anchor2 = new DOMPos(text2, nextTo == 1 ? 0 : text2.nodeValue.length);
             }
           }
-          rawSel.collapse(anchor.node, anchor.offset);
+          rawSel.collapse(anchor2.node, anchor2.offset);
           if (main2.bidiLevel != null && domSel.cursorBidiLevel != null)
             domSel.cursorBidiLevel = main2.bidiLevel;
         } else if (rawSel.extend) {
-          rawSel.collapse(anchor.node, anchor.offset);
+          rawSel.collapse(anchor2.node, anchor2.offset);
           rawSel.extend(head.node, head.offset);
         } else {
           let range = document.createRange();
           if (main2.anchor > main2.head)
-            [anchor, head] = [head, anchor];
+            [anchor2, head] = [head, anchor2];
           range.setEnd(head.node, head.offset);
-          range.setStart(anchor.node, anchor.offset);
+          range.setStart(anchor2.node, anchor2.offset);
           rawSel.removeAllRanges();
           rawSel.addRange(range);
         }
       });
-      this.view.observer.setSelectionRange(anchor, head);
+      this.view.observer.setSelectionRange(anchor2, head);
     }
-    this.impreciseAnchor = anchor.precise ? null : new DOMPos(domSel.anchorNode, domSel.anchorOffset);
+    this.impreciseAnchor = anchor2.precise ? null : new DOMPos(domSel.anchorNode, domSel.anchorOffset);
     this.impreciseHead = head.precise ? null : new DOMPos(domSel.focusNode, domSel.focusOffset);
   }
   enforceCursorAssoc() {
@@ -28070,8 +26437,8 @@ class DOMObserver {
     this.selectionRange.setRange(range);
     return this.selectionChanged = true;
   }
-  setSelectionRange(anchor, head) {
-    this.selectionRange.set(anchor.node, anchor.offset, head.node, head.offset);
+  setSelectionRange(anchor2, head) {
+    this.selectionRange.set(anchor2.node, anchor2.offset, head.node, head.offset);
     this.selectionChanged = false;
   }
   listenForScroll() {
@@ -28292,9 +26659,9 @@ function applyDOMChange(view, start2, end2, typeOver) {
     let domSel = view.observer.selectionRange;
     let { impreciseHead: iHead, impreciseAnchor: iAnchor } = view.docView;
     let head = iHead && iHead.node == domSel.focusNode && iHead.offset == domSel.focusOffset || !contains(view.contentDOM, domSel.focusNode) ? view.state.selection.main.head : view.docView.posFromDOM(domSel.focusNode, domSel.focusOffset);
-    let anchor = iAnchor && iAnchor.node == domSel.anchorNode && iAnchor.offset == domSel.anchorOffset || !contains(view.contentDOM, domSel.anchorNode) ? view.state.selection.main.anchor : view.docView.posFromDOM(domSel.anchorNode, domSel.anchorOffset);
-    if (head != sel.head || anchor != sel.anchor)
-      newSel = EditorSelection.single(anchor, head);
+    let anchor2 = iAnchor && iAnchor.node == domSel.anchorNode && iAnchor.offset == domSel.anchorOffset || !contains(view.contentDOM, domSel.anchorNode) ? view.state.selection.main.anchor : view.docView.posFromDOM(domSel.anchorNode, domSel.anchorOffset);
+    if (head != sel.head || anchor2 != sel.anchor)
+      newSel = EditorSelection.single(anchor2, head);
   }
   if (!change && !newSel)
     return;
@@ -28411,8 +26778,8 @@ function selectionPoints(view) {
 function selectionFromPoints(points, base2) {
   if (points.length == 0)
     return null;
-  let anchor = points[0].pos, head = points.length == 2 ? points[1].pos : anchor;
-  return anchor > -1 && head > -1 ? EditorSelection.single(anchor + base2, head + base2) : null;
+  let anchor2 = points[0].pos, head = points.length == 2 ? points[1].pos : anchor2;
+  return anchor2 > -1 && head > -1 ? EditorSelection.single(anchor2 + base2, head + base2) : null;
 }
 class EditorView {
   constructor(config2 = {}) {
@@ -34092,7 +32459,7 @@ const historyKeymap = [
   window.IntersectionObserver = IntersectionObserver2;
   window.IntersectionObserverEntry = IntersectionObserverEntry;
 })();
-const usePassiveLayoutEffect = React$d[typeof document !== "undefined" && document.createElement !== void 0 ? "useLayoutEffect" : "useEffect"];
+const usePassiveLayoutEffect = React$c[typeof document !== "undefined" && document.createElement !== void 0 ? "useLayoutEffect" : "useEffect"];
 var useLayoutEffect = usePassiveLayoutEffect;
 function useIntersectionObserver(target, options = {}) {
   const {
@@ -40896,7 +39263,7 @@ var parseReactElement = function parseReactElement2(element, options) {
     return createStringTreeNode(element);
   } else if (typeof element === "number") {
     return createNumberTreeNode(element);
-  } else if (!/* @__PURE__ */ React$d.isValidElement(element)) {
+  } else if (!/* @__PURE__ */ React$c.isValidElement(element)) {
     throw new Error("react-element-to-jsx-string: Expected a React.Element, got `".concat(_typeof(element), "`"));
   }
   var displayName = displayNameFn(element);
@@ -40909,7 +39276,7 @@ var parseReactElement = function parseReactElement2(element, options) {
     props.key = key;
   }
   var defaultProps2 = filterProps(element.type.defaultProps || {}, noChildren);
-  var childrens = React$d.Children.toArray(element.props.children).filter(onlyMeaningfulChildren).map(function(child) {
+  var childrens = React$c.Children.toArray(element.props.children).filter(onlyMeaningfulChildren).map(function(child) {
     return parseReactElement2(child, options);
   });
   if (supportFragment && element.type === react.exports.Fragment) {
@@ -41247,4 +39614,4 @@ var reactElementToJsxString = function reactElementToJsxString2(element) {
   };
   return formatTree(parseReactElement(element, options), options);
 };
-export { SvgDockRight as $, MenuDivider as A, ButtonGroup as B, SvgMenu as C, DropdownMenu as D, MenuExtraContent as E, Fragment as F, Select as G, Hammer as H, IconButton as I, SideNavigation as J, SidenavButton as K, SvgHome as L, MenuItem as M, SvgFolder as N, SvgConfiguration as O, useTheme as P, SvgMoon as Q, React$d as R, SvgChevronRight as S, Text$1 as T, UserIcon as U, SvgSun as V, reactElementToJsxString as W, cx as X, SvgWindowCollapse as Y, SvgWindowFullScreen as Z, Link as _, Button as a, SvgDockBottom as a0, SandpackProvider as a1, SandpackLayout as a2, SandpackCodeViewer as a3, Headline as a4, SvgAdd as a5, LabeledInput as a6, SvgSearch as a7, Tile as a8, Body as a9, Anchor as aa, ToggleSwitch as ab, ReactDOM as ac, HashRouter as ad, Routes as ae, Route as af, jsx as b, InformationPanel as c, InformationPanelHeader as d, SvgChevronLeft as e, SvgImodelHollow as f, InformationPanelBody as g, getUserColor as h, SvgModel as i, jsxs as j, SvgSettings as k, SvgSmileyHappy as l, SvgNews as m, SvgInfoCircular as n, SvgNotification as o, SvgHelpCircular as p, SvgFeedback as q, SvgChat as r, SvgExit as s, Header as t, useNavigate as u, HeaderLogo as v, HeaderBreadcrumbs as w, HeaderButton as x, SvgCheckmark as y, SvgProject as z };
+export { Surface as $, SvgMoon as A, SvgSun as B, reactElementToJsxString as C, DropdownMenu as D, ButtonGroup as E, Fragment as F, SvgWindowCollapse as G, Header as H, IconButton as I, SvgWindowFullScreen as J, SvgDockRight as K, Link as L, MenuItem as M, SvgDockBottom as N, Button as O, SandpackProvider as P, SandpackLayout as Q, React$c as R, SvgImodelHollow as S, Text$1 as T, UserIcon as U, SandpackCodeViewer as V, Headline as W, SvgAdd as X, LabeledInput as Y, SvgSearch as Z, Tile as _, HeaderLogo as a, UserIconGroup as a0, Body as a1, Anchor as a2, ReactDOM as a3, HashRouter as a4, Routes as a5, Route as a6, HeaderBreadcrumbs as b, cx as c, HeaderButton as d, SvgCheckmark as e, SvgProject as f, MenuDivider as g, SvgModel as h, SvgNotification as i, jsx as j, SvgHelpCircular as k, MenuExtraContent as l, jsxs as m, Select as n, SvgExit as o, SvgSettings as p, SvgSmileyHappy as q, SvgNews as r, SvgInfoCircular as s, SideNavigation as t, useNavigate as u, SidenavButton as v, SvgHome as w, SvgFolder as x, SvgConfiguration as y, useTheme as z };
