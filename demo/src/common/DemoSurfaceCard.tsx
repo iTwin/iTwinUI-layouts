@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import cx from 'classnames';
-import { Text } from '@itwin/itwinui-react';
+import { Surface, Text } from '@itwin/itwinui-react';
 import './DemoSurfaceCard.scss';
 
 type DemoSurfaceCardProps = {
@@ -17,18 +17,27 @@ export const DemoSurfaceCard = (props: DemoSurfaceCardProps) => {
   const { children, title, centeredContent = false } = props;
 
   return (
-    <div className='demo-surface-card'>
-      <div className='demo-surface-title-bar'>
-        <Text variant='subheading'>{title}</Text>
+    <Surface
+      elevation={1}
+      style={{
+        width: '100%',
+        minHeight: centeredContent ? '400px' : '250px',
+        height: '100%',
+      }}
+    >
+      <div className='demo-surface-card'>
+        <div className='demo-surface-title-bar'>
+          <Text variant='subheading'>{title}</Text>
+        </div>
+        <div
+          className={cx('demo-surface-content', {
+            'demo-surface-content-centered': centeredContent,
+          })}
+        >
+          {children}
+        </div>
       </div>
-      <div
-        className={cx('demo-surface-content', {
-          'demo-surface-content-centered': centeredContent,
-        })}
-      >
-        {children}
-      </div>
-    </div>
+    </Surface>
   );
 };
 
