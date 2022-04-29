@@ -3,9 +3,9 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import { DemoHeader } from '../common/DemoHeader';
-import { DemoSideNav } from '../common/DemoSideNav';
-import { DemoTemplate } from '../common/DemoTemplate';
+import { DemoHeader } from '../../common/DemoHeader';
+import { DemoSideNav } from '../../common/DemoSideNav';
+import { DemoTemplate } from '../../common/DemoTemplate';
 import { FluidGrid, PageLayout } from '@itwin/itwinui-layouts-react';
 import {
   Tile,

@@ -6,7 +6,7 @@ import React from 'react';
 import './App.scss';
 import '@codesandbox/sandpack-react/dist/index.css';
 import '@itwin/itwinui-layouts-css/styles.css';
-import { Anchor, Text, Body, Tile } from '@itwin/itwinui-react';
+import { Anchor, Text, Body, Tile, Title } from '@itwin/itwinui-react';
 import { FluidGrid } from '@itwin/itwinui-layouts-react';
 import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
@@ -37,17 +37,28 @@ const App = () => {
         src='https://img.shields.io/github/last-commit/itwin/iTwinUI-layouts'
       />
       <hr />
-      <FluidGrid>
-        {DEMOS_LIST.map(({ path, name, description, icon }) => (
-          <div
-            key={name}
-            onClick={() => navigate(path)}
-            className='tile-wrapper'
-          >
-            <Tile name={name} description={description} thumbnail={icon} />
-          </div>
-        ))}
-      </FluidGrid>
+
+      {DEMOS_LIST.map(({ listName, layouts }) => (
+        <div key={listName} className='demo-layouts-list'>
+          <Title>{listName}</Title>
+          <FluidGrid>
+            {layouts.map(({ path, name, description, icon }) => (
+              <div
+                key={name}
+                onClick={() => navigate(path)}
+                className='tile-wrapper'
+              >
+                <Tile
+                  isActionable
+                  name={name}
+                  description={description}
+                  thumbnail={icon}
+                />
+              </div>
+            ))}
+          </FluidGrid>
+        </div>
+      ))}
     </div>
   );
 };

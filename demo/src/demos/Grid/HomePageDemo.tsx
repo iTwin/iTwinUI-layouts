@@ -3,11 +3,11 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import { DemoHeader } from '../common/DemoHeader';
-import { DemoSideNav } from '../common/DemoSideNav';
-import { DemoTemplate } from '../common/DemoTemplate';
-import { DemoSurfaceCard } from '../common/DemoSurfaceCard';
-import { DemoHomePageInfoCard } from '../common/DemoHomePageInfoCard';
+import { DemoHeader } from '../../common/DemoHeader';
+import { DemoSideNav } from '../../common/DemoSideNav';
+import { DemoTemplate } from '../../common/DemoTemplate';
+import { DemoSurfaceCard } from '../../common/DemoSurfaceCard';
+import { DemoHomePageInfoCard } from '../../common/DemoHomePageInfoCard';
 import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
 import { Button } from '@itwin/itwinui-react';
 
