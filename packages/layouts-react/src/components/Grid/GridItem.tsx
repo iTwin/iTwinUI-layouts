@@ -15,13 +15,49 @@ export type GridItemProps = {
   /**
    * Sets column count for grid item - how many columns this item spans.
    * Max columnSpan is 12.
+   *
+   * - `number` - spans grid item same amount in all screen sizes;
+   * - `ResponsiveColumnSpan` - object to specify grid column span in specific screen sizes;
+   *
    * @default 1
+   * 
+   * @example
+   * columnSpan={4}
+   * 
+   * @example
+   * columnSpan={{
+       monitor: 8,
+       smallMonitor: 6,
+       tablet: 4,
+       landscapeMobile: 12,
+       mobile: 12,
+     }}
    */
   columnSpan?: number | ResponsiveColumnSpan;
   /**
    * Sets on which column grid item starts.
    * Eg. When set to 10, grid item starts on 10th column.
+   *
+   * - `auto` - places grid item in nearest empty suitable grid column in all screen sizes;
+   * - `number` - places grid item in specific grid column in all screen sizes;
+   * - `ResponsiveColumnStart` - object to specify grid column to place item in specific screen sizes;
+   * 
    * @default 'auto'
+   * 
+   * @example
+   * columnStart={8}
+   * 
+   * @example
+   * columnStart='auto'
+   * 
+   * @example
+   * columnStart={{
+       monitor: 2,
+       smallMonitor: 2,
+       tablet: 1,
+       landscapeMobile: 'auto',
+       mobile: 'auto',
+      }}
    */
   columnStart?: 'auto' | number | ResponsiveColumnStart;
 } & StylingProps;
