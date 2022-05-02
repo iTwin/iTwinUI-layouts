@@ -4,9 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 import { layoutDescribe } from '../../../cypress/common/layoutDescribe';
 
-layoutDescribe('GridLayoutDemo', (screenSize) => {
-  it('should render GridLayoutDemo', () => {
-    cy.visit('grid-layout');
+layoutDescribe('FluidGridDemo', (screenSize) => {
+  it('should render FluidGridDemo', () => {
+    cy.visit('fluid-grid');
     cy.compareSnapshot(`basic-${screenSize.width}x${screenSize.height}`);
   });
 });

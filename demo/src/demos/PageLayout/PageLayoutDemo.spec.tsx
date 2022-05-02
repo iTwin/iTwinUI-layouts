@@ -4,9 +4,11 @@
  *--------------------------------------------------------------------------------------------*/
 import { layoutDescribe } from '../../../cypress/common/layoutDescribe';
 
-layoutDescribe('HomePageDemo', (screenSize) => {
-  it('should render HomePageDemo', () => {
-    cy.visit('home-layout');
+layoutDescribe('PageLayoutDemo', (screenSize) => {
+  it('should render PageLayoutDemo', () => {
+    cy.visit('page-layout-1');
+    // Hiding iTwin.js viewer to avoid flakiness
+    cy.get('iframe').hide();
     cy.compareSnapshot(`basic-${screenSize.width}x${screenSize.height}`);
   });
 });

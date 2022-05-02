@@ -4,11 +4,9 @@
  *--------------------------------------------------------------------------------------------*/
 import { layoutDescribe } from '../../../cypress/common/layoutDescribe';
 
-layoutDescribe('AppLayoutDemo', (screenSize) => {
-  it('should render AppLayoutDemo', () => {
-    cy.visit('app-layout');
-    // Hiding iTwin.js viewer to avoid flakiness
-    cy.get('iframe').hide();
+layoutDescribe('GridDemo', (screenSize) => {
+  it('should render GridDemo', () => {
+    cy.visit('grid-1');
     cy.compareSnapshot(`basic-${screenSize.width}x${screenSize.height}`);
   });
 });

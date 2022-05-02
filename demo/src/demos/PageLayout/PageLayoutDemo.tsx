@@ -8,7 +8,7 @@ import { DemoSideNav } from '../../common/DemoSideNav';
 import { DemoTemplate } from '../../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
 
-export const AppLayoutDemo = () => {
+export const PageLayoutDemo = () => {
   return (
     <DemoTemplate title='App'>
       <PageLayout>
@@ -38,4 +38,4 @@ export const AppLayoutDemo = () => {
   );
 };
 
-export default AppLayoutDemo;
+export default PageLayoutDemo;

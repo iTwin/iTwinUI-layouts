@@ -2,10 +2,10 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-import AppLayoutDemo from './PageLayout/AppLayoutDemo';
+import AppLayoutDemo from './PageLayout/PageLayoutDemo';
 import PageLayoutPaddedDemo from './PageLayout/PageLayoutPaddedDemo';
-import GridLayoutDemo from './Grid/GridLayoutDemo';
-import HomePageDemo from './Grid/HomePageDemo';
+import GridLayoutDemo from './Grid/FluidGridDemo';
+import HomePageDemo from './Grid/GridDemo';
 
 /**
  * List of all demos. It is used to dynamically populate the home page and react-router.
@@ -15,7 +15,7 @@ export const DEMOS_LIST = [
     listName: 'Layouts',
     layouts: [
       {
-        path: 'app-layout',
+        path: 'page-layout-1',
         name: 'PageLayout 1',
         description:
           'Demo consisting of header, side navigation, and full frame content (eg. iTwin.js frame).',
@@ -33,18 +33,18 @@ export const DEMOS_LIST = [
     ],
   },
   {
-    listName: 'Grid',
+    listName: 'Grids',
     layouts: [
       {
-        path: 'grid-layout',
+        path: 'fluid-grid',
         name: 'Fluid grid',
         description: 'A responsive grid of tiles.',
         icon: 'layouts-thumbnails/TileGridLayout.png',
         component: GridLayoutDemo,
       },
       {
-        path: 'home-layout',
-        name: 'Grid 1',
+        path: 'grid-1',
+        name: 'Grid',
         description: 'Grid layout example for home page.',
         icon: 'layouts-thumbnails/HomeLayout.png',
         component: HomePageDemo,

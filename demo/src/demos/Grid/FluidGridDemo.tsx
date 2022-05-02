@@ -38,7 +38,7 @@ export const GridLayoutDemo = () => {
             <Headline>Fluid grid</Headline>
             <Text>
               This page is example of how to use <Code>FluidGrid</Code>{' '}
-              component. Try resizing this page and see how grid bellow changes.
+              component. Try resizing this page and see how grid changes.
             </Text>
             <br />
             <Text>

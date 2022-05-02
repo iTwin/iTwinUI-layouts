@@ -11,7 +11,7 @@ import { DemoHomePageInfoCard } from '../../common/DemoHomePageInfoCard';
 import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
 import { Button } from '@itwin/itwinui-react';
 
-export const HomePageDemo = () => {
+export const GridDemo = () => {
   return (
     <DemoTemplate title='Grid'>
       <PageLayout>
@@ -119,4 +119,4 @@ export const HomePageDemo = () => {
   );
 };
 
-export default HomePageDemo;
+export default GridDemo;
