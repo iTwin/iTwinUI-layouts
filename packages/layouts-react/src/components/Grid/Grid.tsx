@@ -17,14 +17,14 @@ export type GridProps = {
 /**
  * Grid component based on CSS grid.
  * Grid has 12 columns across all screen breakpoints to keep consistent layouts.
- * Recommended to use `GridItem` components as children but can take any `ReactNode` component.
+ * Recommended to use `Grid.Item` components as children but can take any `ReactNode` component.
  *
  * @example
  *
  * <Grid>
- *   <GridItem />
- *   <GridItem columnSpan={6}/>
- *   <GridItem columnSpan={6}/>
+ *   <Grid.Item />
+ *   <Grid.Item columnSpan={6}/>
+ *   <Grid.Item columnSpan={6}/>
  * </Grid>
  */
 export const Grid = (props: GridProps) => {

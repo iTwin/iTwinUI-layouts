@@ -26,11 +26,12 @@ const App = () => {
         iTwinUI-Layouts
       </Text>
       <Body>
-        An open-source common UI layouts library used to display{' '}
+        iTwinUI-Layouts places given React (eg.{' '}
         <Anchor href='https://itwin.github.io/iTwinUI-react/'>
           iTwinUI-react
-        </Anchor>{' '}
-        components.
+        </Anchor>
+        ) components accordingly within the page with minimal effort on the
+        development side.
       </Body>
       <img
         alt='GitHub last commit'
