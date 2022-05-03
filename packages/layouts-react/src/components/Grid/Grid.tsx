@@ -24,7 +24,7 @@ export type GridProps = {
  * <Grid>
  *   <Grid.Item />
  *   <Grid.Item columnSpan={6}/>
- *   <Grid.Item columnSpan={6}/>
+ *   <Grid.Item columnSpan={5}/>
  * </Grid>
  */
 export const Grid = (props: GridProps) => {
