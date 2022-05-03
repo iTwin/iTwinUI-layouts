@@ -3,7 +3,6 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import cx from 'classnames';
 import { Surface, Text } from '@itwin/itwinui-react';
 import './DemoSurfaceCard.scss';
 
