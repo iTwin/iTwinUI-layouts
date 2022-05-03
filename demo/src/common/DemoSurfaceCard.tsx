@@ -10,18 +10,17 @@ import './DemoSurfaceCard.scss';
 type DemoSurfaceCardProps = {
   children: React.ReactNode;
   title: string;
-  centeredContent?: boolean;
 };
 
 export const DemoSurfaceCard = (props: DemoSurfaceCardProps) => {
-  const { children, title, centeredContent = false } = props;
+  const { children, title } = props;
 
   return (
     <Surface
       elevation={1}
       style={{
         width: '100%',
-        minHeight: centeredContent ? '400px' : '250px',
+        minHeight: '250px',
         height: '100%',
       }}
     >
@@ -29,13 +28,7 @@ export const DemoSurfaceCard = (props: DemoSurfaceCardProps) => {
         <div className='demo-surface-title-bar'>
           <Text variant='subheading'>{title}</Text>
         </div>
-        <div
-          className={cx('demo-surface-content', {
-            'demo-surface-content-centered': centeredContent,
-          })}
-        >
-          {children}
-        </div>
+        <div className='demo-surface-content'>{children}</div>
       </div>
     </Surface>
   );

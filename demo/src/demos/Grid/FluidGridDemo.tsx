@@ -45,7 +45,7 @@ export const GridLayoutDemo = () => {
               <Code>FluidGrid</Code> component has two props:{' '}
               <ol>
                 <li>
-                  <Code>Children</Code> - list of items you want to place in
+                  <Code>children</Code> - list of items you want to place in
                   FluidGrid. One option might be array of{' '}
                   <Anchor
                     href='https://itwin.github.io/iTwinUI-react/?path=/story/core-tile--actionable'

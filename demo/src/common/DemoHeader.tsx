@@ -30,24 +30,29 @@ import {
   SvgNews,
   SvgProject,
 } from '@itwin/itwinui-icons-react';
+import { useNavigate } from 'react-router-dom';
 
 export type DemoHeaderProps = {
   isSlim?: boolean;
 };
 
 export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
+  const navigate = useNavigate();
+
   return (
     <Header
       isSlim={isSlim}
       appLogo={
-        <HeaderLogo logo={<SvgImodelHollow />}>iTwinUI-layouts</HeaderLogo>
+        <HeaderLogo logo={<SvgImodelHollow />} onClick={() => navigate('/')}>
+          iTwinUI-layouts
+        </HeaderLogo>
       }
       breadcrumbs={
         <HeaderBreadcrumbs
           items={[
             <HeaderButton
               key='projectBreadcrumb'
-              name='HeaderButton Alpha'
+              name='Project Alpha'
               description='0x0123456789'
               startIcon={
                 <img
@@ -71,21 +76,21 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
                   badge={<SvgCheckmark />}
                   isSelected
                 >
-                  HeaderButton Alpha
+                  Project Alpha
                 </MenuItem>,
                 <MenuItem
                   key='projectB'
                   sublabel='0x0987654321'
                   icon={<SvgProject />}
                 >
-                  HeaderButton Beta
+                  Project Beta
                 </MenuItem>,
                 <MenuItem
                   key='projectC'
                   sublabel='0x0001337420'
                   icon={<SvgProject />}
                 >
-                  HeaderButton Charlie
+                  Project Charlie
                 </MenuItem>,
                 <MenuDivider key='divider' />,
                 <MenuItem key='myProjects'>My projects</MenuItem>,
@@ -93,7 +98,7 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
             />,
             <HeaderButton
               key='iModelBreadcrumb'
-              name='HeaderButton Two'
+              name='iModel Beta'
               description='0x0987654321'
               startIcon={<SvgModel />}
               onClick={() => {}}
@@ -104,7 +109,7 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
                   sublabel='0x0123456789'
                   icon={<SvgModel />}
                 >
-                  HeaderButton One
+                  iModel Alpha
                 </MenuItem>,
                 <MenuItem
                   key='iModelB'
@@ -113,17 +118,17 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
                   isSelected
                   badge={<SvgCheckmark />}
                 >
-                  HeaderButton Two
+                  iModel Beta
                 </MenuItem>,
                 <MenuItem
                   key='iModelC'
                   sublabel='0x0001337420'
                   icon={<SvgModel />}
                 >
-                  HeaderButton Three
+                  iModel Charlie
                 </MenuItem>,
                 <MenuDivider key='divider' />,
-                <MenuItem key='myiModels'>My items</MenuItem>,
+                <MenuItem key='myiModels'>My iModels</MenuItem>,
               ]}
             />,
           ]}

@@ -16,12 +16,8 @@
 }
 
 .demo-surface-content {
+  display: flex;
+  flex-direction: column;
   padding: $iui-baseline $iui-sm;
   height: calc(100% - 4 * $iui-baseline);
-
-  &-centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
