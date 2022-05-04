@@ -6,6 +6,6 @@ npm rebuild esbuild
 cd demo
 # `&` is used to run the process in the background
 yarn preview &
-cypress run
+cypress run "$@"
 
 # exec "$@"

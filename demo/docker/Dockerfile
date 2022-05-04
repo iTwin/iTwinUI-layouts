@@ -1,5 +1,8 @@
 FROM node:16.14.2-bullseye-slim
 
+ENV WIDTH=3840
+ENV HEIGHT=2160
+
 USER root
 
 RUN apt-get update && \
