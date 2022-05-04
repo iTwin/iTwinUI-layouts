@@ -6,9 +6,7 @@ const { spawn } = require('child_process');
 
 // Using diferent Cypress image for M1 processors
 const isM1 = process.argv.includes('--m1');
-const dockerImage = isM1
-  ? `cookiescrumbs/cypress-m1:9.4.1`
-  : `cypress/included:9.5.0`;
+const dockerImage = 'itwinui/cypress:latest';
 
 // Need to use this script because current directory variable is different in different shells
 const dockerProcess = spawn(

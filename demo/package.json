@@ -27,7 +27,8 @@
     "test": "yarn build && node run-tests.js",
     "test:m1": "yarn build && node run-tests.js --m1",
     "test:ci": "node run-tests.js",
-    "test:approve": "cypress-image-diff -u"
+    "test:approve": "cypress-image-diff -u",
+    "build-docker": "node buildDocker.js"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^0.13.7",
