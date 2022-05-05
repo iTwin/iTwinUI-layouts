@@ -25,10 +25,9 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "test": "yarn build && node run-tests.js",
-    "test:m1": "yarn build && node run-tests.js --m1",
     "test:ci": "node run-tests.js",
     "test:approve": "cypress-image-diff -u",
-    "build-docker": "node buildDocker.js"
+    "build-docker": "node build-docker.js"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^0.13.7",

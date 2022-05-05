@@ -17,7 +17,6 @@
     "build": "yarn build:css && yarn lint:copyright --fix packages/layouts-css/dist/* && yarn build:react",
     "build:watch": "yarn build && concurrently -n css,react -k \"yarn build:css:watch\" \"yarn build:react:watch\"",
     "test": "yarn build && yarn workspace @itwin/itwinui-layouts-demo test",
-    "test:m1": "yarn build && yarn workspace @itwin/itwinui-layouts-demo test:m1",
     "test:ci": "yarn workspace @itwin/itwinui-layouts-demo test:ci",
     "test:approve": "yarn workspace @itwin/itwinui-layouts-demo test:approve",
     "lint:js": "eslint \"*/**/*.{js,ts,tsx}\" --max-warnings=0",
@@ -25,7 +24,8 @@
     "lint:copyright": "node scripts/copyrightLinter.js",
     "lint": "yarn lint:js && yarn lint:css",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "build-docker": "yarn workspace @itwin/itwinui-layouts-demo build-docker"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.10.1",
