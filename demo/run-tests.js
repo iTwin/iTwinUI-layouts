@@ -17,7 +17,7 @@ const dockerProcess = spawn(
   // -w /e2e - makes `e2e` the working directory
   // cypress/included:9.5.0 or cookiescrumbs/cypress-m1:9.4.1 - Docker image to run
   // ./demo/entrypoint.sh - entrypoint script to run
-  `docker run --rm --entrypoint /bin/bash -e WIDTH=3840 -e HEIGHT=2160 -v "${__dirname}/../":/e2e -w /e2e ${dockerImage} ./demo/entrypoint.sh --browser chromium`,
+  `docker run --rm --entrypoint /bin/bash -e WIDTH=3840 -e HEIGHT=2160 -v "${__dirname}/../":/e2e -w /e2e ${dockerImage} ./demo/entrypoint.sh`,
   {
     stdio: 'inherit',
     shell: true,

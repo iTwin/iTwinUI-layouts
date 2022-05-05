@@ -6,9 +6,12 @@ const os = require('os');
 const { spawn } = require('child_process');
 
 const platform = os.arch().includes('arm') ? 'linux/arm64/v8' : 'linux/amd64';
+const binaryPath = os.arch().includes('arm')
+  ? '/tmp/cypress-build/linux/build/linux-arm64-unpacked'
+  : '/tmp/cypress-build/linux/build/linux-unpacked';
 
 spawn(
-  `docker buildx build docker --platform ${platform} -t itwinui/cypress:latest --load`,
+  `docker buildx build docker --platform ${platform} --build-arg BINARY_PATH=${binaryPath} -t itwinui/cypress:latest --load`,
   {
     stdio: 'inherit',
     shell: true,
