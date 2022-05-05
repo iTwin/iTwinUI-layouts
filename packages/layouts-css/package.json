@@ -1,7 +1,10 @@
 {
   "name": "@itwin/itwinui-layouts-css",
   "version": "0.1.0",
-  "author": "Bentley Systems",
+  "author": {
+    "name": "Bentley Systems, Inc.",
+    "url": "http://www.bentley.com"
+  },
   "description": "iTwinUI CSS package that provides classes for most common layouts",
   "main": "dist/styles.css",
   "exports": {

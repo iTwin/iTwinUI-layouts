@@ -1,6 +1,10 @@
 {
   "private": true,
   "name": "@itwin/itwinui-layouts-monorepo",
+  "author": {
+    "name": "Bentley Systems, Inc.",
+    "url": "http://www.bentley.com"
+  },
   "workspaces": [
     "packages/*",
     "demo"
