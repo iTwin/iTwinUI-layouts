@@ -5,12 +5,15 @@
 .demo-surface-card {
   height: 100%;
   width: 100%;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
 }
 
 .demo-surface-title-bar {
   display: flex;
   align-items: center;
-  height: 4 * $iui-baseline;
+  min-height: 4 * $iui-baseline;
   border-bottom: 1px solid var(--iui-color-background-5);
   padding: 0 12px;
 }
@@ -19,5 +22,4 @@
   display: flex;
   flex-direction: column;
   padding: $iui-baseline $iui-sm;
-  height: calc(100% - 4 * $iui-baseline);
 }

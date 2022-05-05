@@ -34,6 +34,7 @@ export const GridDemo = () => {
       [content]
     </Grid.Item>,
   );
+
   const gridItemCode4 = reactElementToJSXString(
     <Grid.Item
       columnSpan={{
@@ -93,12 +94,12 @@ export const GridDemo = () => {
                 <Text>
                   <ul>
                     <li>
-                      `number` - spans grid item same amount in all screen
-                      sizes;
+                      <Code>number</Code> - spans grid item same amount in all
+                      screen sizes;
                     </li>
                     <li>
-                      `ResponsiveColumnSpan` - object to specify grid column
-                      span in specific screen sizes;
+                      <Code>ResponsiveColumnSpan</Code> - object to specify grid
+                      column span in specific screen sizes;
                     </li>
                   </ul>
                 </Text>
@@ -129,16 +130,16 @@ export const GridDemo = () => {
                 <Text>
                   <ul>
                     <li>
-                      `auto` - places grid item in nearest empty suitable grid
+                      <Code>auto</Code> - places grid item in nearest empty
+                      suitable grid column in all screen sizes;
+                    </li>
+                    <li>
+                      <Code>number</Code> - places grid item in specific grid
                       column in all screen sizes;
                     </li>
                     <li>
-                      `number` - places grid item in specific grid column in all
-                      screen sizes;
-                    </li>
-                    <li>
-                      `ResponsiveColumnStart` - object to specify grid column to
-                      place item in specific screen sizes;
+                      <Code>ResponsiveColumnStart</Code> - object to specify
+                      grid column to place item in specific screen sizes;
                     </li>
                   </ul>
                 </Text>
@@ -157,19 +158,27 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Props objects'>
-                <Text>ResponsiveColumnSpan = </Text>
-                <Text>mobile: number; </Text>
-                <Text>landscapeMobile: number;</Text>
-                <Text>tablet: number;</Text>
-                <Text>smallMonitor: number;</Text>
-                <Text>monitor: number;</Text>
+                <Text as='pre'>
+                  {`ResponsiveColumnSpan = 
+{
+  mobile: number; 
+  landscapeMobile: number; 
+  tablet: number; 
+  smallMonitor: number; 
+  monitor: number;
+}`}
+                </Text>
                 <br />
-                <Text>ResponsiveColumnStart = </Text>
-                <Text>mobile: `auto` | number; </Text>
-                <Text>landscapeMobile: `auto` | number;</Text>
-                <Text>tablet: `auto` | number;</Text>
-                <Text>smallMonitor: `auto` | number;</Text>
-                <Text>monitor: `auto` | number;</Text>
+                <Text as='pre'>
+                  {`ResponsiveColumnStart = 
+{
+  mobile: 'auto' | number; 
+  landscapeMobile: 'auto' | number; 
+  tablet: 'auto' | number; 
+  smallMonitor: 'auto' | number; 
+  monitor: 'auto' | number;
+}`}
+                </Text>
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item columnSpan={9}>
@@ -201,9 +210,9 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Example code'>
-                <Text>{gridItemCode1}</Text>
+                <Text as='pre'>{gridItemCode1}</Text>
                 <br />
-                <Text>{gridItemCode2}</Text>
+                <Text as='pre'>{gridItemCode2}</Text>
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item
@@ -217,9 +226,13 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Example code'>
-                <Text>{gridItemCode3}</Text>
-                <br />
-                <Text>{gridItemCode4}</Text>
+                <div
+                  style={{ display: 'flex', flexDirection: 'row', gap: '24px' }}
+                >
+                  <Text as='pre'>{gridItemCode3}</Text>
+                  <br />
+                  <Text as='pre'>{gridItemCode4}</Text>
+                </div>
               </DemoSurfaceCard>
             </Grid.Item>
           </Grid>
