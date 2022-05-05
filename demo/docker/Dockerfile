@@ -35,7 +35,7 @@ WORKDIR /
 FROM node:16.13.0-bullseye
 
 ARG VERSION=9.5.0
-ARG BINARY_PATH=/tmp/cypress-build/linux/build/linux-arm64-unpacked
+ARG BINARY_PATH=/tmp/cypress-build/linux/build/linux-unpacked
 
 ENV TERM=xterm \
     NPM_CONFIG_LOGLEVEL=warn \
