@@ -28,17 +28,19 @@ yarn start
 
 ### To run visual tests
 
+If you are running tests for the first time, then you need to build docker image locally by running:
+
+```console
+yarn build-docker
+```
+
+Then you can run tests by running:
+
 ```console
 yarn test
 ```
 
-#### To run visual tests on M1 processors
-
-```console
-yarn test:m1
-```
-
-_Before running this command, make sure Docker is running._
+> _Before running this command, make sure Docker is running._
 
 ### To approve changed visual tests images
 
@@ -47,13 +49,15 @@ yarn test:approve
 ```
 
 ---
+
 ## Testing
 
 For running tests you will need [Docker](https://www.docker.com/products/docker-desktop). It helps to avoid cross-platform rendering differences.
 We are using [cypress](https://www.cypress.io/) for running tests and making screenshots.
+
 - If you get `ENOENT: no such file or directory` or `EPERM: operation not permitted` then you need to open Docker Desktop -> Settings -> General -> Disable `Use the WSL 2 based engine` setting.
-- To check failed tests results, open `demo/cypress-visual-report/cypress-visual-report.html` in your browser. You may want to use a local HTTP server (e.g. with the  [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)).
-- When writing tests, use `layoutsDescribe` instead of regular `describe`. This way tests will be run on different screen sizes. 
+- To check failed tests results, open `demo/cypress-visual-report/cypress-visual-report.html` in your browser. You may want to use a local HTTP server (e.g. with the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)).
+- When writing tests, use `layoutsDescribe` instead of regular `describe`. This way tests will be run on different screen sizes.
 - To make a screenshot, use `cy.compareSnapshot(...)`.
 - Example test:
   ```ts
