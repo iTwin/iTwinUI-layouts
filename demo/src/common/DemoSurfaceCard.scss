@@ -22,4 +22,10 @@
   display: flex;
   flex-direction: column;
   padding: $iui-baseline $iui-sm;
+
+  pre {
+    white-space: break-spaces;
+    margin: 0;
+    font-family: inherit;
+  }
 }

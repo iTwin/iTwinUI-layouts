@@ -10,51 +10,41 @@ import { DemoSurfaceCard } from '../../common/DemoSurfaceCard';
 import { DemoHomePageInfoCard } from '../../common/DemoHomePageInfoCard';
 import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
 import { Button, Text, Code } from '@itwin/itwinui-react';
-import reactElementToJSXString from 'react-element-to-jsx-string';
+import '../../common/DemoTemplate.scss';
 
 export const GridDemo = () => {
-  const gridItemCode1 = reactElementToJSXString(
-    <Grid.Item
-      columnSpan={{
-        monitor: 4,
-        smallMonitor: 4,
-        tablet: 4,
-        landscapeMobile: 6,
-        mobile: 12,
-      }}
-    >
+  const gridItemCode1 = `<Grid.Item
+  columnSpan={{
+    monitor: 4,
+    smallMonitor: 4,
+    tablet: 4,
+    landscapeMobile: 6,
+    mobile: 12,
+  }}
+>
+  [content]
+</Grid.Item>`;
+  const gridItemCode2 = `<Grid.Item 
+  columnSpan={4}>
+    [content]
+</Grid.Item>`;
+  const gridItemCode3 = `<Grid.Item
+  columnStart={10}>
       [content]
-    </Grid.Item>,
-  );
-  const gridItemCode2 = reactElementToJSXString(
-    <Grid.Item columnSpan={4}>[content]</Grid.Item>,
-  );
-  const gridItemCode3 = reactElementToJSXString(
-    <Grid.Item columnSpan={3} columnStart={10}>
-      [content]
-    </Grid.Item>,
-  );
+  </Grid.Item>
+  `;
 
-  const gridItemCode4 = reactElementToJSXString(
-    <Grid.Item
-      columnSpan={{
-        monitor: 2,
-        smallMonitor: 4,
-        tablet: 6,
-        landscapeMobile: 8,
-        mobile: 10,
-      }}
-      columnStart={{
-        monitor: 10,
-        smallMonitor: 8,
-        tablet: 6,
-        landscapeMobile: 4,
-        mobile: 2,
-      }}
-    >
-      [content]
-    </Grid.Item>,
-  );
+  const gridItemCode4 = `<Grid.Item
+  columnStart={{
+    monitor: 10,
+    smallMonitor: 8,
+    tablet: 6,
+    landscapeMobile: 4,
+    mobile: 2,
+  }}
+>
+  [content]
+</Grid.Item>`;
 
   return (
     <DemoTemplate title='Grid'>
@@ -157,8 +147,8 @@ export const GridDemo = () => {
                 mobile: 12,
               }}
             >
-              <DemoSurfaceCard title='Props objects'>
-                <Text as='pre'>
+              <DemoSurfaceCard title='Props types'>
+                <pre>
                   {`ResponsiveColumnSpan = 
 {
   mobile: number; 
@@ -167,9 +157,9 @@ export const GridDemo = () => {
   smallMonitor: number; 
   monitor: number;
 }`}
-                </Text>
+                </pre>
                 <br />
-                <Text as='pre'>
+                <pre>
                   {`ResponsiveColumnStart = 
 {
   mobile: 'auto' | number; 
@@ -178,7 +168,7 @@ export const GridDemo = () => {
   smallMonitor: 'auto' | number; 
   monitor: 'auto' | number;
 }`}
-                </Text>
+                </pre>
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item columnSpan={9}>
@@ -194,8 +184,8 @@ export const GridDemo = () => {
               style={{
                 display: 'flex',
                 justifyContent: 'flex-end',
-                border: '1px solid #cdd2d6',
               }}
+              className='demo-transparent-background'
             >
               <Button>Button</Button>
             </Grid.Item>
@@ -210,9 +200,9 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Example code'>
-                <Text as='pre'>{gridItemCode1}</Text>
+                <pre>{gridItemCode1}</pre>
                 <br />
-                <Text as='pre'>{gridItemCode2}</Text>
+                <pre>{gridItemCode2}</pre>
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item
@@ -229,9 +219,9 @@ export const GridDemo = () => {
                 <div
                   style={{ display: 'flex', flexDirection: 'row', gap: '24px' }}
                 >
-                  <Text as='pre'>{gridItemCode3}</Text>
+                  <pre>{gridItemCode3}</pre>
                   <br />
-                  <Text as='pre'>{gridItemCode4}</Text>
+                  <pre>{gridItemCode4}</pre>
                 </div>
               </DemoSurfaceCard>
             </Grid.Item>
