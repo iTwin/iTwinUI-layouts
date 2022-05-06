@@ -105,19 +105,19 @@
   background-position: 0 0, 4px 4px;
   background-size: 8px 8px;
   background-image: repeating-linear-gradient(
-      45deg,
-      var(--iui-color-background-3) 25%,
-      transparent 25%,
-      transparent 75%,
-      var(--iui-color-background-3) 75%,
-      var(--iui-color-background-3)
-    ),
+    45deg,
+    var(--iui-color-background-3) 25%,
+    transparent 25%,
+    transparent 75%,
+    var(--iui-color-background-3) 75%,
+    var(--iui-color-background-3)
+  ),
     repeating-linear-gradient(
-      45deg,
-      var(--iui-color-background-3) 25%,
-      var(--iui-color-background-5) 25%,
-      var(--iui-color-background-5) 75%,
-      var(--iui-color-background-3) 75%,
-      var(--iui-color-background-3)
-    );
+    45deg,
+    var(--iui-color-background-3) 25%,
+    var(--iui-color-background-5) 25%,
+    var(--iui-color-background-5) 75%,
+    var(--iui-color-background-3) 75%,
+    var(--iui-color-background-3)
+  );
 }
