@@ -3,6 +3,8 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
+import cx from 'classnames';
+import { StylingProps } from '../../utils/props';
 import Content from './Content';
 import ToolsArea from './ToolsArea';
 import { Header } from './Header';
@@ -10,20 +12,19 @@ import SideNavigation from './SideNavigation';
 import TitleArea from './TitleArea';
 
 export type PageLayoutProps = {
+  /**
+   * Children of the element
+   */
   children: React.ReactNode;
-};
-
-export type PageLayoutType = (props: PageLayoutProps) => JSX.Element & {
-  Header: typeof Header;
-  SideNavigation: typeof SideNavigation;
-  Content: typeof Content;
-  ToolsArea: typeof ToolsArea;
-  TitleArea: typeof TitleArea;
-};
+} & StylingProps;
 
 export const PageLayout = (props: PageLayoutProps) => {
-  const { children } = props;
-  return <div className='iui-layouts-page'>{children}</div>;
+  const { className, style, children } = props;
+  return (
+    <div className={cx('iui-layouts-page', className)} style={style}>
+      {children}
+    </div>
+  );
 };
 
 PageLayout.Header = Header;

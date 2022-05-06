@@ -1,0 +1,29 @@
+// Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+// See LICENSE.md in the project root for license terms and full copyright notice.
+@import '@itwin/itwinui-css/scss/variables';
+
+.demo-surface-card {
+  height: 100%;
+  width: 100%;
+  word-break: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+.demo-surface-title-bar {
+  display: flex;
+  align-items: center;
+  min-height: 4 * $iui-baseline;
+  border-bottom: 1px solid var(--iui-color-background-5);
+  padding: 0 12px;
+}
+
+.demo-surface-content {
+  padding: $iui-baseline $iui-sm;
+
+  pre {
+    white-space: break-spaces;
+    margin: 0;
+    font-family: inherit;
+  }
+}

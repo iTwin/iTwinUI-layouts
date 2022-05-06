@@ -4,3 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 export { FluidGrid } from './FluidGrid';
 export type { FluidGridProps } from './FluidGrid';
+
+export { Grid } from './Grid';
+export type { GridProps } from './Grid';
+
+export type { ResponsiveColumnSpan, ResponsiveColumnStart } from './types';
