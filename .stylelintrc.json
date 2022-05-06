@@ -22,5 +22,6 @@
     "selector-no-qualifying-type": null,
     "scss/dollar-variable-pattern": null
   },
-  "ignoreFiles": ["**/dist/**/*", "**/*.tsx", "**/*.ts", "**/*.js", "**/*.md"]
+  "ignoreFiles": ["**/dist/**/*", "**/*.tsx", "**/*.ts", "**/*.js", "**/*.md"],
+  "customSyntax": "postcss-scss"
 }
