@@ -23,17 +23,17 @@
 
   &-center {
     padding: $iui-baseline $iui-sm;
-    width: 50%;
+    width: 40%;
   }
 
   &-right {
     padding: $iui-baseline $iui-sm;
-    width: 30%;
+    width: 40%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
   }
 
-  @media (max-width: 486px) {
+  @media (max-width: 768px) {
     flex-direction: column;
 
     &-icon {

@@ -2,27 +2,11 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-@import '@itwin/itwinui-css/scss/variables';
+import { layoutDescribe } from '../../../cypress/common/layoutDescribe';
 
-.app {
-  padding: $iui-line-height $iui-l;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid var(--iui-color-background-5);
-  margin: $iui-baseline 0;
-}
-
-.tile-wrapper {
-  display: flex;
-  cursor: pointer;
-
-  .iui-tile {
-    width: 100%;
-  }
-}
-
-.demo-layouts-list {
-  margin: $iui-m 0;
-}
+layoutDescribe('GridDemo', (screenSize) => {
+  it('should render GridDemo', () => {
+    cy.visit('grid-1');
+    cy.compareSnapshot(`basic-${screenSize.width}x${screenSize.height}`);
+  });
+});

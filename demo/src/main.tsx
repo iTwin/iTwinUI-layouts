@@ -14,9 +14,11 @@ ReactDOM.render(
     <HashRouter>
       <Routes>
         <Route path='/' element={<App />} />
-        {DEMOS_LIST.map(({ path, component }) => (
-          <Route key={path} path={path} element={component()} />
-        ))}
+        {DEMOS_LIST.map(({ layouts }) =>
+          layouts.map(({ path, component: Component }) => (
+            <Route key={path} path={path} element={<Component />} />
+          )),
+        )}
       </Routes>
     </HashRouter>
   </React.StrictMode>,

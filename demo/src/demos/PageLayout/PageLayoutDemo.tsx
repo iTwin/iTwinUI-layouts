@@ -3,12 +3,12 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import { DemoHeader } from '../common/DemoHeader';
-import { DemoSideNav } from '../common/DemoSideNav';
-import { DemoTemplate } from '../common/DemoTemplate';
+import { DemoHeader } from '../../common/DemoHeader';
+import { DemoSideNav } from '../../common/DemoSideNav';
+import { DemoTemplate } from '../../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
 
-export const AppLayoutDemo = () => {
+export const PageLayoutDemo = () => {
   return (
     <DemoTemplate title='App'>
       <PageLayout>
@@ -22,7 +22,7 @@ export const AppLayoutDemo = () => {
 
         <PageLayout.Content>
           <iframe
-            src='https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-Layouts%20demo?editorPane=Hide&headers=Hide'
+            src='https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-layouts%20demo?editorPane=Hide&headers=Hide'
             loading='lazy'
             style={{
               border: 'none',
@@ -38,4 +38,4 @@ export const AppLayoutDemo = () => {
   );
 };
 
-export default AppLayoutDemo;
+export default PageLayoutDemo;
