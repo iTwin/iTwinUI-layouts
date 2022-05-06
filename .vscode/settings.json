@@ -4,12 +4,19 @@
   "editor.insertSpaces": true,
   "files.insertFinalNewline": true,
   "search.exclude": {
-    "**/dist/**": true,
+    "**/dist/**": true
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  "[scss]": {
+    "editor.formatOnSave": false
+  },
+  "stylelint.validate": ["scss"],
   "files.eol": "\n",
   "typescript.tsdk": "node_modules\\typescript\\lib"
 }
