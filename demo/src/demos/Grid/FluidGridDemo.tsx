@@ -21,7 +21,8 @@ import { useNavigate } from 'react-router-dom';
 
 export const GridLayoutDemo = () => {
   const navigate = useNavigate();
-
+  const loremIpsum =
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.';
   return (
     <DemoTemplate title='Fluid grid'>
       <PageLayout>
@@ -98,7 +99,7 @@ export const GridLayoutDemo = () => {
                   key={index}
                   name={`Item #${index}`}
                   thumbnail={<SvgImodelHollow />}
-                  description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.'
+                  description={loremIpsum}
                 />
               ))}
           </FluidGrid>

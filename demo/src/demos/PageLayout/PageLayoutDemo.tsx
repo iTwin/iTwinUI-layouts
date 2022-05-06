@@ -22,7 +22,7 @@ export const PageLayoutDemo = () => {
 
         <PageLayout.Content>
           <iframe
-            src='https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-Layouts%20demo?editorPane=Hide&headers=Hide'
+            src='https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-layouts%20demo?editorPane=Hide&headers=Hide'
             loading='lazy'
             style={{
               border: 'none',

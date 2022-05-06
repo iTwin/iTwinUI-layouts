@@ -13,39 +13,6 @@ import { Button, Text, Code } from '@itwin/itwinui-react';
 import '../../common/DemoTemplate.scss';
 
 export const GridDemo = () => {
-  const gridItemCode1 = `<Grid.Item
-  columnSpan={{
-    monitor: 4,
-    smallMonitor: 4,
-    tablet: 4,
-    landscapeMobile: 6,
-    mobile: 12,
-  }}
->
-  [content]
-</Grid.Item>`;
-  const gridItemCode2 = `<Grid.Item 
-  columnSpan={4}>
-    [content]
-</Grid.Item>`;
-  const gridItemCode3 = `<Grid.Item
-  columnStart={10}>
-      [content]
-  </Grid.Item>
-  `;
-
-  const gridItemCode4 = `<Grid.Item
-  columnStart={{
-    monitor: 10,
-    smallMonitor: 8,
-    tablet: 6,
-    landscapeMobile: 4,
-    mobile: 2,
-  }}
->
-  [content]
-</Grid.Item>`;
-
   return (
     <DemoTemplate title='Grid'>
       <PageLayout>
@@ -171,7 +138,15 @@ export const GridDemo = () => {
                 </pre>
               </DemoSurfaceCard>
             </Grid.Item>
-            <Grid.Item columnSpan={9}>
+            <Grid.Item
+              columnSpan={{
+                monitor: 5,
+                smallMonitor: 5,
+                tablet: 5,
+                landscapeMobile: 5,
+                mobile: 12,
+              }}
+            >
               <Text>
                 This button is placed using Grid.Item with{' '}
                 <Code>columnSpan={3}</Code> and <Code>columnStart={10}</Code>.
@@ -179,8 +154,20 @@ export const GridDemo = () => {
             </Grid.Item>
             <Grid.Item
               key={'offset-button'}
-              columnSpan={3}
-              columnStart={10}
+              columnSpan={{
+                monitor: 3,
+                smallMonitor: 3,
+                tablet: 3,
+                landscapeMobile: 3,
+                mobile: 12,
+              }}
+              columnStart={{
+                monitor: 10,
+                smallMonitor: 10,
+                tablet: 10,
+                landscapeMobile: 10,
+                mobile: 'auto',
+              }}
               style={{
                 display: 'flex',
                 justifyContent: 'flex-end',
@@ -200,9 +187,22 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Example code'>
-                <pre>{gridItemCode1}</pre>
+                <pre>{`<Grid.Item
+  columnSpan={{
+    monitor: 4,
+    smallMonitor: 4,
+    tablet: 4,
+    landscapeMobile: 6,
+    mobile: 12,
+  }}
+>
+  [content]
+</Grid.Item>`}</pre>
                 <br />
-                <pre>{gridItemCode2}</pre>
+                <pre>{`<Grid.Item 
+  columnSpan={4}>
+    [content]
+</Grid.Item>`}</pre>
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item
@@ -219,9 +219,22 @@ export const GridDemo = () => {
                 <div
                   style={{ display: 'flex', flexDirection: 'row', gap: '24px' }}
                 >
-                  <pre>{gridItemCode3}</pre>
+                  <pre>{`<Grid.Item
+  columnStart={10}>
+      [content]
+  </Grid.Item>`}</pre>
                   <br />
-                  <pre>{gridItemCode4}</pre>
+                  <pre>{`<Grid.Item
+  columnStart={{
+    monitor: 10,
+    smallMonitor: 8,
+    tablet: 6,
+    landscapeMobile: 4,
+    mobile: 2,
+  }}
+>
+  [content]
+</Grid.Item>`}</pre>
                 </div>
               </DemoSurfaceCard>
             </Grid.Item>

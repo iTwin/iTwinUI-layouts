@@ -23,10 +23,10 @@ const App = () => {
       <GitHubBanner />
 
       <Text as='h1' variant='headline'>
-        iTwinUI-Layouts
+        iTwinUI-layouts
       </Text>
       <Body>
-        iTwinUI-Layouts places given React (eg.{' '}
+        iTwinUI-layouts places given React (eg.{' '}
         <Anchor href='https://itwin.github.io/iTwinUI-react/'>
           iTwinUI-react
         </Anchor>
