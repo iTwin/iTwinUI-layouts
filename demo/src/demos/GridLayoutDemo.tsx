@@ -25,7 +25,7 @@ export const GridLayoutDemo = () => {
         </PageLayout.Header>
 
         <PageLayout.SideNavigation>
-          <DemoSideNav />
+          <DemoSideNav activeItemKey='Browse' />
         </PageLayout.SideNavigation>
 
         <PageLayout.Content padded>

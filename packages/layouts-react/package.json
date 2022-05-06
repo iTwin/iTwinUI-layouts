@@ -1,7 +1,10 @@
 {
   "name": "@itwin/itwinui-layouts-react",
   "version": "0.1.0",
-  "author": "Bentley Systems",
+  "author": {
+    "name": "Bentley Systems, Inc.",
+    "url": "http://www.bentley.com"
+  },
   "description": "iTwinUI package that provides React components for most common layouts",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -39,7 +42,8 @@
     "build:watch": "chokidar \"src/**/*\" -c \"yarn build\""
   },
   "dependencies": {
-    "@itwin/itwinui-layouts-css": "workspace:*"
+    "@itwin/itwinui-layouts-css": "workspace:*",
+    "classnames": "^2.3.1"
   },
   "peerDependencies": {
     "react": "^16.8.6 || ^17.0.0",

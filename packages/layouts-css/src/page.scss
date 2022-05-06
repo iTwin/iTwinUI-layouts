@@ -28,7 +28,7 @@
       flex-direction: column;
       align-items: center;
 
-      @include large-monitor {
+      @include monitor {
         padding: $iui-xl $iui-xxl;
       }
 
@@ -38,6 +38,10 @@
 
       @include tablet {
         padding: $iui-m $iui-xl;
+      }
+
+      @include landscape-mobile {
+        padding: $iui-s $iui-l;
       }
 
       @include mobile {
