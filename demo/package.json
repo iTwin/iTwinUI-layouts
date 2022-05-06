@@ -38,6 +38,7 @@
     "@itwin/itwinui-react": "^1.37.0",
     "react-element-to-jsx-string": "^14.3.4",
     "react-router-dom": "6",
+    "react-syntax-highlighter": "^15.5.0",
     "vite-plugin-svgr": "^1.0.1"
   },
   "devDependencies": {
