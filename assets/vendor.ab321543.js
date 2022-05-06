@@ -10738,8 +10738,8 @@ var forwardRef = function(Tippy2, defaultProps2) {
 var index = /* @__PURE__ */ forwardRef(/* @__PURE__ */ TippyGenerator(tippy));
 var Tippy = index;
 var popover = "";
-var __assign$6t = globalThis && globalThis.__assign || function() {
-  __assign$6t = Object.assign || function(t2) {
+var __assign$6u = globalThis && globalThis.__assign || function() {
+  __assign$6u = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -10748,7 +10748,7 @@ var __assign$6t = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6t.apply(this, arguments);
+  return __assign$6u.apply(this, arguments);
 };
 var __spreadArray$1 = globalThis && globalThis.__spreadArray || function(to, from, pack) {
   if (pack || arguments.length === 2)
@@ -10788,13 +10788,13 @@ var Popover = React$c.forwardRef(function(props, ref) {
       };
     }
   };
-  var computedProps = __assign$6t(__assign$6t({ allowHTML: true, animation: false, appendTo: function(el) {
+  var computedProps = __assign$6u(__assign$6u({ allowHTML: true, animation: false, appendTo: function(el) {
     return el.ownerDocument.body;
   }, arrow: false, duration: 0, interactive: true, role: void 0, offset: [0, 0], maxWidth: "", zIndex: 99999 }, props), { className: cx("iui-popover", props.className), plugins: __spreadArray$1([
     lazyLoad,
     removeTabIndex,
     hideOnEscOrTab
-  ], props.plugins || [], true), popperOptions: __assign$6t(__assign$6t({ strategy: "fixed" }, props.popperOptions), { modifiers: __spreadArray$1([
+  ], props.plugins || [], true), popperOptions: __assign$6u(__assign$6u({ strategy: "fixed" }, props.popperOptions), { modifiers: __spreadArray$1([
     { name: "flip" },
     { name: "preventOverflow", options: { padding: 0 } }
   ], ((_a = props.popperOptions) === null || _a === void 0 ? void 0 : _a.modifiers) || [], true) }) });
@@ -10817,7 +10817,7 @@ var Popover = React$c.forwardRef(function(props, ref) {
     }) : props.content;
     computedProps.content = mounted ? clonedContent : "";
   }
-  return React$c.createElement(Tippy, __assign$6t({}, computedProps, { ref: refs }));
+  return React$c.createElement(Tippy, __assign$6u({}, computedProps, { ref: refs }));
 });
 var hideOnEscOrTab = {
   fn: function(instance) {
@@ -10850,8 +10850,8 @@ var hideOnEscOrTab = {
     };
   }
 };
-var __assign$6s = globalThis && globalThis.__assign || function() {
-  __assign$6s = Object.assign || function(t2) {
+var __assign$6t = globalThis && globalThis.__assign || function() {
+  __assign$6t = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -10860,9 +10860,9 @@ var __assign$6s = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6s.apply(this, arguments);
+  return __assign$6t.apply(this, arguments);
 };
-var __rest$t = globalThis && globalThis.__rest || function(s, e2) {
+var __rest$u = globalThis && globalThis.__rest || function(s, e2) {
   var t2 = {};
   for (var p2 in s)
     if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
@@ -10877,8 +10877,8 @@ var __rest$t = globalThis && globalThis.__rest || function(s, e2) {
 var InputContainer = function(props) {
   var _a;
   var _b;
-  var _c = props.as, Element2 = _c === void 0 ? "div" : _c, label = props.label, disabled = props.disabled, required = props.required, status = props.status, message = props.message, icon = props.icon, isLabelInline = props.isLabelInline, isIconInline = props.isIconInline, children = props.children, className = props.className, style = props.style, statusMessage = props.statusMessage, rest = __rest$t(props, ["as", "label", "disabled", "required", "status", "message", "icon", "isLabelInline", "isIconInline", "children", "className", "style", "statusMessage"]);
-  return React$c.createElement(Element2, __assign$6s({ className: cx("iui-input-container", (_a = {
+  var _c = props.as, Element2 = _c === void 0 ? "div" : _c, label = props.label, disabled = props.disabled, required = props.required, status = props.status, message = props.message, icon = props.icon, isLabelInline = props.isLabelInline, isIconInline = props.isIconInline, children = props.children, className = props.className, style = props.style, statusMessage = props.statusMessage, rest = __rest$u(props, ["as", "label", "disabled", "required", "status", "message", "icon", "isLabelInline", "isIconInline", "children", "className", "style", "statusMessage"]);
+  return React$c.createElement(Element2, __assign$6t({ className: cx("iui-input-container", (_a = {
     "iui-disabled": disabled
   }, _a["iui-" + status] = !!status, _a["iui-inline-label"] = isLabelInline, _a["iui-inline-icon"] = isIconInline, _a["iui-with-message"] = (!!message || !!icon || !!statusMessage) && !isLabelInline, _a), className), style }, rest), label && React$c.createElement("div", { className: cx("iui-label", {
     "iui-required": required
@@ -10887,8 +10887,8 @@ var InputContainer = function(props) {
   }), message && !isLabelInline && React$c.createElement("div", { className: "iui-message" }, message)));
 };
 var InfoCircular = {};
-var __assign$6r = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6r = Object.assign || function(t2) {
+var __assign$6s = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6s = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -10897,7 +10897,7 @@ var __assign$6r = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6r.apply(this, arguments);
+  return __assign$6s.apply(this, arguments);
 };
 var __createBinding$b = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -10930,12 +10930,12 @@ var __importStar$b = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(InfoCircular, "__esModule", { value: true });
 var React$b = __importStar$b(react.exports);
 function SvgInfoCircular$1(props) {
-  return React$b.createElement("svg", __assign$6r({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$b.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm1.2 3.2a.92336.92336 0 0 1 .997.8433q.00235.02829.003.0567a1.30936 1.30936 0 0 1 -1.3 1.2.94477.94477 0 0 1 -1-1 1.22815 1.22815 0 0 1 1.3-1.1zm-2 9.6c-.5 0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5 0-.5-.2-.1-.9.2-1.3.5l-.2-.5a6.49722 6.49722 0 0 1 3.3-1.6c.5 0 .6.6.3 1.6l-.7 2.6c-.1.5-.1.6.1.6a2.00287 2.00287 0 0 0 1.1-.6l.3.4a5.76881 5.76881 0 0 1 -3 1.6z" }));
+  return React$b.createElement("svg", __assign$6s({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$b.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm1.2 3.2a.92336.92336 0 0 1 .997.8433q.00235.02829.003.0567a1.30936 1.30936 0 0 1 -1.3 1.2.94477.94477 0 0 1 -1-1 1.22815 1.22815 0 0 1 1.3-1.1zm-2 9.6c-.5 0-.9-.3-.5-1.7l.6-2.4c.1-.4.1-.5 0-.5-.2-.1-.9.2-1.3.5l-.2-.5a6.49722 6.49722 0 0 1 3.3-1.6c.5 0 .6.6.3 1.6l-.7 2.6c-.1.5-.1.6.1.6a2.00287 2.00287 0 0 0 1.1-.6l.3.4a5.76881 5.76881 0 0 1 -3 1.6z" }));
 }
 var _default$b = InfoCircular.default = SvgInfoCircular$1;
 var StatusError = {};
-var __assign$6q = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6q = Object.assign || function(t2) {
+var __assign$6r = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6r = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -10944,7 +10944,7 @@ var __assign$6q = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6q.apply(this, arguments);
+  return __assign$6r.apply(this, arguments);
 };
 var __createBinding$a = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -10977,12 +10977,12 @@ var __importStar$a = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(StatusError, "__esModule", { value: true });
 var React$a = __importStar$a(react.exports);
 function SvgStatusError(props) {
-  return React$a.createElement("svg", __assign$6q({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$a.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm1 12h-2v-2h2zm0-3h-2v-5h2z" }));
+  return React$a.createElement("svg", __assign$6r({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$a.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm1 12h-2v-2h2zm0-3h-2v-5h2z" }));
 }
 var _default$a = StatusError.default = SvgStatusError;
 var StatusSuccess = {};
-var __assign$6p = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6p = Object.assign || function(t2) {
+var __assign$6q = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6q = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -10991,7 +10991,7 @@ var __assign$6p = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6p.apply(this, arguments);
+  return __assign$6q.apply(this, arguments);
 };
 var __createBinding$9 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -11024,12 +11024,12 @@ var __importStar$9 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(StatusSuccess, "__esModule", { value: true });
 var React$9 = __importStar$9(react.exports);
 function SvgStatusSuccess(props) {
-  return React$9.createElement("svg", __assign$6p({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$9.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm-1.35 12-3.65-3.41 1.4-1.3 2.36 2.2 4.83-4.49 1.41 1.29z" }));
+  return React$9.createElement("svg", __assign$6q({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$9.createElement("path", { d: "m8 0a8 8 0 1 0 8 8 8 8 0 0 0 -8-8zm-1.35 12-3.65-3.41 1.4-1.3 2.36 2.2 4.83-4.49 1.41 1.29z" }));
 }
 var _default$9 = StatusSuccess.default = SvgStatusSuccess;
 var StatusWarning = {};
-var __assign$6o = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6o = Object.assign || function(t2) {
+var __assign$6p = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6p = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11038,7 +11038,7 @@ var __assign$6o = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6o.apply(this, arguments);
+  return __assign$6p.apply(this, arguments);
 };
 var __createBinding$8 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -11071,11 +11071,11 @@ var __importStar$8 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(StatusWarning, "__esModule", { value: true });
 var React$8 = __importStar$8(react.exports);
 function SvgStatusWarning(props) {
-  return React$8.createElement("svg", __assign$6o({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$8.createElement("path", { d: "m15.86807 13.26721-6.77-11.62a1.15 1.15 0 0 0 -1.1-.67 1.17 1.17 0 0 0 -1.1.69l-6.77 11.59a1.2 1.2 0 0 0 1.1 1.72h13.45a1.19 1.19 0 0 0 1.19-1.71zm-6.87-.29h-2v-2h2zm0-3h-2v-5h2z" }));
+  return React$8.createElement("svg", __assign$6p({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$8.createElement("path", { d: "m15.86807 13.26721-6.77-11.62a1.15 1.15 0 0 0 -1.1-.67 1.17 1.17 0 0 0 -1.1.69l-6.77 11.59a1.2 1.2 0 0 0 1.1 1.72h13.45a1.19 1.19 0 0 0 1.19-1.71zm-6.87-.29h-2v-2h2zm0-3h-2v-5h2z" }));
 }
 var _default$8 = StatusWarning.default = SvgStatusWarning;
-var __assign$6n = globalThis && globalThis.__assign || function() {
-  __assign$6n = Object.assign || function(t2) {
+var __assign$6o = globalThis && globalThis.__assign || function() {
+  __assign$6o = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11084,20 +11084,20 @@ var __assign$6n = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6n.apply(this, arguments);
+  return __assign$6o.apply(this, arguments);
 };
 var StatusIconMap = {
   negative: function(args) {
-    return React$c.createElement(_default$a, __assign$6n({ "aria-hidden": true }, args));
+    return React$c.createElement(_default$a, __assign$6o({ "aria-hidden": true }, args));
   },
   positive: function(args) {
-    return React$c.createElement(_default$9, __assign$6n({ "aria-hidden": true }, args));
+    return React$c.createElement(_default$9, __assign$6o({ "aria-hidden": true }, args));
   },
   warning: function(args) {
-    return React$c.createElement(_default$8, __assign$6n({ "aria-hidden": true }, args));
+    return React$c.createElement(_default$8, __assign$6o({ "aria-hidden": true }, args));
   },
   informational: function(args) {
-    return React$c.createElement(_default$b, __assign$6n({ "aria-hidden": true }, args));
+    return React$c.createElement(_default$b, __assign$6o({ "aria-hidden": true }, args));
   }
 };
 function _extends() {
@@ -11555,6 +11555,56 @@ CSSTransition.defaultProps = {
 };
 CSSTransition.propTypes = {};
 var CSSTransition$1 = CSSTransition;
+var __assign$6n = globalThis && globalThis.__assign || function() {
+  __assign$6n = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$6n.apply(this, arguments);
+};
+var __rest$t = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var WithCSSTransition = function(props) {
+  var visible = props.in, _a = props.dimension, dimension = _a === void 0 ? "height" : _a, children = props.children, rest = __rest$t(props, ["in", "dimension", "children"]);
+  var expandedSize = React$c.useRef(0);
+  var dimensionCamelCase = dimension === "height" ? "Height" : "Width";
+  return React$c.createElement(CSSTransition$1, __assign$6n({ in: visible, timeout: 200, unmountOnExit: true, onEnter: function(node) {
+    node.style["min" + dimensionCamelCase] = "initial";
+    node.style[dimension] = "0px";
+  }, onEntering: function(node) {
+    node.style[dimension] = expandedSize.current + "px";
+  }, onEntered: function(node) {
+    node.style["min" + dimensionCamelCase] = "";
+    node.style[dimension] = "";
+  }, onExit: function(node) {
+    node.style[dimension] = expandedSize.current + "px";
+  }, onExiting: function(node) {
+    node.style["min" + dimensionCamelCase] = "initial";
+    node.style[dimension] = "0px";
+  }, classNames: "iui" }, rest), React$c.cloneElement(children, {
+    ref: function(el) {
+      if (el) {
+        expandedSize.current = el.getBoundingClientRect()[dimension];
+      }
+    }
+  }));
+};
+var button = "";
 var __assign$6m = globalThis && globalThis.__assign || function() {
   __assign$6m = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -11579,33 +11629,17 @@ var __rest$s = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var WithCSSTransition = function(props) {
-  var visible = props.in, _a = props.dimension, dimension = _a === void 0 ? "height" : _a, children = props.children, rest = __rest$s(props, ["in", "dimension", "children"]);
-  var expandedSize = React$c.useRef(0);
-  var dimensionCamelCase = dimension === "height" ? "Height" : "Width";
-  return React$c.createElement(CSSTransition$1, __assign$6m({ in: visible, timeout: 200, unmountOnExit: true, onEnter: function(node) {
-    node.style["min" + dimensionCamelCase] = "initial";
-    node.style[dimension] = "0px";
-  }, onEntering: function(node) {
-    node.style[dimension] = expandedSize.current + "px";
-  }, onEntered: function(node) {
-    node.style["min" + dimensionCamelCase] = "";
-    node.style[dimension] = "";
-  }, onExit: function(node) {
-    node.style[dimension] = expandedSize.current + "px";
-  }, onExiting: function(node) {
-    node.style["min" + dimensionCamelCase] = "initial";
-    node.style[dimension] = "0px";
-  }, classNames: "iui" }, rest), React$c.cloneElement(children, {
-    ref: function(el) {
-      if (el) {
-        expandedSize.current = el.getBoundingClientRect()[dimension];
-      }
-    }
+var IconButton = React$c.forwardRef(function(props, ref) {
+  var _a;
+  var isActive = props.isActive, children = props.children, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, size = props.size, _c = props.type, type = _c === void 0 ? "button" : _c, className = props.className, _d = props.as, Element2 = _d === void 0 ? "button" : _d, rest = __rest$s(props, ["isActive", "children", "styleType", "size", "type", "className", "as"]);
+  useTheme();
+  return React$c.createElement(Element2, __assign$6m({ ref, className: cx("iui-button", "iui-" + styleType, (_a = {}, _a["iui-" + size] = !!size, _a["iui-active"] = isActive, _a), className), type }, rest), React$c.cloneElement(children, {
+    className: cx("iui-button-icon", children.props.className),
+    "aria-hidden": true
   }));
-};
-var button = "";
-var __assign$6l = globalThis && globalThis.__assign || function() {
+});
+var ChevronRight = {};
+var __assign$6l = commonjsGlobal && commonjsGlobal.__assign || function() {
   __assign$6l = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
@@ -11616,40 +11650,6 @@ var __assign$6l = globalThis && globalThis.__assign || function() {
     return t2;
   };
   return __assign$6l.apply(this, arguments);
-};
-var __rest$r = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
-var IconButton = React$c.forwardRef(function(props, ref) {
-  var _a;
-  var isActive = props.isActive, children = props.children, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, size = props.size, _c = props.type, type = _c === void 0 ? "button" : _c, className = props.className, _d = props.as, Element2 = _d === void 0 ? "button" : _d, rest = __rest$r(props, ["isActive", "children", "styleType", "size", "type", "className", "as"]);
-  useTheme();
-  return React$c.createElement(Element2, __assign$6l({ ref, className: cx("iui-button", "iui-" + styleType, (_a = {}, _a["iui-" + size] = !!size, _a["iui-active"] = isActive, _a), className), type }, rest), React$c.cloneElement(children, {
-    className: cx("iui-button-icon", children.props.className),
-    "aria-hidden": true
-  }));
-});
-var ChevronRight = {};
-var __assign$6k = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6k = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$6k.apply(this, arguments);
 };
 var __createBinding$7 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -11682,9 +11682,44 @@ var __importStar$7 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(ChevronRight, "__esModule", { value: true });
 var React$7 = __importStar$7(react.exports);
 function SvgChevronRight(props) {
-  return React$7.createElement("svg", __assign$6k({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$7.createElement("path", { d: "m4.7 0-1.4 1.4 6.6 6.6-6.6 6.6 1.4 1.4 8-8z" }));
+  return React$7.createElement("svg", __assign$6l({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$7.createElement("path", { d: "m4.7 0-1.4 1.4 6.6 6.6-6.6 6.6 1.4 1.4 8-8z" }));
 }
 var _default$7 = ChevronRight.default = SvgChevronRight;
+var __assign$6k = globalThis && globalThis.__assign || function() {
+  __assign$6k = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$6k.apply(this, arguments);
+};
+var __rest$r = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var Button = React$c.forwardRef(function(props, ref) {
+  var _a;
+  var children = props.children, className = props.className, size = props.size, style = props.style, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, _c = props.type, type = _c === void 0 ? "button" : _c, startIcon = props.startIcon, endIcon = props.endIcon, _d = props.as, Element2 = _d === void 0 ? "button" : _d, rest = __rest$r(props, ["children", "className", "size", "style", "styleType", "type", "startIcon", "endIcon", "as"]);
+  useTheme();
+  return React$c.createElement(Element2, __assign$6k({ ref, className: cx("iui-button", "iui-" + styleType, (_a = {}, _a["iui-" + size] = !!size, _a), className), style, type }, rest), startIcon && React$c.cloneElement(startIcon, {
+    className: cx("iui-button-icon", startIcon.props.className)
+  }), children && React$c.createElement("span", { className: "iui-button-label" }, children), endIcon && React$c.cloneElement(endIcon, {
+    className: cx("iui-button-icon", endIcon.props.className)
+  }));
+});
+var menu = "";
 var __assign$6j = globalThis && globalThis.__assign || function() {
   __assign$6j = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -11709,43 +11744,8 @@ var __rest$q = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Button = React$c.forwardRef(function(props, ref) {
-  var _a;
-  var children = props.children, className = props.className, size = props.size, style = props.style, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, _c = props.type, type = _c === void 0 ? "button" : _c, startIcon = props.startIcon, endIcon = props.endIcon, _d = props.as, Element2 = _d === void 0 ? "button" : _d, rest = __rest$q(props, ["children", "className", "size", "style", "styleType", "type", "startIcon", "endIcon", "as"]);
-  useTheme();
-  return React$c.createElement(Element2, __assign$6j({ ref, className: cx("iui-button", "iui-" + styleType, (_a = {}, _a["iui-" + size] = !!size, _a), className), style, type }, rest), startIcon && React$c.cloneElement(startIcon, {
-    className: cx("iui-button-icon", startIcon.props.className)
-  }), children && React$c.createElement("span", { className: "iui-button-label" }, children), endIcon && React$c.cloneElement(endIcon, {
-    className: cx("iui-button-icon", endIcon.props.className)
-  }));
-});
-var menu = "";
-var __assign$6i = globalThis && globalThis.__assign || function() {
-  __assign$6i = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$6i.apply(this, arguments);
-};
-var __rest$p = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
 var Menu = React$c.forwardRef(function(props, ref) {
-  var children = props.children, _a = props.role, role = _a === void 0 ? "menu" : _a, _b = props.setFocus, setFocus = _b === void 0 ? true : _b, className = props.className, style = props.style, rest = __rest$p(props, ["children", "role", "setFocus", "className", "style"]);
+  var children = props.children, _a = props.role, role = _a === void 0 ? "menu" : _a, _b = props.setFocus, setFocus = _b === void 0 ? true : _b, className = props.className, style = props.style, rest = __rest$q(props, ["children", "role", "setFocus", "className", "style"]);
   useTheme();
   var _c = React$c.useState(), focusedIndex = _c[0], setFocusedIndex = _c[1];
   var menuRef = React$c.useRef(null);
@@ -11796,11 +11796,11 @@ var Menu = React$c.forwardRef(function(props, ref) {
       }
     }
   };
-  return React$c.createElement("ul", __assign$6i({ className: cx("iui-menu", className), style, role, onKeyDown, ref: refs }, rest), children);
+  return React$c.createElement("ul", __assign$6j({ className: cx("iui-menu", className), style, role, onKeyDown, ref: refs }, rest), children);
 });
 var CaretRightSmall = {};
-var __assign$6h = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6h = Object.assign || function(t2) {
+var __assign$6i = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6i = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11809,7 +11809,7 @@ var __assign$6h = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6h.apply(this, arguments);
+  return __assign$6i.apply(this, arguments);
 };
 var __createBinding$6 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -11842,11 +11842,11 @@ var __importStar$6 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(CaretRightSmall, "__esModule", { value: true });
 var React$6 = __importStar$6(react.exports);
 function SvgCaretRightSmall(props) {
-  return React$6.createElement("svg", __assign$6h({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$6.createElement("path", { d: "m6.00263 4.80681v6.39946a.27938.27938 0 0 0 .44292.24059l3.45479-3.17567a.34022.34022 0 0 0 .00046-.4807l-.00046-.00044-3.45479-3.22382a.269.269 0 0 0 -.44292.24058z" }));
+  return React$6.createElement("svg", __assign$6i({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$6.createElement("path", { d: "m6.00263 4.80681v6.39946a.27938.27938 0 0 0 .44292.24059l3.45479-3.17567a.34022.34022 0 0 0 .00046-.4807l-.00046-.00044-3.45479-3.22382a.269.269 0 0 0 -.44292.24058z" }));
 }
 var _default$6 = CaretRightSmall.default = SvgCaretRightSmall;
-var __assign$6g = globalThis && globalThis.__assign || function() {
-  __assign$6g = Object.assign || function(t2) {
+var __assign$6h = globalThis && globalThis.__assign || function() {
+  __assign$6h = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -11855,9 +11855,9 @@ var __assign$6g = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$6g.apply(this, arguments);
+  return __assign$6h.apply(this, arguments);
 };
-var __rest$o = globalThis && globalThis.__rest || function(s, e2) {
+var __rest$p = globalThis && globalThis.__rest || function(s, e2) {
   var t2 = {};
   for (var p2 in s)
     if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
@@ -11871,7 +11871,7 @@ var __rest$o = globalThis && globalThis.__rest || function(s, e2) {
 };
 var MenuItemContext = React$c.createContext({ ref: void 0 });
 var MenuItem = React$c.forwardRef(function(props, ref) {
-  var children = props.children, isSelected = props.isSelected, disabled = props.disabled, value = props.value, onClick = props.onClick, sublabel = props.sublabel, _a = props.size, size = _a === void 0 ? !!sublabel ? "large" : "default" : _a, icon = props.icon, badge = props.badge, className = props.className, style = props.style, _b = props.role, role = _b === void 0 ? "menuitem" : _b, _c = props.subMenuItems, subMenuItems = _c === void 0 ? [] : _c, rest = __rest$o(props, ["children", "isSelected", "disabled", "value", "onClick", "sublabel", "size", "icon", "badge", "className", "style", "role", "subMenuItems"]);
+  var children = props.children, isSelected = props.isSelected, disabled = props.disabled, value = props.value, onClick = props.onClick, sublabel = props.sublabel, _a = props.size, size = _a === void 0 ? !!sublabel ? "large" : "default" : _a, icon = props.icon, badge = props.badge, className = props.className, style = props.style, _b = props.role, role = _b === void 0 ? "menuitem" : _b, _c = props.subMenuItems, subMenuItems = _c === void 0 ? [] : _c, rest = __rest$p(props, ["children", "isSelected", "disabled", "value", "onClick", "sublabel", "size", "icon", "badge", "className", "style", "role", "subMenuItems"]);
   useTheme();
   var menuItemRef = React$c.useRef(null);
   var refs = useMergedRefs(menuItemRef, ref);
@@ -11907,7 +11907,7 @@ var MenuItem = React$c.forwardRef(function(props, ref) {
       }
     }
   };
-  var listItem = React$c.createElement("li", __assign$6g({ className: cx("iui-menu-item", {
+  var listItem = React$c.createElement("li", __assign$6h({ className: cx("iui-menu-item", {
     "iui-large": size === "large",
     "iui-active": isSelected,
     "iui-disabled": disabled
@@ -11932,6 +11932,35 @@ var MenuItem = React$c.forwardRef(function(props, ref) {
     !!(e2.relatedTarget instanceof Node) && !((_a2 = subMenuRef.current) === null || _a2 === void 0 ? void 0 : _a2.contains(e2.relatedTarget)) && !((_b2 = subMenuRef.current) === null || _b2 === void 0 ? void 0 : _b2.isEqualNode(e2.relatedTarget)) && setIsSubmenuVisible(false);
   } }, React$c.createElement(Menu, { ref: subMenuRef }, subMenuItems)) }, listItem));
 });
+var __assign$6g = globalThis && globalThis.__assign || function() {
+  __assign$6g = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$6g.apply(this, arguments);
+};
+var __rest$o = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var MenuDivider = function(props) {
+  var className = props.className, rest = __rest$o(props, ["className"]);
+  useTheme();
+  return React$c.createElement("li", __assign$6g({ role: "separator", className: cx("iui-menu-divider", className) }, rest));
+};
 var __assign$6f = globalThis && globalThis.__assign || function() {
   __assign$6f = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -11956,10 +11985,10 @@ var __rest$n = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var MenuDivider = function(props) {
-  var className = props.className, rest = __rest$n(props, ["className"]);
+var MenuExtraContent = function(props) {
+  var children = props.children, className = props.className, rest = __rest$n(props, ["children", "className"]);
   useTheme();
-  return React$c.createElement("li", __assign$6f({ role: "separator", className: cx("iui-menu-divider", className) }, rest));
+  return React$c.createElement("li", __assign$6f({ className: cx("iui-menu-content", className), role: "presentation" }, rest), children);
 };
 var __assign$6e = globalThis && globalThis.__assign || function() {
   __assign$6e = Object.assign || function(t2) {
@@ -11985,37 +12014,8 @@ var __rest$m = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var MenuExtraContent = function(props) {
-  var children = props.children, className = props.className, rest = __rest$m(props, ["children", "className"]);
-  useTheme();
-  return React$c.createElement("li", __assign$6e({ className: cx("iui-menu-content", className), role: "presentation" }, rest), children);
-};
-var __assign$6d = globalThis && globalThis.__assign || function() {
-  __assign$6d = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$6d.apply(this, arguments);
-};
-var __rest$l = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
 var DropdownMenu = function(props) {
-  var menuItems = props.menuItems, children = props.children, className = props.className, style = props.style, _a = props.role, role = _a === void 0 ? "menu" : _a, visible = props.visible, _b = props.placement, placement = _b === void 0 ? "bottom-start" : _b, onShow2 = props.onShow, onHide2 = props.onHide, trigger = props.trigger, id2 = props.id, rest = __rest$l(props, ["menuItems", "children", "className", "style", "role", "visible", "placement", "onShow", "onHide", "trigger", "id"]);
+  var menuItems = props.menuItems, children = props.children, className = props.className, style = props.style, _a = props.role, role = _a === void 0 ? "menu" : _a, visible = props.visible, _b = props.placement, placement = _b === void 0 ? "bottom-start" : _b, onShow2 = props.onShow, onHide2 = props.onHide, trigger = props.trigger, id2 = props.id, rest = __rest$m(props, ["menuItems", "children", "className", "style", "role", "visible", "placement", "onShow", "onHide", "trigger", "id"]);
   var _c = React$c.useState(visible !== null && visible !== void 0 ? visible : false), isVisible = _c[0], setIsVisible = _c[1];
   React$c.useEffect(function() {
     setIsVisible(visible !== null && visible !== void 0 ? visible : false);
@@ -12038,7 +12038,7 @@ var DropdownMenu = function(props) {
     onHide2 === null || onHide2 === void 0 ? void 0 : onHide2(instance);
   }, [onHide2]);
   useTheme();
-  return React$c.createElement(Popover, __assign$6d({ content: React$c.createElement(Menu, { className, style, role, id: id2 }, React$c.useMemo(function() {
+  return React$c.createElement(Popover, __assign$6e({ content: React$c.createElement(Menu, { className, style, role, id: id2 }, React$c.useMemo(function() {
     return menuItems(close);
   }, [menuItems, close])), visible: trigger === void 0 ? isVisible : void 0, onClickOutside: close, placement, onShow: onShowHandler, onHide: onHideHandler, trigger: visible === void 0 ? trigger : void 0 }, rest), React$c.cloneElement(children, {
     ref: mergeRefs(targetRef, props.children.ref),
@@ -12050,8 +12050,8 @@ var DropdownMenu = function(props) {
   }));
 };
 var CaretDownSmall = {};
-var __assign$6c = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6c = Object.assign || function(t2) {
+var __assign$6d = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6d = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -12060,7 +12060,7 @@ var __assign$6c = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6c.apply(this, arguments);
+  return __assign$6d.apply(this, arguments);
 };
 var __createBinding$5 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -12093,12 +12093,12 @@ var __importStar$5 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(CaretDownSmall, "__esModule", { value: true });
 var React$5 = __importStar$5(react.exports);
 function SvgCaretDownSmall(props) {
-  return React$5.createElement("svg", __assign$6c({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$5.createElement("path", { d: "m4.8067 6h6.3953a.27961.27961 0 0 1 .24043.44321l-3.1736 3.45707a.33969.33969 0 0 1 -.48085 0l-3.2217-3.45707a.26909.26909 0 0 1 .24042-.44321z" }));
+  return React$5.createElement("svg", __assign$6d({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$5.createElement("path", { d: "m4.8067 6h6.3953a.27961.27961 0 0 1 .24043.44321l-3.1736 3.45707a.33969.33969 0 0 1 -.48085 0l-3.2217-3.45707a.26909.26909 0 0 1 .24042-.44321z" }));
 }
 var _default$5 = CaretDownSmall.default = SvgCaretDownSmall;
 var CaretUpSmall = {};
-var __assign$6b = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$6b = Object.assign || function(t2) {
+var __assign$6c = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$6c = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -12107,7 +12107,7 @@ var __assign$6b = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$6b.apply(this, arguments);
+  return __assign$6c.apply(this, arguments);
 };
 var __createBinding$4 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -12140,9 +12140,51 @@ var __importStar$4 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(CaretUpSmall, "__esModule", { value: true });
 var React$4 = __importStar$4(react.exports);
 function SvgCaretUpSmall(props) {
-  return React$4.createElement("svg", __assign$6b({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$4.createElement("path", { d: "m4.8067 9.99737h6.3953a.27961.27961 0 0 0 .24043-.44321l-3.1736-3.45707a.33969.33969 0 0 0 -.48039-.00046l-.00044.00046-3.22172 3.45707a.26909.26909 0 0 0 .24042.44321z" }));
+  return React$4.createElement("svg", __assign$6c({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$4.createElement("path", { d: "m4.8067 9.99737h6.3953a.27961.27961 0 0 0 .24043-.44321l-3.1736-3.45707a.33969.33969 0 0 0 -.48039-.00046l-.00044.00046-3.22172 3.45707a.26909.26909 0 0 0 .24042.44321z" }));
 }
 var _default$4 = CaretUpSmall.default = SvgCaretUpSmall;
+var __assign$6b = globalThis && globalThis.__assign || function() {
+  __assign$6b = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$6b.apply(this, arguments);
+};
+var __rest$l = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var DropdownButton = React$c.forwardRef(function(props, ref) {
+  var menuItems = props.menuItems, className = props.className, size = props.size, styleType = props.styleType, children = props.children, rest = __rest$l(props, ["menuItems", "className", "size", "styleType", "children"]);
+  useTheme();
+  var _a = React$c.useState(false), isMenuOpen = _a[0], setIsMenuOpen = _a[1];
+  var _b = React$c.useState(0), menuWidth = _b[0], setMenuWidth = _b[1];
+  var buttonRef = React$c.useRef(null);
+  var refs = useMergedRefs(ref, buttonRef);
+  React$c.useEffect(function() {
+    if (buttonRef.current) {
+      setMenuWidth(buttonRef.current.offsetWidth);
+    }
+  }, [children, size, styleType]);
+  return React$c.createElement(DropdownMenu, { menuItems, style: { minWidth: menuWidth }, onShow: function() {
+    return setIsMenuOpen(true);
+  }, onHide: function() {
+    return setIsMenuOpen(false);
+  } }, React$c.createElement(Button, __assign$6b({ className: cx("iui-dropdown", className), size, styleType, endIcon: isMenuOpen ? React$c.createElement(_default$4, { "aria-hidden": true }) : React$c.createElement(_default$5, { "aria-hidden": true }), ref: refs, "aria-label": "Dropdown" }, rest), children));
+});
 var __assign$6a = globalThis && globalThis.__assign || function() {
   __assign$6a = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12167,23 +12209,24 @@ var __rest$k = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var DropdownButton = React$c.forwardRef(function(props, ref) {
-  var menuItems = props.menuItems, className = props.className, size = props.size, styleType = props.styleType, children = props.children, rest = __rest$k(props, ["menuItems", "className", "size", "styleType", "children"]);
+var SplitButton = React$c.forwardRef(function(props, forwardedRef) {
+  var onClick = props.onClick, menuItems = props.menuItems, className = props.className, _a = props.menuPlacement, menuPlacement = _a === void 0 ? "bottom-end" : _a, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, size = props.size, children = props.children, style = props.style, title = props.title, rest = __rest$k(props, ["onClick", "menuItems", "className", "menuPlacement", "styleType", "size", "children", "style", "title"]);
   useTheme();
-  var _a = React$c.useState(false), isMenuOpen = _a[0], setIsMenuOpen = _a[1];
-  var _b = React$c.useState(0), menuWidth = _b[0], setMenuWidth = _b[1];
-  var buttonRef = React$c.useRef(null);
-  var refs = useMergedRefs(ref, buttonRef);
+  var _c = React$c.useState(false), isMenuOpen = _c[0], setIsMenuOpen = _c[1];
+  var _d = React$c.useState(0), menuWidth = _d[0], setMenuWidth = _d[1];
+  var ref = React$c.useRef(null);
   React$c.useEffect(function() {
-    if (buttonRef.current) {
-      setMenuWidth(buttonRef.current.offsetWidth);
+    if (ref.current) {
+      setMenuWidth(ref.current.offsetWidth);
     }
-  }, [children, size, styleType]);
-  return React$c.createElement(DropdownMenu, { menuItems, style: { minWidth: menuWidth }, onShow: function() {
+  }, [children, size]);
+  return React$c.createElement("span", { className: cx(className, "iui-button-split-menu", {
+    "iui-disabled": props.disabled
+  }), style, title, ref }, React$c.createElement("div", null, React$c.createElement(Button, __assign$6a({ styleType, size, onClick, ref: forwardedRef }, rest), children)), React$c.createElement("div", null, React$c.createElement(DropdownMenu, { placement: menuPlacement, menuItems, style: { minWidth: menuWidth }, onShow: React$c.useCallback(function() {
     return setIsMenuOpen(true);
-  }, onHide: function() {
+  }, []), onHide: React$c.useCallback(function() {
     return setIsMenuOpen(false);
-  } }, React$c.createElement(Button, __assign$6a({ className: cx("iui-dropdown", className), size, styleType, endIcon: isMenuOpen ? React$c.createElement(_default$4, { "aria-hidden": true }) : React$c.createElement(_default$5, { "aria-hidden": true }), ref: refs, "aria-label": "Dropdown" }, rest), children));
+  }, []) }, React$c.createElement(IconButton, { styleType, size, disabled: props.disabled }, isMenuOpen ? React$c.createElement(_default$4, null) : React$c.createElement(_default$5, null)))));
 });
 var __assign$69 = globalThis && globalThis.__assign || function() {
   __assign$69 = Object.assign || function(t2) {
@@ -12209,25 +12252,25 @@ var __rest$j = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var SplitButton = React$c.forwardRef(function(props, forwardedRef) {
-  var onClick = props.onClick, menuItems = props.menuItems, className = props.className, _a = props.menuPlacement, menuPlacement = _a === void 0 ? "bottom-end" : _a, _b = props.styleType, styleType = _b === void 0 ? "default" : _b, size = props.size, children = props.children, style = props.style, title = props.title, rest = __rest$j(props, ["onClick", "menuItems", "className", "menuPlacement", "styleType", "size", "children", "style", "title"]);
+var ButtonGroup = React$c.forwardRef(function(props, ref) {
+  var children = props.children, className = props.className, overflowButton = props.overflowButton, _a = props.overflowPlacement, overflowPlacement = _a === void 0 ? "end" : _a, _b = props.orientation, orientation = _b === void 0 ? "horizontal" : _b, rest = __rest$j(props, ["children", "className", "overflowButton", "overflowPlacement", "orientation"]);
+  var items = React$c.useMemo(function() {
+    var _a2;
+    return (_a2 = React$c.Children.map(children, function(child) {
+      return React$c.createElement("div", null, child);
+    })) !== null && _a2 !== void 0 ? _a2 : [];
+  }, [children]);
   useTheme();
-  var _c = React$c.useState(false), isMenuOpen = _c[0], setIsMenuOpen = _c[1];
-  var _d = React$c.useState(0), menuWidth = _d[0], setMenuWidth = _d[1];
-  var ref = React$c.useRef(null);
-  React$c.useEffect(function() {
-    if (ref.current) {
-      setMenuWidth(ref.current.offsetWidth);
-    }
-  }, [children, size]);
-  return React$c.createElement("span", { className: cx(className, "iui-button-split-menu", {
-    "iui-disabled": props.disabled
-  }), style, title, ref }, React$c.createElement("div", null, React$c.createElement(Button, __assign$69({ styleType, size, onClick, ref: forwardedRef }, rest), children)), React$c.createElement("div", null, React$c.createElement(DropdownMenu, { placement: menuPlacement, menuItems, style: { minWidth: menuWidth }, onShow: React$c.useCallback(function() {
-    return setIsMenuOpen(true);
-  }, []), onHide: React$c.useCallback(function() {
-    return setIsMenuOpen(false);
-  }, []) }, React$c.createElement(IconButton, { styleType, size, disabled: props.disabled }, isMenuOpen ? React$c.createElement(_default$4, null) : React$c.createElement(_default$5, null)))));
+  var _c = useOverflow(items, !overflowButton, orientation), overflowRef = _c[0], visibleCount = _c[1];
+  var refs = useMergedRefs(overflowRef, ref);
+  return React$c.createElement("div", __assign$69({ className: cx({
+    "iui-button-group": orientation === "horizontal",
+    "iui-button-group-vertical": orientation === "vertical",
+    "iui-button-group-overflow-x": !!overflowButton && orientation === "horizontal"
+  }, className), "aria-orientation": orientation, ref: refs }, rest), !!overflowButton && visibleCount < items.length ? React$c.createElement(React$c.Fragment, null, overflowButton && overflowPlacement === "start" && React$c.createElement("div", null, overflowButton(visibleCount)), items.slice(0, visibleCount - 1), overflowButton && overflowPlacement === "end" && React$c.createElement("div", null, overflowButton(visibleCount))) : items);
 });
+var inputs = "";
+var tooltip = "";
 var __assign$68 = globalThis && globalThis.__assign || function() {
   __assign$68 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12252,25 +12295,11 @@ var __rest$i = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var ButtonGroup = React$c.forwardRef(function(props, ref) {
-  var children = props.children, className = props.className, overflowButton = props.overflowButton, _a = props.overflowPlacement, overflowPlacement = _a === void 0 ? "end" : _a, _b = props.orientation, orientation = _b === void 0 ? "horizontal" : _b, rest = __rest$i(props, ["children", "className", "overflowButton", "overflowPlacement", "orientation"]);
-  var items = React$c.useMemo(function() {
-    var _a2;
-    return (_a2 = React$c.Children.map(children, function(child) {
-      return React$c.createElement("div", null, child);
-    })) !== null && _a2 !== void 0 ? _a2 : [];
-  }, [children]);
+var Tooltip = function(props) {
+  var content2 = props.content, children = props.children, className = props.className, style = props.style, visible = props.visible, ref = props.ref, id2 = props.id, rest = __rest$i(props, ["content", "children", "className", "style", "visible", "ref", "id"]);
   useTheme();
-  var _c = useOverflow(items, !overflowButton, orientation), overflowRef = _c[0], visibleCount = _c[1];
-  var refs = useMergedRefs(overflowRef, ref);
-  return React$c.createElement("div", __assign$68({ className: cx({
-    "iui-button-group": orientation === "horizontal",
-    "iui-button-group-vertical": orientation === "vertical",
-    "iui-button-group-overflow-x": !!overflowButton && orientation === "horizontal"
-  }, className), "aria-orientation": orientation, ref: refs }, rest), !!overflowButton && visibleCount < items.length ? React$c.createElement(React$c.Fragment, null, overflowButton && overflowPlacement === "start" && React$c.createElement("div", null, overflowButton(visibleCount)), items.slice(0, visibleCount - 1), overflowButton && overflowPlacement === "end" && React$c.createElement("div", null, overflowButton(visibleCount))) : items);
-});
-var inputs = "";
-var tooltip = "";
+  return React$c.createElement(Popover, __assign$68({ visible, interactive: false, content: React$c.createElement("div", { className: cx("iui-tooltip", className), style, role: "tooltip", id: id2 }, content2), offset: [0, 4], ref }, rest), children && React$c.cloneElement(children, { title: void 0 }));
+};
 var __assign$67 = globalThis && globalThis.__assign || function() {
   __assign$67 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12295,11 +12324,20 @@ var __rest$h = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Tooltip = function(props) {
-  var content2 = props.content, children = props.children, className = props.className, style = props.style, visible = props.visible, ref = props.ref, id2 = props.id, rest = __rest$h(props, ["content", "children", "className", "style", "visible", "ref", "id"]);
+var Input = React$c.forwardRef(function(props, ref) {
+  var _a;
+  var _b = props.setFocus, setFocus = _b === void 0 ? false : _b, size = props.size, className = props.className, rest = __rest$h(props, ["setFocus", "size", "className"]);
   useTheme();
-  return React$c.createElement(Popover, __assign$67({ visible, interactive: false, content: React$c.createElement("div", { className: cx("iui-tooltip", className), style, role: "tooltip", id: id2 }, content2), offset: [0, 4], ref }, rest), children && React$c.cloneElement(children, { title: void 0 }));
-};
+  var inputRef = React$c.useRef(null);
+  var refs = useMergedRefs(inputRef, ref);
+  React$c.useEffect(function() {
+    if (inputRef.current && setFocus) {
+      inputRef.current.focus();
+    }
+  }, [setFocus]);
+  return React$c.createElement("input", __assign$67({ className: cx("iui-input", (_a = {}, _a["iui-" + size] = !!size, _a), className), ref: refs }, rest));
+});
+var anchor = "";
 var __assign$66 = globalThis && globalThis.__assign || function() {
   __assign$66 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12324,20 +12362,12 @@ var __rest$g = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Input = React$c.forwardRef(function(props, ref) {
-  var _a;
-  var _b = props.setFocus, setFocus = _b === void 0 ? false : _b, size = props.size, className = props.className, rest = __rest$g(props, ["setFocus", "size", "className"]);
+var Anchor = React$c.forwardRef(function(_a, ref) {
+  var className = _a.className, rest = __rest$g(_a, ["className"]);
   useTheme();
-  var inputRef = React$c.useRef(null);
-  var refs = useMergedRefs(inputRef, ref);
-  React$c.useEffect(function() {
-    if (inputRef.current && setFocus) {
-      inputRef.current.focus();
-    }
-  }, [setFocus]);
-  return React$c.createElement("input", __assign$66({ className: cx("iui-input", (_a = {}, _a["iui-" + size] = !!size, _a), className), ref: refs }, rest));
+  return React$c.createElement("a", __assign$66({ className: cx("iui-anchor", className), ref }, rest));
 });
-var anchor = "";
+var text = "";
 var __assign$65 = globalThis && globalThis.__assign || function() {
   __assign$65 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12362,12 +12392,11 @@ var __rest$f = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Anchor = React$c.forwardRef(function(_a, ref) {
-  var className = _a.className, rest = __rest$f(_a, ["className"]);
+var Headline = React$c.forwardRef(function(props, ref) {
+  var className = props.className, _a = props.isMuted, isMuted = _a === void 0 ? false : _a, rest = __rest$f(props, ["className", "isMuted"]);
   useTheme();
-  return React$c.createElement("a", __assign$65({ className: cx("iui-anchor", className), ref }, rest));
+  return React$c.createElement("h1", __assign$65({ ref, className: cx("iui-text-headline", "iui-text-spacing", { "iui-text-muted": isMuted }, className) }, rest));
 });
-var text = "";
 var __assign$64 = globalThis && globalThis.__assign || function() {
   __assign$64 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12392,10 +12421,10 @@ var __rest$e = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Headline = React$c.forwardRef(function(props, ref) {
+var Title = React$c.forwardRef(function(props, ref) {
   var className = props.className, _a = props.isMuted, isMuted = _a === void 0 ? false : _a, rest = __rest$e(props, ["className", "isMuted"]);
   useTheme();
-  return React$c.createElement("h1", __assign$64({ ref, className: cx("iui-text-headline", "iui-text-spacing", { "iui-text-muted": isMuted }, className) }, rest));
+  return React$c.createElement("h2", __assign$64({ ref, className: cx("iui-text-title", "iui-text-spacing", { "iui-text-muted": isMuted }, className) }, rest));
 });
 var __assign$63 = globalThis && globalThis.__assign || function() {
   __assign$63 = Object.assign || function(t2) {
@@ -12429,6 +12458,7 @@ var Body = React$c.forwardRef(function(props, ref) {
     "iui-skeleton": isSkeleton
   }, className) }, rest));
 });
+var code$1 = "";
 var __assign$62 = globalThis && globalThis.__assign || function() {
   __assign$62 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12453,14 +12483,12 @@ var __rest$c = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var Text$1 = React$c.forwardRef(function(props, ref) {
-  var _a;
-  var _b = props.variant, variant = _b === void 0 ? "body" : _b, _c = props.as, Element2 = _c === void 0 ? "div" : _c, className = props.className, _d = props.isMuted, isMuted = _d === void 0 ? false : _d, _e = props.isSkeleton, isSkeleton = _e === void 0 ? false : _e, rest = __rest$c(props, ["variant", "as", "className", "isMuted", "isSkeleton"]);
+var Code = function(props) {
+  var className = props.className, children = props.children, rest = __rest$c(props, ["className", "children"]);
   useTheme();
-  return React$c.createElement(Element2, __assign$62({ className: cx((_a = {}, _a["iui-text-" + variant] = variant !== "body", _a["iui-text-block"] = variant === "body", _a["iui-text-muted"] = isMuted, _a["iui-skeleton"] = isSkeleton, _a), className), ref }, rest));
-});
-var MoreVertical = {};
-var __assign$61 = commonjsGlobal && commonjsGlobal.__assign || function() {
+  return React$c.createElement("code", __assign$62({ className: cx("iui-code", className) }, rest), children);
+};
+var __assign$61 = globalThis && globalThis.__assign || function() {
   __assign$61 = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
@@ -12471,6 +12499,37 @@ var __assign$61 = commonjsGlobal && commonjsGlobal.__assign || function() {
     return t2;
   };
   return __assign$61.apply(this, arguments);
+};
+var __rest$b = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var Text$1 = React$c.forwardRef(function(props, ref) {
+  var _a;
+  var _b = props.variant, variant = _b === void 0 ? "body" : _b, _c = props.as, Element2 = _c === void 0 ? "div" : _c, className = props.className, _d = props.isMuted, isMuted = _d === void 0 ? false : _d, _e = props.isSkeleton, isSkeleton = _e === void 0 ? false : _e, rest = __rest$b(props, ["variant", "as", "className", "isMuted", "isSkeleton"]);
+  useTheme();
+  return React$c.createElement(Element2, __assign$61({ className: cx((_a = {}, _a["iui-text-" + variant] = variant !== "body", _a["iui-text-block"] = variant === "body", _a["iui-text-muted"] = isMuted, _a["iui-skeleton"] = isSkeleton, _a), className), ref }, rest));
+});
+var MoreVertical = {};
+var __assign$60 = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$60 = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$60.apply(this, arguments);
 };
 var __createBinding$3 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -12503,43 +12562,10 @@ var __importStar$3 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(MoreVertical, "__esModule", { value: true });
 var React$3 = __importStar$3(react.exports);
 function SvgMoreVertical(props) {
-  return React$3.createElement("svg", __assign$61({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$3.createElement("path", { d: "m8 4a2 2 0 1 1 2-2 2 2 0 0 1 -2 2zm2 4a2 2 0 1 0 -2 2 2 2 0 0 0 2-2zm0 6a2 2 0 1 0 -2 2 2 2 0 0 0 2-2z" }));
+  return React$3.createElement("svg", __assign$60({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$3.createElement("path", { d: "m8 4a2 2 0 1 1 2-2 2 2 0 0 1 -2 2zm2 4a2 2 0 1 0 -2 2 2 2 0 0 0 2-2zm0 6a2 2 0 1 0 -2 2 2 2 0 0 0 2-2z" }));
 }
 var _default$3 = MoreVertical.default = SvgMoreVertical;
 var header = "";
-var __assign$60 = globalThis && globalThis.__assign || function() {
-  __assign$60 = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$60.apply(this, arguments);
-};
-var __rest$b = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
-var defaultTranslations = {
-  moreOptions: "More options"
-};
-var Header = function(props) {
-  var appLogo = props.appLogo, breadcrumbs = props.breadcrumbs, _a = props.isSlim, isSlim = _a === void 0 ? false : _a, actions = props.actions, userIcon2 = props.userIcon, menuItems = props.menuItems, translatedStrings = props.translatedStrings, className = props.className, children = props.children, rest = __rest$b(props, ["appLogo", "breadcrumbs", "isSlim", "actions", "userIcon", "menuItems", "translatedStrings", "className", "children"]);
-  useTheme();
-  var headerTranslations = __assign$60(__assign$60({}, defaultTranslations), translatedStrings);
-  return React$c.createElement("header", __assign$60({ className: cx("iui-page-header", { "iui-slim": isSlim }, className) }, rest), React$c.createElement("div", { className: "iui-left" }, appLogo, breadcrumbs && React$c.createElement("div", { className: "iui-divider" }), breadcrumbs), children && React$c.createElement("div", { className: "iui-center" }, children), React$c.createElement("div", { className: "iui-right" }, actions, userIcon2, menuItems && React$c.createElement(DropdownMenu, { menuItems }, React$c.createElement(IconButton, { styleType: "borderless", "aria-label": headerTranslations.moreOptions }, React$c.createElement(_default$3, { "aria-hidden": true })))));
-};
 var __assign$5$ = globalThis && globalThis.__assign || function() {
   __assign$5$ = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12564,31 +12590,15 @@ var __rest$a = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var isSplitButton = function(props) {
-  return !!props.menuItems && !!props.onClick;
+var defaultTranslations = {
+  moreOptions: "More options"
 };
-var isDropdownButton = function(props) {
-  return !!props.menuItems;
-};
-var HeaderButton = React$c.forwardRef(function(props, ref) {
-  var name2 = props.name, description = props.description, _a = props.isActive, isActive = _a === void 0 ? false : _a, className = props.className, startIcon = props.startIcon, menuItems = props.menuItems, rest = __rest$a(props, ["name", "description", "isActive", "className", "startIcon", "menuItems"]);
+var Header = function(props) {
+  var appLogo = props.appLogo, breadcrumbs = props.breadcrumbs, _a = props.isSlim, isSlim = _a === void 0 ? false : _a, actions = props.actions, userIcon2 = props.userIcon, menuItems = props.menuItems, translatedStrings = props.translatedStrings, className = props.className, children = props.children, rest = __rest$a(props, ["appLogo", "breadcrumbs", "isSlim", "actions", "userIcon", "menuItems", "translatedStrings", "className", "children"]);
   useTheme();
-  var buttonProps = __assign$5$(__assign$5$({ startIcon: React$c.isValidElement(startIcon) ? React$c.cloneElement(startIcon, {
-    className: cx("iui-header-button-icon", startIcon.props.className)
-  }) : void 0, styleType: "borderless", className: cx({
-    "iui-header-button": !isSplitButton(props),
-    "iui-header-split-button": isSplitButton(props),
-    "iui-header-dropdown-button": !isSplitButton(props) && isDropdownButton(props),
-    "iui-active": isActive
-  }, className), "aria-current": isActive ? "location" : void 0, children: React$c.createElement(React$c.Fragment, null, React$c.createElement("div", null, name2), description && React$c.createElement("div", { className: "iui-description" }, description)), ref }, !!menuItems && { menuItems }), rest);
-  if (isSplitButton(buttonProps)) {
-    return React$c.createElement(SplitButton, __assign$5$({}, buttonProps));
-  }
-  if (isDropdownButton(buttonProps)) {
-    return React$c.createElement(DropdownButton, __assign$5$({}, buttonProps));
-  }
-  return React$c.createElement(Button, __assign$5$({}, buttonProps));
-});
+  var headerTranslations = __assign$5$(__assign$5$({}, defaultTranslations), translatedStrings);
+  return React$c.createElement("header", __assign$5$({ className: cx("iui-page-header", { "iui-slim": isSlim }, className) }, rest), React$c.createElement("div", { className: "iui-left" }, appLogo, breadcrumbs && React$c.createElement("div", { className: "iui-divider" }), breadcrumbs), children && React$c.createElement("div", { className: "iui-center" }, children), React$c.createElement("div", { className: "iui-right" }, actions, userIcon2, menuItems && React$c.createElement(DropdownMenu, { menuItems }, React$c.createElement(IconButton, { styleType: "borderless", "aria-label": headerTranslations.moreOptions }, React$c.createElement(_default$3, { "aria-hidden": true })))));
+};
 var __assign$5_ = globalThis && globalThis.__assign || function() {
   __assign$5_ = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12613,19 +12623,31 @@ var __rest$9 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var HeaderLogo = function(props) {
-  var className = props.className, children = props.children, logo = props.logo, onClick = props.onClick, rest = __rest$9(props, ["className", "children", "logo", "onClick"]);
-  var keyDownHandler = function(e2) {
-    if (onClick && (e2.key === "Enter" || e2.key === " " || e2.key === "Spacebar")) {
-      e2.preventDefault();
-      onClick();
-    }
-  };
-  useTheme();
-  return React$c.createElement("div", __assign$5_({ className: cx("iui-header-logo", className), role: onClick && "button", tabIndex: onClick && 0, onKeyDown: keyDownHandler, onClick }, rest), React$c.isValidElement(logo) ? React$c.cloneElement(logo, {
-    className: cx("iui-header-button-icon", logo.props.className)
-  }) : void 0, children && React$c.createElement("span", { className: "iui-label" }, children));
+var isSplitButton = function(props) {
+  return !!props.menuItems && !!props.onClick;
 };
+var isDropdownButton = function(props) {
+  return !!props.menuItems;
+};
+var HeaderButton = React$c.forwardRef(function(props, ref) {
+  var name2 = props.name, description = props.description, _a = props.isActive, isActive = _a === void 0 ? false : _a, className = props.className, startIcon = props.startIcon, menuItems = props.menuItems, rest = __rest$9(props, ["name", "description", "isActive", "className", "startIcon", "menuItems"]);
+  useTheme();
+  var buttonProps = __assign$5_(__assign$5_({ startIcon: React$c.isValidElement(startIcon) ? React$c.cloneElement(startIcon, {
+    className: cx("iui-header-button-icon", startIcon.props.className)
+  }) : void 0, styleType: "borderless", className: cx({
+    "iui-header-button": !isSplitButton(props),
+    "iui-header-split-button": isSplitButton(props),
+    "iui-header-dropdown-button": !isSplitButton(props) && isDropdownButton(props),
+    "iui-active": isActive
+  }, className), "aria-current": isActive ? "location" : void 0, children: React$c.createElement(React$c.Fragment, null, React$c.createElement("div", null, name2), description && React$c.createElement("div", { className: "iui-description" }, description)), ref }, !!menuItems && { menuItems }), rest);
+  if (isSplitButton(buttonProps)) {
+    return React$c.createElement(SplitButton, __assign$5_({}, buttonProps));
+  }
+  if (isDropdownButton(buttonProps)) {
+    return React$c.createElement(DropdownButton, __assign$5_({}, buttonProps));
+  }
+  return React$c.createElement(Button, __assign$5_({}, buttonProps));
+});
 var __assign$5Z = globalThis && globalThis.__assign || function() {
   __assign$5Z = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12650,26 +12672,18 @@ var __rest$8 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var __spreadArray = globalThis && globalThis.__spreadArray || function(to, from, pack) {
-  if (pack || arguments.length === 2)
-    for (var i = 0, l2 = from.length, ar; i < l2; i++) {
-      if (ar || !(i in from)) {
-        if (!ar)
-          ar = Array.prototype.slice.call(from, 0, i);
-        ar[i] = from[i];
-      }
+var HeaderLogo = function(props) {
+  var className = props.className, children = props.children, logo = props.logo, onClick = props.onClick, rest = __rest$8(props, ["className", "children", "logo", "onClick"]);
+  var keyDownHandler = function(e2) {
+    if (onClick && (e2.key === "Enter" || e2.key === " " || e2.key === "Spacebar")) {
+      e2.preventDefault();
+      onClick();
     }
-  return to.concat(ar || Array.prototype.slice.call(from));
-};
-var HeaderBreadcrumbs = function(props) {
-  var items = props.items, rest = __rest$8(props, ["items"]);
+  };
   useTheme();
-  return React$c.createElement("nav", __assign$5Z({ "aria-label": "breadcrumbs" }, rest), items.reduce(function(previous, current, index2) {
-    return __spreadArray(__spreadArray([], previous, true), [
-      current,
-      index2 !== items.length - 1 && React$c.createElement(_default$7, { key: "chevron" + index2, "aria-hidden": true, className: "iui-chevron" })
-    ], false);
-  }, []));
+  return React$c.createElement("div", __assign$5Z({ className: cx("iui-header-logo", className), role: onClick && "button", tabIndex: onClick && 0, onKeyDown: keyDownHandler, onClick }, rest), React$c.isValidElement(logo) ? React$c.cloneElement(logo, {
+    className: cx("iui-header-button-icon", logo.props.className)
+  }) : void 0, children && React$c.createElement("span", { className: "iui-label" }, children));
 };
 var __assign$5Y = globalThis && globalThis.__assign || function() {
   __assign$5Y = Object.assign || function(t2) {
@@ -12695,12 +12709,27 @@ var __rest$7 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var LabeledInput = React$c.forwardRef(function(props, ref) {
-  var className = props.className, _a = props.disabled, disabled = _a === void 0 ? false : _a, label = props.label, message = props.message, status = props.status, svgIcon = props.svgIcon, style = props.style, inputClassName = props.inputClassName, inputStyle = props.inputStyle, _b = props.displayStyle, displayStyle = _b === void 0 ? "default" : _b, _c = props.iconDisplayStyle, iconDisplayStyle = _c === void 0 ? displayStyle === "default" ? "block" : "inline" : _c, _d = props.required, required = _d === void 0 ? false : _d, rest = __rest$7(props, ["className", "disabled", "label", "message", "status", "svgIcon", "style", "inputClassName", "inputStyle", "displayStyle", "iconDisplayStyle", "required"]);
+var __spreadArray = globalThis && globalThis.__spreadArray || function(to, from, pack) {
+  if (pack || arguments.length === 2)
+    for (var i = 0, l2 = from.length, ar; i < l2; i++) {
+      if (ar || !(i in from)) {
+        if (!ar)
+          ar = Array.prototype.slice.call(from, 0, i);
+        ar[i] = from[i];
+      }
+    }
+  return to.concat(ar || Array.prototype.slice.call(from));
+};
+var HeaderBreadcrumbs = function(props) {
+  var items = props.items, rest = __rest$7(props, ["items"]);
   useTheme();
-  var icon = svgIcon !== null && svgIcon !== void 0 ? svgIcon : status && StatusIconMap[status]();
-  return React$c.createElement(InputContainer, { as: "label", label, disabled, required, status, message, icon, isLabelInline: displayStyle === "inline", isIconInline: iconDisplayStyle === "inline", className, style }, React$c.createElement(Input, __assign$5Y({ disabled, className: inputClassName, style: inputStyle, required, ref }, rest)));
-});
+  return React$c.createElement("nav", __assign$5Y({ "aria-label": "breadcrumbs" }, rest), items.reduce(function(previous, current, index2) {
+    return __spreadArray(__spreadArray([], previous, true), [
+      current,
+      index2 !== items.length - 1 && React$c.createElement(_default$7, { key: "chevron" + index2, "aria-hidden": true, className: "iui-chevron" })
+    ], false);
+  }, []));
+};
 var __assign$5X = globalThis && globalThis.__assign || function() {
   __assign$5X = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12725,10 +12754,40 @@ var __rest$6 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
+var LabeledInput = React$c.forwardRef(function(props, ref) {
+  var className = props.className, _a = props.disabled, disabled = _a === void 0 ? false : _a, label = props.label, message = props.message, status = props.status, svgIcon = props.svgIcon, style = props.style, inputClassName = props.inputClassName, inputStyle = props.inputStyle, _b = props.displayStyle, displayStyle = _b === void 0 ? "default" : _b, _c = props.iconDisplayStyle, iconDisplayStyle = _c === void 0 ? displayStyle === "default" ? "block" : "inline" : _c, _d = props.required, required = _d === void 0 ? false : _d, rest = __rest$6(props, ["className", "disabled", "label", "message", "status", "svgIcon", "style", "inputClassName", "inputStyle", "displayStyle", "iconDisplayStyle", "required"]);
+  useTheme();
+  var icon = svgIcon !== null && svgIcon !== void 0 ? svgIcon : status && StatusIconMap[status]();
+  return React$c.createElement(InputContainer, { as: "label", label, disabled, required, status, message, icon, isLabelInline: displayStyle === "inline", isIconInline: iconDisplayStyle === "inline", className, style }, React$c.createElement(Input, __assign$5X({ disabled, className: inputClassName, style: inputStyle, required, ref }, rest)));
+});
+var __assign$5W = globalThis && globalThis.__assign || function() {
+  __assign$5W = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$5W.apply(this, arguments);
+};
+var __rest$5 = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
 var Select = function(props) {
   var _a;
   var _b;
-  var options = props.options, value = props.value, onChange = props.onChange, placeholder = props.placeholder, _c = props.disabled, disabled = _c === void 0 ? false : _c, size = props.size, _d = props.setFocus, setFocus = _d === void 0 ? false : _d, itemRenderer = props.itemRenderer, selectedItemRenderer = props.selectedItemRenderer, className = props.className, style = props.style, menuClassName = props.menuClassName, menuStyle = props.menuStyle, onShow2 = props.onShow, onHide2 = props.onHide, popoverProps = props.popoverProps, rest = __rest$6(props, ["options", "value", "onChange", "placeholder", "disabled", "size", "setFocus", "itemRenderer", "selectedItemRenderer", "className", "style", "menuClassName", "menuStyle", "onShow", "onHide", "popoverProps"]);
+  var options = props.options, value = props.value, onChange = props.onChange, placeholder = props.placeholder, _c = props.disabled, disabled = _c === void 0 ? false : _c, size = props.size, _d = props.setFocus, setFocus = _d === void 0 ? false : _d, itemRenderer = props.itemRenderer, selectedItemRenderer = props.selectedItemRenderer, className = props.className, style = props.style, menuClassName = props.menuClassName, menuStyle = props.menuStyle, onShow2 = props.onShow, onHide2 = props.onHide, popoverProps = props.popoverProps, rest = __rest$5(props, ["options", "value", "onChange", "placeholder", "disabled", "size", "setFocus", "itemRenderer", "selectedItemRenderer", "className", "style", "menuClassName", "menuStyle", "onShow", "onHide", "popoverProps"]);
   useTheme();
   var _e = React$c.useState((_b = popoverProps === null || popoverProps === void 0 ? void 0 : popoverProps.visible) !== null && _b !== void 0 ? _b : false), isOpen = _e[0], setIsOpen = _e[1];
   React$c.useEffect(function() {
@@ -12777,7 +12836,7 @@ var Select = function(props) {
     return options.map(function(option, index2) {
       var isSelected = value === option.value;
       var menuItem = itemRenderer ? itemRenderer(option, { close, isSelected }) : React$c.createElement(MenuItem, null, option.label);
-      return React$c.cloneElement(menuItem, __assign$5X(__assign$5X({ key: option.label + "-" + index2, isSelected, onClick: function() {
+      return React$c.cloneElement(menuItem, __assign$5W(__assign$5W({ key: option.label + "-" + index2, isSelected, onClick: function() {
         !option.disabled && (onChange === null || onChange === void 0 ? void 0 : onChange(option.value));
         close();
       }, ref: function(el) {
@@ -12793,7 +12852,7 @@ var Select = function(props) {
       return option.value === value;
     });
   }, [options, value]);
-  return React$c.createElement("div", __assign$5X({ className: cx("iui-input-with-icon", className), "aria-expanded": isOpen, "aria-haspopup": "listbox", style }, rest), React$c.createElement(DropdownMenu, __assign$5X({ menuItems, placement: "bottom-start", className: cx("iui-scroll", menuClassName), style: __assign$5X({ minWidth, maxWidth: "min(" + minWidth * 2 + "px, 90vw)", maxHeight: "300px" }, menuStyle), role: "listbox", onShow: onShowHandler, onHide: onHideHandler, disabled }, popoverProps, { visible: isOpen, onClickOutside: function(_, _a2) {
+  return React$c.createElement("div", __assign$5W({ className: cx("iui-input-with-icon", className), "aria-expanded": isOpen, "aria-haspopup": "listbox", style }, rest), React$c.createElement(DropdownMenu, __assign$5W({ menuItems, placement: "bottom-start", className: cx("iui-scroll", menuClassName), style: __assign$5W({ minWidth, maxWidth: "min(" + minWidth * 2 + "px, 90vw)", maxHeight: "300px" }, menuStyle), role: "listbox", onShow: onShowHandler, onHide: onHideHandler, disabled }, popoverProps, { visible: isOpen, onClickOutside: function(_, _a2) {
     var _b2;
     var target = _a2.target;
     if (!((_b2 = toggleButtonRef.current) === null || _b2 === void 0 ? void 0 : _b2.contains(target))) {
@@ -12817,8 +12876,8 @@ var Select = function(props) {
   } }, React$c.createElement(_default$5, { "aria-hidden": true })));
 };
 var Checkmark = {};
-var __assign$5W = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$5W = Object.assign || function(t2) {
+var __assign$5V = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$5V = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -12827,7 +12886,7 @@ var __assign$5W = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$5W.apply(this, arguments);
+  return __assign$5V.apply(this, arguments);
 };
 var __createBinding$2 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -12860,56 +12919,10 @@ var __importStar$2 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(Checkmark, "__esModule", { value: true });
 var React$2 = __importStar$2(react.exports);
 function SvgCheckmark$1(props) {
-  return React$2.createElement("svg", __assign$5W({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16" }, props), React$2.createElement("path", { d: "M6,14L0,8l2-2l4,4l8-8l2,2L6,14z" }));
+  return React$2.createElement("svg", __assign$5V({ xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 16 16" }, props), React$2.createElement("path", { d: "M6,14L0,8l2-2l4,4l8-8l2,2L6,14z" }));
 }
 var _default$2 = Checkmark.default = SvgCheckmark$1;
 var sideNavigation = "";
-var __assign$5V = globalThis && globalThis.__assign || function() {
-  __assign$5V = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$5V.apply(this, arguments);
-};
-var __rest$5 = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
-var SideNavigation = function(props) {
-  var items = props.items, secondaryItems = props.secondaryItems, _a = props.expanderPlacement, expanderPlacement = _a === void 0 ? "top" : _a, className = props.className, _b = props.isExpanded, isExpanded = _b === void 0 ? false : _b, onExpanderClick = props.onExpanderClick, submenu = props.submenu, _c = props.isSubmenuOpen, isSubmenuOpen = _c === void 0 ? false : _c, rest = __rest$5(props, ["items", "secondaryItems", "expanderPlacement", "className", "isExpanded", "onExpanderClick", "submenu", "isSubmenuOpen"]);
-  useTheme();
-  var _d = React$c.useState(isExpanded), _isExpanded = _d[0], _setIsExpanded = _d[1];
-  React$c.useEffect(function() {
-    _setIsExpanded(isExpanded);
-  }, [isExpanded]);
-  var ExpandButton = React$c.createElement(IconButton, { className: "iui-sidenav-button iui-expand", onClick: React$c.useCallback(function() {
-    _setIsExpanded(function(expanded) {
-      return !expanded;
-    });
-    onExpanderClick === null || onExpanderClick === void 0 ? void 0 : onExpanderClick();
-  }, [onExpanderClick]) }, React$c.createElement(_default$7, null));
-  return React$c.createElement("div", __assign$5V({ className: cx("iui-side-navigation-wrapper", className) }, rest), React$c.createElement("div", { className: cx("iui-side-navigation", {
-    "iui-expanded": _isExpanded,
-    "iui-collapsed": !_isExpanded
-  }) }, expanderPlacement === "top" && ExpandButton, React$c.createElement("div", { className: "iui-sidenav-content" }, React$c.createElement("div", { className: "iui-top" }, items.map(function(sidenavButton, index2) {
-    return !_isExpanded ? React$c.createElement(Tooltip, { content: sidenavButton.props.children, placement: "right", key: index2 }, sidenavButton) : sidenavButton;
-  })), React$c.createElement("div", { className: "iui-bottom" }, secondaryItems === null || secondaryItems === void 0 ? void 0 : secondaryItems.map(function(sidenavButton, index2) {
-    return !_isExpanded ? React$c.createElement(Tooltip, { content: sidenavButton.props.children, placement: "right", key: index2 }, sidenavButton) : sidenavButton;
-  }))), expanderPlacement === "bottom" && ExpandButton), submenu && React$c.createElement(WithCSSTransition, { in: isSubmenuOpen, dimension: "width", timeout: 200, classNames: "iui" }, submenu));
-};
 var __assign$5U = globalThis && globalThis.__assign || function() {
   __assign$5U = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12934,15 +12947,28 @@ var __rest$4 = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var SidenavButton = React$c.forwardRef(function(props, ref) {
-  var className = props.className, children = props.children, _a = props.isActive, isActive = _a === void 0 ? false : _a, _b = props.disabled, disabled = _b === void 0 ? false : _b, _c = props.isSubmenuOpen, isSubmenuOpen = _c === void 0 ? false : _c, rest = __rest$4(props, ["className", "children", "isActive", "disabled", "isSubmenuOpen"]);
+var SideNavigation = function(props) {
+  var items = props.items, secondaryItems = props.secondaryItems, _a = props.expanderPlacement, expanderPlacement = _a === void 0 ? "top" : _a, className = props.className, _b = props.isExpanded, isExpanded = _b === void 0 ? false : _b, onExpanderClick = props.onExpanderClick, submenu = props.submenu, _c = props.isSubmenuOpen, isSubmenuOpen = _c === void 0 ? false : _c, rest = __rest$4(props, ["items", "secondaryItems", "expanderPlacement", "className", "isExpanded", "onExpanderClick", "submenu", "isSubmenuOpen"]);
   useTheme();
-  return React$c.createElement(Button, __assign$5U({ className: cx("iui-sidenav-button", {
-    "iui-active": isActive,
-    "iui-submenu-open": isSubmenuOpen
-  }, className), size: "large", disabled, ref }, rest), children);
-});
-var surface = "";
+  var _d = React$c.useState(isExpanded), _isExpanded = _d[0], _setIsExpanded = _d[1];
+  React$c.useEffect(function() {
+    _setIsExpanded(isExpanded);
+  }, [isExpanded]);
+  var ExpandButton = React$c.createElement(IconButton, { className: "iui-sidenav-button iui-expand", onClick: React$c.useCallback(function() {
+    _setIsExpanded(function(expanded) {
+      return !expanded;
+    });
+    onExpanderClick === null || onExpanderClick === void 0 ? void 0 : onExpanderClick();
+  }, [onExpanderClick]) }, React$c.createElement(_default$7, null));
+  return React$c.createElement("div", __assign$5U({ className: cx("iui-side-navigation-wrapper", className) }, rest), React$c.createElement("div", { className: cx("iui-side-navigation", {
+    "iui-expanded": _isExpanded,
+    "iui-collapsed": !_isExpanded
+  }) }, expanderPlacement === "top" && ExpandButton, React$c.createElement("div", { className: "iui-sidenav-content" }, React$c.createElement("div", { className: "iui-top" }, items.map(function(sidenavButton, index2) {
+    return !_isExpanded ? React$c.createElement(Tooltip, { content: sidenavButton.props.children, placement: "right", key: index2 }, sidenavButton) : sidenavButton;
+  })), React$c.createElement("div", { className: "iui-bottom" }, secondaryItems === null || secondaryItems === void 0 ? void 0 : secondaryItems.map(function(sidenavButton, index2) {
+    return !_isExpanded ? React$c.createElement(Tooltip, { content: sidenavButton.props.children, placement: "right", key: index2 }, sidenavButton) : sidenavButton;
+  }))), expanderPlacement === "bottom" && ExpandButton), submenu && React$c.createElement(WithCSSTransition, { in: isSubmenuOpen, dimension: "width", timeout: 200, classNames: "iui" }, submenu));
+};
 var __assign$5T = globalThis && globalThis.__assign || function() {
   __assign$5T = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -12956,6 +12982,39 @@ var __assign$5T = globalThis && globalThis.__assign || function() {
   return __assign$5T.apply(this, arguments);
 };
 var __rest$3 = globalThis && globalThis.__rest || function(s, e2) {
+  var t2 = {};
+  for (var p2 in s)
+    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
+      t2[p2] = s[p2];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function")
+    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
+      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
+        t2[p2[i]] = s[p2[i]];
+    }
+  return t2;
+};
+var SidenavButton = React$c.forwardRef(function(props, ref) {
+  var className = props.className, children = props.children, _a = props.isActive, isActive = _a === void 0 ? false : _a, _b = props.disabled, disabled = _b === void 0 ? false : _b, _c = props.isSubmenuOpen, isSubmenuOpen = _c === void 0 ? false : _c, rest = __rest$3(props, ["className", "children", "isActive", "disabled", "isSubmenuOpen"]);
+  useTheme();
+  return React$c.createElement(Button, __assign$5T({ className: cx("iui-sidenav-button", {
+    "iui-active": isActive,
+    "iui-submenu-open": isSubmenuOpen
+  }, className), size: "large", disabled, ref }, rest), children);
+});
+var surface = "";
+var __assign$5S = globalThis && globalThis.__assign || function() {
+  __assign$5S = Object.assign || function(t2) {
+    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
+      s = arguments[i];
+      for (var p2 in s)
+        if (Object.prototype.hasOwnProperty.call(s, p2))
+          t2[p2] = s[p2];
+    }
+    return t2;
+  };
+  return __assign$5S.apply(this, arguments);
+};
+var __rest$2 = globalThis && globalThis.__rest || function(s, e2) {
   var t2 = {};
   for (var p2 in s)
     if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
@@ -12985,14 +13044,14 @@ var getSurfaceElevationValue = function(elevation) {
 };
 var Surface = React$c.forwardRef(function(props, ref) {
   var _a, _b, _c;
-  var _d = props.elevation, elevation = _d === void 0 ? 0 : _d, className = props.className, style = props.style, children = props.children, rest = __rest$3(props, ["elevation", "className", "style", "children"]);
+  var _d = props.elevation, elevation = _d === void 0 ? 0 : _d, className = props.className, style = props.style, children = props.children, rest = __rest$2(props, ["elevation", "className", "style", "children"]);
   useTheme();
-  var _style = ((_c = (_b = (_a = getWindow$1()) === null || _a === void 0 ? void 0 : _a.CSS) === null || _b === void 0 ? void 0 : _b.supports) === null || _c === void 0 ? void 0 : _c.call(_b, "--iui-surface-elevation: " + getSurfaceElevationValue(elevation))) ? __assign$5T({ "--iui-surface-elevation": getSurfaceElevationValue(elevation) }, style) : __assign$5T({ boxShadow: getSurfaceElevationValue(elevation) }, style);
-  return React$c.createElement("div", __assign$5T({ className: cx("iui-surface", className), style: _style, ref }, rest), children);
+  var _style = ((_c = (_b = (_a = getWindow$1()) === null || _a === void 0 ? void 0 : _a.CSS) === null || _b === void 0 ? void 0 : _b.supports) === null || _c === void 0 ? void 0 : _c.call(_b, "--iui-surface-elevation: " + getSurfaceElevationValue(elevation))) ? __assign$5S({ "--iui-surface-elevation": getSurfaceElevationValue(elevation) }, style) : __assign$5S({ boxShadow: getSurfaceElevationValue(elevation) }, style);
+  return React$c.createElement("div", __assign$5S({ className: cx("iui-surface", className), style: _style, ref }, rest), children);
 });
 var More = {};
-var __assign$5S = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$5S = Object.assign || function(t2) {
+var __assign$5R = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$5R = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -13001,7 +13060,7 @@ var __assign$5S = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$5S.apply(this, arguments);
+  return __assign$5R.apply(this, arguments);
 };
 var __createBinding$1 = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -13034,12 +13093,12 @@ var __importStar$1 = commonjsGlobal && commonjsGlobal.__importStar || function(m
 Object.defineProperty(More, "__esModule", { value: true });
 var React$1 = __importStar$1(react.exports);
 function SvgMore(props) {
-  return React$1.createElement("svg", __assign$5S({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$1.createElement("path", { d: "m4 8a2 2 0 1 1 -2-2 2 2 0 0 1 2 2zm4-2a2 2 0 1 0 2 2 2 2 0 0 0 -2-2zm6 0a2 2 0 1 0 2 2 2 2 0 0 0 -2-2z" }));
+  return React$1.createElement("svg", __assign$5R({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React$1.createElement("path", { d: "m4 8a2 2 0 1 1 -2-2 2 2 0 0 1 2 2zm4-2a2 2 0 1 0 2 2 2 2 0 0 0 -2-2zm6 0a2 2 0 1 0 2 2 2 2 0 0 0 -2-2z" }));
 }
 var _default$1 = More.default = SvgMore;
 var New = {};
-var __assign$5R = commonjsGlobal && commonjsGlobal.__assign || function() {
-  __assign$5R = Object.assign || function(t2) {
+var __assign$5Q = commonjsGlobal && commonjsGlobal.__assign || function() {
+  __assign$5Q = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -13048,7 +13107,7 @@ var __assign$5R = commonjsGlobal && commonjsGlobal.__assign || function() {
     }
     return t2;
   };
-  return __assign$5R.apply(this, arguments);
+  return __assign$5Q.apply(this, arguments);
 };
 var __createBinding = commonjsGlobal && commonjsGlobal.__createBinding || (Object.create ? function(o, m2, k2, k22) {
   if (k22 === void 0)
@@ -13081,12 +13140,12 @@ var __importStar = commonjsGlobal && commonjsGlobal.__importStar || function(mod
 Object.defineProperty(New, "__esModule", { value: true });
 var React = __importStar(react.exports);
 function SvgNew(props) {
-  return React.createElement("svg", __assign$5R({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React.createElement("path", { d: "m8 5a1.00011 1.00011 0 0 1 -1-1v-3a1 1 0 0 1 2 0v3a1.00011 1.00011 0 0 1 -1 1zm-3.4648 2a.99727.99727 0 0 1 -.499-.1338l-2.5981-1.5a1.00013 1.00013 0 1 1 .9999-1.7324l2.5981 1.5a1 1 0 0 1 -.5009 1.8662zm-2.5962 5.5a1 1 0 0 1 -.501-1.8662l2.5981-1.5a1.00015 1.00015 0 1 1 1 1.7324l-2.5981 1.5a.99727.99727 0 0 1 -.499.1338zm6.061 3.5a.99979.99979 0 0 1 -1-1v-3a1 1 0 0 1 2 0v3a.99979.99979 0 0 1 -1 1zm6.0615-3.5a.99457.99457 0 0 1 -.499-.1338l-2.5986-1.5a1.00015 1.00015 0 1 1 1-1.7324l2.5986 1.5a1 1 0 0 1 -.501 1.8662zm-2.5967-5.5a1 1 0 0 1 -.501-1.8662l2.5986-1.5a1.00018 1.00018 0 1 1 1.0001 1.7324l-2.5986 1.5a.99493.99493 0 0 1 -.4991.1338z" }));
+  return React.createElement("svg", __assign$5Q({ viewBox: "0 0 16 16", xmlns: "http://www.w3.org/2000/svg" }, props), React.createElement("path", { d: "m8 5a1.00011 1.00011 0 0 1 -1-1v-3a1 1 0 0 1 2 0v3a1.00011 1.00011 0 0 1 -1 1zm-3.4648 2a.99727.99727 0 0 1 -.499-.1338l-2.5981-1.5a1.00013 1.00013 0 1 1 .9999-1.7324l2.5981 1.5a1 1 0 0 1 -.5009 1.8662zm-2.5962 5.5a1 1 0 0 1 -.501-1.8662l2.5981-1.5a1.00015 1.00015 0 1 1 1 1.7324l-2.5981 1.5a.99727.99727 0 0 1 -.499.1338zm6.061 3.5a.99979.99979 0 0 1 -1-1v-3a1 1 0 0 1 2 0v3a.99979.99979 0 0 1 -1 1zm6.0615-3.5a.99457.99457 0 0 1 -.499-.1338l-2.5986-1.5a1.00015 1.00015 0 1 1 1-1.7324l2.5986 1.5a1 1 0 0 1 -.501 1.8662zm-2.5967-5.5a1 1 0 0 1 -.501-1.8662l2.5986-1.5a1.00018 1.00018 0 1 1 1.0001 1.7324l-2.5986 1.5a.99493.99493 0 0 1 -.4991.1338z" }));
 }
 var _default = New.default = SvgNew;
 var tile = "";
-var __assign$5Q = globalThis && globalThis.__assign || function() {
-  __assign$5Q = Object.assign || function(t2) {
+var __assign$5P = globalThis && globalThis.__assign || function() {
+  __assign$5P = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
       s = arguments[i];
       for (var p2 in s)
@@ -13095,9 +13154,9 @@ var __assign$5Q = globalThis && globalThis.__assign || function() {
     }
     return t2;
   };
-  return __assign$5Q.apply(this, arguments);
+  return __assign$5P.apply(this, arguments);
 };
-var __rest$2 = globalThis && globalThis.__rest || function(s, e2) {
+var __rest$1 = globalThis && globalThis.__rest || function(s, e2) {
   var t2 = {};
   for (var p2 in s)
     if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
@@ -13110,7 +13169,7 @@ var __rest$2 = globalThis && globalThis.__rest || function(s, e2) {
   return t2;
 };
 var Tile = function(props) {
-  var className = props.className, name2 = props.name, description = props.description, metadata = props.metadata, thumbnail = props.thumbnail, buttons = props.buttons, leftIcon = props.leftIcon, rightIcon = props.rightIcon, badge = props.badge, isNew = props.isNew, isSelected = props.isSelected, moreOptions = props.moreOptions, _a = props.variant, variant = _a === void 0 ? "default" : _a, children = props.children, isActionable = props.isActionable, rest = __rest$2(props, ["className", "name", "description", "metadata", "thumbnail", "buttons", "leftIcon", "rightIcon", "badge", "isNew", "isSelected", "moreOptions", "variant", "children", "isActionable"]);
+  var className = props.className, name2 = props.name, description = props.description, metadata = props.metadata, thumbnail = props.thumbnail, buttons = props.buttons, leftIcon = props.leftIcon, rightIcon = props.rightIcon, badge = props.badge, isNew = props.isNew, isSelected = props.isSelected, moreOptions = props.moreOptions, _a = props.variant, variant = _a === void 0 ? "default" : _a, children = props.children, isActionable = props.isActionable, rest = __rest$1(props, ["className", "name", "description", "metadata", "thumbnail", "buttons", "leftIcon", "rightIcon", "badge", "isNew", "isSelected", "moreOptions", "variant", "children", "isActionable"]);
   useTheme();
   var _b = React$c.useState(false), isMenuVisible = _b[0], setIsMenuVisible = _b[1];
   var showMenu = React$c.useCallback(function() {
@@ -13119,7 +13178,7 @@ var Tile = function(props) {
   var hideMenu = React$c.useCallback(function() {
     return setIsMenuVisible(false);
   }, []);
-  return React$c.createElement("div", __assign$5Q({ className: cx("iui-tile", {
+  return React$c.createElement("div", __assign$5P({ className: cx("iui-tile", {
     "iui-folder": variant === "folder",
     "iui-new": isNew,
     "iui-selected": isSelected,
@@ -13147,43 +13206,6 @@ var Tile = function(props) {
   }) }, React$c.createElement(IconButton, { styleType: "borderless", size: "small", "aria-label": "More options" }, React$c.createElement(_default$1, null)))), children), buttons && React$c.createElement("div", { className: "iui-tile-buttons" }, buttons));
 };
 var userIcon = "";
-var __assign$5P = globalThis && globalThis.__assign || function() {
-  __assign$5P = Object.assign || function(t2) {
-    for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
-      s = arguments[i];
-      for (var p2 in s)
-        if (Object.prototype.hasOwnProperty.call(s, p2))
-          t2[p2] = s[p2];
-    }
-    return t2;
-  };
-  return __assign$5P.apply(this, arguments);
-};
-var __rest$1 = globalThis && globalThis.__rest || function(s, e2) {
-  var t2 = {};
-  for (var p2 in s)
-    if (Object.prototype.hasOwnProperty.call(s, p2) && e2.indexOf(p2) < 0)
-      t2[p2] = s[p2];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-    for (var i = 0, p2 = Object.getOwnPropertySymbols(s); i < p2.length; i++) {
-      if (e2.indexOf(p2[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p2[i]))
-        t2[p2[i]] = s[p2[i]];
-    }
-  return t2;
-};
-var defaultStatusTitles = {
-  away: "Away",
-  busy: "Busy",
-  offline: "Offline",
-  online: "Online"
-};
-var UserIcon = function(props) {
-  var _a, _b;
-  var _c = props.size, size = _c === void 0 ? "small" : _c, status = props.status, abbreviation = props.abbreviation, image = props.image, _d = props.backgroundColor, backgroundColor = _d === void 0 ? "white" : _d, title = props.title, translatedStatusTitles = props.translatedStatusTitles, className = props.className, style = props.style, rest = __rest$1(props, ["size", "status", "abbreviation", "image", "backgroundColor", "title", "translatedStatusTitles", "className", "style"]);
-  useTheme();
-  var statusTitles = __assign$5P(__assign$5P({}, defaultStatusTitles), translatedStatusTitles);
-  return React$c.createElement("span", __assign$5P({ className: cx("iui-user-icon", (_a = {}, _a["iui-" + size] = size !== "medium", _a), className), title, style }, rest), image !== null && image !== void 0 ? image : React$c.createElement("abbr", { className: "iui-initials", style: { backgroundColor } }, abbreviation === null || abbreviation === void 0 ? void 0 : abbreviation.substring(0, 2)), React$c.createElement("span", { className: "iui-stroke" }), status && React$c.createElement("span", { title: statusTitles[status], className: cx("iui-status", (_b = {}, _b["iui-" + status] = !!status, _b)), "aria-label": statusTitles[status] }));
-};
 var __assign$5O = globalThis && globalThis.__assign || function() {
   __assign$5O = Object.assign || function(t2) {
     for (var s, i = 1, n2 = arguments.length; i < n2; i++) {
@@ -13208,25 +13230,18 @@ var __rest = globalThis && globalThis.__rest || function(s, e2) {
     }
   return t2;
 };
-var UserIconGroup = function(props) {
-  var _a;
-  var maxLength = 99;
-  var children = props.children, _b = props.animated, animated = _b === void 0 ? false : _b, _c = props.stacked, stacked = _c === void 0 ? true : _c, _d = props.maxIcons, maxIcons = _d === void 0 ? 5 : _d, _e = props.iconSize, iconSize = _e === void 0 ? "small" : _e, countIconProps = props.countIconProps, className = props.className, rest = __rest(props, ["children", "animated", "stacked", "maxIcons", "iconSize", "countIconProps", "className"]);
-  var childrenArray = React$c.Children.toArray(children);
-  var childrenLength = childrenArray.length;
+var defaultStatusTitles = {
+  away: "Away",
+  busy: "Busy",
+  offline: "Offline",
+  online: "Online"
+};
+var UserIcon = function(props) {
+  var _a, _b;
+  var _c = props.size, size = _c === void 0 ? "small" : _c, status = props.status, abbreviation = props.abbreviation, image = props.image, _d = props.backgroundColor, backgroundColor = _d === void 0 ? "white" : _d, title = props.title, translatedStatusTitles = props.translatedStatusTitles, className = props.className, style = props.style, rest = __rest(props, ["size", "status", "abbreviation", "image", "backgroundColor", "title", "translatedStatusTitles", "className", "style"]);
   useTheme();
-  var getUserIconList = function(count) {
-    return childrenArray.slice(0, count).map(function(child) {
-      return React$c.cloneElement(child, {
-        status: void 0,
-        size: iconSize
-      });
-    });
-  };
-  return React$c.createElement(React$c.Fragment, null, React$c.createElement("div", __assign$5O({ className: cx("iui-user-icon-list", {
-    "iui-animated": animated,
-    "iui-stacked": stacked
-  }, className) }, rest), childrenArray.length <= maxIcons + 1 && getUserIconList(maxIcons + 1), childrenArray.length > maxIcons + 1 && React$c.createElement(React$c.Fragment, null, getUserIconList(maxIcons), React$c.createElement("div", __assign$5O({}, countIconProps, { className: cx("iui-user-icon", (_a = {}, _a["iui-" + iconSize] = iconSize !== "medium", _a), "iui-user-icon-count", countIconProps === null || countIconProps === void 0 ? void 0 : countIconProps.className) }), React$c.createElement("abbr", { className: "iui-initials" }, childrenLength <= maxLength ? "" + (childrenLength - maxIcons) : maxLength + "+"), React$c.createElement("span", { className: "iui-stroke" })))));
+  var statusTitles = __assign$5O(__assign$5O({}, defaultStatusTitles), translatedStatusTitles);
+  return React$c.createElement("span", __assign$5O({ className: cx("iui-user-icon", (_a = {}, _a["iui-" + size] = size !== "medium", _a), className), title, style }, rest), image !== null && image !== void 0 ? image : React$c.createElement("abbr", { className: "iui-initials", style: { backgroundColor } }, abbreviation === null || abbreviation === void 0 ? void 0 : abbreviation.substring(0, 2)), React$c.createElement("span", { className: "iui-stroke" }), status && React$c.createElement("span", { title: statusTitles[status], className: cx("iui-status", (_b = {}, _b["iui-" + status] = !!status, _b)), "aria-label": statusTitles[status] }));
 };
 var __assign$5N = globalThis && globalThis.__assign || function() {
   __assign$5N = Object.assign || function(t2) {
@@ -39614,4 +39629,4 @@ var reactElementToJsxString = function reactElementToJsxString2(element) {
   };
   return formatTree(parseReactElement(element, options), options);
 };
-export { Surface as $, SvgMoon as A, SvgSun as B, reactElementToJsxString as C, DropdownMenu as D, ButtonGroup as E, Fragment as F, SvgWindowCollapse as G, Header as H, IconButton as I, SvgWindowFullScreen as J, SvgDockRight as K, Link as L, MenuItem as M, SvgDockBottom as N, Button as O, SandpackProvider as P, SandpackLayout as Q, React$c as R, SvgImodelHollow as S, Text$1 as T, UserIcon as U, SandpackCodeViewer as V, Headline as W, SvgAdd as X, LabeledInput as Y, SvgSearch as Z, Tile as _, HeaderLogo as a, UserIconGroup as a0, Body as a1, Anchor as a2, ReactDOM as a3, HashRouter as a4, Routes as a5, Route as a6, HeaderBreadcrumbs as b, cx as c, HeaderButton as d, SvgCheckmark as e, SvgProject as f, MenuDivider as g, SvgModel as h, SvgNotification as i, jsx as j, SvgHelpCircular as k, MenuExtraContent as l, jsxs as m, Select as n, SvgExit as o, SvgSettings as p, SvgSmileyHappy as q, SvgNews as r, SvgInfoCircular as s, SideNavigation as t, useNavigate as u, SidenavButton as v, SvgHome as w, SvgFolder as x, SvgConfiguration as y, useTheme as z };
+export { LabeledInput as $, SvgMoon as A, SvgSun as B, reactElementToJsxString as C, DropdownMenu as D, ButtonGroup as E, Fragment as F, SvgWindowCollapse as G, Header as H, IconButton as I, SvgWindowFullScreen as J, SvgDockRight as K, Link as L, MenuItem as M, SvgDockBottom as N, Button as O, SandpackProvider as P, SandpackLayout as Q, React$c as R, SvgImodelHollow as S, Text$1 as T, UserIcon as U, SandpackCodeViewer as V, Headline as W, Code as X, Surface as Y, Anchor as Z, SvgAdd as _, HeaderLogo as a, SvgSearch as a0, Tile as a1, Body as a2, Title as a3, ReactDOM as a4, HashRouter as a5, Routes as a6, Route as a7, HeaderBreadcrumbs as b, cx as c, HeaderButton as d, SvgCheckmark as e, SvgProject as f, MenuDivider as g, SvgModel as h, SvgNotification as i, jsx as j, SvgHelpCircular as k, MenuExtraContent as l, jsxs as m, Select as n, SvgExit as o, SvgSettings as p, SvgSmileyHappy as q, SvgNews as r, SvgInfoCircular as s, SideNavigation as t, useNavigate as u, SidenavButton as v, SvgHome as w, SvgFolder as x, SvgConfiguration as y, useTheme as z };

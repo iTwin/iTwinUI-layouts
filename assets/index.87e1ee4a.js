@@ -1,4 +1,4 @@
-import { R as React, c as cx, u as useNavigate, j as jsx, H as Header$1, a as HeaderLogo, S as SvgImodelHollow, b as HeaderBreadcrumbs, d as HeaderButton, M as MenuItem, e as SvgCheckmark, f as SvgProject, g as MenuDivider, h as SvgModel, I as IconButton, i as SvgNotification, D as DropdownMenu, k as SvgHelpCircular, l as MenuExtraContent, m as jsxs, F as Fragment, T as Text, n as Select, o as SvgExit, U as UserIcon, p as SvgSettings, q as SvgSmileyHappy, r as SvgNews, s as SvgInfoCircular, t as SideNavigation$1, v as SidenavButton, w as SvgHome, x as SvgFolder, y as SvgConfiguration, z as useTheme, A as SvgMoon, B as SvgSun, C as reactElementToJsxString, E as ButtonGroup, G as SvgWindowCollapse, J as SvgWindowFullScreen, L as Link, K as SvgDockRight, N as SvgDockBottom, O as Button, P as SandpackProvider, Q as SandpackLayout, V as SandpackCodeViewer, W as Headline, X as SvgAdd, Y as LabeledInput, Z as SvgSearch, _ as Tile, $ as Surface, a0 as UserIconGroup, a1 as Body, a2 as Anchor, a3 as ReactDOM, a4 as HashRouter, a5 as Routes, a6 as Route } from "./vendor.44e12d70.js";
+import { R as React, c as cx, u as useNavigate, j as jsx, H as Header$1, a as HeaderLogo, S as SvgImodelHollow, b as HeaderBreadcrumbs, d as HeaderButton, M as MenuItem, e as SvgCheckmark, f as SvgProject, g as MenuDivider, h as SvgModel, I as IconButton, i as SvgNotification, D as DropdownMenu, k as SvgHelpCircular, l as MenuExtraContent, m as jsxs, F as Fragment, T as Text, n as Select, o as SvgExit, U as UserIcon, p as SvgSettings, q as SvgSmileyHappy, r as SvgNews, s as SvgInfoCircular, t as SideNavigation$1, v as SidenavButton, w as SvgHome, x as SvgFolder, y as SvgConfiguration, z as useTheme, A as SvgMoon, B as SvgSun, C as reactElementToJsxString, E as ButtonGroup, G as SvgWindowCollapse, J as SvgWindowFullScreen, L as Link, K as SvgDockRight, N as SvgDockBottom, O as Button, P as SandpackProvider, Q as SandpackLayout, V as SandpackCodeViewer, W as Headline, X as Code, Y as Surface, Z as Anchor, _ as SvgAdd, $ as LabeledInput, a0 as SvgSearch, a1 as Tile, a2 as Body, a3 as Title, a4 as ReactDOM, a5 as HashRouter, a6 as Routes, a7 as Route } from "./vendor.ab321543.js";
 const p = function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -296,7 +296,6 @@ const DemoHeader = ({
 const DemoSideNav = ({
   activeItemKey = "Home"
 }) => {
-  const navigate = useNavigate();
   return /* @__PURE__ */ jsx(SideNavigation$1, {
     className: "app-sidenav",
     expanderPlacement: "bottom",
@@ -307,12 +306,10 @@ const DemoSideNav = ({
     }, "Home"), /* @__PURE__ */ jsx(SidenavButton, {
       startIcon: /* @__PURE__ */ jsx(SvgModel, {}),
       isActive: activeItemKey === "Model",
-      onClick: () => navigate("/app-layout"),
       children: "Model"
     }, "Model"), /* @__PURE__ */ jsx(SidenavButton, {
       startIcon: /* @__PURE__ */ jsx(SvgFolder, {}),
       isActive: activeItemKey === "Browse",
-      onClick: () => navigate("/grid-layout"),
       children: "Browse"
     }, "Browse")],
     secondaryItems: [/* @__PURE__ */ jsx(SidenavButton, {
@@ -406,7 +403,7 @@ const DemoTemplate = (props) => {
     })]
   });
 };
-const AppLayoutDemo = () => {
+const PageLayoutDemo = () => {
   return /* @__PURE__ */ jsx(DemoTemplate, {
     title: "App",
     children: /* @__PURE__ */ jsxs(PageLayout, {
@@ -420,7 +417,7 @@ const AppLayoutDemo = () => {
         })
       }), /* @__PURE__ */ jsx(PageLayout.Content, {
         children: /* @__PURE__ */ jsx("iframe", {
-          src: "https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-Layouts%20demo?editorPane=Hide&headers=Hide",
+          src: "https://dev.imodeljs.org/sandbox/embed/JonGraft/iTwinUI-layouts%20demo?editorPane=Hide&headers=Hide",
           loading: "lazy",
           style: {
             border: "none",
@@ -434,9 +431,64 @@ const AppLayoutDemo = () => {
     })
   });
 };
-const GridLayoutDemo = () => {
+const PageLayoutPaddedDemo = () => {
   return /* @__PURE__ */ jsx(DemoTemplate, {
-    title: "Grid Layout",
+    title: "App",
+    children: /* @__PURE__ */ jsxs(PageLayout, {
+      children: [/* @__PURE__ */ jsx(PageLayout.Header, {
+        children: /* @__PURE__ */ jsx(DemoHeader, {})
+      }), /* @__PURE__ */ jsx(PageLayout.SideNavigation, {
+        children: /* @__PURE__ */ jsx(DemoSideNav, {
+          activeItemKey: "Model"
+        })
+      }), /* @__PURE__ */ jsxs(PageLayout.Content, {
+        padded: true,
+        children: [/* @__PURE__ */ jsxs(PageLayout.TitleArea, {
+          children: [/* @__PURE__ */ jsx(Headline, {
+            children: "This is PageLayout with padding"
+          }), /* @__PURE__ */ jsx(Text, {
+            children: "This page layout has padded content. You can use it for Home page, dashboards, tables, settings and other content that does not need to be full frame."
+          }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsxs(Text, {
+            children: ["The content is automatically centered in large screens and has", " ", /* @__PURE__ */ jsx(Code, {
+              children: "maxWidth: 1440px"
+            }), " for better visuals."]
+          }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsxs(Text, {
+            children: ["Page title and this description is positioned in", " ", /* @__PURE__ */ jsx(Code, {
+              children: "PageLayout.TitleArea"
+            }), " component."]
+          }), /* @__PURE__ */ jsxs(Text, {
+            children: ["Buttons bellow are positioned in ", /* @__PURE__ */ jsx(Code, {
+              children: "PageLayout.ToolsArea"
+            }), " ", "component. It has ", /* @__PURE__ */ jsx(Code, {
+              children: "left"
+            }), " and ", /* @__PURE__ */ jsx(Code, {
+              children: "right"
+            }), " props to place tools accordingly. You can add anything you want in this area - search bar, filters, button groups, etc."]
+          })]
+        }), /* @__PURE__ */ jsx(PageLayout.ToolsArea, {
+          left: /* @__PURE__ */ jsx(Button, {
+            children: "Left tools"
+          }, "new"),
+          right: /* @__PURE__ */ jsx(Button, {
+            children: "Right tools"
+          }, "new")
+        }), /* @__PURE__ */ jsx(Surface, {
+          elevation: 1,
+          style: {
+            width: "100%",
+            height: "100%"
+          },
+          children: /* @__PURE__ */ jsx("div", {})
+        })]
+      })]
+    })
+  });
+};
+const GridLayoutDemo = () => {
+  const navigate = useNavigate();
+  const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.";
+  return /* @__PURE__ */ jsx(DemoTemplate, {
+    title: "Fluid grid",
     children: /* @__PURE__ */ jsxs(PageLayout, {
       children: [/* @__PURE__ */ jsx(PageLayout.Header, {
         children: /* @__PURE__ */ jsx(DemoHeader, {})
@@ -448,9 +500,34 @@ const GridLayoutDemo = () => {
         padded: true,
         children: [/* @__PURE__ */ jsxs(PageLayout.TitleArea, {
           children: [/* @__PURE__ */ jsx(Headline, {
-            children: "This is grid layout"
-          }), /* @__PURE__ */ jsx(Text, {
-            children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            children: "Fluid grid"
+          }), /* @__PURE__ */ jsxs(Text, {
+            children: ["This page is example of how to use ", /* @__PURE__ */ jsx(Code, {
+              children: "FluidGrid"
+            }), " ", "component. Try resizing this page and see how grid changes."]
+          }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsxs(Text, {
+            children: [/* @__PURE__ */ jsx(Code, {
+              children: "FluidGrid"
+            }), " component has two props:", " ", /* @__PURE__ */ jsxs("ol", {
+              children: [/* @__PURE__ */ jsxs("li", {
+                children: [/* @__PURE__ */ jsx(Code, {
+                  children: "children"
+                }), " - list of items you want to place in FluidGrid. One option might be array of", " ", /* @__PURE__ */ jsx(Anchor, {
+                  href: "https://itwin.github.io/iTwinUI-react/?path=/story/core-tile--actionable",
+                  target: "_blank",
+                  children: "Tiles"
+                }), "."]
+              }), /* @__PURE__ */ jsxs("li", {
+                children: [/* @__PURE__ */ jsx(Code, {
+                  children: "minItemWidth"
+                }), " - number that is being used in calculating item count on a FluidGrid row. Default value is 256px."]
+              })]
+            })]
+          }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsxs(Text, {
+            children: ["This page is based on", " ", /* @__PURE__ */ jsx(Anchor, {
+              onClick: () => navigate("/page-layout-2"),
+              children: "PageLayout with padding"
+            }), "."]
           })]
         }), /* @__PURE__ */ jsx(PageLayout.ToolsArea, {
           left: /* @__PURE__ */ jsx(Button, {
@@ -464,9 +541,10 @@ const GridLayoutDemo = () => {
           }, "search")
         }), /* @__PURE__ */ jsx(FluidGrid, {
           children: Array(12).fill(null).map((_, index2) => /* @__PURE__ */ jsx(Tile, {
+            isActionable: true,
             name: `Item #${index2}`,
             thumbnail: /* @__PURE__ */ jsx(SvgImodelHollow, {}),
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat."
+            description: loremIpsum
           }, index2))
         })]
       })]
@@ -477,14 +555,13 @@ var DemoSurfaceCard$1 = "";
 const DemoSurfaceCard = (props) => {
   const {
     children,
-    title,
-    centeredContent = false
+    title
   } = props;
   return /* @__PURE__ */ jsx(Surface, {
     elevation: 1,
     style: {
       width: "100%",
-      minHeight: centeredContent ? "400px" : "250px",
+      minHeight: "250px",
       height: "100%"
     },
     children: /* @__PURE__ */ jsxs("div", {
@@ -496,9 +573,7 @@ const DemoSurfaceCard = (props) => {
           children: title
         })
       }), /* @__PURE__ */ jsx("div", {
-        className: cx("demo-surface-content", {
-          "demo-surface-content-centered": centeredContent
-        }),
+        className: "demo-surface-content",
         children
       })]
     })
@@ -506,22 +581,9 @@ const DemoSurfaceCard = (props) => {
 };
 var DemoHomePageInfoCard$1 = "";
 const DemoHomePageInfoCard = () => {
-  const userNames = [{
-    name: "Terry Rivers",
-    abbreviation: "TR",
-    color: "#56AA1C"
-  }, {
-    name: "Kayla Smith",
-    abbreviation: "KS",
-    color: "#2B9CA7"
-  }, {
-    name: "Celine Adams",
-    abbreviation: "CA",
-    color: "#00426B"
-  }];
-  return /* @__PURE__ */ jsxs(Surface, {
+  return /* @__PURE__ */ jsx(Surface, {
     elevation: 1,
-    children: [/* @__PURE__ */ jsxs("div", {
+    children: /* @__PURE__ */ jsxs("div", {
       className: "demo-home-page-info-card",
       children: [/* @__PURE__ */ jsx("div", {
         className: "demo-home-page-info-card-icon",
@@ -530,29 +592,86 @@ const DemoHomePageInfoCard = () => {
         className: "demo-home-page-info-card-center",
         children: [/* @__PURE__ */ jsx(Text, {
           variant: "title",
-          children: "This is app title"
-        }), /* @__PURE__ */ jsx(Text, {
+          children: "Grid"
+        }), /* @__PURE__ */ jsxs(Text, {
           variant: "leading",
-          children: "This subheading is the best. Giving description to the title of the app."
+          children: ["This is example of how to use ", /* @__PURE__ */ jsx(Code, {
+            children: "Grid"
+          }), " and", " ", /* @__PURE__ */ jsx(Code, {
+            children: "Grid.Item"
+          }), "."]
+        }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsxs(Text, {
+          children: [/* @__PURE__ */ jsx(Code, {
+            children: "Grid"
+          }), " is composed of 12 equal parts columns across all screen sizes."]
+        }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsxs(Text, {
+          children: ["Screen size breakpoints we use:", /* @__PURE__ */ jsxs("ul", {
+            children: [/* @__PURE__ */ jsxs("li", {
+              children: [/* @__PURE__ */ jsx(Code, {
+                children: "mobile"
+              }), " - under 486px"]
+            }), /* @__PURE__ */ jsxs("li", {
+              children: [/* @__PURE__ */ jsx(Code, {
+                children: "landscapeMobile"
+              }), " - 487px to 768px"]
+            }), /* @__PURE__ */ jsxs("li", {
+              children: [/* @__PURE__ */ jsx(Code, {
+                children: "tablet"
+              }), " - 769px to 991px"]
+            }), /* @__PURE__ */ jsxs("li", {
+              children: [/* @__PURE__ */ jsx(Code, {
+                children: "smallMonitor"
+              }), " - 992px to 1399px"]
+            }), /* @__PURE__ */ jsxs("li", {
+              children: [/* @__PURE__ */ jsx(Code, {
+                children: "monitor"
+              }), " - over 1400px"]
+            })]
+          })]
         })]
-      }), /* @__PURE__ */ jsx("div", {
+      }), /* @__PURE__ */ jsxs("div", {
         className: "demo-home-page-info-card-right",
-        children: /* @__PURE__ */ jsx(UserIconGroup, {
-          animated: true,
-          iconSize: "medium",
-          children: userNames.map((user, index2) => /* @__PURE__ */ jsx(UserIcon, {
-            title: user.name,
-            abbreviation: user.abbreviation,
-            backgroundColor: user.color
-          }, `user${index2}`))
-        })
+        children: [/* @__PURE__ */ jsx(Text, {
+          variant: "title",
+          children: "Grid.Item"
+        }), /* @__PURE__ */ jsxs(Text, {
+          children: [/* @__PURE__ */ jsx(Code, {
+            children: "Grid"
+          }), " can have any React component as children. We recommend using ", /* @__PURE__ */ jsx(Code, {
+            children: "Grid.Item"
+          }), "."]
+        }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsxs(Text, {
+          children: [/* @__PURE__ */ jsx(Code, {
+            children: "Grid.Item"
+          }), " props:", /* @__PURE__ */ jsxs("ul", {
+            children: [/* @__PURE__ */ jsxs("li", {
+              children: [/* @__PURE__ */ jsx(Code, {
+                children: "children"
+              }), " - content you want to add to grid item."]
+            }), /* @__PURE__ */ jsxs("li", {
+              children: [/* @__PURE__ */ jsx(Code, {
+                children: "columnSpan"
+              }), " - amount of columns grid item spans."]
+            }), /* @__PURE__ */ jsxs("li", {
+              children: [/* @__PURE__ */ jsx(Code, {
+                children: "columnStart"
+              }), " - column number on which grid item starts."]
+            })]
+          })]
+        }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Text, {
+          children: "This card is taking 12/12 columns - full row."
+        }), /* @__PURE__ */ jsxs(Text, {
+          children: ["You can set same value of column span for all screen sizes using", " ", /* @__PURE__ */ jsx(Code, {
+            children: "columnSpan"
+          }), " and setting it to 12."]
+        })]
       })]
-    }), " "]
+    })
   });
 };
-const HomePageDemo = () => {
+const GridDemo = () => {
   return /* @__PURE__ */ jsx(DemoTemplate, {
-    title: "Home Page",
+    title: "Grid",
     children: /* @__PURE__ */ jsxs(PageLayout, {
       children: [/* @__PURE__ */ jsx(PageLayout.Header, {
         children: /* @__PURE__ */ jsx(DemoHeader, {})
@@ -572,10 +691,29 @@ const HomePageDemo = () => {
               landscapeMobile: 6,
               mobile: 12
             },
-            children: /* @__PURE__ */ jsx(DemoSurfaceCard, {
-              title: "Demo group 1",
-              centeredContent: true,
-              children: "No data"
+            children: /* @__PURE__ */ jsxs(DemoSurfaceCard, {
+              title: "Grid.Item columnSpan",
+              children: [/* @__PURE__ */ jsxs(Text, {
+                children: [/* @__PURE__ */ jsx(Code, {
+                  children: "columnSpan?"
+                }), ": number | ResponsiveColumnSpan;"]
+              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Text, {
+                children: "Sets column count for grid item - how many columns this item spans. Max columnSpan is 12."
+              }), /* @__PURE__ */ jsx(Text, {
+                children: /* @__PURE__ */ jsxs("ul", {
+                  children: [/* @__PURE__ */ jsxs("li", {
+                    children: [/* @__PURE__ */ jsx(Code, {
+                      children: "number"
+                    }), " - spans grid item same amount in all screen sizes;"]
+                  }), /* @__PURE__ */ jsxs("li", {
+                    children: [/* @__PURE__ */ jsx(Code, {
+                      children: "ResponsiveColumnSpan"
+                    }), " - object to specify grid column span in specific screen sizes;"]
+                  })]
+                })
+              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Text, {
+                children: "default 1"
+              })]
             })
           }, "demo-group-1"), /* @__PURE__ */ jsx(Grid.Item, {
             columnSpan: {
@@ -585,10 +723,33 @@ const HomePageDemo = () => {
               landscapeMobile: 6,
               mobile: 12
             },
-            children: /* @__PURE__ */ jsx(DemoSurfaceCard, {
-              title: "Demo group 2",
-              centeredContent: true,
-              children: "No data"
+            children: /* @__PURE__ */ jsxs(DemoSurfaceCard, {
+              title: "Grid.Item columnStart",
+              children: [/* @__PURE__ */ jsxs(Text, {
+                children: [/* @__PURE__ */ jsx(Code, {
+                  children: "columnStart?"
+                }), ": auto | number | ResponsiveColumnStart;"]
+              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Text, {
+                children: "Sets on which column grid item starts. Eg. When set to 10, grid item starts on 10th column."
+              }), /* @__PURE__ */ jsx(Text, {
+                children: /* @__PURE__ */ jsxs("ul", {
+                  children: [/* @__PURE__ */ jsxs("li", {
+                    children: [/* @__PURE__ */ jsx(Code, {
+                      children: "auto"
+                    }), " - places grid item in nearest empty suitable grid column in all screen sizes;"]
+                  }), /* @__PURE__ */ jsxs("li", {
+                    children: [/* @__PURE__ */ jsx(Code, {
+                      children: "number"
+                    }), " - places grid item in specific grid column in all screen sizes;"]
+                  }), /* @__PURE__ */ jsxs("li", {
+                    children: [/* @__PURE__ */ jsx(Code, {
+                      children: "ResponsiveColumnStart"
+                    }), " - object to specify grid column to place item in specific screen sizes;"]
+                  })]
+                })
+              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Text, {
+                children: "default `auto`"
+              })]
             })
           }, "demo-group-2"), /* @__PURE__ */ jsx(Grid.Item, {
             columnSpan: {
@@ -598,18 +759,63 @@ const HomePageDemo = () => {
               landscapeMobile: 12,
               mobile: 12
             },
-            children: /* @__PURE__ */ jsx(DemoSurfaceCard, {
-              title: "Demo group 3",
-              centeredContent: true,
-              children: "No data"
+            children: /* @__PURE__ */ jsxs(DemoSurfaceCard, {
+              title: "Props types",
+              children: [/* @__PURE__ */ jsx("pre", {
+                children: `ResponsiveColumnSpan = 
+{
+  mobile: number; 
+  landscapeMobile: number; 
+  tablet: number; 
+  smallMonitor: number; 
+  monitor: number;
+}`
+              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx("pre", {
+                children: `ResponsiveColumnStart = 
+{
+  mobile: 'auto' | number; 
+  landscapeMobile: 'auto' | number; 
+  tablet: 'auto' | number; 
+  smallMonitor: 'auto' | number; 
+  monitor: 'auto' | number;
+}`
+              })]
             })
           }, "demo-group-3"), /* @__PURE__ */ jsx(Grid.Item, {
-            columnSpan: 3,
-            columnStart: 10,
+            columnSpan: {
+              monitor: 5,
+              smallMonitor: 5,
+              tablet: 5,
+              landscapeMobile: 5,
+              mobile: 12
+            },
+            children: /* @__PURE__ */ jsxs(Text, {
+              children: ["This button is placed using Grid.Item with", " ", /* @__PURE__ */ jsxs(Code, {
+                children: ["columnSpan=", 3]
+              }), " and ", /* @__PURE__ */ jsxs(Code, {
+                children: ["columnStart=", 10]
+              }), "."]
+            })
+          }), /* @__PURE__ */ jsx(Grid.Item, {
+            columnSpan: {
+              monitor: 3,
+              smallMonitor: 3,
+              tablet: 3,
+              landscapeMobile: 3,
+              mobile: 12
+            },
+            columnStart: {
+              monitor: 10,
+              smallMonitor: 10,
+              tablet: 10,
+              landscapeMobile: 10,
+              mobile: "auto"
+            },
             style: {
               display: "flex",
               justifyContent: "flex-end"
             },
+            className: "demo-transparent-background",
             children: /* @__PURE__ */ jsx(Button, {
               children: "Button"
             })
@@ -621,9 +827,26 @@ const HomePageDemo = () => {
               landscapeMobile: 12,
               mobile: 12
             },
-            children: /* @__PURE__ */ jsx(DemoSurfaceCard, {
-              title: "Example card",
-              children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            children: /* @__PURE__ */ jsxs(DemoSurfaceCard, {
+              title: "Example code",
+              children: [/* @__PURE__ */ jsx("pre", {
+                children: `<Grid.Item
+  columnSpan={{
+    monitor: 4,
+    smallMonitor: 4,
+    tablet: 4,
+    landscapeMobile: 6,
+    mobile: 12,
+  }}
+>
+  [content]
+</Grid.Item>`
+              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx("pre", {
+                children: `<Grid.Item 
+  columnSpan={4}>
+    [content]
+</Grid.Item>`
+              })]
             })
           }, "example-card-1"), /* @__PURE__ */ jsx(Grid.Item, {
             columnSpan: {
@@ -634,8 +857,32 @@ const HomePageDemo = () => {
               mobile: 12
             },
             children: /* @__PURE__ */ jsx(DemoSurfaceCard, {
-              title: "List of products",
-              children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              title: "Example code",
+              children: /* @__PURE__ */ jsxs("div", {
+                style: {
+                  display: "flex",
+                  flexDirection: "row",
+                  gap: "24px"
+                },
+                children: [/* @__PURE__ */ jsx("pre", {
+                  children: `<Grid.Item
+  columnStart={10}>
+      [content]
+  </Grid.Item>`
+                }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx("pre", {
+                  children: `<Grid.Item
+  columnStart={{
+    monitor: 10,
+    smallMonitor: 8,
+    tablet: 6,
+    landscapeMobile: 4,
+    mobile: 2,
+  }}
+>
+  [content]
+</Grid.Item>`
+                })]
+              })
             })
           }, "example-card-2")]
         })
@@ -644,23 +891,35 @@ const HomePageDemo = () => {
   });
 };
 const DEMOS_LIST = [{
-  path: "app-layout",
-  name: "App",
-  description: "Display an iTwin.js frame within the content area.",
-  icon: "layouts-thumbnails/AppLayout.png",
-  component: AppLayoutDemo
+  listName: "Layouts",
+  layouts: [{
+    path: "page-layout-1",
+    name: "PageLayout 1",
+    description: "Demo consisting of header, side navigation, and full frame content (eg. iTwin.js frame).",
+    icon: "layouts-thumbnails/AppLayout.png",
+    component: PageLayoutDemo
+  }, {
+    path: "page-layout-2",
+    name: "PageLayout 2",
+    description: "Demo consisting of header, side navigation, and padded content (eg. array of tiles or table).",
+    icon: "layouts-thumbnails/PageLayoutPadded.png",
+    component: PageLayoutPaddedDemo
+  }]
 }, {
-  path: "grid-layout",
-  name: "Tiles grid",
-  description: "A responsive grid of tiles.",
-  icon: "layouts-thumbnails/TileGridLayout.png",
-  component: GridLayoutDemo
-}, {
-  path: "home-layout",
-  name: "Home page",
-  description: "Grid layout example for home page.",
-  icon: "/layouts-thumbnails/HomeLayout.png",
-  component: HomePageDemo
+  listName: "Grids",
+  layouts: [{
+    path: "fluid-grid",
+    name: "Fluid grid",
+    description: "A responsive grid of tiles.",
+    icon: "layouts-thumbnails/TileGridLayout.png",
+    component: GridLayoutDemo
+  }, {
+    path: "grid-1",
+    name: "Grid",
+    description: "Grid layout example for home page.",
+    icon: "layouts-thumbnails/HomeLayout.png",
+    component: GridDemo
+  }]
 }];
 var GitHubBanner$1 = "";
 const GitHubBanner = () => {
@@ -711,31 +970,40 @@ const App = () => {
     children: [/* @__PURE__ */ jsx(GitHubBanner, {}), /* @__PURE__ */ jsx(Text, {
       as: "h1",
       variant: "headline",
-      children: "iTwinUI-Layouts"
+      children: "iTwinUI-layouts"
     }), /* @__PURE__ */ jsxs(Body, {
-      children: ["An open-source common UI layouts library used to display", " ", /* @__PURE__ */ jsx(Anchor, {
+      children: ["iTwinUI-layouts places given React (eg.", " ", /* @__PURE__ */ jsx(Anchor, {
         href: "https://itwin.github.io/iTwinUI-react/",
         children: "iTwinUI-react"
-      }), " ", "components."]
+      }), ") components accordingly within the page with minimal effort on the development side."]
     }), /* @__PURE__ */ jsx("img", {
       alt: "GitHub last commit",
       src: "https://img.shields.io/github/last-commit/itwin/iTwinUI-layouts"
-    }), /* @__PURE__ */ jsx("hr", {}), /* @__PURE__ */ jsx(FluidGrid, {
-      children: DEMOS_LIST.map(({
-        path,
-        name,
-        description,
-        icon
-      }) => /* @__PURE__ */ jsx("div", {
-        onClick: () => navigate(path),
-        className: "tile-wrapper",
-        children: /* @__PURE__ */ jsx(Tile, {
+    }), /* @__PURE__ */ jsx("hr", {}), DEMOS_LIST.map(({
+      listName,
+      layouts
+    }) => /* @__PURE__ */ jsxs("div", {
+      className: "demo-layouts-list",
+      children: [/* @__PURE__ */ jsx(Title, {
+        children: listName
+      }), /* @__PURE__ */ jsx(FluidGrid, {
+        children: layouts.map(({
+          path,
           name,
           description,
-          thumbnail: icon
-        })
-      }, name))
-    })]
+          icon
+        }) => /* @__PURE__ */ jsx("div", {
+          onClick: () => navigate(path),
+          className: "tile-wrapper",
+          children: /* @__PURE__ */ jsx(Tile, {
+            isActionable: true,
+            name,
+            description,
+            thumbnail: icon
+          })
+        }, name))
+      })]
+    }, listName))]
   });
 };
 ReactDOM.render(/* @__PURE__ */ jsx(React.StrictMode, {
@@ -745,12 +1013,14 @@ ReactDOM.render(/* @__PURE__ */ jsx(React.StrictMode, {
         path: "/",
         element: /* @__PURE__ */ jsx(App, {})
       }), DEMOS_LIST.map(({
+        layouts
+      }) => layouts.map(({
         path,
-        component
+        component: Component
       }) => /* @__PURE__ */ jsx(Route, {
         path,
-        element: component()
-      }, path))]
+        element: /* @__PURE__ */ jsx(Component, {})
+      }, path)))]
     })
   })
 }), document.getElementById("root"));
