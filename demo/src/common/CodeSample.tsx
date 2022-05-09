@@ -21,6 +21,7 @@ export const CodeSample = ({ children }: CodeSampleProps) => {
       language='typescript'
       style={theme === 'light' ? oneLight : oneDark}
       wrapLongLines={true}
+      wrapLines={true}
     >
       {children}
     </SyntaxHighlighter>
