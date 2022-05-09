@@ -65,8 +65,5 @@
     "*.{js,ts,tsx,scss}": [
       "yarn lint:copyright --fix"
     ]
-  },
-  "dependencies": {
-    "@types/react-syntax-highlighter": "^15.5.1"
   }
 }
