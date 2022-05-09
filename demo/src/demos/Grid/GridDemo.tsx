@@ -171,6 +171,7 @@ columnStart?: auto | number | ResponsiveColumnStart;`}
               style={{
                 display: 'flex',
                 justifyContent: 'flex-end',
+                alignItems: 'center',
               }}
               className='demo-transparent-background'
             >

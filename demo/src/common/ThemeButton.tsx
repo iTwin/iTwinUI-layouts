@@ -3,15 +3,13 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import { ThemeType, useTheme, IconButton } from '@itwin/itwinui-react';
+import { useTheme, IconButton } from '@itwin/itwinui-react';
 import { SvgSun, SvgMoon } from '@itwin/itwinui-icons-react';
+import { useThemeContext } from './ThemeContext';
 
 export const ThemeButton = () => {
-  const [theme, setTheme] = React.useState<ThemeType>(() =>
-    window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light',
-  );
+  const { theme, setTheme } = useThemeContext();
+
   useTheme(theme);
 
   const changeTheme = () => {

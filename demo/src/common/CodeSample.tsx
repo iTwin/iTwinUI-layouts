@@ -5,20 +5,21 @@
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import {
-  vscDarkPlus,
-  vs,
+  oneDark,
+  oneLight,
 } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { useThemeContext } from './ThemeContext';
 
 export type CodeSampleProps = {
   children: React.ReactNode;
 };
 
 export const CodeSample = ({ children }: CodeSampleProps) => {
+  const { theme } = useThemeContext();
   return (
     <SyntaxHighlighter
-      customStyle={{ fontSize: '1em' }}
       language='typescript'
-      style={vs}
+      style={theme === 'light' ? oneLight : oneDark}
       wrapLongLines={true}
     >
       {children}

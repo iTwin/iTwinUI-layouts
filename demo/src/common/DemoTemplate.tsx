@@ -11,7 +11,13 @@ import {
 import cx from 'classnames';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 import './DemoTemplate.scss';
-import { IconButton, ButtonGroup, Button, Text } from '@itwin/itwinui-react';
+import {
+  IconButton,
+  ButtonGroup,
+  Button,
+  Text,
+  ThemeType,
+} from '@itwin/itwinui-react';
 import {
   SvgWindowFullScreen,
   SvgWindowCollapse,
@@ -20,6 +26,7 @@ import {
 } from '@itwin/itwinui-icons-react';
 import { ThemeButton } from '../common/ThemeButton';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from './ThemeContext';
 
 export type DemoTemplateProps = {
   title: string;
@@ -43,68 +50,74 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
   const [isFullScreen, setIsFullScreen] = React.useState(isTestRun());
   const [isHorizontal, setIsHorizontal] = React.useState(false);
   const demoCode = toDemoCode(reactElementToJSXString(children));
-
+  const [theme, setTheme] = React.useState<ThemeType>(() =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light',
+  );
   return (
-    <div
-      className={cx('demo-template-container', {
-        'demo-template-container-vertical': isHorizontal,
-      })}
-    >
-      <div className='demo-template-content'>
-        {children}
-        {!isTestRun() && (
-          <ButtonGroup className='demo-template-button-overlay'>
-            <ThemeButton />
-            <IconButton onClick={() => setIsFullScreen((f) => !f)}>
-              {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
-            </IconButton>
-          </ButtonGroup>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <div
+        className={cx('demo-template-container', {
+          'demo-template-container-vertical': isHorizontal,
+        })}
+      >
+        <div className='demo-template-content'>
+          {children}
+          {!isTestRun() && (
+            <ButtonGroup className='demo-template-button-overlay'>
+              <ThemeButton />
+              <IconButton onClick={() => setIsFullScreen((f) => !f)}>
+                {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
+              </IconButton>
+            </ButtonGroup>
+          )}
+        </div>
+
+        {!isFullScreen && (
+          <div className='demo-template-code'>
+            <div className='demo-template-code-header'>
+              <div className='demo-template-code-header-left'>
+                <Link
+                  to='../'
+                  className='iui-anchor demo-template-code-header-back'
+                >
+                  ..
+                </Link>
+                <Text
+                  as='h1'
+                  variant='title'
+                  className='demo-template-code-header-title'
+                >
+                  {title}
+                </Text>
+              </div>
+              <div className='demo-template-code-header-right'>
+                <IconButton onClick={() => setIsHorizontal((f) => !f)}>
+                  {isHorizontal ? <SvgDockRight /> : <SvgDockBottom />}
+                </IconButton>
+                <Button
+                  onClick={() => navigator.clipboard.writeText(demoCode)}
+                  styleType='high-visibility'
+                >
+                  Copy
+                </Button>
+              </div>
+            </div>
+            <SandpackProvider template='react-ts'>
+              <SandpackLayout theme='github-light'>
+                <SandpackCodeViewer
+                  code={demoCode}
+                  showTabs={false}
+                  showLineNumbers={true}
+                  wrapContent={true}
+                />
+              </SandpackLayout>
+            </SandpackProvider>
+          </div>
         )}
       </div>
-
-      {!isFullScreen && (
-        <div className='demo-template-code'>
-          <div className='demo-template-code-header'>
-            <div className='demo-template-code-header-left'>
-              <Link
-                to='../'
-                className='iui-anchor demo-template-code-header-back'
-              >
-                ..
-              </Link>
-              <Text
-                as='h1'
-                variant='title'
-                className='demo-template-code-header-title'
-              >
-                {title}
-              </Text>
-            </div>
-            <div className='demo-template-code-header-right'>
-              <IconButton onClick={() => setIsHorizontal((f) => !f)}>
-                {isHorizontal ? <SvgDockRight /> : <SvgDockBottom />}
-              </IconButton>
-              <Button
-                onClick={() => navigator.clipboard.writeText(demoCode)}
-                styleType='high-visibility'
-              >
-                Copy
-              </Button>
-            </div>
-          </div>
-          <SandpackProvider template='react-ts'>
-            <SandpackLayout theme='github-light'>
-              <SandpackCodeViewer
-                code={demoCode}
-                showTabs={false}
-                showLineNumbers={true}
-                wrapContent={true}
-              />
-            </SandpackLayout>
-          </SandpackProvider>
-        </div>
-      )}
-    </div>
+    </ThemeContext.Provider>
   );
 };
 
