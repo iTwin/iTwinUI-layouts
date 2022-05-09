@@ -11,7 +11,7 @@ import {
 import { useThemeContext } from './ThemeContext';
 
 export type CodeSampleProps = {
-  children: React.ReactNode;
+  children: string;
 };
 
 export const CodeSample = ({ children }: CodeSampleProps) => {

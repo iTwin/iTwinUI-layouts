@@ -797,6 +797,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@itwin/itwinui-layouts-monorepo@workspace:."
   dependencies:
+    "@types/react-syntax-highlighter": ^15.5.1
     "@typescript-eslint/eslint-plugin": ^5.10.1
     "@typescript-eslint/parser": ^5.10.1
     concurrently: ^7.0.0
@@ -810,7 +811,6 @@ __metadata:
     postcss: ^8.4.5
     postcss-scss: ^4.0.4
     prettier: ^2.5.1
-    react-syntax-highlighter: ^15.5.0
     stylelint: ^14.3.0
     stylelint-config-sass-guidelines: ^9.0.1
   languageName: unknown
@@ -1197,6 +1197,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
+  languageName: node
+  linkType: hard
+
+"@types/react-syntax-highlighter@npm:^15.5.1":
+  version: 15.5.1
+  resolution: "@types/react-syntax-highlighter@npm:15.5.1"
+  dependencies:
+    "@types/react": "*"
+  checksum: e23f2e35f5d2688bc0bbe3e0b13518ff5ff9be177e92d9e303775c053b85221c63f017a72e05f7f27ba9a50e711f89fe13c8fc72af76419ea8907fc104ebce5d
   languageName: node
   linkType: hard
 
