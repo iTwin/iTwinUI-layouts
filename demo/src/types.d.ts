@@ -27,8 +27,3 @@ declare global {
     }
   }
 }
-
-// declare module 'react-syntax-highlighter/dist/esm/styles/prism' {
-//   export { default as oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism/one-dark';
-//   export { default as oneLight } from 'react-syntax-highlighter/dist/esm/styles/prism/one-light';
-// }
