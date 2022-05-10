@@ -4,17 +4,23 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import {
+  vs,
+  vscDarkPlus,
+} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { useThemeContext } from './ThemeContext';
 
 export type CodeSampleProps = {
   children: string;
 };
 
 export const CodeSample = ({ children }: CodeSampleProps) => {
+  const { theme } = useThemeContext();
   return (
     <SyntaxHighlighter
+      customStyle={theme === 'light' ? { fontSize: '1.1em' } : {}}
       language='javascript'
-      style={darcula}
+      style={theme === 'light' ? vs : vscDarkPlus}
       wrapLongLines={true}
       wrapLines={true}
     >
