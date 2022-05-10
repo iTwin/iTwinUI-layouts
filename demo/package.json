@@ -38,13 +38,13 @@
     "@itwin/itwinui-react": "^1.37.0",
     "react-element-to-jsx-string": "^14.3.4",
     "react-router-dom": "6",
-    "react-syntax-highlighter": "^15.5.0",
+    "react-syntax-highlighter": "^13.0.0",
     "vite-plugin-svgr": "^1.0.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
-    "@types/react-syntax-highlighter": "^15.5.1",
+    "@types/react-syntax-highlighter": "^13.5.2",
     "@vitejs/plugin-react": "^1.0.7",
     "cypress": "^9.5.0",
     "cypress-image-diff-js": "^1.18.1",

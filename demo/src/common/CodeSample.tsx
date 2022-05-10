@@ -4,22 +4,17 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {
-  oneDark,
-  oneLight,
-} from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { useThemeContext } from './ThemeContext';
+import { darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export type CodeSampleProps = {
   children: string;
 };
 
 export const CodeSample = ({ children }: CodeSampleProps) => {
-  const { theme } = useThemeContext();
   return (
     <SyntaxHighlighter
-      language='typescript'
-      style={theme === 'light' ? oneLight : oneDark}
+      language='javascript'
+      style={darcula}
       wrapLongLines={true}
       wrapLines={true}
     >

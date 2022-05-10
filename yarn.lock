@@ -778,7 +778,7 @@ __metadata:
     "@itwin/itwinui-react": ^1.37.0
     "@types/react": ^17.0.33
     "@types/react-dom": ^17.0.10
-    "@types/react-syntax-highlighter": ^15.5.1
+    "@types/react-syntax-highlighter": ^13.5.2
     "@vitejs/plugin-react": ^1.0.7
     cypress: ^9.5.0
     cypress-image-diff-js: ^1.18.1
@@ -786,7 +786,7 @@ __metadata:
     react-dom: ^17.0.2
     react-element-to-jsx-string: ^14.3.4
     react-router-dom: 6
-    react-syntax-highlighter: ^15.5.0
+    react-syntax-highlighter: ^13.0.0
     sass: ^1.49.0
     typescript: ^4.4.4
     vite: ^2.7.2
@@ -1200,12 +1200,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-syntax-highlighter@npm:^15.5.1":
-  version: 15.5.1
-  resolution: "@types/react-syntax-highlighter@npm:15.5.1"
+"@types/react-syntax-highlighter@npm:^13.5.2":
+  version: 13.5.2
+  resolution: "@types/react-syntax-highlighter@npm:13.5.2"
   dependencies:
     "@types/react": "*"
-  checksum: e23f2e35f5d2688bc0bbe3e0b13518ff5ff9be177e92d9e303775c053b85221c63f017a72e05f7f27ba9a50e711f89fe13c8fc72af76419ea8907fc104ebce5d
+  checksum: 237cb596368f7c2c8549d0150308cd5fe633d249b6e20bebb4e242bc1172b60e808db2a57d212f409ab3fee37f47b8465ac35c4754e814d7e0f53cc1b2dd14ea
   languageName: node
   linkType: hard
 
@@ -3848,7 +3848,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"highlight.js@npm:^10.4.1, highlight.js@npm:~10.7.0":
+"highlight.js@npm:^10.1.1, highlight.js@npm:~10.7.0":
   version: 10.7.3
   resolution: "highlight.js@npm:10.7.3"
   checksum: defeafcd546b535d710d8efb8e650af9e3b369ef53e28c3dc7893eacfe263200bba4c5fcf43524ae66d5c0c296b1af0870523ceae3e3104d24b7abf6374a4fea
@@ -4717,7 +4717,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lowlight@npm:^1.17.0":
+"lowlight@npm:^1.14.0":
   version: 1.20.0
   resolution: "lowlight@npm:1.20.0"
   dependencies:
@@ -5606,7 +5606,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.27.0":
+"prismjs@npm:^1.21.0":
   version: 1.28.0
   resolution: "prismjs@npm:1.28.0"
   checksum: bde93fb2beb45b7243219fc53855f59ee54b3fa179f315e8f9d66244d756ef984462e10561bbdc6713d3d7e051852472d7c284f5794a8791eeaefea2fb910b16
@@ -5790,18 +5790,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-syntax-highlighter@npm:^15.5.0":
-  version: 15.5.0
-  resolution: "react-syntax-highlighter@npm:15.5.0"
+"react-syntax-highlighter@npm:^13.0.0":
+  version: 13.5.3
+  resolution: "react-syntax-highlighter@npm:13.5.3"
   dependencies:
     "@babel/runtime": ^7.3.1
-    highlight.js: ^10.4.1
-    lowlight: ^1.17.0
-    prismjs: ^1.27.0
-    refractor: ^3.6.0
+    highlight.js: ^10.1.1
+    lowlight: ^1.14.0
+    prismjs: ^1.21.0
+    refractor: ^3.1.0
   peerDependencies:
     react: ">= 0.14.0"
-  checksum: c082b48f30f8ba8d0c55ed1d761910630860077c7ff5793c4c912adcb5760df06436ed0ad62be0de28113aac9ad2af55eccd995f8eee98df53382e4ced2072fb
+  checksum: fa03880a887bc0c79c0be25fc35924980d75f684f8d05620272bdfcbb9f119f45bb7f8ddd92b9e944103964a4e094b99750d0b19c992fd86f2ce0b70266e89c3
   languageName: node
   linkType: hard
 
@@ -5901,7 +5901,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"refractor@npm:^3.6.0":
+"refractor@npm:^3.1.0":
   version: 3.6.0
   resolution: "refractor@npm:3.6.0"
   dependencies:
