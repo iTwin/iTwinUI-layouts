@@ -29,23 +29,23 @@
       align-items: center;
 
       @include monitor {
-        padding: $iui-xl $iui-xxl;
+        padding: $iui-xl unquote('max(#{$iui-xxl}, #{$iui-xxl} + env(safe-area-inset-right))') $iui-xl $iui-xxl;
       }
 
       @include small-monitor {
-        padding: $iui-l 48px;
+        padding: $iui-l unquote('max(48px, 48px + env(safe-area-inset-right))') $iui-l 48px;
       }
 
       @include tablet {
-        padding: $iui-m $iui-xl;
+        padding: $iui-m unquote('max(#{$iui-xl}, #{$iui-xl} + env(safe-area-inset-right))') $iui-m $iui-xl;
       }
 
       @include landscape-mobile {
-        padding: $iui-s $iui-l;
+        padding: $iui-s unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-right))') $iui-s $iui-l;
       }
 
       @include mobile {
-        padding: $iui-s $iui-l;
+        padding: $iui-s unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-right))') $iui-s $iui-l;
       }
     }
 

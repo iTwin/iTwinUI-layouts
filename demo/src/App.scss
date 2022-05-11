@@ -5,7 +5,7 @@
 @import '@itwin/itwinui-css/scss/variables';
 
 .app {
-  padding: $iui-line-height $iui-l;
+  padding: $iui-line-height unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-left))') $iui-line-height unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-right))');
 }
 
 hr {
