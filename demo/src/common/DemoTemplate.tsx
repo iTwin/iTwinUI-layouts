@@ -27,6 +27,7 @@ import {
 import { ThemeButton } from '../common/ThemeButton';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from './ThemeContext';
+import CodeSample from './CodeSample';
 
 export type DemoTemplateProps = {
   title: string;
@@ -104,16 +105,7 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
                 </Button>
               </div>
             </div>
-            <SandpackProvider template='react-ts'>
-              <SandpackLayout theme='github-light'>
-                <SandpackCodeViewer
-                  code={demoCode}
-                  showTabs={false}
-                  showLineNumbers={true}
-                  wrapContent={true}
-                />
-              </SandpackLayout>
-            </SandpackProvider>
+            <CodeSample showLineNumbers>{demoCode}</CodeSample>
           </div>
         )}
       </div>

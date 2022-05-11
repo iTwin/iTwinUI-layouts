@@ -9,15 +9,20 @@ import { useThemeContext } from './ThemeContext';
 
 export type CodeSampleProps = {
   children: string;
+  showLineNumbers?: boolean;
 };
 
-export const CodeSample = ({ children }: CodeSampleProps) => {
+export const CodeSample = ({
+  children,
+  showLineNumbers = false,
+}: CodeSampleProps) => {
   const { theme } = useThemeContext();
   return (
     <SyntaxHighlighter
       customStyle={theme === 'light' ? { fontSize: '1.1em' } : {}}
       language='typescript'
       style={theme === 'light' ? vs : darcula}
+      showLineNumbers={showLineNumbers}
     >
       {children}
     </SyntaxHighlighter>
