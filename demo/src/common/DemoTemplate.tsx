@@ -32,6 +32,7 @@ import CodeSample from './CodeSample';
 export type DemoTemplateProps = {
   title: string;
   children: React.ReactNode;
+  codeExample?: string;
 };
 
 const toDemoCode = (code: string) => {
@@ -46,11 +47,11 @@ const isTestRun = () => {
 };
 
 export const DemoTemplate = (props: DemoTemplateProps) => {
-  const { children, title } = props;
+  const { children, title, codeExample } = props;
 
   const [isFullScreen, setIsFullScreen] = React.useState(isTestRun());
   const [isHorizontal, setIsHorizontal] = React.useState(false);
-  const demoCode = toDemoCode(reactElementToJSXString(children));
+  const demoCode = codeExample ?? toDemoCode(reactElementToJSXString(children));
   const [theme, setTheme] = React.useState<ThemeType>(() =>
     window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'

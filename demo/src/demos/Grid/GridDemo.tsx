@@ -14,8 +14,92 @@ import { Button, Text, Code } from '@itwin/itwinui-react';
 import '../../common/DemoTemplate.scss';
 
 export const GridDemo = () => {
+  const codeDemo = `const Demo = () => {
+  return 
+    <PageLayout>
+      <PageLayout.Header>
+        <DemoHeader />
+      </PageLayout.Header>
+
+      <PageLayout.SideNavigation>
+        <DemoSideNav />
+      </PageLayout.SideNavigation>
+
+      <PageLayout.Content padded>
+      
+        <Grid>
+
+          <Grid.Item columnSpan={12}>
+            <DemoHomePageInfoCard />
+          </Grid.Item>
+
+          <Grid.Item columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 4,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+
+          <Grid.Item columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 4,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+
+          <Grid.Item columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 4,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+
+          <Grid.Item columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 4,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+
+          <Grid.Item columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 4,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+          
+          <Grid.Item columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 4,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+        </Grid>
+
+      </PageLayout.Content>
+
+    </PageLayout>
+  `;
   return (
-    <DemoTemplate title='Grid'>
+    <DemoTemplate title='Grid' codeExample={codeDemo}>
       <PageLayout>
         <PageLayout.Header>
           <DemoHeader />
