@@ -3,6 +3,7 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
+import { CodeSample } from '../../common/CodeSample';
 import { DemoHeader } from '../../common/DemoHeader';
 import { DemoSideNav } from '../../common/DemoSideNav';
 import { DemoTemplate } from '../../common/DemoTemplate';
@@ -40,9 +41,9 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Grid.Item columnSpan'>
-                <Text>
-                  <Code>columnSpan?</Code>: number | ResponsiveColumnSpan;
-                </Text>
+                <CodeSample>
+                  columnSpan?: number | ResponsiveColumnSpan;
+                </CodeSample>
                 <br />
                 <Text>
                   Sets column count for grid item - how many columns this item
@@ -75,15 +76,15 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Grid.Item columnStart'>
-                <Text>
-                  <Code>columnStart?</Code>: auto | number |
-                  ResponsiveColumnStart;
-                </Text>
-                <br />
+                <CodeSample>
+                  {`/** @default 'auto' */
+columnStart?: auto | number | ResponsiveColumnStart;`}
+                </CodeSample>
                 <Text>
                   Sets on which column grid item starts. Eg. When set to 10,
                   grid item starts on 10th column.
                 </Text>
+
                 <Text>
                   <ul>
                     <li>
@@ -101,7 +102,6 @@ export const GridDemo = () => {
                   </ul>
                 </Text>
                 <br />
-                <Text>default `auto`</Text>
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item
@@ -115,8 +115,8 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Props types'>
-                <pre>
-                  {`ResponsiveColumnSpan = 
+                <CodeSample>
+                  {`type ResponsiveColumnSpan = 
 {
   mobile: number; 
   landscapeMobile: number; 
@@ -124,10 +124,10 @@ export const GridDemo = () => {
   smallMonitor: number; 
   monitor: number;
 }`}
-                </pre>
-                <br />
-                <pre>
-                  {`ResponsiveColumnStart = 
+                </CodeSample>
+
+                <CodeSample>
+                  {`type ResponsiveColumnStart = 
 {
   mobile: 'auto' | number; 
   landscapeMobile: 'auto' | number; 
@@ -135,7 +135,7 @@ export const GridDemo = () => {
   smallMonitor: 'auto' | number; 
   monitor: 'auto' | number;
 }`}
-                </pre>
+                </CodeSample>
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item
@@ -171,6 +171,7 @@ export const GridDemo = () => {
               style={{
                 display: 'flex',
                 justifyContent: 'flex-end',
+                alignItems: 'center',
               }}
               className='demo-transparent-background'
             >
@@ -187,7 +188,7 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Example code'>
-                <pre>{`<Grid.Item
+                <CodeSample>{`<Grid.Item
   columnSpan={{
     monitor: 4,
     smallMonitor: 4,
@@ -197,12 +198,8 @@ export const GridDemo = () => {
   }}
 >
   [content]
-</Grid.Item>`}</pre>
-                <br />
-                <pre>{`<Grid.Item 
-  columnSpan={4}>
-    [content]
-</Grid.Item>`}</pre>
+</Grid.Item>`}</CodeSample>
+                <CodeSample>{`<Grid.Item columnSpan={4}>[content]</Grid.Item>`}</CodeSample>
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item
@@ -216,15 +213,9 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Example code'>
-                <div
-                  style={{ display: 'flex', flexDirection: 'row', gap: '24px' }}
-                >
-                  <pre>{`<Grid.Item
-  columnStart={10}>
-      [content]
-  </Grid.Item>`}</pre>
-                  <br />
-                  <pre>{`<Grid.Item
+                <div>
+                  <CodeSample>{`<Grid.Item columnStart={10}>[content]</Grid.Item>`}</CodeSample>
+                  <CodeSample>{`<Grid.Item
   columnStart={{
     monitor: 10,
     smallMonitor: 8,
@@ -234,7 +225,7 @@ export const GridDemo = () => {
   }}
 >
   [content]
-</Grid.Item>`}</pre>
+</Grid.Item>`}</CodeSample>
                 </div>
               </DemoSurfaceCard>
             </Grid.Item>
