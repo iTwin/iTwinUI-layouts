@@ -4,10 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import {
-  vs,
-  vscDarkPlus,
-} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { vs, darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { useThemeContext } from './ThemeContext';
 
 export type CodeSampleProps = {
@@ -19,10 +16,8 @@ export const CodeSample = ({ children }: CodeSampleProps) => {
   return (
     <SyntaxHighlighter
       customStyle={theme === 'light' ? { fontSize: '1.1em' } : {}}
-      language='javascript'
-      style={theme === 'light' ? vs : vscDarkPlus}
-      wrapLongLines={true}
-      wrapLines={true}
+      language='typescript'
+      style={theme === 'light' ? vs : darcula}
     >
       {children}
     </SyntaxHighlighter>
