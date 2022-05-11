@@ -1,4 +1,4 @@
-import { R as React, c as cx, u as useNavigate, j as jsx, H as Header$1, a as HeaderLogo, S as SvgImodelHollow, b as HeaderBreadcrumbs, d as HeaderButton, M as MenuItem, e as SvgCheckmark, f as SvgProject, g as MenuDivider, h as SvgModel, I as IconButton, i as SvgNotification, D as DropdownMenu, k as SvgHelpCircular, l as MenuExtraContent, m as jsxs, F as Fragment, T as Text, n as Select, o as SvgExit, U as UserIcon, p as SvgSettings, q as SvgSmileyHappy, r as SvgNews, s as SvgInfoCircular, t as SideNavigation$1, v as SidenavButton, w as SvgHome, x as SvgFolder, y as SvgConfiguration, z as useTheme, A as SvgMoon, B as SvgSun, C as reactElementToJsxString, E as ButtonGroup, G as SvgWindowCollapse, J as SvgWindowFullScreen, L as Link, K as SvgDockRight, N as SvgDockBottom, O as Button, P as SandpackProvider, Q as SandpackLayout, V as SandpackCodeViewer, W as Headline, X as Code, Y as Surface, Z as Anchor, _ as SvgAdd, $ as LabeledInput, a0 as SvgSearch, a1 as Tile, a2 as Body, a3 as Title, a4 as ReactDOM, a5 as HashRouter, a6 as Routes, a7 as Route } from "./vendor.ab321543.js";
+import { R as React, c as cx, u as useNavigate, j as jsx, H as Header$1, a as HeaderLogo, S as SvgImodelHollow, b as HeaderBreadcrumbs, d as HeaderButton, M as MenuItem, e as SvgCheckmark, f as SvgProject, g as MenuDivider, h as SvgModel, I as IconButton, i as SvgNotification, D as DropdownMenu, k as SvgHelpCircular, l as MenuExtraContent, m as jsxs, F as Fragment, T as Text, n as Select, o as SvgExit, U as UserIcon, p as SvgSettings, q as SvgSmileyHappy, r as SvgNews, s as SvgInfoCircular, t as SideNavigation$1, v as SidenavButton, w as SvgHome, x as SvgFolder, y as SvgConfiguration, z as useTheme, A as SvgMoon, B as SvgSun, C as reactElementToJsxString, E as ButtonGroup, G as SvgWindowCollapse, J as SvgWindowFullScreen, L as Link, K as SvgDockRight, N as SvgDockBottom, O as Button, P as SandpackProvider, Q as SandpackLayout, V as SandpackCodeViewer, W as Headline, X as Code, Y as Surface, Z as Anchor, _ as SvgAdd, $ as LabeledInput, a0 as SvgSearch, a1 as Tile, a2 as SyntaxHighlighter, a3 as vs, a4 as darcula, a5 as Body, a6 as Title, a7 as ReactDOM, a8 as HashRouter, a9 as Routes, aa as Route } from "./vendor.bd29cfa3.js";
 const p = function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -319,8 +319,19 @@ const DemoSideNav = ({
   });
 };
 var DemoTemplate$1 = "";
+const ThemeContext = React.createContext(void 0);
+const useThemeContext = () => {
+  const context = React.useContext(ThemeContext);
+  if (context == void 0) {
+    throw new Error("useThemeContext must be used within a ThemeContext.Provider");
+  }
+  return context;
+};
 const ThemeButton = () => {
-  const [theme, setTheme] = React.useState(() => window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const {
+    theme,
+    setTheme
+  } = useThemeContext();
   useTheme(theme);
   const changeTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -348,59 +359,66 @@ const DemoTemplate = (props) => {
   const [isFullScreen, setIsFullScreen] = React.useState(isTestRun());
   const [isHorizontal, setIsHorizontal] = React.useState(false);
   const demoCode = toDemoCode(reactElementToJsxString(children));
-  return /* @__PURE__ */ jsxs("div", {
-    className: cx("demo-template-container", {
-      "demo-template-container-vertical": isHorizontal
-    }),
-    children: [/* @__PURE__ */ jsxs("div", {
-      className: "demo-template-content",
-      children: [children, !isTestRun() && /* @__PURE__ */ jsxs(ButtonGroup, {
-        className: "demo-template-button-overlay",
-        children: [/* @__PURE__ */ jsx(ThemeButton, {}), /* @__PURE__ */ jsx(IconButton, {
-          onClick: () => setIsFullScreen((f) => !f),
-          children: isFullScreen ? /* @__PURE__ */ jsx(SvgWindowCollapse, {}) : /* @__PURE__ */ jsx(SvgWindowFullScreen, {})
-        })]
-      })]
-    }), !isFullScreen && /* @__PURE__ */ jsxs("div", {
-      className: "demo-template-code",
+  const [theme, setTheme] = React.useState(() => window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  return /* @__PURE__ */ jsx(ThemeContext.Provider, {
+    value: {
+      theme,
+      setTheme
+    },
+    children: /* @__PURE__ */ jsxs("div", {
+      className: cx("demo-template-container", {
+        "demo-template-container-vertical": isHorizontal
+      }),
       children: [/* @__PURE__ */ jsxs("div", {
-        className: "demo-template-code-header",
-        children: [/* @__PURE__ */ jsxs("div", {
-          className: "demo-template-code-header-left",
-          children: [/* @__PURE__ */ jsx(Link, {
-            to: "../",
-            className: "iui-anchor demo-template-code-header-back",
-            children: ".."
-          }), /* @__PURE__ */ jsx(Text, {
-            as: "h1",
-            variant: "title",
-            className: "demo-template-code-header-title",
-            children: title
-          })]
-        }), /* @__PURE__ */ jsxs("div", {
-          className: "demo-template-code-header-right",
-          children: [/* @__PURE__ */ jsx(IconButton, {
-            onClick: () => setIsHorizontal((f) => !f),
-            children: isHorizontal ? /* @__PURE__ */ jsx(SvgDockRight, {}) : /* @__PURE__ */ jsx(SvgDockBottom, {})
-          }), /* @__PURE__ */ jsx(Button, {
-            onClick: () => navigator.clipboard.writeText(demoCode),
-            styleType: "high-visibility",
-            children: "Copy"
+        className: "demo-template-content",
+        children: [children, !isTestRun() && /* @__PURE__ */ jsxs(ButtonGroup, {
+          className: "demo-template-button-overlay",
+          children: [/* @__PURE__ */ jsx(ThemeButton, {}), /* @__PURE__ */ jsx(IconButton, {
+            onClick: () => setIsFullScreen((f) => !f),
+            children: isFullScreen ? /* @__PURE__ */ jsx(SvgWindowCollapse, {}) : /* @__PURE__ */ jsx(SvgWindowFullScreen, {})
           })]
         })]
-      }), /* @__PURE__ */ jsx(SandpackProvider, {
-        template: "react-ts",
-        children: /* @__PURE__ */ jsx(SandpackLayout, {
-          theme: "github-light",
-          children: /* @__PURE__ */ jsx(SandpackCodeViewer, {
-            code: demoCode,
-            showTabs: false,
-            showLineNumbers: true,
-            wrapContent: true
+      }), !isFullScreen && /* @__PURE__ */ jsxs("div", {
+        className: "demo-template-code",
+        children: [/* @__PURE__ */ jsxs("div", {
+          className: "demo-template-code-header",
+          children: [/* @__PURE__ */ jsxs("div", {
+            className: "demo-template-code-header-left",
+            children: [/* @__PURE__ */ jsx(Link, {
+              to: "../",
+              className: "iui-anchor demo-template-code-header-back",
+              children: ".."
+            }), /* @__PURE__ */ jsx(Text, {
+              as: "h1",
+              variant: "title",
+              className: "demo-template-code-header-title",
+              children: title
+            })]
+          }), /* @__PURE__ */ jsxs("div", {
+            className: "demo-template-code-header-right",
+            children: [/* @__PURE__ */ jsx(IconButton, {
+              onClick: () => setIsHorizontal((f) => !f),
+              children: isHorizontal ? /* @__PURE__ */ jsx(SvgDockRight, {}) : /* @__PURE__ */ jsx(SvgDockBottom, {})
+            }), /* @__PURE__ */ jsx(Button, {
+              onClick: () => navigator.clipboard.writeText(demoCode),
+              styleType: "high-visibility",
+              children: "Copy"
+            })]
+          })]
+        }), /* @__PURE__ */ jsx(SandpackProvider, {
+          template: "react-ts",
+          children: /* @__PURE__ */ jsx(SandpackLayout, {
+            theme: "github-light",
+            children: /* @__PURE__ */ jsx(SandpackCodeViewer, {
+              code: demoCode,
+              showTabs: false,
+              showLineNumbers: true,
+              wrapContent: true
+            })
           })
-        })
+        })]
       })]
-    })]
+    })
   });
 };
 const PageLayoutDemo = () => {
@@ -551,6 +569,21 @@ const GridLayoutDemo = () => {
     })
   });
 };
+const CodeSample = ({
+  children
+}) => {
+  const {
+    theme
+  } = useThemeContext();
+  return /* @__PURE__ */ jsx(SyntaxHighlighter, {
+    customStyle: theme === "light" ? {
+      fontSize: "1.1em"
+    } : {},
+    language: "typescript",
+    style: theme === "light" ? vs : darcula,
+    children
+  });
+};
 var DemoSurfaceCard$1 = "";
 const DemoSurfaceCard = (props) => {
   const {
@@ -693,10 +726,8 @@ const GridDemo = () => {
             },
             children: /* @__PURE__ */ jsxs(DemoSurfaceCard, {
               title: "Grid.Item columnSpan",
-              children: [/* @__PURE__ */ jsxs(Text, {
-                children: [/* @__PURE__ */ jsx(Code, {
-                  children: "columnSpan?"
-                }), ": number | ResponsiveColumnSpan;"]
+              children: [/* @__PURE__ */ jsx(CodeSample, {
+                children: "columnSpan?: number | ResponsiveColumnSpan;"
               }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Text, {
                 children: "Sets column count for grid item - how many columns this item spans. Max columnSpan is 12."
               }), /* @__PURE__ */ jsx(Text, {
@@ -725,11 +756,10 @@ const GridDemo = () => {
             },
             children: /* @__PURE__ */ jsxs(DemoSurfaceCard, {
               title: "Grid.Item columnStart",
-              children: [/* @__PURE__ */ jsxs(Text, {
-                children: [/* @__PURE__ */ jsx(Code, {
-                  children: "columnStart?"
-                }), ": auto | number | ResponsiveColumnStart;"]
-              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Text, {
+              children: [/* @__PURE__ */ jsx(CodeSample, {
+                children: `/** @default 'auto' */
+columnStart?: auto | number | ResponsiveColumnStart;`
+              }), /* @__PURE__ */ jsx(Text, {
                 children: "Sets on which column grid item starts. Eg. When set to 10, grid item starts on 10th column."
               }), /* @__PURE__ */ jsx(Text, {
                 children: /* @__PURE__ */ jsxs("ul", {
@@ -747,9 +777,7 @@ const GridDemo = () => {
                     }), " - object to specify grid column to place item in specific screen sizes;"]
                   })]
                 })
-              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx(Text, {
-                children: "default `auto`"
-              })]
+              }), /* @__PURE__ */ jsx("br", {})]
             })
           }, "demo-group-2"), /* @__PURE__ */ jsx(Grid.Item, {
             columnSpan: {
@@ -761,8 +789,8 @@ const GridDemo = () => {
             },
             children: /* @__PURE__ */ jsxs(DemoSurfaceCard, {
               title: "Props types",
-              children: [/* @__PURE__ */ jsx("pre", {
-                children: `ResponsiveColumnSpan = 
+              children: [/* @__PURE__ */ jsx(CodeSample, {
+                children: `type ResponsiveColumnSpan = 
 {
   mobile: number; 
   landscapeMobile: number; 
@@ -770,8 +798,8 @@ const GridDemo = () => {
   smallMonitor: number; 
   monitor: number;
 }`
-              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx("pre", {
-                children: `ResponsiveColumnStart = 
+              }), /* @__PURE__ */ jsx(CodeSample, {
+                children: `type ResponsiveColumnStart = 
 {
   mobile: 'auto' | number; 
   landscapeMobile: 'auto' | number; 
@@ -813,7 +841,8 @@ const GridDemo = () => {
             },
             style: {
               display: "flex",
-              justifyContent: "flex-end"
+              justifyContent: "flex-end",
+              alignItems: "center"
             },
             className: "demo-transparent-background",
             children: /* @__PURE__ */ jsx(Button, {
@@ -829,7 +858,7 @@ const GridDemo = () => {
             },
             children: /* @__PURE__ */ jsxs(DemoSurfaceCard, {
               title: "Example code",
-              children: [/* @__PURE__ */ jsx("pre", {
+              children: [/* @__PURE__ */ jsx(CodeSample, {
                 children: `<Grid.Item
   columnSpan={{
     monitor: 4,
@@ -841,11 +870,8 @@ const GridDemo = () => {
 >
   [content]
 </Grid.Item>`
-              }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx("pre", {
-                children: `<Grid.Item 
-  columnSpan={4}>
-    [content]
-</Grid.Item>`
+              }), /* @__PURE__ */ jsx(CodeSample, {
+                children: `<Grid.Item columnSpan={4}>[content]</Grid.Item>`
               })]
             })
           }, "example-card-1"), /* @__PURE__ */ jsx(Grid.Item, {
@@ -859,17 +885,9 @@ const GridDemo = () => {
             children: /* @__PURE__ */ jsx(DemoSurfaceCard, {
               title: "Example code",
               children: /* @__PURE__ */ jsxs("div", {
-                style: {
-                  display: "flex",
-                  flexDirection: "row",
-                  gap: "24px"
-                },
-                children: [/* @__PURE__ */ jsx("pre", {
-                  children: `<Grid.Item
-  columnStart={10}>
-      [content]
-  </Grid.Item>`
-                }), /* @__PURE__ */ jsx("br", {}), /* @__PURE__ */ jsx("pre", {
+                children: [/* @__PURE__ */ jsx(CodeSample, {
+                  children: `<Grid.Item columnStart={10}>[content]</Grid.Item>`
+                }), /* @__PURE__ */ jsx(CodeSample, {
                   children: `<Grid.Item
   columnStart={{
     monitor: 10,
