@@ -778,7 +778,6 @@ __metadata:
     "@itwin/itwinui-react": ^1.37.0
     "@types/react": ^17.0.33
     "@types/react-dom": ^17.0.10
-    "@types/react-syntax-highlighter": ^13.5.2
     "@vitejs/plugin-react": ^1.0.7
     cypress: ^9.5.0
     cypress-image-diff-js: ^1.18.1
@@ -1188,15 +1187,6 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
-  languageName: node
-  linkType: hard
-
-"@types/react-syntax-highlighter@npm:^13.5.2":
-  version: 13.5.2
-  resolution: "@types/react-syntax-highlighter@npm:13.5.2"
-  dependencies:
-    "@types/react": "*"
-  checksum: 237cb596368f7c2c8549d0150308cd5fe633d249b6e20bebb4e242bc1172b60e808db2a57d212f409ab3fee37f47b8465ac35c4754e814d7e0f53cc1b2dd14ea
   languageName: node
   linkType: hard
 
