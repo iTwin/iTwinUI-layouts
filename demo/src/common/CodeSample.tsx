@@ -21,7 +21,6 @@ export const CodeSample = ({
   const { theme } = useThemeContext();
   return (
     <SyntaxHighlighter
-      showLineNumbers={true}
       customStyle={{
         fontSize: '16px',
         lineHeight: '20px',
@@ -30,7 +29,10 @@ export const CodeSample = ({
       language={language}
       style={theme === 'light' ? vs : darcula}
       codeTagProps={{
-        style: { whiteSpace: 'break-spaces', wordBreak: 'break-word' },
+        style: {
+          whiteSpace: 'break-spaces',
+          wordBreak: 'break-word',
+        },
       }}
     >
       {children}
