@@ -125,7 +125,8 @@ const Demo = () => {
             >
               <DemoSurfaceCard title='Grid.Item columnSpan'>
                 <CodeSample>
-                  columnSpan?: number | ResponsiveColumnSpan;
+                  {`/** @default 1 */
+columnSpan?: number | ResponsiveColumnSpan;`}
                 </CodeSample>
                 <br />
                 <Text>
