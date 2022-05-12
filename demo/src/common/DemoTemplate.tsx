@@ -3,11 +3,6 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import {
-  SandpackProvider,
-  SandpackLayout,
-  SandpackCodeViewer,
-} from '@codesandbox/sandpack-react';
 import cx from 'classnames';
 import reactElementToJSXString from 'react-element-to-jsx-string';
 import './DemoTemplate.scss';
@@ -17,12 +12,14 @@ import {
   Button,
   Text,
   ThemeType,
+  InformationPanel,
+  InformationPanelHeader,
+  InformationPanelWrapper,
 } from '@itwin/itwinui-react';
 import {
-  SvgWindowFullScreen,
-  SvgWindowCollapse,
   SvgDockRight,
   SvgDockBottom,
+  SvgDeveloper,
 } from '@itwin/itwinui-icons-react';
 import { ThemeButton } from '../common/ThemeButton';
 import { Link } from 'react-router-dom';
@@ -59,57 +56,58 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
   );
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div
-        className={cx('demo-template-container', {
-          'demo-template-container-vertical': isHorizontal,
-        })}
-      >
-        <div className='demo-template-content'>
-          {children}
-          {!isTestRun() && (
-            <ButtonGroup className='demo-template-button-overlay'>
-              <ThemeButton />
-              <IconButton onClick={() => setIsFullScreen((f) => !f)}>
-                {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
-              </IconButton>
-            </ButtonGroup>
-          )}
-        </div>
-
-        {!isFullScreen && (
-          <div className='demo-template-code'>
-            <div className='demo-template-code-header'>
-              <div className='demo-template-code-header-left'>
-                <Link
-                  to='../'
-                  className='iui-anchor demo-template-code-header-back'
-                >
-                  ..
-                </Link>
-                <Text
-                  as='h1'
-                  variant='title'
-                  className='demo-template-code-header-title'
-                >
-                  {title}
-                </Text>
-              </div>
-              <div className='demo-template-code-header-right'>
-                <IconButton onClick={() => setIsHorizontal((f) => !f)}>
-                  {isHorizontal ? <SvgDockRight /> : <SvgDockBottom />}
+      <InformationPanelWrapper>
+        <div
+          className={cx('demo-template-container', {
+            'demo-template-container-vertical': isHorizontal,
+          })}
+        >
+          <div className='demo-template-content'>
+            {children}
+            {!isTestRun() && (
+              <ButtonGroup className='demo-template-button-overlay'>
+                <ThemeButton />
+                <IconButton onClick={() => setIsFullScreen((f) => !f)}>
+                  <SvgDeveloper />
                 </IconButton>
-                <Button
-                  onClick={() => navigator.clipboard.writeText(demoCode)}
-                  styleType='high-visibility'
-                >
-                  Copy
-                </Button>
-              </div>
-            </div>
-            <CodeSample showLineNumbers>{demoCode}</CodeSample>
+              </ButtonGroup>
+            )}
           </div>
-        )}
-      </div>
+
+          <InformationPanel isOpen={isFullScreen}>
+            <InformationPanelHeader
+              actions={
+                <div className='demo-template-code-header-right'>
+                  <IconButton onClick={() => setIsHorizontal((f) => !f)}>
+                    {isHorizontal ? <SvgDockRight /> : <SvgDockBottom />}
+                  </IconButton>
+                  <Button
+                    onClick={() => navigator.clipboard.writeText(demoCode)}
+                    styleType='high-visibility'
+                  >
+                    Copy
+                  </Button>
+                </div>
+              }
+            >
+              <Link
+                to='../'
+                className='iui-anchor demo-template-code-header-back'
+              >
+                ..
+              </Link>
+              <Text
+                as='h1'
+                variant='title'
+                className='demo-template-code-header-title'
+              >
+                {title}
+              </Text>
+            </InformationPanelHeader>
+            <CodeSample>{demoCode}</CodeSample>
+          </InformationPanel>
+        </div>
+      </InformationPanelWrapper>
     </ThemeContext.Provider>
   );
 };

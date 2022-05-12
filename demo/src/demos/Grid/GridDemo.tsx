@@ -14,7 +14,8 @@ import { Button, Text, Code } from '@itwin/itwinui-react';
 import '../../common/DemoTemplate.scss';
 
 export const GridDemo = () => {
-  const codeDemo = `const Demo = () => {
+  const codeDemo = `import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
+const Demo = () => {
   return 
     <PageLayout>
       <PageLayout.Header>
@@ -24,15 +25,11 @@ export const GridDemo = () => {
       <PageLayout.SideNavigation>
         <DemoSideNav />
       </PageLayout.SideNavigation>
-
       <PageLayout.Content padded>
-      
         <Grid>
-
           <Grid.Item columnSpan={12}>
             <DemoHomePageInfoCard />
           </Grid.Item>
-
           <Grid.Item columnSpan={{
             monitor: 4,
             smallMonitor: 4,
@@ -42,7 +39,6 @@ export const GridDemo = () => {
           }}>
             <DemoSurfaceCard />
           </Grid.Item>
-
           <Grid.Item columnSpan={{
             monitor: 4,
             smallMonitor: 4,
@@ -52,7 +48,6 @@ export const GridDemo = () => {
           }}>
             <DemoSurfaceCard />
           </Grid.Item>
-
           <Grid.Item columnSpan={{
             monitor: 4,
             smallMonitor: 4,
@@ -62,7 +57,6 @@ export const GridDemo = () => {
           }}>
             <DemoSurfaceCard />
           </Grid.Item>
-
           <Grid.Item columnSpan={{
             monitor: 4,
             smallMonitor: 4,
@@ -72,7 +66,6 @@ export const GridDemo = () => {
           }}>
             <DemoSurfaceCard />
           </Grid.Item>
-
           <Grid.Item columnSpan={{
             monitor: 4,
             smallMonitor: 4,
@@ -82,7 +75,6 @@ export const GridDemo = () => {
           }}>
             <DemoSurfaceCard />
           </Grid.Item>
-          
           <Grid.Item columnSpan={{
             monitor: 4,
             smallMonitor: 4,
@@ -93,9 +85,7 @@ export const GridDemo = () => {
             <DemoSurfaceCard />
           </Grid.Item>
         </Grid>
-
       </PageLayout.Content>
-
     </PageLayout>
   `;
   return (
