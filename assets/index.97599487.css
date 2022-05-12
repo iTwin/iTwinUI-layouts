@@ -18,7 +18,7 @@ body {
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 .app {
-  padding: 22px 24px;
+  padding: 22px max(24px, 24px + env(safe-area-inset-right)) 22px max(24px, 24px + env(safe-area-inset-left));
 }
 hr {
   border: none;
@@ -69,27 +69,27 @@ hr {
 }
 @media (min-width: 1400px){
   .iui-layouts-page-content-padded{
-    padding:32px 64px;
+    padding:32px max(64px, 64px + env(safe-area-inset-right)) 32px 64px;
   }
 }
 @media (min-width: 992px) and (max-width: 1399px){
   .iui-layouts-page-content-padded{
-    padding:24px 48px;
+    padding:24px max(48px, 48px + env(safe-area-inset-right)) 24px 48px;
   }
 }
 @media (min-width: 769px) and (max-width: 991px){
   .iui-layouts-page-content-padded{
-    padding:16px 32px;
+    padding:16px max(32px, 32px + env(safe-area-inset-right)) 16px 32px;
   }
 }
 @media (min-width: 487px) and (max-width: 768px){
   .iui-layouts-page-content-padded{
-    padding:8px 24px;
+    padding:8px max(24px, 24px + env(safe-area-inset-right)) 8px 24px;
   }
 }
 @media (max-width: 486px){
   .iui-layouts-page-content-padded{
-    padding:8px 24px;
+    padding:8px max(24px, 24px + env(safe-area-inset-right)) 8px 24px;
   }
 }
 .iui-layouts-page-content-centered{
