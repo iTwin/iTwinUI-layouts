@@ -21,9 +21,10 @@ export const CodeSample = ({
   const { theme } = useThemeContext();
   return (
     <SyntaxHighlighter
+      showLineNumbers={true}
       customStyle={{
-        fontSize: '1.1em',
-        lineHeight: '1.2em',
+        fontSize: '16px',
+        lineHeight: '20px',
         ...style,
       }}
       language={language}

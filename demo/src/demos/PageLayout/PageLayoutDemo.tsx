@@ -10,8 +10,8 @@ import { PageLayout } from '@itwin/itwinui-layouts-react';
 
 export const PageLayoutDemo = () => {
   const codeDemo = `import { PageLayout } from '@itwin/itwinui-layouts-react';
-  
-  const Demo = () => {
+
+const Demo = () => {
   return (
     <PageLayout>
       <PageLayout.Header>
@@ -27,7 +27,7 @@ export const PageLayoutDemo = () => {
       </PageLayout.Content>
     </PageLayout>
   );
-  `;
+}`;
   return (
     <DemoTemplate title='App' codeExample={codeDemo}>
       <PageLayout>

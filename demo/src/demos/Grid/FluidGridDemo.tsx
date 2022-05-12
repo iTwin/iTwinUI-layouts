@@ -43,21 +43,19 @@ const Demo = () => {
           }
           right={
             <DemoLabeledInput />
-           }
+          }
         />
         <FluidGrid>
           {Array(12)
             .fill(null)
             .map((_,index) => (
-              <Tile
-                isActionable
-                name='Demo tile'
-              />
+              <DemoTile />
           ))}
         </FluidGrid>
       </PageLayout.Content>
-    </PageLayout>);
-  `;
+    </PageLayout>
+  );
+}`;
 
   const navigate = useNavigate();
   const loremIpsum =

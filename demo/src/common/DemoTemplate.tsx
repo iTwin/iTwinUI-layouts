@@ -75,6 +75,7 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
           </div>
 
           <InformationPanel
+            style={{ width: '40%' }}
             isOpen={showCodeDemo}
             orientation={isHorizontal ? 'horizontal' : 'vertical'}
           >

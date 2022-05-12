@@ -96,7 +96,8 @@ const Demo = () => {
         </Grid>
       </PageLayout.Content>
     </PageLayout>
-  );`;
+  );
+}`;
   return (
     <DemoTemplate title='Grid' codeExample={codeDemo}>
       <PageLayout>
