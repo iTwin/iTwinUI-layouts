@@ -46,7 +46,7 @@ const isTestRun = () => {
 export const DemoTemplate = (props: DemoTemplateProps) => {
   const { children, title, codeExample } = props;
 
-  const [isFullScreen, setIsFullScreen] = React.useState(isTestRun());
+  const [showCodeDemo, setShowCodeDemo] = React.useState(false);
   const [isHorizontal, setIsHorizontal] = React.useState(false);
   const demoCode = codeExample ?? toDemoCode(reactElementToJSXString(children));
   const [theme, setTheme] = React.useState<ThemeType>(() =>
@@ -67,14 +67,17 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
             {!isTestRun() && (
               <ButtonGroup className='demo-template-button-overlay'>
                 <ThemeButton />
-                <IconButton onClick={() => setIsFullScreen((f) => !f)}>
+                <IconButton onClick={() => setShowCodeDemo((f) => !f)}>
                   <SvgDeveloper />
                 </IconButton>
               </ButtonGroup>
             )}
           </div>
 
-          <InformationPanel isOpen={isFullScreen}>
+          <InformationPanel
+            isOpen={showCodeDemo}
+            orientation={isHorizontal ? 'horizontal' : 'vertical'}
+          >
             <InformationPanelHeader
               actions={
                 <div className='demo-template-code-header-right'>

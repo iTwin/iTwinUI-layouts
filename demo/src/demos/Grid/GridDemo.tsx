@@ -15,13 +15,13 @@ import '../../common/DemoTemplate.scss';
 
 export const GridDemo = () => {
   const codeDemo = `import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
+
 const Demo = () => {
-  return 
+  return (
     <PageLayout>
       <PageLayout.Header>
         <DemoHeader />
       </PageLayout.Header>
-
       <PageLayout.SideNavigation>
         <DemoSideNav />
       </PageLayout.SideNavigation>
@@ -57,29 +57,38 @@ const Demo = () => {
           }}>
             <DemoSurfaceCard />
           </Grid.Item>
-          <Grid.Item columnSpan={{
-            monitor: 4,
-            smallMonitor: 4,
-            tablet: 4,
-            landscapeMobile: 6,
-            mobile: 12,
-          }}>
-            <DemoSurfaceCard />
+          <Grid.Item
+            columnSpan={{
+              monitor: 3,
+              smallMonitor: 3,
+              tablet: 3,
+              landscapeMobile: 3,
+              mobile: 12,
+            }}
+            columnStart={{
+              monitor: 10,
+              smallMonitor: 10,
+              tablet: 10,
+              landscapeMobile: 10,
+              mobile: 'auto',
+            }}
+            >
+              <DemoButton />
           </Grid.Item>
           <Grid.Item columnSpan={{
             monitor: 4,
             smallMonitor: 4,
             tablet: 4,
-            landscapeMobile: 6,
+            landscapeMobile: 12,
             mobile: 12,
           }}>
             <DemoSurfaceCard />
           </Grid.Item>
           <Grid.Item columnSpan={{
-            monitor: 4,
-            smallMonitor: 4,
-            tablet: 4,
-            landscapeMobile: 6,
+            monitor: 8,
+            smallMonitor: 8,
+            tablet: 8,
+            landscapeMobile: 12,
             mobile: 12,
           }}>
             <DemoSurfaceCard />
@@ -87,7 +96,7 @@ const Demo = () => {
         </Grid>
       </PageLayout.Content>
     </PageLayout>
-  `;
+  );`;
   return (
     <DemoTemplate title='Grid' codeExample={codeDemo}>
       <PageLayout>

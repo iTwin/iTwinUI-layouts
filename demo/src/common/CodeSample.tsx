@@ -19,13 +19,12 @@ export const CodeSample = ({
   const { theme } = useThemeContext();
   return (
     <SyntaxHighlighter
-      customStyle={{ fontSize: '1.1em', margin: '0' }}
+      customStyle={{ fontSize: '1.1em', margin: '0', border: 'none' }}
       language={language}
       style={theme === 'light' ? vs : darcula}
       codeTagProps={{
         style: { whiteSpace: 'break-spaces', wordBreak: 'break-word' },
       }}
-      lineProps={{ style: { backgroundColor: 'red' } }}
     >
       {children}
     </SyntaxHighlighter>
