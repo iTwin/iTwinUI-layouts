@@ -14,30 +14,28 @@ export const PageLayoutPaddedDemo = () => {
   
   const Demo = () => {
   return (
-    <DemoTemplate title='App'>
-      <PageLayout>
-        <PageLayout.Header>
-          <DemoHeader />
-        </PageLayout.Header>
+  <PageLayout>
+    <PageLayout.Header>
+      <DemoHeader />
+    </PageLayout.Header>
 
-        <PageLayout.SideNavigation>
-          <DemoSideNav />
-        </PageLayout.SideNavigation>
+    <PageLayout.SideNavigation>
+      <DemoSideNav />
+    </PageLayout.SideNavigation>
 
-       <PageLayout.Content padded>
-          <PageLayout.TitleArea>
-            <DemoTitleArea />
-          </PageLayout.TitleArea>
-          <PageLayout.ToolsArea
-            left={<DemoButton />}
-            right={<DemoButton />}
-          />
-          <Surface elevation={1} >
-            <DemoContent />
-          </Surface>
-        </PageLayout.Content>
-      </PageLayout>
-    </DemoTemplate>
+    <PageLayout.Content padded>
+      <PageLayout.TitleArea>
+        <DemoTitleArea />
+      </PageLayout.TitleArea>
+      <PageLayout.ToolsArea
+        left={<DemoButton />}
+        right={<DemoButton />}
+      />
+      <Surface elevation={1} >
+        <DemoContent />
+      </Surface>
+    </PageLayout.Content>
+  </PageLayout>
     );
   `;
   return (

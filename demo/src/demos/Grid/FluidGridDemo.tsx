@@ -21,44 +21,42 @@ import { useNavigate } from 'react-router-dom';
 
 export const GridLayoutDemo = () => {
   const codeDemo = `import { PageLayout, FluidGrid } from '@itwin/itwinui-layouts-react';
-  
+
 const Demo = () => {
-  return 
-    <DemoTemplate title='Fluid grid'>
-      <PageLayout>
-        <PageLayout.Header>
-          <DemoHeader />
-        </PageLayout.Header>
+  return (
+    <PageLayout>
+      <PageLayout.Header>
+        <DemoHeader />
+      </PageLayout.Header>
 
-        <PageLayout.SideNavigation>
-          <DemoSideNav />
-        </PageLayout.SideNavigation>
+      <PageLayout.SideNavigation>
+        <DemoSideNav />
+      </PageLayout.SideNavigation>
 
-        <PageLayout.Content padded>
-          <PageLayout.TitleArea>
-            <DemoTitleArea />
-          </PageLayout.TitleArea>
-          <PageLayout.ToolsArea
-            left={
-              <DemoButton />
-            }
-            right={
-              <DemoLabeledInput />
-            }
-          />
-          <FluidGrid>
-            {Array(12)
-              .fill(null)
-              .map((_,index) => (
-                <Tile
-                  isActionable
-                  name='Demo tile'
-                />
-              ))}
-          </FluidGrid>
-        </PageLayout.Content>
-      </PageLayout>
-    </DemoTemplate>
+      <PageLayout.Content padded>
+        <PageLayout.TitleArea>
+          <DemoTitleArea />
+        </PageLayout.TitleArea>
+        <PageLayout.ToolsArea
+          left={
+            <DemoButton />
+          }
+          right={
+            <DemoLabeledInput />
+           }
+        />
+        <FluidGrid>
+          {Array(12)
+            .fill(null)
+            .map((_,index) => (
+              <Tile
+                isActionable
+                name='Demo tile'
+              />
+          ))}
+        </FluidGrid>
+      </PageLayout.Content>
+    </PageLayout>);
   `;
 
   const navigate = useNavigate();

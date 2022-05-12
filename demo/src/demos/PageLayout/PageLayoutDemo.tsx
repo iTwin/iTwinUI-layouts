@@ -10,23 +10,22 @@ import { PageLayout } from '@itwin/itwinui-layouts-react';
 
 export const PageLayoutDemo = () => {
   const codeDemo = `import { PageLayout } from '@itwin/itwinui-layouts-react';
+  
   const Demo = () => {
   return (
-    <DemoTemplate title='App'>
-      <PageLayout>
-        <PageLayout.Header>
-          <DemoHeader isSlim />
-        </PageLayout.Header>
+    <PageLayout>
+      <PageLayout.Header>
+        <DemoHeader isSlim />
+      </PageLayout.Header>
 
-        <PageLayout.SideNavigation>
-          <DemoSideNav />
-        </PageLayout.SideNavigation>
-
-        <PageLayout.Content>
-          <DemoContent />
-        </PageLayout.Content>
-      </PageLayout>
-    </DemoTemplate>
+      <PageLayout.SideNavigation>
+        <DemoSideNav />
+      </PageLayout.SideNavigation>
+ 
+      <PageLayout.Content>
+        <DemoContent />
+      </PageLayout.Content>
+    </PageLayout>
   );
   `;
   return (
