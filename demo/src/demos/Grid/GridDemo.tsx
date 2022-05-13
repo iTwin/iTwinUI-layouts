@@ -41,9 +41,9 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Grid.Item columnSpan'>
-                <CodeSample>
-                  columnSpan?: number | ResponsiveColumnSpan;
-                </CodeSample>
+                <CodeSample
+                  code={`columnSpan?: number | ResponsiveColumnSpan;`}
+                />
                 <br />
                 <Text>
                   Sets column count for grid item - how many columns this item
@@ -76,10 +76,12 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Grid.Item columnStart'>
-                <CodeSample>
-                  {`/** @default 'auto' */
-columnStart?: auto | number | ResponsiveColumnStart;`}
-                </CodeSample>
+                <CodeSample
+                  code={`
+/** @default 'auto' */
+columnStart?: auto | number | ResponsiveColumnStart;
+`}
+                />
                 <Text>
                   Sets on which column grid item starts. Eg. When set to 10,
                   grid item starts on 10th column.
@@ -115,27 +117,30 @@ columnStart?: auto | number | ResponsiveColumnStart;`}
               }}
             >
               <DemoSurfaceCard title='Props types'>
-                <CodeSample>
-                  {`type ResponsiveColumnSpan = 
+                <CodeSample
+                  code={`
+type ResponsiveColumnSpan = 
 {
-  mobile: number; 
-  landscapeMobile: number; 
-  tablet: number; 
-  smallMonitor: number; 
-  monitor: number;
-}`}
-                </CodeSample>
+    mobile: number; 
+    landscapeMobile: number; 
+    tablet: number; 
+    smallMonitor: number; 
+    monitor: number;
+}         
+`}
+                />
 
-                <CodeSample>
-                  {`type ResponsiveColumnStart = 
+                <CodeSample
+                  code={`
+type ResponsiveColumnStart = 
 {
-  mobile: 'auto' | number; 
-  landscapeMobile: 'auto' | number; 
-  tablet: 'auto' | number; 
-  smallMonitor: 'auto' | number; 
-  monitor: 'auto' | number;
+    mobile: 'auto' | number; 
+    landscapeMobile: 'auto' | number; 
+    tablet: 'auto' | number; 
+    smallMonitor: 'auto' | number; 
+    monitor: 'auto' | number;
 }`}
-                </CodeSample>
+                />
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item
@@ -188,18 +193,23 @@ columnStart?: auto | number | ResponsiveColumnStart;`}
               }}
             >
               <DemoSurfaceCard title='Example code'>
-                <CodeSample>{`<Grid.Item
-  columnSpan={{
-    monitor: 4,
-    smallMonitor: 4,
-    tablet: 4,
-    landscapeMobile: 6,
-    mobile: 12,
-  }}
+                <CodeSample
+                  code={`
+<Grid.Item
+    columnSpan={{
+        monitor: 4,
+        smallMonitor: 4,
+        tablet: 4,
+        landscapeMobile: 6,
+        mobile: 12,
+    }}
 >
-  [content]
-</Grid.Item>`}</CodeSample>
-                <CodeSample>{`<Grid.Item columnSpan={4}>[content]</Grid.Item>`}</CodeSample>
+    [content]
+</Grid.Item>`}
+                />
+                <CodeSample
+                  code={`<Grid.Item columnSpan={4}>[content]</Grid.Item>`}
+                />
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item
@@ -214,18 +224,23 @@ columnStart?: auto | number | ResponsiveColumnStart;`}
             >
               <DemoSurfaceCard title='Example code'>
                 <div>
-                  <CodeSample>{`<Grid.Item columnStart={10}>[content]</Grid.Item>`}</CodeSample>
-                  <CodeSample>{`<Grid.Item
-  columnStart={{
-    monitor: 10,
-    smallMonitor: 8,
-    tablet: 6,
-    landscapeMobile: 4,
-    mobile: 2,
-  }}
+                  <CodeSample
+                    code={`<Grid.Item columnStart={10}>[content]</Grid.Item>`}
+                  />
+                  <CodeSample
+                    code={`
+<Grid.Item
+    columnStart={{
+        monitor: 10,
+        smallMonitor: 8,
+        tablet: 6,
+        landscapeMobile: 4,
+        mobile: 2,
+    }}
 >
-  [content]
-</Grid.Item>`}</CodeSample>
+    [content]
+</Grid.Item>`}
+                  />
                 </div>
               </DemoSurfaceCard>
             </Grid.Item>

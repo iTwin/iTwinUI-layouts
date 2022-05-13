@@ -1,0 +1,31 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+.code-sample {
+  text-align: left;
+  margin: 1em 0;
+  padding: 0.5em;
+  overflow: scroll;
+  white-space: break-spaces;
+  font-family: inherit;
+
+  &-line {
+    display: table-row;
+    line-height: 1.3em;
+    height: 1.3em;
+  }
+
+  &-line-number {
+    display: table-cell;
+    text-align: right;
+    width: 30px;
+    padding-right: 1em;
+    user-select: none;
+    opacity: 0.5;
+  }
+
+  &-line-content {
+    display: table-cell;
+  }
+}
