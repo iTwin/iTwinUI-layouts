@@ -121,11 +121,11 @@ columnStart?: auto | number | ResponsiveColumnStart;
                   code={`
 type ResponsiveColumnSpan = 
 {
-    mobile: number; 
-    landscapeMobile: number; 
-    tablet: number; 
-    smallMonitor: number; 
-    monitor: number;
+  mobile: number; 
+  landscapeMobile: number; 
+  tablet: number; 
+  smallMonitor: number; 
+  monitor: number;
 }         
 `}
                 />
@@ -134,11 +134,11 @@ type ResponsiveColumnSpan =
                   code={`
 type ResponsiveColumnStart = 
 {
-    mobile: 'auto' | number; 
-    landscapeMobile: 'auto' | number; 
-    tablet: 'auto' | number; 
-    smallMonitor: 'auto' | number; 
-    monitor: 'auto' | number;
+  mobile: 'auto' | number; 
+  landscapeMobile: 'auto' | number; 
+  tablet: 'auto' | number; 
+  smallMonitor: 'auto' | number; 
+  monitor: 'auto' | number;
 }`}
                 />
               </DemoSurfaceCard>
@@ -196,15 +196,15 @@ type ResponsiveColumnStart =
                 <CodeSample
                   code={`
 <Grid.Item
-    columnSpan={{
-        monitor: 4,
-        smallMonitor: 4,
-        tablet: 4,
-        landscapeMobile: 6,
-        mobile: 12,
-    }}
+  columnSpan={{
+    monitor: 4,
+    smallMonitor: 4,
+    tablet: 4,
+    landscapeMobile: 6,
+    mobile: 12,
+  }}
 >
-    [content]
+  [content]
 </Grid.Item>`}
                 />
                 <CodeSample
@@ -229,15 +229,15 @@ type ResponsiveColumnStart =
                 <CodeSample
                   code={`
 <Grid.Item
-    columnStart={{
-        monitor: 10,
-        smallMonitor: 8,
-        tablet: 6,
-        landscapeMobile: 4,
-        mobile: 2,
-    }}
+  columnStart={{
+    monitor: 10,
+    smallMonitor: 8,
+    tablet: 6,
+    landscapeMobile: 4,
+    mobile: 2,
+  }}
 >
-    [content]
+  [content]
 </Grid.Item>`}
                 />
               </DemoSurfaceCard>
