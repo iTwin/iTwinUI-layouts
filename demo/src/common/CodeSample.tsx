@@ -2,7 +2,7 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-import React, { Children } from 'react';
+import React from 'react';
 import cx from 'classnames';
 import { useThemeContext } from './ThemeContext';
 import Highlight, { defaultProps, Language } from 'prism-react-renderer';
