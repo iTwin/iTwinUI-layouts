@@ -223,12 +223,11 @@ type ResponsiveColumnStart =
               }}
             >
               <DemoSurfaceCard title='Example code'>
-                <div>
-                  <CodeSample
-                    code={`<Grid.Item columnStart={10}>[content]</Grid.Item>`}
-                  />
-                  <CodeSample
-                    code={`
+                <CodeSample
+                  code={`<Grid.Item columnStart={10}>[content]</Grid.Item>`}
+                />
+                <CodeSample
+                  code={`
 <Grid.Item
     columnStart={{
         monitor: 10,
@@ -240,8 +239,7 @@ type ResponsiveColumnStart =
 >
     [content]
 </Grid.Item>`}
-                  />
-                </div>
+                />
               </DemoSurfaceCard>
             </Grid.Item>
           </Grid>

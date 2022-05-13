@@ -20,4 +20,7 @@
 
 .demo-surface-content {
   padding: $iui-baseline $iui-sm;
+  display: flex;
+  flex-direction: column;
+  gap: $iui-s;
 }

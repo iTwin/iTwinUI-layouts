@@ -30,11 +30,10 @@ export const CodeSample = (props: CodeSampleProps) => {
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre className={cx(`code-sample`, className)} style={style}>
           {tokens.map((line, i) => (
-            <div
+            <code
               key={i}
               {...getLineProps({
                 line,
-                key: i,
                 className: 'code-sample-line',
               })}
             >
@@ -42,9 +41,9 @@ export const CodeSample = (props: CodeSampleProps) => {
                 <span className='code-sample-line-number'>{i + 1}</span>
               )}
               {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token, key })} />
+                <span key={key} {...getTokenProps({ token })} />
               ))}
-            </div>
+            </code>
           ))}
         </pre>
       )}
