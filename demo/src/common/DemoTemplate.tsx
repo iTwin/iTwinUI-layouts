@@ -3,8 +3,6 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import cx from 'classnames';
-import reactElementToJSXString from 'react-element-to-jsx-string';
 import './DemoTemplate.scss';
 import {
   IconButton,
@@ -15,12 +13,9 @@ import {
   InformationPanel,
   InformationPanelHeader,
   InformationPanelWrapper,
+  Tooltip,
 } from '@itwin/itwinui-react';
-import {
-  SvgDockRight,
-  SvgDockBottom,
-  SvgDeveloper,
-} from '@itwin/itwinui-icons-react';
+import { SvgDeveloper } from '@itwin/itwinui-icons-react';
 import { ThemeButton } from '../common/ThemeButton';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from './ThemeContext';
@@ -29,14 +24,7 @@ import CodeSample from './CodeSample';
 export type DemoTemplateProps = {
   title: string;
   children: React.ReactNode;
-  codeExample?: string;
-};
-
-const toDemoCode = (code: string) => {
-  return `const Demo = () => {
-  return 
-    ${code.replace(/\n/g, '\n    ')}
-};`;
+  codeExample: string;
 };
 
 const isTestRun = () => {
@@ -47,21 +35,23 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
   const { children, title, codeExample } = props;
 
   const [showCodeDemo, setShowCodeDemo] = React.useState(false);
-  const [isHorizontal, setIsHorizontal] = React.useState(false);
-  const demoCode = codeExample ?? toDemoCode(reactElementToJSXString(children));
+  const [copyTooltipVisible, setCopyTooltipVisible] = React.useState(false);
   const [theme, setTheme] = React.useState<ThemeType>(() =>
     window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : 'light',
   );
+
+  const showCopiedTooltip = () => {
+    setCopyTooltipVisible(true);
+    setTimeout(() => {
+      setCopyTooltipVisible(false);
+    }, 500);
+  };
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <InformationPanelWrapper>
-        <div
-          className={cx('demo-template-container', {
-            'demo-template-container-vertical': isHorizontal,
-          })}
-        >
+        <div className='demo-template-container'>
           <div className='demo-template-content'>
             {children}
             {!isTestRun() && (
@@ -74,30 +64,28 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
             )}
           </div>
 
-          <InformationPanel
-            style={{ width: '40%' }}
-            isOpen={showCodeDemo}
-            orientation={isHorizontal ? 'horizontal' : 'vertical'}
-          >
+          <InformationPanel style={{ width: '40%' }} isOpen={showCodeDemo}>
             <InformationPanelHeader
               actions={
-                <div className='demo-template-code-header-right'>
-                  <IconButton onClick={() => setIsHorizontal((f) => !f)}>
-                    {isHorizontal ? <SvgDockRight /> : <SvgDockBottom />}
-                  </IconButton>
-                  <Button
-                    onClick={() => navigator.clipboard.writeText(demoCode)}
-                    styleType='high-visibility'
+                <div className='demo-template-code-header-actions'>
+                  <Tooltip
+                    content='Copied to clipboard'
+                    visible={copyTooltipVisible}
                   >
-                    Copy
-                  </Button>
+                    <Button
+                      onClick={() => {
+                        navigator.clipboard.writeText(codeExample);
+                        showCopiedTooltip();
+                      }}
+                      styleType='high-visibility'
+                    >
+                      Copy
+                    </Button>
+                  </Tooltip>
                 </div>
               }
             >
-              <Link
-                to='../'
-                className='iui-anchor demo-template-code-header-back'
-              >
+              <Link to='../' className='iui-anchor'>
                 ..
               </Link>
               <Text
@@ -109,7 +97,7 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
               </Text>
             </InformationPanelHeader>
             <CodeSample style={{ height: '100%', border: 'none', margin: '0' }}>
-              {demoCode}
+              {codeExample}
             </CodeSample>
           </InformationPanel>
         </div>
