@@ -472,7 +472,7 @@ __metadata:
     "@vitejs/plugin-react": ^1.0.7
     cypress: ^9.5.0
     cypress-image-diff-js: ^1.18.1
-    prism-react-renderer: ^1.3.1
+    prism-react-renderer: ^1.3.3
     react: ^17.0.2
     react-dom: ^17.0.2
     react-router-dom: 6
@@ -5000,7 +5000,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prism-react-renderer@npm:^1.3.1":
+"prism-react-renderer@npm:^1.3.3":
   version: 1.3.3
   resolution: "prism-react-renderer@npm:1.3.3"
   peerDependencies:
