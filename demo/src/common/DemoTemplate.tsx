@@ -3,13 +3,6 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import {
-  SandpackProvider,
-  SandpackLayout,
-  SandpackCodeViewer,
-} from '@codesandbox/sandpack-react';
-import cx from 'classnames';
-import reactElementToJSXString from 'react-element-to-jsx-string';
 import './DemoTemplate.scss';
 import {
   IconButton,
@@ -17,27 +10,21 @@ import {
   Button,
   Text,
   ThemeType,
+  InformationPanel,
+  InformationPanelHeader,
+  InformationPanelWrapper,
+  Tooltip,
 } from '@itwin/itwinui-react';
-import {
-  SvgWindowFullScreen,
-  SvgWindowCollapse,
-  SvgDockRight,
-  SvgDockBottom,
-} from '@itwin/itwinui-icons-react';
+import { SvgDeveloper } from '@itwin/itwinui-icons-react';
 import { ThemeButton } from '../common/ThemeButton';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from './ThemeContext';
+import CodeSample from './CodeSample';
 
 export type DemoTemplateProps = {
   title: string;
   children: React.ReactNode;
-};
-
-const toDemoCode = (code: string) => {
-  return `const Demo = () => {
-  return 
-    ${code.replace(/\n/g, '\n    ')}
-};`;
+  codeExample: string;
 };
 
 const isTestRun = () => {
@@ -45,78 +32,76 @@ const isTestRun = () => {
 };
 
 export const DemoTemplate = (props: DemoTemplateProps) => {
-  const { children, title } = props;
+  const { children, title, codeExample } = props;
 
-  const [isFullScreen, setIsFullScreen] = React.useState(isTestRun());
-  const [isHorizontal, setIsHorizontal] = React.useState(false);
-  const demoCode = toDemoCode(reactElementToJSXString(children));
+  const [showCodeDemo, setShowCodeDemo] = React.useState(false);
+  const [copyTooltipVisible, setCopyTooltipVisible] = React.useState(false);
   const [theme, setTheme] = React.useState<ThemeType>(() =>
     window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : 'light',
   );
+
+  const showCopiedTooltip = () => {
+    setCopyTooltipVisible(true);
+    setTimeout(() => {
+      setCopyTooltipVisible(false);
+    }, 500);
+  };
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div
-        className={cx('demo-template-container', {
-          'demo-template-container-vertical': isHorizontal,
-        })}
-      >
-        <div className='demo-template-content'>
-          {children}
-          {!isTestRun() && (
-            <ButtonGroup className='demo-template-button-overlay'>
-              <ThemeButton />
-              <IconButton onClick={() => setIsFullScreen((f) => !f)}>
-                {isFullScreen ? <SvgWindowCollapse /> : <SvgWindowFullScreen />}
-              </IconButton>
-            </ButtonGroup>
-          )}
-        </div>
-
-        {!isFullScreen && (
-          <div className='demo-template-code'>
-            <div className='demo-template-code-header'>
-              <div className='demo-template-code-header-left'>
-                <Link
-                  to='../'
-                  className='iui-anchor demo-template-code-header-back'
-                >
-                  ..
-                </Link>
-                <Text
-                  as='h1'
-                  variant='title'
-                  className='demo-template-code-header-title'
-                >
-                  {title}
-                </Text>
-              </div>
-              <div className='demo-template-code-header-right'>
-                <IconButton onClick={() => setIsHorizontal((f) => !f)}>
-                  {isHorizontal ? <SvgDockRight /> : <SvgDockBottom />}
+      <InformationPanelWrapper>
+        <div className='demo-template-container'>
+          <div className='demo-template-content'>
+            {children}
+            {!isTestRun() && (
+              <ButtonGroup className='demo-template-button-overlay'>
+                <ThemeButton />
+                <IconButton onClick={() => setShowCodeDemo((f) => !f)}>
+                  <SvgDeveloper />
                 </IconButton>
-                <Button
-                  onClick={() => navigator.clipboard.writeText(demoCode)}
-                  styleType='high-visibility'
-                >
-                  Copy
-                </Button>
-              </div>
-            </div>
-            <SandpackProvider template='react-ts'>
-              <SandpackLayout theme='github-light'>
-                <SandpackCodeViewer
-                  code={demoCode}
-                  showTabs={false}
-                  showLineNumbers={true}
-                  wrapContent={true}
-                />
-              </SandpackLayout>
-            </SandpackProvider>
+              </ButtonGroup>
+            )}
           </div>
-        )}
-      </div>
+
+          <InformationPanel style={{ width: '40%' }} isOpen={showCodeDemo}>
+            <InformationPanelHeader
+              actions={
+                <div className='demo-template-code-header-actions'>
+                  <Tooltip
+                    content='Copied to clipboard'
+                    visible={copyTooltipVisible}
+                  >
+                    <Button
+                      onClick={() => {
+                        navigator.clipboard.writeText(codeExample);
+                        showCopiedTooltip();
+                      }}
+                      styleType='high-visibility'
+                    >
+                      Copy
+                    </Button>
+                  </Tooltip>
+                </div>
+              }
+            >
+              <Link to='../' className='iui-anchor'>
+                ..
+              </Link>
+              <Text
+                as='h1'
+                variant='title'
+                className='demo-template-code-header-title'
+              >
+                {title}
+              </Text>
+            </InformationPanelHeader>
+            <CodeSample style={{ height: '100%', border: 'none', margin: '0' }}>
+              {codeExample}
+            </CodeSample>
+          </InformationPanel>
+        </div>
+      </InformationPanelWrapper>
     </ThemeContext.Provider>
   );
 };

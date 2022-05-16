@@ -13,11 +13,12 @@ import './CodeSample.scss';
 export type CodeSampleProps = {
   code: string;
   language?: Language;
+  style?: React.CSSProperties;
   showLineNumbers?: boolean;
 };
 
 export const CodeSample = (props: CodeSampleProps) => {
-  const { code, language = 'tsx', showLineNumbers = false } = props;
+  const { code, language = 'tsx', showLineNumbers = false, style } = props;
   const { theme } = useThemeContext();
 
   return (

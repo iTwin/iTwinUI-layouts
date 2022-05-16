@@ -19,12 +19,49 @@ import {
 import { SvgImodelHollow, SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
 import { useNavigate } from 'react-router-dom';
 
+const codeDemo = `import { PageLayout, FluidGrid } from '@itwin/itwinui-layouts-react';
+
+const Demo = () => {
+  return (
+    <PageLayout>
+      <PageLayout.Header>
+        <DemoHeader />
+      </PageLayout.Header>
+
+      <PageLayout.SideNavigation>
+        <DemoSideNav />
+      </PageLayout.SideNavigation>
+
+      <PageLayout.Content padded>
+        <PageLayout.TitleArea>
+          <DemoTitleArea />
+        </PageLayout.TitleArea>
+        <PageLayout.ToolsArea
+          left={
+            <DemoButton />
+          }
+          right={
+            <DemoLabeledInput />
+          }
+        />
+        <FluidGrid>
+          {Array(12)
+            .fill(null)
+            .map((_,index) => (
+              <DemoTile />
+          ))}
+        </FluidGrid>
+      </PageLayout.Content>
+    </PageLayout>
+  );
+}`;
+
 export const GridLayoutDemo = () => {
   const navigate = useNavigate();
   const loremIpsum =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.';
   return (
-    <DemoTemplate title='Fluid grid'>
+    <DemoTemplate title='Fluid grid' codeExample={codeDemo}>
       <PageLayout>
         <PageLayout.Header>
           <DemoHeader />

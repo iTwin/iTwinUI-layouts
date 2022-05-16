@@ -13,9 +13,94 @@ import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
 import { Button, Text, Code } from '@itwin/itwinui-react';
 import '../../common/DemoTemplate.scss';
 
+const codeDemo = `import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
+
+const Demo = () => {
+  return (
+    <PageLayout>
+      <PageLayout.Header>
+        <DemoHeader />
+      </PageLayout.Header>
+      <PageLayout.SideNavigation>
+        <DemoSideNav />
+      </PageLayout.SideNavigation>
+      <PageLayout.Content padded>
+        <Grid>
+          <Grid.Item columnSpan={12}>
+            <DemoHomePageInfoCard />
+          </Grid.Item>
+          <Grid.Item columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 4,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+          <Grid.Item columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 4,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+          <Grid.Item columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 4,
+            landscapeMobile: 6,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+          <Grid.Item
+            columnSpan={{
+              monitor: 3,
+              smallMonitor: 3,
+              tablet: 3,
+              landscapeMobile: 3,
+              mobile: 12,
+            }}
+            columnStart={{
+              monitor: 10,
+              smallMonitor: 10,
+              tablet: 10,
+              landscapeMobile: 10,
+              mobile: 'auto',
+            }}
+            >
+              <DemoButton />
+          </Grid.Item>
+          <Grid.Item columnSpan={{
+            monitor: 4,
+            smallMonitor: 4,
+            tablet: 4,
+            landscapeMobile: 12,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+          <Grid.Item columnSpan={{
+            monitor: 8,
+            smallMonitor: 8,
+            tablet: 8,
+            landscapeMobile: 12,
+            mobile: 12,
+          }}>
+            <DemoSurfaceCard />
+          </Grid.Item>
+        </Grid>
+      </PageLayout.Content>
+    </PageLayout>
+  );
+}`;
+
 export const GridDemo = () => {
   return (
-    <DemoTemplate title='Grid'>
+    <DemoTemplate title='Grid' codeExample={codeDemo}>
       <PageLayout>
         <PageLayout.Header>
           <DemoHeader />
@@ -41,9 +126,10 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Grid.Item columnSpan'>
-                <CodeSample
-                  code={`columnSpan?: number | ResponsiveColumnSpan;`}
-                />
+                <CodeSample>
+                  {`/** @default 1 */
+columnSpan?: number | ResponsiveColumnSpan;`}
+                </CodeSample>
                 <br />
                 <Text>
                   Sets column count for grid item - how many columns this item
