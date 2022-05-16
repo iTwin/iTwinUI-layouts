@@ -126,11 +126,10 @@ export const GridDemo = () => {
               }}
             >
               <DemoSurfaceCard title='Grid.Item columnSpan'>
-                <CodeSample>
-                  {`/** @default 1 */
+                <CodeSample
+                  code={`/** @default 1 */
 columnSpan?: number | ResponsiveColumnSpan;`}
-                </CodeSample>
-                <br />
+                />
                 <Text>
                   Sets column count for grid item - how many columns this item
                   spans. Max columnSpan is 12.
@@ -147,8 +146,6 @@ columnSpan?: number | ResponsiveColumnSpan;`}
                     </li>
                   </ul>
                 </Text>
-                <br />
-                <Text>default 1</Text>
               </DemoSurfaceCard>
             </Grid.Item>
             <Grid.Item

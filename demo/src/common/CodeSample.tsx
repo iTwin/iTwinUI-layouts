@@ -18,7 +18,7 @@ export type CodeSampleProps = {
 };
 
 export const CodeSample = (props: CodeSampleProps) => {
-  const { code, language = 'tsx', showLineNumbers = false, style } = props;
+  const { code, language = 'tsx', showLineNumbers = false } = props;
   const { theme } = useThemeContext();
 
   return (
@@ -29,7 +29,10 @@ export const CodeSample = (props: CodeSampleProps) => {
       language={language}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={cx(`code-sample`, className)} style={style}>
+        <pre
+          className={cx(`code-sample`, className)}
+          style={{ ...style, ...props.style }}
+        >
           {tokens.map((line, i) => (
             <code
               key={i}

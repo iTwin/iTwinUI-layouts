@@ -96,9 +96,11 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
                 {title}
               </Text>
             </InformationPanelHeader>
-            <CodeSample style={{ height: '100%', border: 'none', margin: '0' }}>
-              {codeExample}
-            </CodeSample>
+            <CodeSample
+              showLineNumbers
+              style={{ height: '100%', border: 'none', margin: '0' }}
+              code={codeExample}
+            />
           </InformationPanel>
         </div>
       </InformationPanelWrapper>
