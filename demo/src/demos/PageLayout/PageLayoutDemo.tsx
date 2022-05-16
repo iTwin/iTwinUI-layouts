@@ -8,9 +8,29 @@ import { DemoSideNav } from '../../common/DemoSideNav';
 import { DemoTemplate } from '../../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
 
+const codeDemo = `import { PageLayout } from '@itwin/itwinui-layouts-react';
+
+const Demo = () => {
+  return (
+    <PageLayout>
+      <PageLayout.Header>
+        <DemoHeader isSlim />
+      </PageLayout.Header>
+
+      <PageLayout.SideNavigation>
+        <DemoSideNav />
+      </PageLayout.SideNavigation>
+ 
+      <PageLayout.Content>
+        <DemoContent />
+      </PageLayout.Content>
+    </PageLayout>
+  );
+}`;
+
 export const PageLayoutDemo = () => {
   return (
-    <DemoTemplate title='App'>
+    <DemoTemplate title='App' codeExample={codeDemo}>
       <PageLayout>
         <PageLayout.Header>
           <DemoHeader isSlim />

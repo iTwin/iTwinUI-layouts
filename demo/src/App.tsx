@@ -3,18 +3,17 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import './App.scss';
-import '@codesandbox/sandpack-react/dist/index.css';
-import '@itwin/itwinui-layouts-css/styles.css';
+import { useNavigate } from 'react-router-dom';
 import { Anchor, Text, Body, Tile, Title } from '@itwin/itwinui-react';
 import { FluidGrid } from '@itwin/itwinui-layouts-react';
 import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
+import './App.scss';
+import '@itwin/itwinui-layouts-css/styles.css';
 import '@fontsource/open-sans/300.css';
 import '@fontsource/open-sans/400.css';
 import '@fontsource/open-sans/600.css';
 import '@fontsource/open-sans/700.css';
-import { useNavigate } from 'react-router-dom';
 
 const App = () => {
   const navigate = useNavigate();

@@ -9,9 +9,38 @@ import { DemoTemplate } from '../../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
 import { Headline, Text, Button, Code, Surface } from '@itwin/itwinui-react';
 
+const codeDemo = `import { PageLayout } from '@itwin/itwinui-layouts-react';
+  
+const Demo = () => {
+  return (
+    <PageLayout>
+      <PageLayout.Header>
+        <DemoHeader />
+      </PageLayout.Header>
+
+      <PageLayout.SideNavigation>
+        <DemoSideNav />
+      </PageLayout.SideNavigation>
+
+      <PageLayout.Content padded>
+        <PageLayout.TitleArea>
+          <DemoTitleArea />
+        </PageLayout.TitleArea>
+        <PageLayout.ToolsArea
+          left={<DemoButton />}
+          right={<DemoButton />}
+        />
+        <Surface elevation={1} >
+          <DemoContent />
+        </Surface>
+      </PageLayout.Content>
+    </PageLayout>
+  );
+}`;
+
 export const PageLayoutPaddedDemo = () => {
   return (
-    <DemoTemplate title='App'>
+    <DemoTemplate title='App' codeExample={codeDemo}>
       <PageLayout>
         <PageLayout.Header>
           <DemoHeader />

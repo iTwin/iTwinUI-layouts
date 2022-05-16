@@ -30,13 +30,11 @@
     "build-docker": "node build-docker.js"
   },
   "dependencies": {
-    "@codesandbox/sandpack-react": "^0.13.7",
     "@fontsource/open-sans": "^4.5.8",
     "@itwin/itwinui-icons-react": "^1.7.0",
     "@itwin/itwinui-layouts-css": "workspace:*",
     "@itwin/itwinui-layouts-react": "workspace:*",
     "@itwin/itwinui-react": "^1.37.0",
-    "react-element-to-jsx-string": "^14.3.4",
     "react-router-dom": "6",
     "react-syntax-highlighter": "^12.2.0",
     "vite-plugin-svgr": "^1.0.1"

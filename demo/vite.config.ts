@@ -18,9 +18,6 @@ export default defineConfig({
       },
     }),
   ],
-  build: {
-    minify: false, // Need to disable minification for components' names to show normally in demos
-  },
   css: {
     preprocessorOptions: { css: { charset: false }, scss: { charset: false } },
   },

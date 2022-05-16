@@ -9,15 +9,31 @@ import { useThemeContext } from './ThemeContext';
 
 export type CodeSampleProps = {
   children: string;
+  language?: string;
+  style?: React.CSSProperties;
 };
 
-export const CodeSample = ({ children }: CodeSampleProps) => {
+export const CodeSample = ({
+  children,
+  language = 'typescript',
+  style,
+}: CodeSampleProps) => {
   const { theme } = useThemeContext();
   return (
     <SyntaxHighlighter
-      customStyle={theme === 'light' ? { fontSize: '1.1em' } : {}}
-      language='typescript'
+      customStyle={{
+        fontSize: '16px',
+        lineHeight: '20px',
+        ...style,
+      }}
+      language={language}
       style={theme === 'light' ? vs : darcula}
+      codeTagProps={{
+        style: {
+          whiteSpace: 'break-spaces',
+          wordBreak: 'break-word',
+        },
+      }}
     >
       {children}
     </SyntaxHighlighter>
