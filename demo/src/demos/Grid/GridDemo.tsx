@@ -13,8 +13,7 @@ import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
 import { Button, Text, Code } from '@itwin/itwinui-react';
 import '../../common/DemoTemplate.scss';
 
-export const GridDemo = () => {
-  const codeDemo = `import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
+const codeDemo = `import { PageLayout, Grid } from '@itwin/itwinui-layouts-react';
 
 const Demo = () => {
   return (
@@ -98,6 +97,8 @@ const Demo = () => {
     </PageLayout>
   );
 }`;
+
+export const GridDemo = () => {
   return (
     <DemoTemplate title='Grid' codeExample={codeDemo}>
       <PageLayout>

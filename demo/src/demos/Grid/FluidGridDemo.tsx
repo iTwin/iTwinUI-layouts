@@ -19,8 +19,7 @@ import {
 import { SvgImodelHollow, SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
 import { useNavigate } from 'react-router-dom';
 
-export const GridLayoutDemo = () => {
-  const codeDemo = `import { PageLayout, FluidGrid } from '@itwin/itwinui-layouts-react';
+const codeDemo = `import { PageLayout, FluidGrid } from '@itwin/itwinui-layouts-react';
 
 const Demo = () => {
   return (
@@ -57,6 +56,7 @@ const Demo = () => {
   );
 }`;
 
+export const GridLayoutDemo = () => {
   const navigate = useNavigate();
   const loremIpsum =
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris   nisi ut aliquip ex ea commodo consequat.';
