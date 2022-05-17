@@ -16,6 +16,28 @@
 
   &-sidenav {
     grid-area: sidenav;
+
+    ~ .iui-layouts-page-content-padded {
+      @include monitor {
+        padding-left: $iui-xxl;
+      }
+
+      @include small-monitor {
+        padding-left: 48px;
+      }
+
+      @include tablet {
+        padding-left: $iui-xl;
+      }
+
+      @include landscape-mobile {
+        padding-left: $iui-l;
+      }
+
+      @include mobile {
+        padding-left: $iui-l;
+      }
+    }
   }
 
   &-content {
@@ -29,23 +51,23 @@
       align-items: center;
 
       @include monitor {
-        padding: $iui-xl unquote('max(#{$iui-xxl}, #{$iui-xxl} + env(safe-area-inset-right))') $iui-xl $iui-xxl;
+        padding: $iui-xl unquote('max(#{$iui-xxl}, #{$iui-xxl} + env(safe-area-inset-right))') $iui-xl unquote('max(#{$iui-xxl}, #{$iui-xxl} + env(safe-area-inset-left))');
       }
 
       @include small-monitor {
-        padding: $iui-l unquote('max(48px, 48px + env(safe-area-inset-right))') $iui-l 48px;
+        padding: $iui-l unquote('max(48px, 48px + env(safe-area-inset-right))') $iui-l unquote('max(48px, 48px + env(safe-area-inset-left))');
       }
 
       @include tablet {
-        padding: $iui-m unquote('max(#{$iui-xl}, #{$iui-xl} + env(safe-area-inset-right))') $iui-m $iui-xl;
+        padding: $iui-m unquote('max(#{$iui-xl}, #{$iui-xl} + env(safe-area-inset-right))') $iui-m unquote('max(#{$iui-xl}, #{$iui-xl} + env(safe-area-inset-left))');
       }
 
       @include landscape-mobile {
-        padding: $iui-s unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-right))') $iui-s $iui-l;
+        padding: $iui-s unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-right))') $iui-s unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-left))');
       }
 
       @include mobile {
-        padding: $iui-s unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-right))') $iui-s $iui-l;
+        padding: $iui-s unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-right))') $iui-s unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-left))');
       }
     }
 
