@@ -467,8 +467,8 @@ __metadata:
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
     "@itwin/itwinui-react": ^1.37.0
-    "@types/react": ^17.0.33
-    "@types/react-dom": ^17.0.10
+    "@types/react": ^18.0.9
+    "@types/react-dom": ^18.0.4
     "@vitejs/plugin-react": ^1.0.7
     cypress: ^9.5.0
     cypress-image-diff-js: ^1.18.1
@@ -850,6 +850,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-dom@npm:^18.0.4":
+  version: 18.0.4
+  resolution: "@types/react-dom@npm:18.0.4"
+  dependencies:
+    "@types/react": "*"
+  checksum: decde42d02a90ac2fe94fd6bfd9c78d002c03762a2d940df9422bf61af89c03d05e2113fd55fe45521fe27fa872a79dfd654b7d6b89652b455425efdcb763c58
+  languageName: node
+  linkType: hard
+
 "@types/react-table@npm:^7.0.18":
   version: 7.7.12
   resolution: "@types/react-table@npm:7.7.12"
@@ -859,7 +868,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*":
+"@types/react@npm:*, @types/react@npm:^18.0.9":
   version: 18.0.9
   resolution: "@types/react@npm:18.0.9"
   dependencies:
