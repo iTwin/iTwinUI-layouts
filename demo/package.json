@@ -40,8 +40,8 @@
     "vite-plugin-svgr": "^1.0.1"
   },
   "devDependencies": {
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.4",
+    "@types/react": "17.0.45",
+    "@types/react-dom": "17.0.17",
     "@vitejs/plugin-react": "^1.0.7",
     "cypress": "^9.5.0",
     "cypress-image-diff-js": "^1.18.1",

@@ -31,6 +31,9 @@
     "pre-commit": "lint-staged",
     "build-docker": "yarn workspace @itwin/itwinui-layouts-demo build-docker"
   },
+  "resolutions": {
+    "@types/react": "17.0.45"
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
