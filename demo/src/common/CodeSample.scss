@@ -1,0 +1,38 @@
+/*---------------------------------------------------------------------------------------------
+ * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
+ * See LICENSE.md in the project root for license terms and full copyright notice.
+ *--------------------------------------------------------------------------------------------*/
+@import '@itwin/itwinui-css/scss/variables';
+
+.code-sample {
+  text-align: left;
+  padding: $iui-s;
+  margin: 0;
+  overflow: scroll;
+  white-space: break-spaces;
+  font-family: inherit;
+  border: 1px solid var(--iui-color-background-3);
+  border-radius: 4px;
+
+  &-line {
+    display: table-row;
+    line-height: $iui-baseline*2;
+
+    > .maybe-class-name {
+      color: rgb(38, 127, 153);
+    }
+  }
+
+  &-line-number {
+    display: table-cell;
+    text-align: right;
+    width: $iui-baseline*3;
+    padding-right: $iui-sm;
+    user-select: none;
+    opacity: 0.5;
+  }
+
+  &-line-content {
+    display: table-cell;
+  }
+}

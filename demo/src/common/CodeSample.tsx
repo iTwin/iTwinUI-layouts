@@ -3,40 +3,55 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vs, darcula } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import cx from 'classnames';
 import { useThemeContext } from './ThemeContext';
+import Highlight, { defaultProps, Language } from 'prism-react-renderer';
+import vsLight from 'prism-react-renderer/themes/vsLight';
+import vsDark from 'prism-react-renderer/themes/vsDark';
+import './CodeSample.scss';
 
 export type CodeSampleProps = {
-  children: string;
-  language?: string;
+  code: string;
+  language?: Language;
   style?: React.CSSProperties;
+  showLineNumbers?: boolean;
 };
 
-export const CodeSample = ({
-  children,
-  language = 'typescript',
-  style,
-}: CodeSampleProps) => {
+export const CodeSample = (props: CodeSampleProps) => {
+  const { code, language = 'tsx', showLineNumbers = false } = props;
   const { theme } = useThemeContext();
+
   return (
-    <SyntaxHighlighter
-      customStyle={{
-        fontSize: '16px',
-        lineHeight: '20px',
-        ...style,
-      }}
+    <Highlight
+      {...defaultProps}
+      theme={theme === 'light' ? vsLight : vsDark}
+      code={code.trim()}
       language={language}
-      style={theme === 'light' ? vs : darcula}
-      codeTagProps={{
-        style: {
-          whiteSpace: 'break-spaces',
-          wordBreak: 'break-word',
-        },
-      }}
     >
-      {children}
-    </SyntaxHighlighter>
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <pre
+          className={cx(`code-sample`, className)}
+          style={{ ...style, ...props.style }}
+        >
+          {tokens.map((line, i) => (
+            <code
+              key={i}
+              {...getLineProps({
+                line,
+                className: 'code-sample-line',
+              })}
+            >
+              {showLineNumbers && (
+                <span className='code-sample-line-number'>{i + 1}</span>
+              )}
+              {line.map((token, key) => (
+                <span key={key} {...getTokenProps({ token })} />
+              ))}
+            </code>
+          ))}
+        </pre>
+      )}
+    </Highlight>
   );
 };
 

@@ -20,10 +20,7 @@
 
 .demo-surface-content {
   padding: $iui-baseline $iui-sm;
-
-  pre {
-    white-space: break-spaces;
-    margin: 0;
-    font-family: inherit;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: $iui-s;
 }
