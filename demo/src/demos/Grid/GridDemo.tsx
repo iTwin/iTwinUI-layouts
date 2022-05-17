@@ -287,11 +287,11 @@ type ResponsiveColumnStart =
     mobile: 12,
   }}
 >
-  [content]
+  {content}
 </Grid.Item>`}
                 />
                 <CodeSample
-                  code={`<Grid.Item columnSpan={4}>[content]</Grid.Item>`}
+                  code={`<Grid.Item columnSpan={4}>{content}</Grid.Item>`}
                 />
               </DemoSurfaceCard>
             </Grid.Item>
@@ -307,7 +307,7 @@ type ResponsiveColumnStart =
             >
               <DemoSurfaceCard title='Example code'>
                 <CodeSample
-                  code={`<Grid.Item columnStart={10}>[content]</Grid.Item>`}
+                  code={`<Grid.Item columnStart={10}>{content}</Grid.Item>`}
                 />
                 <CodeSample
                   code={`
@@ -320,7 +320,7 @@ type ResponsiveColumnStart =
     mobile: 2,
   }}
 >
-  [content]
+  {content}
 </Grid.Item>`}
                 />
               </DemoSurfaceCard>
