@@ -1,5 +1,5 @@
 {
-  "baseUrl": "http://localhost:5000/iTwinUI-layouts/#/",
+  "baseUrl": "http://localhost:5001/iTwinUI-layouts/#/",
   "integrationFolder": "src/demos",
   "testFiles": "**/*.spec.{js,ts,jsx,tsx}",
   "video": false,

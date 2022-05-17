@@ -23,7 +23,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --port 5001",
     "test": "yarn build && node run-tests.js",
     "test:ci": "node run-tests.js",
     "test:approve": "cypress-image-diff -u",
