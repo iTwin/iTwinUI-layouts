@@ -3,13 +3,13 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import './index.scss';
 import App from './App';
 import { DEMOS_LIST } from './demos/list';
 
-ReactDOM.render(
+createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HashRouter>
       <Routes>
@@ -22,5 +22,4 @@ ReactDOM.render(
       </Routes>
     </HashRouter>
   </React.StrictMode>,
-  document.getElementById('root'),
 );
