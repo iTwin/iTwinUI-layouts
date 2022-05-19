@@ -8,7 +8,8 @@ import { DemoSideNav } from '../../common/DemoSideNav';
 import { DemoTemplate } from '../../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
 
-const codeDemo = `import { PageLayout } from '@itwin/itwinui-layouts-react';
+const codeDemo = `import '@itwin/itwinui-layouts-css/styles.css';
+import { PageLayout } from '@itwin/itwinui-layouts-react';
 
 const Demo = () => {
   return (
