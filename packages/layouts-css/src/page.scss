@@ -17,6 +17,7 @@
   &-sidenav {
     grid-area: sidenav;
 
+    //#region If side navigation is present, remove the env(safe-area-inset-left) from the left side of content area
     ~ .iui-layouts-page-content-padded {
       @include monitor {
         padding-left: $iui-xxl;
@@ -38,6 +39,7 @@
         padding-left: $iui-l;
       }
     }
+    //#endregion If side navigation is present, remove the env(safe-area-inset-left) from the left side of content area
   }
 
   &-content {
@@ -50,6 +52,7 @@
       flex-direction: column;
       align-items: center;
 
+      //#region Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
       @include monitor {
         padding: $iui-xl unquote('max(#{$iui-xxl}, env(safe-area-inset-right))') $iui-xl unquote('max(#{$iui-xxl}, env(safe-area-inset-left))');
       }
@@ -69,6 +72,7 @@
       @include mobile {
         padding: $iui-s unquote('max(#{$iui-l}, env(safe-area-inset-right))') $iui-s unquote('max(#{$iui-l}, env(safe-area-inset-left))');
       }
+      //#endregion Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
     }
 
     &-centered {
