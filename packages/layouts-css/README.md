@@ -38,7 +38,7 @@ yarn add @itwin/itwinui-layouts-css
 
 ```css
 // app.css
-import "@itwin/itwinui-layouts-css";
+import '@itwin/itwinui-layouts-css/styles.css';
 ```
 
 ```html

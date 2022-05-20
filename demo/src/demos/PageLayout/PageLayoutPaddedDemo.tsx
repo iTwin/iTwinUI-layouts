@@ -9,7 +9,8 @@ import { DemoTemplate } from '../../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
 import { Headline, Text, Button, Code, Surface } from '@itwin/itwinui-react';
 
-const codeDemo = `import { PageLayout } from '@itwin/itwinui-layouts-react';
+const codeDemo = `import '@itwin/itwinui-layouts-css/styles.css';
+import { PageLayout } from '@itwin/itwinui-layouts-react';
   
 const Demo = () => {
   return (
