@@ -36,9 +36,10 @@ yarn add @itwin/itwinui-layouts-react
 
 ## Usage
 
-Import the component you want and start using it!
+Import layouts CSS in your root component then the layouts component you want and start using it!
 
 ```jsx
+import '@itwin/itwinui-layouts-css/styles.css';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
 
 const App = () => (

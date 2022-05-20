@@ -19,7 +19,8 @@ import {
 import { SvgImodelHollow, SvgSearch, SvgAdd } from '@itwin/itwinui-icons-react';
 import { useNavigate } from 'react-router-dom';
 
-const codeDemo = `import { PageLayout, FluidGrid } from '@itwin/itwinui-layouts-react';
+const codeDemo = `import '@itwin/itwinui-layouts-css/styles.css';
+import { PageLayout, FluidGrid } from '@itwin/itwinui-layouts-react';
 
 const Demo = () => {
   return (
