@@ -21,7 +21,7 @@ jobs:
 
       - run: yarn pack --out release.tgz
         working-directory: './packages/layouts-react'
-      - run: npm publish ./release.tgz --access public --tag dev
+      - run: npm publish ./release.tgz --access public
         working-directory: './packages/layouts-react'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_PUBLISH_ITWIN }}
