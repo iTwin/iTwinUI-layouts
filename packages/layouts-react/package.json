@@ -15,6 +15,10 @@
       "require": "./dist/cjs/index.js"
     }
   },
+  "files": [
+    "dist",
+    "LICENSE.md"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/iTwin/iTwinUI-layouts",
   "repository": {
