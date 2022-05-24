@@ -19,7 +19,9 @@ jobs:
       - run: yarn install
       - run: yarn build
 
-      - run: yarn npm publish --access public --tag dev
+      - run: yarn pack --out release.tgz
+        working-directory: './packages/layouts-css'
+      - run: npm publish ./release.tgz --access public --tag dev
         working-directory: './packages/layouts-css'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_PUBLISH_ITWIN }}
