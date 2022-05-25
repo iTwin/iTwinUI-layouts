@@ -1,6 +1,6 @@
 {
   "name": "@itwin/itwinui-layouts-css",
-  "version": "0.1.0-dev",
+  "version": "0.1.1",
   "author": {
     "name": "Bentley Systems, Inc.",
     "url": "http://www.bentley.com"
@@ -10,6 +10,10 @@
   "exports": {
     "./*": "./dist/*"
   },
+  "files": [
+    "dist",
+    "LICENSE.md"
+  ],
   "scripts": {
     "build": "sass --no-source-map --load-path=../../node_modules src:dist && postcss dist --replace --no-map",
     "build:watch": "chokidar \"src/**/*\" -c \"yarn build\""

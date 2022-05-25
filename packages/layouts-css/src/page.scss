@@ -4,7 +4,7 @@
 @import '@itwin/itwinui-css/scss/variables';
 
 .iui-layouts-page {
-  height: 100%;
+  height: 100vh;
   display: grid;
   grid-template:
     'header header' auto
