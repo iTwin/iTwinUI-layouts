@@ -28,3 +28,8 @@ jobs:
         with:
           name: release
           path: packages/layouts-react/release.tgz
+          
+      - run: |
+          echo testProp: "$TEST_SECRET" >> ./.yarnrc.yml
+        env:
+          TEST_SECRET: ${{ secrets.TEST_SECRET }}
