@@ -19,9 +19,10 @@ jobs:
       - run: yarn install
       - run: yarn build
 
-      - run: yarn pack --out release.tgz
-        working-directory: './packages/layouts-css'
-      - run: npm publish ./release.tgz --access public
-        working-directory: './packages/layouts-css'
+      # Writes token to .yarnrc.yml
+      - run: |
+          echo npmAuthToken: "$NODE_AUTH_TOKEN" >> ./.yarnrc.yml
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_PUBLISH_ITWIN }}
+      - run: yarn npm publish --access public
+        working-directory: './packages/layouts-css'
