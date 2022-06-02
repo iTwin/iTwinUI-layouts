@@ -4,7 +4,7 @@
 
 ### What's new
 
-- **Added `PageLayout` component.** It has `PageLayout.Header`, `PageLayout.SideNavigation` and `PageLayout.Content` sub-components that place content in the correct places.
+- **Added `PageLayout` component.** It has `PageLayout.Header`, `PageLayout.SideNavigation`, `PageLayout.Content`, `PageLayout.TitleArea` and `PageLayout.ToolsArea` sub-components that place content in the correct places.
 - **Added `FluidGrid` component.**
   - Use it for items (e.g. tiles) array.
   - It has `minItemWidth` prop that defines minimum width of the item that is used for responsiveness.
