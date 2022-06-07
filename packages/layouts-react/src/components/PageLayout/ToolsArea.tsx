@@ -3,6 +3,8 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
+import cx from 'classnames';
+import { StylingProps } from '../../utils/props';
 
 export type ToolsAreaProps = {
   /**
@@ -13,12 +15,15 @@ export type ToolsAreaProps = {
    * Tools displayed at the right side of toolbar
    */
   right?: React.ReactNode;
-};
+} & StylingProps;
 
 export const ToolsArea = (props: ToolsAreaProps) => {
-  const { left, right } = props;
+  const { className, style, left, right } = props;
   return (
-    <div className='iui-layouts-page-content-tools'>
+    <div
+      className={cx('iui-layouts-page-content-tools', className)}
+      style={style}
+    >
       {left && (
         <div className='iui-layouts-page-content-tools-left'>{left}</div>
       )}

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://itwin.github.io/iTwinUI-layouts/logo.png" alt="iTwinUI Layouts logo" style="width: 300px;"/>
+  <img src="https://itwin.github.io/iTwinUI-layouts/logo.png" alt="iTwinUI-layouts logo" style="width: 300px;"/>
 </p>
 
 <p align="center">An open-source design system that helps us build a unified web experience.</p>
@@ -18,7 +18,7 @@
 
 ## Key features
 
-iTwinUI-Layouts places given React (eg. [iTwinUI-react](https://github.com/iTwin/iTwinUI-react)) components accordingly within the page with minimal effort on the development side.
+iTwinUI-layouts places given React (eg. [iTwinUI-react](https://github.com/iTwin/iTwinUI-react)) components accordingly within the page with minimal effort on the development side.
 
 ---
 
@@ -36,9 +36,10 @@ yarn add @itwin/itwinui-layouts-react
 
 ## Usage
 
-Import the component you want and start using it!
+Import layouts CSS in your root component then the layouts component you want and start using it!
 
 ```jsx
+import '@itwin/itwinui-layouts-css/styles.css';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
 
 const App = () => (

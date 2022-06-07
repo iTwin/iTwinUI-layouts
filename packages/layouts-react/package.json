@@ -1,7 +1,10 @@
 {
   "name": "@itwin/itwinui-layouts-react",
-  "version": "0.1.0",
-  "author": "Bentley Systems",
+  "version": "0.1.2",
+  "author": {
+    "name": "Bentley Systems, Inc.",
+    "url": "http://www.bentley.com"
+  },
   "description": "iTwinUI package that provides React components for most common layouts",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -12,6 +15,10 @@
       "require": "./dist/cjs/index.js"
     }
   },
+  "files": [
+    "dist",
+    "LICENSE.md"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/iTwin/iTwinUI-layouts",
   "repository": {
@@ -39,19 +46,20 @@
     "build:watch": "chokidar \"src/**/*\" -c \"yarn build\""
   },
   "dependencies": {
-    "@itwin/itwinui-layouts-css": "workspace:*"
+    "@itwin/itwinui-layouts-css": "workspace:*",
+    "classnames": "^2.3.1"
   },
   "peerDependencies": {
-    "react": "^16.8.6 || ^17.0.0",
-    "react-dom": "^16.8.6 || ^17.0.0"
+    "react": ">=16.8.6",
+    "react-dom": ">=16.8.6"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",
-    "@types/react": "^17.0.33",
-    "@types/react-dom": "^17.0.10",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
     "chokidar-cli": "^3.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "typescript": "^4.4.4"
   }
 }
