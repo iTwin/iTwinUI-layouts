@@ -412,27 +412,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-css@npm:0.x":
-  version: 0.53.2
-  resolution: "@itwin/itwinui-css@npm:0.53.2"
-  checksum: a0dd7609f945fe11bbc8adb052a5f33c6d874c42fd1521e14b2bcdf01bd86e12272baf70d4eee1d05aba1f90f11432d061dd5b1b78bd510c88062659d13da1e0
+"@itwin/itwinui-css@npm:^0.59.1":
+  version: 0.59.1
+  resolution: "@itwin/itwinui-css@npm:0.59.1"
+  checksum: ec9caaae51ef029b78206b3ed59157ec5c4d9c9ecbcd0bda5ca8f6d5d36dc8b874689b809ffa7c6626941a6275ae10d442170353cdc6a6b085f21a98ed5e5dd6
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-css@npm:^0.55.0":
-  version: 0.55.0
-  resolution: "@itwin/itwinui-css@npm:0.55.0"
-  checksum: 93d760f3f5c8c224d49d26926215bb9826d5589d288dfee93a6536aecc9d17c8e2b918dd20afc791b6d2694e67a0ac016a494f6982453acb60277461aa74c2f3
-  languageName: node
-  linkType: hard
-
-"@itwin/itwinui-icons-react@npm:^1.5.0":
-  version: 1.5.1
-  resolution: "@itwin/itwinui-icons-react@npm:1.5.1"
+"@itwin/itwinui-icons-react@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "@itwin/itwinui-icons-react@npm:1.10.1"
   peerDependencies:
-    react: ^16.8.6 || ^17.0.0
-    react-dom: ^16.8.6 || ^17.0.0
-  checksum: 18cff028ca58d4d4e1754250aee47e42b53a74998fe1d5acb55d48a1aa9184ab2897b1ed7ccb3f76cfadb968c57bfa845ce7ed80defaea0e8702ca1d296fae2e
+    react: ">=16.8.6"
+    react-dom: ">=16.8.6"
+  checksum: 73bee29f34a1a3e2b200dcec6d454bcf246256541f32073b8aef8297ef637fdc6e8dfad1c911236a7b777622858a41b41563084bf88a422dd9b2ec498be790a0
   languageName: node
   linkType: hard
 
@@ -446,13 +439,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-illustrations-react@npm:^1.0.1":
-  version: 1.2.0
-  resolution: "@itwin/itwinui-illustrations-react@npm:1.2.0"
+"@itwin/itwinui-illustrations-react@npm:^1.3.1":
+  version: 1.3.1
+  resolution: "@itwin/itwinui-illustrations-react@npm:1.3.1"
   peerDependencies:
-    react: ^16.8.6 || ^17.0.0
-    react-dom: ^16.8.6 || ^17.0.0
-  checksum: 8a7a97a0ea5a9c51db4843d37046839f558999beda267d0f7c85d6ab36b8498c34197e2c38f9855c61a3bfb5de696d36ee18c85c9d1290692c0e4c0303cf78bb
+    react: ">=16.8.6"
+    react-dom: ">=16.8.6"
+  checksum: 733b8e5f37c30504aa33b05ad91fd8c5bf2a85978e44e52106f60216745ee5ff55075654aad86eeaf90f89681a3cbe39f87dae6bbe5df329f2ab62ced0f8037d
   languageName: node
   linkType: hard
 
@@ -460,7 +453,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@itwin/itwinui-layouts-css@workspace:packages/layouts-css"
   dependencies:
-    "@itwin/itwinui-css": 0.x
+    "@itwin/itwinui-css": ^0.59.1
     autoprefixer: ^10.4.2
     chokidar-cli: ^3.0.0
     postcss: ^8.4.5
@@ -478,7 +471,7 @@ __metadata:
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
-    "@itwin/itwinui-react": ^1.37.0
+    "@itwin/itwinui-react": ^1.39.0
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
     "@vitejs/plugin-react": ^1.0.7
@@ -536,22 +529,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@itwin/itwinui-react@npm:^1.37.0":
-  version: 1.37.0
-  resolution: "@itwin/itwinui-react@npm:1.37.0"
+"@itwin/itwinui-react@npm:^1.39.0":
+  version: 1.39.0
+  resolution: "@itwin/itwinui-react@npm:1.39.0"
   dependencies:
-    "@itwin/itwinui-css": ^0.55.0
-    "@itwin/itwinui-icons-react": ^1.5.0
-    "@itwin/itwinui-illustrations-react": ^1.0.1
+    "@itwin/itwinui-css": ^0.59.1
+    "@itwin/itwinui-icons-react": ^1.10.1
+    "@itwin/itwinui-illustrations-react": ^1.3.1
     "@tippyjs/react": ^4.2.5
     "@types/react-table": ^7.0.18
     classnames: ^2.2.6
     react-table: ^7.1.0
-    react-transition-group: ^4.1.1
+    react-transition-group: ^4.4.2
   peerDependencies:
-    react: ^16.8.6 || ^17.0.0
-    react-dom: ^16.8.6 || ^17.0.0
-  checksum: 22461d9cc1892e37e070e5b9a14469740faa96f4fba0da30c0c61e5e2274938f35c8b5be80ab54c057d14bb5a5772b5ba545b8125b4a9aa4255171b5362ee28c
+    react: ">=16.8.6 < 19.0.0"
+    react-dom: ">=16.8.6 < 19.0.0"
+  checksum: 9a36339712db58c694b9339116a2aadeab5c5a5ec4f0a84c400b5a53e21550ce365d5ac2375906806a8098fc51e63a1eafc46424eb6b1d2fd75c72e100f99f7f
   languageName: node
   linkType: hard
 
@@ -5063,7 +5056,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-transition-group@npm:^4.1.1":
+"react-transition-group@npm:^4.4.2":
   version: 4.4.2
   resolution: "react-transition-group@npm:4.4.2"
   dependencies:

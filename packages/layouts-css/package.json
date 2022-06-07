@@ -39,7 +39,7 @@
     "itwinui"
   ],
   "dependencies": {
-    "@itwin/itwinui-css": "0.x"
+    "@itwin/itwinui-css": "^0.59.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
