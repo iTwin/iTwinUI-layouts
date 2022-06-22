@@ -6,6 +6,7 @@ import AppLayoutDemo from './PageLayout/PageLayoutDemo';
 import PageLayoutPaddedDemo from './PageLayout/PageLayoutPaddedDemo';
 import GridLayoutDemo from './Grid/FluidGridDemo';
 import HomePageDemo from './Grid/GridDemo';
+import TableDemo from './PageLayout/TableDemo';
 
 /**
  * List of all demos. It is used to dynamically populate the home page and react-router.
@@ -29,6 +30,13 @@ export const DEMOS_LIST = [
           'Demo consisting of header, side navigation, and padded content (eg. array of tiles or table).',
         icon: 'layouts-thumbnails/PageLayoutPadded.png',
         component: PageLayoutPaddedDemo,
+      },
+      {
+        path: 'page-layout-3',
+        name: 'Table',
+        description: '',
+        icon: 'layouts-thumbnails/TableLayout.png',
+        component: TableDemo,
       },
     ],
   },
