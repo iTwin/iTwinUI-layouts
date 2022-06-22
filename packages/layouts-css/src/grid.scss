@@ -55,6 +55,8 @@
   --_iui-grid-item-column-start-small-monitor: auto;
   --_iui-grid-item-column-start-monitor: auto;
 
+  max-width: 100%;
+
   @include monitor {
     grid-column: var(--_iui-grid-item-column-start-monitor) /
       var(--_iui-grid-item-column-span-monitor);
