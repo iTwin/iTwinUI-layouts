@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3 (2022-06-22)
+
+- **`Grid.Item`**: Added `max-width: 100%` to fix overflow in Firefox.
+
 ## 0.1.1 (2022-05-25)
 
 ### What's new
