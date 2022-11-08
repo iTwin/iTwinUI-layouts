@@ -1,6 +1,6 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
-@import '@itwin/itwinui-css/scss/variables';
+@import '@itwin/itwinui-variables';
 
 .demo-surface-card {
   height: 100%;
@@ -13,14 +13,14 @@
 .demo-surface-title-bar {
   display: flex;
   align-items: center;
-  min-height: 4 * $iui-baseline;
-  border-bottom: 1px solid var(--iui-color-background-5);
-  padding: 0 12px;
+  min-height: calc(var(--iui-size-s) * 4);
+  border-bottom: 1px solid var(--iui-color-border);
+  padding-inline: var(--iui-size-s);
 }
 
 .demo-surface-content {
-  padding: $iui-baseline $iui-sm;
+  padding: var(--iui-size-s) var(--iui-size-s);
   display: flex;
   flex-direction: column;
-  gap: $iui-s;
+  gap: var(--iui-size-xs);
 }

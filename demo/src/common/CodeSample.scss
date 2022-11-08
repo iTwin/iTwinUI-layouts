@@ -2,21 +2,21 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-@import '@itwin/itwinui-css/scss/variables';
+@import '@itwin/itwinui-variables';
 
 .code-sample {
   text-align: left;
-  padding: $iui-s;
+  padding: var(--iui-size-xs);
   margin: 0;
   overflow: scroll;
   white-space: break-spaces;
   font-family: inherit;
-  border: 1px solid var(--iui-color-background-3);
-  border-radius: 4px;
+  border: 1px solid var(--iui-color-border-subtle);
+  border-radius: var(--iui-border-radius-1);
 
   &-line {
     display: table-row;
-    line-height: $iui-baseline*2;
+    line-height: var(--iui-size-l);
 
     > .maybe-class-name {
       color: rgb(38, 127, 153);
@@ -26,8 +26,8 @@
   &-line-number {
     display: table-cell;
     text-align: right;
-    width: $iui-baseline*3;
-    padding-right: $iui-sm;
+    width: calc(var(--iui-size-s) * 3);
+    padding-right: var(--iui-size-s);
     user-select: none;
     opacity: 0.5;
   }

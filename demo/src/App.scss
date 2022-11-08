@@ -2,16 +2,16 @@
  * Copyright (c) Bentley Systems, Incorporated. All rights reserved.
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
-@import '@itwin/itwinui-css/scss/variables';
+@import '@itwin/itwinui-variables';
 
 .app {
-  padding: $iui-line-height unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-right))') $iui-line-height unquote('max(#{$iui-l}, #{$iui-l} + env(safe-area-inset-left))');
+  padding: var(--iui-size-l) unquote('max(var(--iui-size-l), var(--iui-size-l) + env(safe-area-inset-right))') var(--iui-size-l) unquote('max(var(--iui-size-l), var(--iui-size-l) + env(safe-area-inset-left))');
 }
 
 hr {
   border: none;
-  border-top: 1px solid var(--iui-color-background-5);
-  margin: $iui-baseline 0;
+  border-top: 1px solid var(--iui-color-border-subtle);
+  margin-block: var(--iui-size-s);
 }
 
 .tile-wrapper {
@@ -24,5 +24,5 @@ hr {
 }
 
 .demo-layouts-list {
-  margin: $iui-m 0;
+  margin: var(--iui-size-m) 0;
 }

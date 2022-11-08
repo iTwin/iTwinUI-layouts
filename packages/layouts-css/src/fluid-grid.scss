@@ -1,7 +1,7 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import './breakpoints';
-@import '@itwin/itwinui-css/scss/variables';
+@import '@itwin/itwinui-variables';
 
 .iui-layouts-fluid-grid {
   --_iui-grid-item-min-width: 256px;
@@ -11,7 +11,7 @@
     auto-fill,
     minmax(Min(100%, var(--_iui-grid-item-min-width)), 1fr)
   );
-  gap: $iui-l;
+  gap: var(--iui-size-l);
 
   &.iui-layouts-fluid-grid > * {
     width: 100%;
