@@ -30,7 +30,8 @@
     "build-docker": "node build-docker.js"
   },
   "dependencies": {
-    "@fontsource/open-sans": "^4.5.8",
+    "@fontsource/noto-sans": "^4.5.11",
+    "@fontsource/noto-sans-mono": "^4.5.12",
     "@itwin/itwinui-icons-react": "^1.7.0",
     "@itwin/itwinui-layouts-css": "workspace:*",
     "@itwin/itwinui-layouts-react": "workspace:*",

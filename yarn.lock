@@ -387,10 +387,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/open-sans@npm:^4.5.8":
-  version: 4.5.8
-  resolution: "@fontsource/open-sans@npm:4.5.8"
-  checksum: 62b00d6b9b51a831c274c04c4e8249883b4cc48cfa040fd54a72a9f9dbb7d367b116495df7a1aa356873589a0afc14dbd523d57cb1061af26768fc4c28274822
+"@fontsource/noto-sans-mono@npm:^4.5.12":
+  version: 4.5.12
+  resolution: "@fontsource/noto-sans-mono@npm:4.5.12"
+  checksum: 0dd8ed3706ef24927333369e73247c7d34778499098488108fae50ae62d13def6b32c241aaa4aad13948b8a47b7dcac6ee538ace0cb47a579f8e97ca1faf8a91
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans@npm:^4.5.11":
+  version: 4.5.11
+  resolution: "@fontsource/noto-sans@npm:4.5.11"
+  checksum: d11ec102ac9b22e3584ad77e9d0069ef8b18cf2f4dfc12f9968456be0f7da5aa95585e853988289c29746e7e04bbaaadf253646d1c9449130ac9f37211b8af15
   languageName: node
   linkType: hard
 
@@ -474,7 +481,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@itwin/itwinui-layouts-demo@workspace:demo"
   dependencies:
-    "@fontsource/open-sans": ^4.5.8
+    "@fontsource/noto-sans": ^4.5.11
+    "@fontsource/noto-sans-mono": ^4.5.12
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
