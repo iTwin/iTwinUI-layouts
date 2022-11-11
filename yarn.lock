@@ -426,20 +426,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-css@npm:1.0.0-dev.13":
-  version: 1.0.0-dev.13
-  resolution: "@itwin/itwinui-css@npm:1.0.0-dev.13"
-  checksum: 1dd6908a0633cd9df68761560ac2c8e21d440b89de0ba6dcb0546a2638ce0a957a79bcff9c80112aa3ea5cf2b1f4798c8d7fe297ef048f0e139d8ac1d153e984
-  languageName: node
-  linkType: hard
-
-"@itwin/itwinui-icons-react@npm:^1.10.1":
-  version: 1.16.0
-  resolution: "@itwin/itwinui-icons-react@npm:1.16.0"
-  peerDependencies:
-    react: ">=16.8.6"
-    react-dom: ">=16.8.6"
-  checksum: bee713328356b916496bac3ffd2f34c19da76297f7875d8f7efaf13ead45b7e0dcfb4b0e14e7063c2abf5bfe50becfb0050eb9d47f8dd95a6986da2556f90927
+"@itwin/itwinui-css@npm:dev":
+  version: 1.0.0-dev.15
+  resolution: "@itwin/itwinui-css@npm:1.0.0-dev.15"
+  checksum: a099ff4b29f295dc2219422dfd8691081a5a07eee21cb803bd2d5889a724a3e2eedb8c77c35090563fef1e48af814610ecea10f27f2539d703feaf51764fca93
   languageName: node
   linkType: hard
 
@@ -486,7 +476,7 @@ __metadata:
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
-    "@itwin/itwinui-react": ^2.0.0-dev.0
+    "@itwin/itwinui-react": ^2.0.0-dev.2
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
     "@vitejs/plugin-react": ^1.0.7
@@ -544,12 +534,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@itwin/itwinui-react@npm:^2.0.0-dev.0":
-  version: 2.0.0-dev.0
-  resolution: "@itwin/itwinui-react@npm:2.0.0-dev.0"
+"@itwin/itwinui-react@npm:^2.0.0-dev.2":
+  version: 2.0.0-dev.2
+  resolution: "@itwin/itwinui-react@npm:2.0.0-dev.2"
   dependencies:
-    "@itwin/itwinui-css": 1.0.0-dev.13
-    "@itwin/itwinui-icons-react": ^1.10.1
+    "@itwin/itwinui-css": dev
     "@itwin/itwinui-illustrations-react": ^1.3.1
     "@itwin/itwinui-variables": 1.0.0-dev.0
     "@tippyjs/react": ^4.2.6
@@ -561,7 +550,7 @@ __metadata:
   peerDependencies:
     react: ">=16.8.6 < 19.0.0"
     react-dom: ">=16.8.6 < 19.0.0"
-  checksum: 87e7180198bf8270f1ad3689b7f6970b99d24eb78f7233872ebad28863fb835c5fb5e92fe775d5c79584804d4967be516ac5422702c4955b726faa3307dea1f7
+  checksum: 815facad2b1107fc486977b798ff0c95216c51e08e053f50c96d3a4985fbc131efd08f35fe552d81ea552cf97493b97f59379a3c2499c36424432dc2f316e3a2
   languageName: node
   linkType: hard
 
