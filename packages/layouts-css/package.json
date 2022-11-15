@@ -39,7 +39,7 @@
     "itwinui"
   ],
   "dependencies": {
-    "@itwin/itwinui-variables": "1.0.0-dev.0"
+    "@itwin/itwinui-variables": "1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",

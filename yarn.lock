@@ -457,7 +457,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@itwin/itwinui-layouts-css@workspace:packages/layouts-css"
   dependencies:
-    "@itwin/itwinui-variables": 1.0.0-dev.0
+    "@itwin/itwinui-variables": 1.0.0
     autoprefixer: ^10.4.2
     chokidar-cli: ^3.0.0
     postcss: ^8.4.5
@@ -551,6 +551,13 @@ __metadata:
     react: ">=16.8.6 < 19.0.0"
     react-dom: ">=16.8.6 < 19.0.0"
   checksum: 815facad2b1107fc486977b798ff0c95216c51e08e053f50c96d3a4985fbc131efd08f35fe552d81ea552cf97493b97f59379a3c2499c36424432dc2f316e3a2
+  languageName: node
+  linkType: hard
+
+"@itwin/itwinui-variables@npm:1.0.0":
+  version: 1.0.0
+  resolution: "@itwin/itwinui-variables@npm:1.0.0"
+  checksum: 6b0efdb7b44522ad3c68020c0e44d85b50a813b25527d59f92a97705756d8159cec9cf6cdd7a02707312b0d6bbd6e96417898ce6378d8599f2fe804073d3a644
   languageName: node
   linkType: hard
 
