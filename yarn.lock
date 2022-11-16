@@ -387,10 +387,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/open-sans@npm:^4.5.8":
-  version: 4.5.8
-  resolution: "@fontsource/open-sans@npm:4.5.8"
-  checksum: 62b00d6b9b51a831c274c04c4e8249883b4cc48cfa040fd54a72a9f9dbb7d367b116495df7a1aa356873589a0afc14dbd523d57cb1061af26768fc4c28274822
+"@fontsource/noto-sans-mono@npm:^4.5.12":
+  version: 4.5.12
+  resolution: "@fontsource/noto-sans-mono@npm:4.5.12"
+  checksum: 0dd8ed3706ef24927333369e73247c7d34778499098488108fae50ae62d13def6b32c241aaa4aad13948b8a47b7dcac6ee538ace0cb47a579f8e97ca1faf8a91
+  languageName: node
+  linkType: hard
+
+"@fontsource/noto-sans@npm:^4.5.11":
+  version: 4.5.11
+  resolution: "@fontsource/noto-sans@npm:4.5.11"
+  checksum: d11ec102ac9b22e3584ad77e9d0069ef8b18cf2f4dfc12f9968456be0f7da5aa95585e853988289c29746e7e04bbaaadf253646d1c9449130ac9f37211b8af15
   languageName: node
   linkType: hard
 
@@ -419,27 +426,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-css@npm:0.x":
-  version: 0.53.2
-  resolution: "@itwin/itwinui-css@npm:0.53.2"
-  checksum: a0dd7609f945fe11bbc8adb052a5f33c6d874c42fd1521e14b2bcdf01bd86e12272baf70d4eee1d05aba1f90f11432d061dd5b1b78bd510c88062659d13da1e0
-  languageName: node
-  linkType: hard
-
-"@itwin/itwinui-css@npm:^0.55.0":
-  version: 0.55.0
-  resolution: "@itwin/itwinui-css@npm:0.55.0"
-  checksum: 93d760f3f5c8c224d49d26926215bb9826d5589d288dfee93a6536aecc9d17c8e2b918dd20afc791b6d2694e67a0ac016a494f6982453acb60277461aa74c2f3
-  languageName: node
-  linkType: hard
-
-"@itwin/itwinui-icons-react@npm:^1.5.0":
-  version: 1.5.1
-  resolution: "@itwin/itwinui-icons-react@npm:1.5.1"
-  peerDependencies:
-    react: ^16.8.6 || ^17.0.0
-    react-dom: ^16.8.6 || ^17.0.0
-  checksum: 18cff028ca58d4d4e1754250aee47e42b53a74998fe1d5acb55d48a1aa9184ab2897b1ed7ccb3f76cfadb968c57bfa845ce7ed80defaea0e8702ca1d296fae2e
+"@itwin/itwinui-css@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@itwin/itwinui-css@npm:1.0.0"
+  checksum: e3e3c8266e77c37789724d782797030da6ac520669606d538da6781d94778eb3e4163695f0f05c663280174f81f615989f976d7ec0f7a1d6c54451b08e48ec59
   languageName: node
   linkType: hard
 
@@ -453,13 +443,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-illustrations-react@npm:^1.0.1":
-  version: 1.2.0
-  resolution: "@itwin/itwinui-illustrations-react@npm:1.2.0"
+"@itwin/itwinui-illustrations-react@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@itwin/itwinui-illustrations-react@npm:2.0.0"
   peerDependencies:
-    react: ^16.8.6 || ^17.0.0
-    react-dom: ^16.8.6 || ^17.0.0
-  checksum: 8a7a97a0ea5a9c51db4843d37046839f558999beda267d0f7c85d6ab36b8498c34197e2c38f9855c61a3bfb5de696d36ee18c85c9d1290692c0e4c0303cf78bb
+    react: ">=16.8.6"
+    react-dom: ">=16.8.6"
+  checksum: fdfa33106030f92d0ad0a1e3e820f4dfbb5290acae2739fbd3c9f1b8e3ab07561ff85def627cd6c979fa9514be63e9d12a7f4132e77dc21b7b396b3378ca162e
   languageName: node
   linkType: hard
 
@@ -467,7 +457,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@itwin/itwinui-layouts-css@workspace:packages/layouts-css"
   dependencies:
-    "@itwin/itwinui-css": 0.x
+    "@itwin/itwinui-variables": 1.0.0
     autoprefixer: ^10.4.2
     chokidar-cli: ^3.0.0
     postcss: ^8.4.5
@@ -481,11 +471,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@itwin/itwinui-layouts-demo@workspace:demo"
   dependencies:
-    "@fontsource/open-sans": ^4.5.8
+    "@fontsource/noto-sans": ^4.5.11
+    "@fontsource/noto-sans-mono": ^4.5.12
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
-    "@itwin/itwinui-react": ^1.37.0
+    "@itwin/itwinui-react": ^2.0.0
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
     "@vitejs/plugin-react": ^1.0.7
@@ -543,22 +534,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@itwin/itwinui-react@npm:^1.37.0":
-  version: 1.37.0
-  resolution: "@itwin/itwinui-react@npm:1.37.0"
+"@itwin/itwinui-react@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@itwin/itwinui-react@npm:2.0.0"
   dependencies:
-    "@itwin/itwinui-css": ^0.55.0
-    "@itwin/itwinui-icons-react": ^1.5.0
-    "@itwin/itwinui-illustrations-react": ^1.0.1
-    "@tippyjs/react": ^4.2.5
+    "@itwin/itwinui-css": ^1.0.0
+    "@itwin/itwinui-illustrations-react": ^2.0.0
+    "@itwin/itwinui-variables": ^1.0.0
+    "@tippyjs/react": ^4.2.6
     "@types/react-table": ^7.0.18
     classnames: ^2.2.6
     react-table: ^7.1.0
-    react-transition-group: ^4.1.1
+    react-transition-group: ^4.4.2
+    tippy.js: ^6.3.7
   peerDependencies:
-    react: ^16.8.6 || ^17.0.0
-    react-dom: ^16.8.6 || ^17.0.0
-  checksum: 22461d9cc1892e37e070e5b9a14469740faa96f4fba0da30c0c61e5e2274938f35c8b5be80ab54c057d14bb5a5772b5ba545b8125b4a9aa4255171b5362ee28c
+    react: ">=16.8.6 < 19.0.0"
+    react-dom: ">=16.8.6 < 19.0.0"
+  checksum: 133621af8f906aa6e523fd59750c1b656b66058c27878f9d7dc8823731a7d8c30266e411a43b5194f23679e773b802707352b64d1510d4437f6c8ccb0d56946d
+  languageName: node
+  linkType: hard
+
+"@itwin/itwinui-variables@npm:1.0.0, @itwin/itwinui-variables@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@itwin/itwinui-variables@npm:1.0.0"
+  checksum: 6b0efdb7b44522ad3c68020c0e44d85b50a813b25527d59f92a97705756d8159cec9cf6cdd7a02707312b0d6bbd6e96417898ce6378d8599f2fe804073d3a644
   languageName: node
   linkType: hard
 
@@ -751,7 +750,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tippyjs/react@npm:^4.2.5":
+"@tippyjs/react@npm:^4.2.6":
   version: 4.2.6
   resolution: "@tippyjs/react@npm:4.2.6"
   dependencies:
@@ -5132,9 +5131,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-transition-group@npm:^4.1.1":
-  version: 4.4.2
-  resolution: "react-transition-group@npm:4.4.2"
+"react-transition-group@npm:^4.4.2":
+  version: 4.4.5
+  resolution: "react-transition-group@npm:4.4.5"
   dependencies:
     "@babel/runtime": ^7.5.5
     dom-helpers: ^5.0.1
@@ -5143,7 +5142,7 @@ __metadata:
   peerDependencies:
     react: ">=16.6.0"
     react-dom: ">=16.6.0"
-  checksum: b67bf5b3e86dbab72d658b9a52a3589e5960583ab28c7c66272427d8fe30d4c7de422d5046ae96bd2683cdf80cc3264b2516f5ce80cae1dbe6cf3ca6dda392c5
+  checksum: 75602840106aa9c6545149d6d7ae1502fb7b7abadcce70a6954c4b64a438ff1cd16fc77a0a1e5197cdd72da398f39eb929ea06f9005c45b132ed34e056ebdeb1
   languageName: node
   linkType: hard
 
@@ -6063,7 +6062,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tippy.js@npm:^6.3.1":
+"tippy.js@npm:^6.3.1, tippy.js@npm:^6.3.7":
   version: 6.3.7
   resolution: "tippy.js@npm:6.3.7"
   dependencies:

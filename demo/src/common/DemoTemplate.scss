@@ -1,28 +1,16 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
-@import '@itwin/itwinui-css/scss/variables';
+@import '@itwin/itwinui-variables';
 
 .demo-template-container {
   display: flex;
   height: 100vh;
-  background-color: var(--iui-color-background-4);
-
-  &-vertical {
-    flex-direction: column;
-
-    .demo-template-code {
-      max-width: revert;
-      max-height: 25%;
-      border-left: none;
-      border-top: $iui-xxs solid var(--iui-color-background-5);
-    }
-  }
 }
 
 .demo-template-code-header {
   &-back {
-    font-size: $iui-l;
-    font-weight: 300;
+    font-size: var(--iui-size-l);
+    font-weight: var(--iui-font-weight-light);
     user-select: none;
   }
 
@@ -35,13 +23,13 @@
     &::before {
       content: '/';
       color: var(--iui-text-color-muted);
-      margin: 0 $iui-xs;
+      margin-inline: var(--iui-size-2xs);
     }
   }
 
   &-actions {
     display: flex;
-    gap: $iui-s;
+    gap: var(--iui-size-xs);
   }
 }
 
@@ -54,9 +42,9 @@
 .demo-template-button-overlay {
   position: absolute;
   z-index: 99;
-  bottom: $iui-baseline;
-  right: $iui-sm;
-  box-shadow: $iui-elevation-8;
+  bottom: var(--iui-size-s);
+  right: var(--iui-size-s);
+  box-shadow: var(--iui-shadow-3);
 }
 
 .demo-transparent-background {
@@ -64,18 +52,18 @@
   background-size: 8px 8px;
   background-image: repeating-linear-gradient(
     45deg,
-    var(--iui-color-background-3) 25%,
+    var(--iui-color-background-disabled) 25%,
     transparent 25%,
     transparent 75%,
-    var(--iui-color-background-3) 75%,
-    var(--iui-color-background-3)
+    var(--iui-color-background-disabled) 75%,
+    var(--iui-color-background-disabled)
   ),
     repeating-linear-gradient(
     45deg,
-    var(--iui-color-background-3) 25%,
-    var(--iui-color-background-5) 25%,
-    var(--iui-color-background-5) 75%,
-    var(--iui-color-background-3) 75%,
-    var(--iui-color-background-3)
+    var(--iui-color-background-disabled) 25%,
+    var(--iui-color-border) 25%,
+    var(--iui-color-border) 75%,
+    var(--iui-color-background-disabled) 75%,
+    var(--iui-color-background-disabled)
   );
 }

@@ -10,10 +10,8 @@ import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
 import './App.scss';
 import '@itwin/itwinui-layouts-css/styles.css';
-import '@fontsource/open-sans/300.css';
-import '@fontsource/open-sans/400.css';
-import '@fontsource/open-sans/600.css';
-import '@fontsource/open-sans/700.css';
+import '@fontsource/noto-sans';
+import '@fontsource/noto-sans-mono';
 
 const App = () => {
   const navigate = useNavigate();

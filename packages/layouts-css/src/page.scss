@@ -1,7 +1,6 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import './breakpoints';
-@import '@itwin/itwinui-css/scss/variables';
 
 .iui-layouts-page {
   height: 100vh;
@@ -20,23 +19,23 @@
     //#region If side navigation is present, remove the env(safe-area-inset-left) from the left side of content area
     ~ .iui-layouts-page-content-padded {
       @include monitor {
-        padding-left: $iui-xxl;
+        padding-left: var(--iui-size-2xl);
       }
 
       @include small-monitor {
-        padding-left: 48px;
+        padding-left: calc(var(--iui-size-l) * 2);
       }
 
       @include tablet {
-        padding-left: $iui-xl;
+        padding-left: var(--iui-size-xl);
       }
 
       @include landscape-mobile {
-        padding-left: $iui-l;
+        padding-left: var(--iui-size-l);
       }
 
       @include mobile {
-        padding-left: $iui-l;
+        padding-left: var(--iui-size-l);
       }
     }
     //#endregion If side navigation is present, remove the env(safe-area-inset-left) from the left side of content area
@@ -45,7 +44,7 @@
   &-content {
     grid-area: content;
     overflow: overlay;
-    background-color: var(--iui-color-background-2);
+    background-color: var(--iui-color-background-backdrop);
 
     &-padded {
       display: flex;
@@ -54,23 +53,23 @@
 
       //#region Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
       @include monitor {
-        padding: $iui-xl unquote('max(#{$iui-xxl}, env(safe-area-inset-right))') $iui-xl unquote('max(#{$iui-xxl}, env(safe-area-inset-left))');
+        padding: var(--iui-size-xl) unquote('max(var(--iui-size-2xl), env(safe-area-inset-right))') var(--iui-size-xl) unquote('max(var(--iui-size-2xl), env(safe-area-inset-left))');
       }
 
       @include small-monitor {
-        padding: $iui-l unquote('max(48px, env(safe-area-inset-right))') $iui-l unquote('max(48px, env(safe-area-inset-left))');
+        padding: var(--iui-size-l) unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-right))') var(--iui-size-l) unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-left))');
       }
 
       @include tablet {
-        padding: $iui-m unquote('max(#{$iui-xl}, env(safe-area-inset-right))') $iui-m unquote('max(#{$iui-xl}, env(safe-area-inset-left))');
+        padding: var(--iui-size-m) unquote('max(var(--iui-size-xl), env(safe-area-inset-right))') var(--iui-size-m) unquote('max(var(--iui-size-xl), env(safe-area-inset-left))');
       }
 
       @include landscape-mobile {
-        padding: $iui-s unquote('max(#{$iui-l}, env(safe-area-inset-right))') $iui-s unquote('max(#{$iui-l}, env(safe-area-inset-left))');
+        padding: var(--iui-size-xs) unquote('max(var(--iui-size-l), env(safe-area-inset-right))') var(--iui-size-xs) unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
       }
 
       @include mobile {
-        padding: $iui-s unquote('max(#{$iui-l}, env(safe-area-inset-right))') $iui-s unquote('max(#{$iui-l}, env(safe-area-inset-left))');
+        padding: var(--iui-size-xs) unquote('max(var(--iui-size-l), env(safe-area-inset-right))') var(--iui-size-xs) unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
       }
       //#endregion Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
     }
@@ -83,13 +82,13 @@
     &-title-area {
       display: flex;
       flex-direction: column;
-      margin-bottom: $iui-baseline * 3;
+      margin-bottom: calc(var(--iui-size-s) * 3);
     }
 
     &-tools {
       display: flex;
       flex-direction: row;
-      margin-bottom: $iui-baseline * 2;
+      margin-bottom: calc(var(--iui-size-s) * 2);
       justify-content: space-between;
 
       &-left,
@@ -97,7 +96,7 @@
         display: flex;
         justify-content: flex-start;
         flex-direction: row;
-        gap: $iui-s;
+        gap: var(--iui-size-xs);
         align-items: center;
         min-width: 0;
         flex-basis: 50%;

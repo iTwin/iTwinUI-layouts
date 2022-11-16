@@ -1,7 +1,6 @@
 // Copyright (c) Bentley Systems, Incorporated. All rights reserved.
 // See LICENSE.md in the project root for license terms and full copyright notice.
 @import './breakpoints';
-@import '@itwin/itwinui-css/scss/variables';
 
 .iui-layouts-grid {
   --_iui-grid-column-count-mobile: 12;
@@ -13,7 +12,7 @@
   display: grid;
   @include monitor {
     grid-template-columns: repeat(var(--_iui-grid-column-count-monitor), 1fr);
-    grid-gap: $iui-l;
+    grid-gap: var(--iui-size-l);
   }
 
   @include small-monitor {
@@ -21,12 +20,12 @@
       var(--_iui-grid-column-count-small-monitor),
       1fr
     );
-    grid-gap: $iui-l;
+    grid-gap: var(--iui-size-l);
   }
 
   @include tablet {
     grid-template-columns: repeat(var(--_iui-grid-column-count-tablet), 1fr);
-    grid-gap: $iui-m;
+    grid-gap: var(--iui-size-m);
   }
 
   @include landscape-mobile {
@@ -34,11 +33,11 @@
       var(--_iui-grid-column-count-landscape-mobile),
       1fr
     );
-    grid-gap: $iui-m;
+    grid-gap: var(--iui-size-m);
   }
   @include mobile {
     grid-template-columns: repeat(var(--_iui-grid-column-count-mobile), 1fr);
-    grid-gap: $iui-m;
+    grid-gap: var(--iui-size-m);
   }
 }
 
