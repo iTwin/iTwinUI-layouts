@@ -5,34 +5,26 @@
 import React from 'react';
 import cx from 'classnames';
 import { StylingProps } from '../../utils/props';
-import Content from './Content';
-import ToolsArea from './ToolsArea';
-import { Header } from './Header';
-import SideNavigation from './SideNavigation';
-import TitleArea from './TitleArea';
-import ActionBar from './ActionBar';
 
-export type PageLayoutProps = {
+export type ActionBarProps = {
   /**
    * Children of the element
    */
   children: React.ReactNode;
 } & StylingProps;
 
-export const PageLayout = (props: PageLayoutProps) => {
+export const ActionBar = (props: ActionBarProps) => {
   const { className, style, children } = props;
   return (
-    <div className={cx('iui-layouts-page', className)} style={style}>
+    <div
+      className={cx('iui-layouts-page-content-action-bar', className)}
+      style={style}
+    >
       {children}
     </div>
   );
 };
 
-PageLayout.Header = Header;
-PageLayout.SideNavigation = SideNavigation;
-PageLayout.Content = Content;
-PageLayout.ToolsArea = ToolsArea;
-PageLayout.TitleArea = TitleArea;
-PageLayout.ActionBar = ActionBar;
+ActionBar.displayName = 'PageLayout.ActionBar';
 
-export default PageLayout;
+export default ActionBar;
