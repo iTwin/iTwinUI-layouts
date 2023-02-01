@@ -35,8 +35,8 @@ export const DEMOS_LIST = [
         path: 'page-layout-3',
         name: 'PageLayout 3',
         description:
-          'Demo consisting of header, side navigation, and padded content (eg. array of tiles or table).',
-        icon: 'layouts-thumbnails/PageLayoutPadded.png',
+          'Demo consisting of header, side navigation, padded content, and a sticky footer (eg. a setup wizard).',
+        icon: 'layouts-thumbnails/WizardLayout.png',
         component: PageLayoutStickyBarDemo,
       },
     ],

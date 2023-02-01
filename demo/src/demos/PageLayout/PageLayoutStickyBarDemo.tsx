@@ -7,7 +7,7 @@ import { DemoHeader } from '../../common/DemoHeader';
 import { DemoSideNav } from '../../common/DemoSideNav';
 import { DemoTemplate } from '../../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
-import { Text, Button, Surface, LabeledInput } from '@itwin/itwinui-react';
+import { Text, Button, Checkbox, LabeledInput } from '@itwin/itwinui-react';
 
 const codeDemo = `import '@itwin/itwinui-layouts-css/styles.css';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
@@ -71,22 +71,18 @@ export const PageLayoutStickyBarDemo = () => {
           </form>
         </PageLayout.Content>
         <PageLayout.ActionBar>
-          <Surface
-            style={{
-              borderRadius: 0,
-              borderInline: 'none',
-              borderBottom: 'none',
-              padding: 'var(--iui-size-m)',
-              display: 'flex',
-              justifyContent: 'center',
-              gap: 'var(--iui-size-s)',
-            }}
-          >
-            <Button styleType='cta' size='large'>
-              Create
-            </Button>
-            <Button size='large'>Cancel</Button>
-          </Surface>
+          <div className='iui-layouts-page-content-action-bar-zones'>
+            <div className='iui-layouts-page-content-action-bar-zones-left'>
+              <Checkbox label='Remember my settings' />
+            </div>
+            <div className='iui-layouts-page-content-action-bar-zones-center'>
+              <Button styleType='cta' size='large'>
+                Create
+              </Button>
+              <Button size='large'>Cancel</Button>
+            </div>
+            <div className='iui-layouts-page-content-action-bar-zones-right' />
+          </div>
         </PageLayout.ActionBar>
       </PageLayout>
     </DemoTemplate>

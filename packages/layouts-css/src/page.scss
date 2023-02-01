@@ -18,7 +18,8 @@
     grid-area: sidenav;
 
     //#region If side navigation is present, remove the env(safe-area-inset-left) from the left side of content area
-    ~ .iui-layouts-page-content-padded {
+    ~ .iui-layouts-page-content-padded,
+    ~ .iui-layouts-page-content-action-bar {
       @include monitor {
         padding-left: var(--iui-size-2xl);
       }
@@ -127,6 +128,57 @@
 
     &-action-bar {
       grid-area: action-bar;
+      background-color: var(--iui-color-background);
+      border-top: 2px solid var(--iui-color-border);
+      padding-block: var(--iui-size-m);
+      // display: flex;
+      // justify-content: center;
+
+      //#region Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
+      @include monitor {
+        padding-inline: unquote('max(var(--iui-size-2xl), env(safe-area-inset-right))') unquote('max(var(--iui-size-2xl), env(safe-area-inset-left))');
+      }
+
+      @include small-monitor {
+        padding-inline: unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-right))') unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-left))');
+      }
+
+      @include tablet {
+        padding-inline: unquote('max(var(--iui-size-xl), env(safe-area-inset-right))') unquote('max(var(--iui-size-xl), env(safe-area-inset-left))');
+      }
+
+      @include landscape-mobile {
+        padding: unquote('max(var(--iui-size-l), env(safe-area-inset-right))') unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
+      }
+
+      @include mobile {
+        padding: unquote('max(var(--iui-size-l), env(safe-area-inset-right))') unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
+      }
+      //#endregion Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
+
+      &-zones {
+        display: flex;
+        gap: 8px;
+        max-width: 1440px;
+        margin-inline: auto;
+
+        &-left,
+        &-center,
+        &-right {
+          display: flex;
+          align-items: center;
+          flex: 1;
+          gap: inherit;
+        }
+
+        &-center {
+          justify-content: center;
+        }
+
+        &-right {
+          justify-content: flex-end;
+        }
+      }
     }
   }
 }
