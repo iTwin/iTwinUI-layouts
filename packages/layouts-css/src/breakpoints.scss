@@ -6,12 +6,6 @@
   }
 }
 
-@mixin landscape-mobile {
-  @media (max-width: 68.75rem) { //1100px
-    @content;
-  }
-}
-
 @mixin tablet {
   @media (max-width: 68.75rem) { //1100px
     @content;
@@ -20,12 +14,6 @@
 
 @mixin small-monitor {
   @media (max-width: 93.75rem) { //1500px
-    @content;
-  }
-}
-
-@mixin monitor {
-  @media (min-width: 93.75rem) { //1500px
     @content;
   }
 }
