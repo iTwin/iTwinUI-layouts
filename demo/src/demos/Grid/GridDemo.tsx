@@ -34,7 +34,6 @@ const Demo = () => {
             monitor: 4,
             smallMonitor: 4,
             tablet: 4,
-            landscapeMobile: 6,
             mobile: 12,
           }}>
             <DemoSurfaceCard />
@@ -43,7 +42,6 @@ const Demo = () => {
             monitor: 4,
             smallMonitor: 4,
             tablet: 4,
-            landscapeMobile: 6,
             mobile: 12,
           }}>
             <DemoSurfaceCard />
@@ -52,7 +50,6 @@ const Demo = () => {
             monitor: 4,
             smallMonitor: 4,
             tablet: 4,
-            landscapeMobile: 6,
             mobile: 12,
           }}>
             <DemoSurfaceCard />
@@ -62,14 +59,12 @@ const Demo = () => {
               monitor: 3,
               smallMonitor: 3,
               tablet: 3,
-              landscapeMobile: 3,
               mobile: 12,
             }}
             columnStart={{
               monitor: 10,
               smallMonitor: 10,
               tablet: 10,
-              landscapeMobile: 10,
               mobile: 'auto',
             }}
             >
@@ -79,7 +74,6 @@ const Demo = () => {
             monitor: 4,
             smallMonitor: 4,
             tablet: 4,
-            landscapeMobile: 12,
             mobile: 12,
           }}>
             <DemoSurfaceCard />
@@ -88,7 +82,6 @@ const Demo = () => {
             monitor: 8,
             smallMonitor: 8,
             tablet: 8,
-            landscapeMobile: 12,
             mobile: 12,
           }}>
             <DemoSurfaceCard />
@@ -122,7 +115,6 @@ export const GridDemo = () => {
                 monitor: 4,
                 smallMonitor: 4,
                 tablet: 4,
-                landscapeMobile: 6,
                 mobile: 12,
               }}
             >
@@ -155,7 +147,6 @@ columnSpan?: number | ResponsiveColumnSpan;`}
                 monitor: 4,
                 smallMonitor: 4,
                 tablet: 4,
-                landscapeMobile: 6,
                 mobile: 12,
               }}
             >
@@ -196,7 +187,6 @@ columnStart?: auto | number | ResponsiveColumnStart;
                 monitor: 4,
                 smallMonitor: 4,
                 tablet: 4,
-                landscapeMobile: 12,
                 mobile: 12,
               }}
             >
@@ -206,7 +196,6 @@ columnStart?: auto | number | ResponsiveColumnStart;
 type ResponsiveColumnSpan = 
 {
   mobile: number; 
-  landscapeMobile: number; 
   tablet: number; 
   smallMonitor: number; 
   monitor: number;
@@ -219,7 +208,6 @@ type ResponsiveColumnSpan =
 type ResponsiveColumnStart = 
 {
   mobile: 'auto' | number; 
-  landscapeMobile: 'auto' | number; 
   tablet: 'auto' | number; 
   smallMonitor: 'auto' | number; 
   monitor: 'auto' | number;
@@ -232,7 +220,6 @@ type ResponsiveColumnStart =
                 monitor: 5,
                 smallMonitor: 5,
                 tablet: 5,
-                landscapeMobile: 5,
                 mobile: 12,
               }}
             >
@@ -247,14 +234,12 @@ type ResponsiveColumnStart =
                 monitor: 3,
                 smallMonitor: 3,
                 tablet: 3,
-                landscapeMobile: 3,
                 mobile: 12,
               }}
               columnStart={{
                 monitor: 10,
                 smallMonitor: 10,
                 tablet: 10,
-                landscapeMobile: 10,
                 mobile: 'auto',
               }}
               style={{
@@ -272,7 +257,6 @@ type ResponsiveColumnStart =
                 monitor: 4,
                 smallMonitor: 4,
                 tablet: 4,
-                landscapeMobile: 12,
                 mobile: 12,
               }}
             >
@@ -284,7 +268,6 @@ type ResponsiveColumnStart =
     monitor: 4,
     smallMonitor: 4,
     tablet: 4,
-    landscapeMobile: 6,
     mobile: 12,
   }}
 >
@@ -302,7 +285,6 @@ type ResponsiveColumnStart =
                 monitor: 8,
                 smallMonitor: 8,
                 tablet: 8,
-                landscapeMobile: 12,
                 mobile: 12,
               }}
             >
@@ -317,7 +299,6 @@ type ResponsiveColumnStart =
     monitor: 10,
     smallMonitor: 8,
     tablet: 6,
-    landscapeMobile: 4,
     mobile: 2,
   }}
 >

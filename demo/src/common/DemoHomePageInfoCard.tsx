@@ -30,19 +30,16 @@ export const DemoHomePageInfoCard = () => {
             Screen size breakpoints we use:
             <ul>
               <li>
-                <Code>mobile</Code> - under 486px
+                <Code>mobile</Code> - under 500px
               </li>
               <li>
-                <Code>landscapeMobile</Code> - 487px to 768px
+                <Code>tablet</Code> - under 1100px
               </li>
               <li>
-                <Code>tablet</Code> - 769px to 991px
+                <Code>smallMonitor</Code> - under 1500px
               </li>
               <li>
-                <Code>smallMonitor</Code> - 992px to 1399px
-              </li>
-              <li>
-                <Code>monitor</Code> - over 1400px
+                <Code>monitor</Code> - over 1500px
               </li>
             </ul>
           </Text>
