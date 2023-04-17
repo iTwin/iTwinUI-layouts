@@ -18,9 +18,7 @@
 
     //#region If side navigation is present, remove the env(safe-area-inset-left) from the left side of content area
     ~ .iui-layouts-page-content-padded {
-      @include monitor {
-        padding-left: var(--iui-size-2xl);
-      }
+      padding-left: var(--iui-size-2xl);
 
       @include small-monitor {
         padding-left: calc(var(--iui-size-l) * 2);
@@ -28,10 +26,6 @@
 
       @include tablet {
         padding-left: var(--iui-size-xl);
-      }
-
-      @include landscape-mobile {
-        padding-left: var(--iui-size-l);
       }
 
       @include mobile {
@@ -52,9 +46,7 @@
       align-items: center;
 
       //#region Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
-      @include monitor {
-        padding: var(--iui-size-xl) unquote('max(var(--iui-size-2xl), env(safe-area-inset-right))') var(--iui-size-xl) unquote('max(var(--iui-size-2xl), env(safe-area-inset-left))');
-      }
+      padding: var(--iui-size-xl) unquote('max(var(--iui-size-2xl), env(safe-area-inset-right))') var(--iui-size-xl) unquote('max(var(--iui-size-2xl), env(safe-area-inset-left))');
 
       @include small-monitor {
         padding: var(--iui-size-l) unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-right))') var(--iui-size-l) unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-left))');
@@ -62,10 +54,6 @@
 
       @include tablet {
         padding: var(--iui-size-m) unquote('max(var(--iui-size-xl), env(safe-area-inset-right))') var(--iui-size-m) unquote('max(var(--iui-size-xl), env(safe-area-inset-left))');
-      }
-
-      @include landscape-mobile {
-        padding: var(--iui-size-xs) unquote('max(var(--iui-size-l), env(safe-area-inset-right))') var(--iui-size-xs) unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
       }
 
       @include mobile {
