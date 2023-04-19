@@ -20,6 +20,7 @@
     //#region If side navigation is present, remove the env(safe-area-inset-left) from the left side of content area
     ~ .iui-layouts-page-content-padded,
     ~ .iui-layouts-page-content-action-bar {
+
       @include monitor {
         padding-left: var(--iui-size-2xl);
       }
@@ -131,6 +132,10 @@
       background-color: var(--iui-color-background);
       border-top: 2px solid var(--iui-color-border);
       padding-block: var(--iui-size-m);
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
       // display: flex;
       // justify-content: center;
 
@@ -141,6 +146,7 @@
 
       @include small-monitor {
         padding-inline: unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-right))') unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-left))');
+        left: calc(var(--iui-size-l) *3);
       }
 
       @include tablet {

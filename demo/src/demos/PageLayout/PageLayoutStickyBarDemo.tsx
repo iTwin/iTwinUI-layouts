@@ -69,21 +69,21 @@ export const PageLayoutStickyBarDemo = () => {
             <LabeledInput label='Country' />
             <LabeledInput label='City' />
           </form>
+          <PageLayout.ActionBar>
+            <div className='iui-layouts-page-content-action-bar-zones'>
+              <div className='iui-layouts-page-content-action-bar-zones-left'>
+                <Checkbox label='Remember my settings' />
+              </div>
+              <div className='iui-layouts-page-content-action-bar-zones-center'>
+                <Button styleType='cta' size='large'>
+                  Create
+                </Button>
+                <Button size='large'>Cancel</Button>
+              </div>
+              <div className='iui-layouts-page-content-action-bar-zones-right' />
+            </div>
+          </PageLayout.ActionBar>
         </PageLayout.Content>
-        <PageLayout.ActionBar>
-          <div className='iui-layouts-page-content-action-bar-zones'>
-            <div className='iui-layouts-page-content-action-bar-zones-left'>
-              <Checkbox label='Remember my settings' />
-            </div>
-            <div className='iui-layouts-page-content-action-bar-zones-center'>
-              <Button styleType='cta' size='large'>
-                Create
-              </Button>
-              <Button size='large'>Cancel</Button>
-            </div>
-            <div className='iui-layouts-page-content-action-bar-zones-right' />
-          </div>
-        </PageLayout.ActionBar>
       </PageLayout>
     </DemoTemplate>
   );
