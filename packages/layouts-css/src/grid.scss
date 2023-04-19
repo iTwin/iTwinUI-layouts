@@ -4,16 +4,13 @@
 
 .iui-layouts-grid {
   --_iui-grid-column-count-mobile: 12;
-  --_iui-grid-column-count-landscape-mobile: 12;
   --_iui-grid-column-count-tablet: 12;
   --_iui-grid-column-count-small-monitor: 12;
   --_iui-grid-column-count-monitor: 12;
 
   display: grid;
-  @include monitor {
-    grid-template-columns: repeat(var(--_iui-grid-column-count-monitor), 1fr);
-    grid-gap: var(--iui-size-l);
-  }
+  grid-template-columns: repeat(var(--_iui-grid-column-count-monitor), 1fr);
+  grid-gap: var(--iui-size-l);
 
   @include small-monitor {
     grid-template-columns: repeat(
@@ -28,13 +25,6 @@
     grid-gap: var(--iui-size-m);
   }
 
-  @include landscape-mobile {
-    grid-template-columns: repeat(
-      var(--_iui-grid-column-count-landscape-mobile),
-      1fr
-    );
-    grid-gap: var(--iui-size-m);
-  }
   @include mobile {
     grid-template-columns: repeat(var(--_iui-grid-column-count-mobile), 1fr);
     grid-gap: var(--iui-size-m);
@@ -43,23 +33,18 @@
 
 .iui-layouts-grid-item {
   --_iui-grid-item-column-span-mobile: span 1;
-  --_iui-grid-item-column-span-landscape-mobile: span 1;
   --_iui-grid-item-column-span-tablet: span 1;
   --_iui-grid-item-column-span-small-monitor: span 1;
   --_iui-grid-item-column-span-monitor: span 1;
 
   --_iui-grid-item-column-start-mobile: auto;
-  --_iui-grid-item-column-start-landscape-mobile: auto;
   --_iui-grid-item-column-start-tablet: auto;
   --_iui-grid-item-column-start-small-monitor: auto;
   --_iui-grid-item-column-start-monitor: auto;
 
   max-width: 100%;
-
-  @include monitor {
-    grid-column: var(--_iui-grid-item-column-start-monitor) /
-      var(--_iui-grid-item-column-span-monitor);
-  }
+  grid-column: var(--_iui-grid-item-column-start-monitor) /
+    var(--_iui-grid-item-column-span-monitor);
 
   @include small-monitor {
     grid-column: var(--_iui-grid-item-column-start-small-monitor) /
@@ -69,11 +54,6 @@
   @include tablet {
     grid-column: var(--_iui-grid-item-column-start-tablet) /
       var(--_iui-grid-item-column-span-tablet);
-  }
-
-  @include landscape-mobile {
-    grid-column: var(--_iui-grid-item-column-start-landscape-mobile) /
-      var(--_iui-grid-item-column-span-landscape-mobile);
   }
 
   @include mobile {

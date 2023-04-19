@@ -29,7 +29,6 @@ export type GridItemProps = {
        monitor: 8,
        smallMonitor: 6,
        tablet: 4,
-       landscapeMobile: 12,
        mobile: 12,
      }}
    */
@@ -55,7 +54,6 @@ export type GridItemProps = {
        monitor: 2,
        smallMonitor: 2,
        tablet: 1,
-       landscapeMobile: 'auto',
        mobile: 'auto',
       }}
    */
@@ -120,7 +118,6 @@ const getColumnStart = (
        monitor: 8,
        smallMonitor: 6,
        tablet: 4,
-       landscapeMobile: 12,
        mobile: 12,
      }}
  * />  
@@ -136,7 +133,6 @@ const getColumnStart = (
        monitor: 2,
        smallMonitor: 2,
        tablet: 1,
-       landscapeMobile: 'auto',
        mobile: 'auto',
       }}
  * />
@@ -154,10 +150,6 @@ export const GridItem = (props: GridItemProps) => {
           getColumnSpan(columnSpan, 'mobile'),
         ),
         ...columnSpanProps(
-          '--_iui-grid-item-column-span-landscape-mobile',
-          getColumnSpan(columnSpan, 'landscapeMobile'),
-        ),
-        ...columnSpanProps(
           '--_iui-grid-item-column-span-tablet',
           getColumnSpan(columnSpan, 'tablet'),
         ),
@@ -173,10 +165,6 @@ export const GridItem = (props: GridItemProps) => {
         ...columnProps(
           '--_iui-grid-item-column-start-mobile',
           getColumnStart(columnStart, 'mobile'),
-        ),
-        ...columnProps(
-          '--_iui-grid-item-column-start-landscape-mobile',
-          getColumnStart(columnStart, 'landscapeMobile'),
         ),
         ...columnProps(
           '--_iui-grid-item-column-start-tablet',
