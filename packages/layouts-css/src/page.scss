@@ -18,8 +18,8 @@
     grid-area: sidenav;
 
     //#region If side navigation is present, remove the env(safe-area-inset-left) from the left side of content area
-    ~ .iui-layouts-page-content-padded {
-      padding-left: var(--iui-size-2xl);
+    ~ .iui-layouts-page-content-padded,
+    ~ .iui-layouts-page-content-action-bar {
 
       @include small-monitor {
         padding-left: calc(var(--iui-size-l) * 2);
@@ -113,29 +113,18 @@
       background-color: var(--iui-color-background);
       border-top: 2px solid var(--iui-color-border);
       padding-block: var(--iui-size-m);
-
-      position: absolute;
-      bottom: 0;
-      right: 0;
+      height: calc(calc(var(--iui-size-s) * 5) + var(--iui-size-l));
       // display: flex;
       // justify-content: center;
 
       //#region Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
-      @include monitor {
-        padding-inline: unquote('max(var(--iui-size-2xl), env(safe-area-inset-right))') unquote('max(var(--iui-size-2xl), env(safe-area-inset-left))');
-      }
 
       @include small-monitor {
         padding-inline: unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-right))') unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-left))');
-        left: calc(var(--iui-size-l) *3);
       }
 
       @include tablet {
         padding-inline: unquote('max(var(--iui-size-xl), env(safe-area-inset-right))') unquote('max(var(--iui-size-xl), env(safe-area-inset-left))');
-      }
-
-      @include landscape-mobile {
-        padding: unquote('max(var(--iui-size-l), env(safe-area-inset-right))') unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
       }
 
       @include mobile {
