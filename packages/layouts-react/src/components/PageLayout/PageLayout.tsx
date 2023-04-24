@@ -10,6 +10,7 @@ import ToolsArea from './ToolsArea';
 import { Header } from './Header';
 import SideNavigation from './SideNavigation';
 import TitleArea from './TitleArea';
+import BottomBar from './BottomBar';
 import ActionBar from './ActionBar';
 
 export type PageLayoutProps = {
@@ -33,6 +34,7 @@ PageLayout.SideNavigation = SideNavigation;
 PageLayout.Content = Content;
 PageLayout.ToolsArea = ToolsArea;
 PageLayout.TitleArea = TitleArea;
+PageLayout.BottomBar = BottomBar;
 PageLayout.ActionBar = ActionBar;
 
 export default PageLayout;

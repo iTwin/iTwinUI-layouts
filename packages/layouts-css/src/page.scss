@@ -8,7 +8,7 @@
   grid-template:
     'header header' auto
     'sidenav content' 1fr
-    'sidenav action-bar' auto / auto 1fr;
+    'sidenav bottom-bar' auto / auto 1fr;
 
   &-header {
     grid-area: header;
@@ -18,8 +18,7 @@
     grid-area: sidenav;
 
     //#region If side navigation is present, remove the env(safe-area-inset-left) from the left side of content area
-    ~ .iui-layouts-page-content-padded,
-    ~ .iui-layouts-page-content-action-bar {
+    ~ .iui-layouts-page-content-padded, {
 
       @include small-monitor {
         padding-left: calc(var(--iui-size-l) * 2);
@@ -75,16 +74,6 @@
       //#endregion Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
     }
 
-    &-centered {
-      max-width: 1440px;
-      width: 100%;
-    }
-
-    &-title-area {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: calc(var(--iui-size-s) * 3);
-    }
 
     &-tools {
       display: flex;
@@ -108,53 +97,97 @@
       }
     }
 
-    &-action-bar {
-      grid-area: action-bar;
-      background-color: var(--iui-color-background);
-      border-top: 2px solid var(--iui-color-border);
-      padding-block: var(--iui-size-m);
-      height: calc(calc(var(--iui-size-s) * 5) + var(--iui-size-l));
-      // display: flex;
-      // justify-content: center;
 
-      //#region Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
+    //#region Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
 
-      @include small-monitor {
-        padding-inline: unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-right))') unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-left))');
-      }
+    @include small-monitor {
+      padding-inline: unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-right))') unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-left))');
+    }
 
-      @include tablet {
-        padding-inline: unquote('max(var(--iui-size-xl), env(safe-area-inset-right))') unquote('max(var(--iui-size-xl), env(safe-area-inset-left))');
-      }
+    @include tablet {
+      padding-inline: unquote('max(var(--iui-size-xl), env(safe-area-inset-right))') unquote('max(var(--iui-size-xl), env(safe-area-inset-left))');
+    }
 
-      @include mobile {
-        padding: unquote('max(var(--iui-size-l), env(safe-area-inset-right))') unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
-      }
-      //#endregion Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
+    @include mobile {
+      padding: unquote('max(var(--iui-size-l), env(safe-area-inset-right))') unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
+    }
+    //#endregion Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
 
-      &-zones {
+    &-zones {
+      display: flex;
+      gap: 8px;
+      max-width: 1440px;
+      margin-inline: auto;
+
+      &-left,
+      &-center,
+      &-right {
         display: flex;
-        gap: 8px;
-        max-width: 1440px;
-        margin-inline: auto;
+        align-items: center;
+        flex: 1;
+        gap: inherit;
+      }
 
-        &-left,
-        &-center,
-        &-right {
-          display: flex;
-          align-items: center;
-          flex: 1;
-          gap: inherit;
-        }
+      &-center {
+        justify-content: center;
+      }
 
-        &-center {
-          justify-content: center;
-        }
-
-        &-right {
-          justify-content: flex-end;
-        }
+      &-right {
+        justify-content: flex-end;
       }
     }
+
+    &-centered {
+      max-width: 1440px;
+      width: 100%;
+    }
+
+    &-title-area {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: calc(var(--iui-size-s) * 3);
+    }
   }
+
+  &-bottom-bar {
+    grid-area: bottom-bar;
+    background-color: var(--iui-color-background);
+    height: calc(var(--iui-size-s)*5 + var(--iui-size-l)); //this is the sizes of the two bottom buttons of side nav
+    // height: calc(var(--iui-size-xl) + 13px);
+
+    &-action-bar {
+      background-color: var(--iui-color-background);
+      border-top: 2px solid var(--iui-color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1440px;
+      margin-inline: auto;
+      padding: var(--iui-size-m);
+      height: inherit;
+
+      &-left,
+      &-center,
+      &-right {
+        display: flex;
+        align-items: center;
+        width: 33%;
+      }
+
+      &-left {
+        justify-content: flex-start;
+      }
+
+      &-center {
+        justify-content: center;
+      }
+
+
+      &-right {
+        justify-content: flex-end;
+      }
+    }
+
+  }
+
 }

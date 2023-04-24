@@ -35,6 +35,10 @@ const Demo = () => {
           <DemoContent />
         </Surface>
       </PageLayout.Content>
+
+      
+      <PageLayout.BottomBar>
+      </PageLayout.BottomBar>
     </PageLayout>
   );
 }`;
@@ -70,20 +74,26 @@ export const PageLayoutStickyBarDemo = () => {
             <LabeledInput label='City' />
           </form>
         </PageLayout.Content>
-        <PageLayout.ActionBar>
-          <div className='iui-layouts-page-content-action-bar-zones'>
-            <div className='iui-layouts-page-content-action-bar-zones-left'>
-              <Checkbox label='Remember my settings' />
-            </div>
-            <div className='iui-layouts-page-content-action-bar-zones-center'>
-              <Button styleType='cta' size='large'>
-                Create
-              </Button>
-              <Button size='large'>Cancel</Button>
-            </div>
-            <div className='iui-layouts-page-content-action-bar-zones-right' />
-          </div>
-        </PageLayout.ActionBar>
+        <PageLayout.BottomBar>
+          <PageLayout.ActionBar>
+            <PageLayout.ActionBar.Left>
+              <div>
+                <Checkbox label='Remember my settings' />
+              </div>
+            </PageLayout.ActionBar.Left>
+            <PageLayout.ActionBar.Center>
+              <div>
+                <Button styleType='cta' size='large'>
+                  Create
+                </Button>
+                <Button size='large'>Cancel</Button>
+              </div>
+            </PageLayout.ActionBar.Center>
+            <PageLayout.ActionBar.Right>
+              <div />
+            </PageLayout.ActionBar.Right>
+          </PageLayout.ActionBar>
+        </PageLayout.BottomBar>
       </PageLayout>
     </DemoTemplate>
   );
