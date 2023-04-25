@@ -153,7 +153,6 @@
     grid-area: bottom-bar;
     background-color: var(--iui-color-background);
     height: calc(var(--iui-size-s)*5 + var(--iui-size-l)); //this is the sizes of the two bottom buttons of side nav
-    // height: calc(var(--iui-size-xl) + 13px);
 
     &-action-bar {
       background-color: var(--iui-color-background);
@@ -161,7 +160,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1440px;
       margin-inline: auto;
       padding: var(--iui-size-m);
       height: inherit;
