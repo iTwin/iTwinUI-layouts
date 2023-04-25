@@ -18,7 +18,7 @@
 
 ## Key features
 
-iTwinUI-layouts places given React (eg. [iTwinUI-react](https://github.com/iTwin/iTwinUI-react)) components accordingly within the page with minimal effort on the development side.
+iTwinUI-layouts places given React (eg. [iTwinUI-react](https://github.com/iTwin/iTwinUI/)) components accordingly within the page with minimal effort on the development side.
 
 ---
 
