@@ -90,7 +90,6 @@ export const PageLayoutStickyBarDemo = () => {
                 <Button size='large'>Cancel</Button>
               </div>
             </ActionBar.Center>
-            <ActionBar.Right />
           </ActionBar>
         </PageLayout.BottomBar>
       </PageLayout>

@@ -15,6 +15,9 @@ export type LeftProps = {
   children: React.ReactNode;
 } & StylingProps;
 
+/**
+ * Left subcomponent of ActionBar that displays content in the left slot
+ */
 const Left = (props: LeftProps) => {
   const { className, style, children } = props;
   return (
@@ -38,6 +41,9 @@ export type CenterProps = {
   children: React.ReactNode;
 } & StylingProps;
 
+/**
+ * Center subcomponent of ActionBar that displays content in the middle slot
+ */
 const Center = (props: CenterProps) => {
   const { className, style, children } = props;
   return (
@@ -61,6 +67,9 @@ export type RightProps = {
   children: React.ReactNode;
 } & StylingProps;
 
+/**
+ * Right subcomponent of ActionBar that displays content in the right slot
+ */
 const Right = (props: RightProps) => {
   const { className, style, children } = props;
   return (
@@ -94,7 +103,6 @@ export const ActionBar = (props: ActionBarProps) => {
   );
 };
 
-ActionBar.displayName = 'PageLayout.ActionBar';
 ActionBar.Left = Left;
 ActionBar.Center = Center;
 ActionBar.Right = Right;
