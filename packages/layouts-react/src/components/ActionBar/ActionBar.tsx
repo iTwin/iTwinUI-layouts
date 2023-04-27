@@ -22,7 +22,7 @@ const Left = (props: LeftProps) => {
   const { className, style, children } = props;
   return (
     <div
-      className={cx('iui-layouts-page-bottom-bar-action-bar-left', className)}
+      className={cx('iui-layouts-page-action-bar-left', className)}
       style={style}
     >
       {children}
@@ -48,7 +48,7 @@ const Center = (props: CenterProps) => {
   const { className, style, children } = props;
   return (
     <div
-      className={cx('iui-layouts-page-bottom-bar-action-bar-center', className)}
+      className={cx('iui-layouts-page-action-bar-center', className)}
       style={style}
     >
       {children}
@@ -74,7 +74,7 @@ const Right = (props: RightProps) => {
   const { className, style, children } = props;
   return (
     <div
-      className={cx('iui-layouts-page-bottom-bar-action-bar-right', className)}
+      className={cx('iui-layouts-page-action-bar-right', className)}
       style={style}
     >
       {children}
@@ -94,17 +94,23 @@ export type ActionBarProps = {
 export const ActionBar = (props: ActionBarProps) => {
   const { className, style, children } = props;
   return (
-    <div
-      className={cx('iui-layouts-page-bottom-bar-action-bar', className)}
-      style={style}
-    >
+    <div className={cx('iui-layouts-page-action-bar', className)} style={style}>
       {children}
     </div>
   );
 };
 
+/**
+ * Left subcomponent of ActionBar that displays content in the left slot
+ */
 ActionBar.Left = Left;
+/**
+ * Center subcomponent of ActionBar that displays content in the middle slot
+ */
 ActionBar.Center = Center;
+/**
+ * Right subcomponent of ActionBar that displays content in the right slot
+ */
 ActionBar.Right = Right;
 
 export default ActionBar;

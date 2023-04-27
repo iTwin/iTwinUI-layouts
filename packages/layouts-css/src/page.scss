@@ -111,58 +111,56 @@
 
   &-bottom-bar {
     grid-area: bottom-bar;
-    background-color: var(--iui-color-background);
     height: calc(var(--iui-size-s)*5 + var(--iui-size-l)); //this is the sizes of the two bottom buttons of side nav
+  }
 
-    &-action-bar {
-      background-color: var(--iui-color-background);
-      border-top: 2px solid var(--iui-color-border);
-      margin-inline: auto;
-      padding: var(--iui-size-m);
-      height: inherit;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas: 'left center right';
+  &-action-bar {
+    background-color: var(--iui-color-background);
+    border-top: 2px solid var(--iui-color-border);
+    margin-inline: auto;
+    padding: var(--iui-size-m);
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'left center right';
 
-      //#region Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
+    //#region Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
 
-      @include small-monitor {
-        padding-inline: unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-right))') unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-left))');
-      }
-
-      @include tablet {
-        padding-inline: unquote('max(var(--iui-size-xl), env(safe-area-inset-right))') unquote('max(var(--iui-size-xl), env(safe-area-inset-left))');
-      }
-
-      @include mobile {
-        padding: unquote('max(var(--iui-size-l), env(safe-area-inset-right))') unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
-      }
-      //#endregion Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
-
-      &-left,
-      &-center,
-      &-right {
-        display: flex;
-        align-items: center;
-      }
-
-      &-left {
-        grid-area: left;
-        justify-content: flex-start;
-      }
-
-      &-center {
-        grid-area: center;
-        justify-content: center;
-      }
-
-
-      &-right {
-        grid-area: right;
-        justify-content: flex-end;
-      }
+    @include small-monitor {
+      padding-inline: unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-right))') unquote('max(calc(var(--iui-size-l) * 2), env(safe-area-inset-left))');
     }
 
+    @include tablet {
+      padding-inline: unquote('max(var(--iui-size-xl), env(safe-area-inset-right))') unquote('max(var(--iui-size-xl), env(safe-area-inset-left))');
+    }
+
+    @include mobile {
+      padding: unquote('max(var(--iui-size-l), env(safe-area-inset-right))') unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
+    }
+    //#endregion Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
+
+    &-left,
+    &-center,
+    &-right {
+      display: flex;
+      align-items: center;
+    }
+
+    &-left {
+      grid-area: left;
+      justify-content: flex-start;
+    }
+
+    &-center {
+      grid-area: center;
+      justify-content: center;
+    }
+
+
+    &-right {
+      grid-area: right;
+      justify-content: flex-end;
+    }
   }
 
 }
