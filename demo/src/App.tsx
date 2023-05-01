@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Anchor, Text, Body, Tile, Title } from '@itwin/itwinui-react';
+import { Anchor, Text, Tile } from '@itwin/itwinui-react';
 import { FluidGrid } from '@itwin/itwinui-layouts-react';
 import { DEMOS_LIST } from './demos/list';
 import { GitHubBanner } from './common/GitHubBanner';
@@ -22,14 +22,14 @@ const App = () => {
       <Text as='h1' variant='headline'>
         iTwinUI-layouts
       </Text>
-      <Body>
+      <Text>
         iTwinUI-layouts places given React (eg.{' '}
-        <Anchor href='https://itwin.github.io/iTwinUI-react/'>
+        <Anchor href='https://itwin.github.io/iTwinUI/react/'>
           iTwinUI-react
         </Anchor>
         ) components accordingly within the page with minimal effort on the
         development side.
-      </Body>
+      </Text>
       <img
         alt='GitHub last commit'
         src='https://img.shields.io/github/last-commit/itwin/iTwinUI-layouts'
@@ -38,7 +38,9 @@ const App = () => {
 
       {DEMOS_LIST.map(({ listName, layouts }) => (
         <div key={listName} className='demo-layouts-list'>
-          <Title>{listName}</Title>
+          <Text as='h2' variant='title'>
+            {listName}
+          </Text>
           <FluidGrid>
             {layouts.map(({ path, name, description, icon }) => (
               <div

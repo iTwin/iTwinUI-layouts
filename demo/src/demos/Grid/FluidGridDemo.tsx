@@ -9,7 +9,6 @@ import { DemoTemplate } from '../../common/DemoTemplate';
 import { FluidGrid, PageLayout } from '@itwin/itwinui-layouts-react';
 import {
   Tile,
-  Headline,
   Text,
   LabeledInput,
   Button,
@@ -74,7 +73,9 @@ export const GridLayoutDemo = () => {
 
         <PageLayout.Content padded>
           <PageLayout.TitleArea>
-            <Headline>Fluid grid</Headline>
+            <Text as='h1' variant='headline'>
+              Fluid grid
+            </Text>
             <Text>
               This page is example of how to use <Code>FluidGrid</Code>{' '}
               component. Try resizing this page and see how grid changes.
@@ -87,7 +88,7 @@ export const GridLayoutDemo = () => {
                   <Code>children</Code> - list of items you want to place in
                   FluidGrid. One option might be array of{' '}
                   <Anchor
-                    href='https://itwin.github.io/iTwinUI-react/?path=/story/core-tile--actionable'
+                    href='https://itwin.github.io/iTwinUI/react/?path=/story/core-tile--actionable'
                     target='_blank'
                   >
                     Tiles
