@@ -74,6 +74,16 @@
       //#endregion Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
     }
 
+    &-centered {
+      max-width: 1440px;
+      width: 100%;
+    }
+
+    &-title-area {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: calc(var(--iui-size-s) * 3);
+    }
 
     &-tools {
       display: flex;
@@ -96,17 +106,6 @@
         justify-content: flex-end;
       }
     }
-
-    &-centered {
-      max-width: 1440px;
-      width: 100%;
-    }
-
-    &-title-area {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: calc(var(--iui-size-s) * 3);
-    }
   }
 
   &-bottom-bar {
@@ -121,6 +120,7 @@
     padding: var(--iui-size-m);
     height: inherit;
     display: grid;
+    gap: var(--iui-size-xs);
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 'left center right';
 
@@ -144,6 +144,7 @@
     &-right {
       display: flex;
       align-items: center;
+      gap: var(--iui-size-xs);
     }
 
     &-left {

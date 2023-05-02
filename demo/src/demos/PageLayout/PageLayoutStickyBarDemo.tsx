@@ -78,17 +78,13 @@ export const PageLayoutStickyBarDemo = () => {
         <PageLayout.BottomBar>
           <ActionBar>
             <ActionBar.Left>
-              <div>
-                <Checkbox label='Remember my settings' />
-              </div>
+              <Checkbox label='Remember my settings' />
             </ActionBar.Left>
             <ActionBar.Center>
-              <div>
-                <Button styleType='cta' size='large'>
-                  Create
-                </Button>
-                <Button size='large'>Cancel</Button>
-              </div>
+              <Button styleType='cta' size='large'>
+                Create
+              </Button>
+              <Button size='large'>Cancel</Button>
             </ActionBar.Center>
           </ActionBar>
         </PageLayout.BottomBar>
