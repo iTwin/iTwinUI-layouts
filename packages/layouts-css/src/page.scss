@@ -111,6 +111,10 @@
   &-bottom-bar {
     grid-area: bottom-bar;
     height: calc(var(--iui-size-s)*5 + var(--iui-size-l)); //this is the sizes of the two bottom buttons of side nav
+
+    @include mobile {
+      height: fit-content;
+    }
   }
 
   &-action-bar {
@@ -135,7 +139,12 @@
     }
 
     @include mobile {
-      padding: unquote('max(var(--iui-size-l), env(safe-area-inset-right))') unquote('max(var(--iui-size-l), env(safe-area-inset-left))');
+      padding: unquote('max(var(--iui-size-s), env(safe-area-inset-right))') unquote('max(var(--iui-size-s), env(safe-area-inset-left))');
+      grid-template-columns: 1fr;
+      grid-template-areas: 'left'
+        'center'
+        'right';
+      justify-items: flex-start;
     }
     //#endregion Add env(safe-area-inset-*) for iPhone notch on the left & right sides of content area
 
@@ -144,7 +153,6 @@
     &-right {
       display: flex;
       align-items: center;
-      gap: var(--iui-size-xs);
     }
 
     &-left {

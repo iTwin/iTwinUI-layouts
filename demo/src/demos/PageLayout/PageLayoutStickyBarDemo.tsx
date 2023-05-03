@@ -80,7 +80,11 @@ export const PageLayoutStickyBarDemo = () => {
             <ActionBar.Left>
               <Checkbox label='Remember my settings' />
             </ActionBar.Left>
-            <ActionBar.Center>
+            <ActionBar.Center
+              style={{
+                gap: 'var(--iui-size-xs)',
+              }}
+            >
               <Button styleType='cta' size='large'>
                 Create
               </Button>
