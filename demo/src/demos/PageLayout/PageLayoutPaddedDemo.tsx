@@ -7,7 +7,7 @@ import { DemoHeader } from '../../common/DemoHeader';
 import { DemoSideNav } from '../../common/DemoSideNav';
 import { DemoTemplate } from '../../common/DemoTemplate';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
-import { Headline, Text, Button, Code, Surface } from '@itwin/itwinui-react';
+import { Text, Button, Code, Surface } from '@itwin/itwinui-react';
 
 const codeDemo = `import '@itwin/itwinui-layouts-css/styles.css';
 import { PageLayout } from '@itwin/itwinui-layouts-react';
@@ -53,7 +53,9 @@ export const PageLayoutPaddedDemo = () => {
 
         <PageLayout.Content padded>
           <PageLayout.TitleArea>
-            <Headline>This is PageLayout with padding</Headline>
+            <Text as='h1' variant='headline'>
+              This is PageLayout with padding
+            </Text>
             <Text>
               This page layout has padded content. You can use it for Home page,
               dashboards, tables, settings and other content that does not need
