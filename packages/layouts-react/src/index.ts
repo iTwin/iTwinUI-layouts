@@ -7,3 +7,6 @@ export type { PageLayoutProps } from './components/PageLayout';
 
 export { FluidGrid, Grid } from './components/Grid';
 export type { FluidGridProps, GridProps } from './components/Grid';
+
+export { ActionBar } from './components/ActionBar';
+export type { ActionBarProps } from './components/ActionBar';
