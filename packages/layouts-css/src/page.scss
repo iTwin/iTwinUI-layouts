@@ -121,7 +121,8 @@
     background-color: var(--iui-color-background);
     border-top: 2px solid var(--iui-color-border);
     margin-inline: auto;
-    padding: var(--iui-size-m);
+    padding-inline: unquote('max(calc(var(--iui-size-xl) * 2), env(safe-area-inset-right))') unquote('max(calc(var(--iui-size-xl) * 2), env(safe-area-inset-left))');
+
     height: inherit;
     display: grid;
     gap: var(--iui-size-xs);
