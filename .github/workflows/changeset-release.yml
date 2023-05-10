@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - greta/*
 
 env:
   NPM_CONFIG_PROVENANCE: true
