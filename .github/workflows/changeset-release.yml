@@ -21,7 +21,6 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
         with:
-          token: ${{ secrets.IMJS_ADMIN_GH_TOKEN }}
 
       - name: Use Node 18.X
         uses: actions/setup-node@v3
