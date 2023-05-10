@@ -3,4 +3,14 @@
 '@itwin/itwinui-layouts-react': minor
 ---
 
-Layout for sticky Bottom Bar slot and Action Bar within Bottom Bar. Action Bar has 3 slots for custom components: `ActionBar.Left`, `ActionBar.Center` and `ActionBar.Right`
+Layout for sticky Bottom Bar slot and Action Bar within Bottom Bar. Action Bar has 3 slots for custom components: `ActionBar.Left`, `ActionBar.Center` and `ActionBar.Right`.
+
+```
+<PageLayout.BottomBar>
+  <ActionBar>
+    <ActionBar.Left/>
+    <ActionBar.Center/>
+    <ActionBar.Right/>
+  </ActionBar>
+</PageLayout.BottomBar>
+```
