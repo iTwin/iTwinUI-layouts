@@ -29,9 +29,11 @@
     "lint": "yarn lint:js && yarn lint:css",
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "build-docker": "yarn workspace @itwin/itwinui-layouts-demo build-docker"
+    "build-docker": "yarn workspace @itwin/itwinui-layouts-demo build-docker",
+    "release": "yarn build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "@typescript-eslint/eslint-plugin": "^5.10.1",
     "@typescript-eslint/parser": "^5.10.1",
     "concurrently": "^7.0.0",
