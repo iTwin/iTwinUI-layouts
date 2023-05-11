@@ -20,7 +20,6 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
-        with:
 
       - name: Use Node 18.X
         uses: actions/setup-node@v3
