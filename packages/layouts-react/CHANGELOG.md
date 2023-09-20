@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.3.0 (2023-09-20)
+
+### Changes
+
+- [#72](https://github.com/iTwin/iTwinUI-layouts/pull/72): **GridItem**: removed `landscapeMobile` breakpoint from `ColumnSpan` and `ColumnStart` types.
+- [#72](https://github.com/iTwin/iTwinUI-layouts/pull/72): Improved breakpoints for page and grid layouts.
+
+### What's new
+
+- [#70](https://github.com/iTwin/iTwinUI-layouts/pull/70): Added a sticky `BottomBar` and `ActionBar` layout to use within BottomBar. ActionBar has 3 slots for custom components: `ActionBar.Left`, `ActionBar.Center` and `ActionBar.Right`.
+
+```
+<PageLayout.BottomBar>
+  <ActionBar>
+    <ActionBar.Left/>
+    <ActionBar.Center/>
+    <ActionBar.Right/>
+  </ActionBar>
+</PageLayout.BottomBar>
+```
+
 ## 0.2.0 (2022-11-16)
 
 - Using `iTwinUI-variables`
