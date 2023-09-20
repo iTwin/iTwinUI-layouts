@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.3.0 (2023-09-20)
+
+### Changes
+
+- [#72](https://github.com/iTwin/iTwinUI-layouts/pull/72): Breakpoints:
+  - Removed landscape-mobile breakpoint.
+  - Using rem instead of px.
+
+### What's new
+
+- [#70](https://github.com/iTwin/iTwinUI-layouts/pull/70): Page layout:
+  - Added bottom-bar area in page grid.
+  - Added action-bar layout for bottom-bar.
+
 ## 0.2.0 (2022-11-16)
 
 - Using `iTwinUI-variables`
