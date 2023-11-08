@@ -756,7 +756,7 @@ __metadata:
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
-    "@itwin/itwinui-react": ^2.0.0
+    "@itwin/itwinui-react": ^3.0.0
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
     "@vitejs/plugin-react": ^1.0.7
@@ -815,9 +815,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@itwin/itwinui-react@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@itwin/itwinui-react@npm:2.0.0"
+"@itwin/itwinui-react@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@itwin/itwinui-react@npm:3.0.0"
   dependencies:
     "@itwin/itwinui-css": ^1.0.0
     "@itwin/itwinui-illustrations-react": ^2.0.0
