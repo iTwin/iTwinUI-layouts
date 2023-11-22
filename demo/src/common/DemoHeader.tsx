@@ -11,11 +11,11 @@ import {
   MenuDivider,
   MenuExtraContent,
   MenuItem,
-  UserIcon,
   IconButton,
   DropdownMenu,
   Select,
   Text,
+  Avatar,
 } from '@itwin/itwinui-react';
 import {
   SvgCheckmark,
@@ -66,14 +66,14 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
                 <MenuItem
                   key='projectA'
                   sublabel='0x0123456789'
-                  icon={
+                  startIcon={
                     <img
                       src='https://itwinplatformcdn.azureedge.net/iTwinUI/stadium.png'
                       alt='Project thumbnail'
                       draggable='false'
                     />
                   }
-                  badge={<SvgCheckmark />}
+                  endIcon={<SvgCheckmark />}
                   isSelected
                 >
                   Project Alpha
@@ -81,14 +81,14 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
                 <MenuItem
                   key='projectB'
                   sublabel='0x0987654321'
-                  icon={<SvgProject />}
+                  startIcon={<SvgProject />}
                 >
                   Project Beta
                 </MenuItem>,
                 <MenuItem
                   key='projectC'
                   sublabel='0x0001337420'
-                  icon={<SvgProject />}
+                  startIcon={<SvgProject />}
                 >
                   Project Charlie
                 </MenuItem>,
@@ -107,23 +107,23 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
                 <MenuItem
                   key='iModelA'
                   sublabel='0x0123456789'
-                  icon={<SvgModel />}
+                  startIcon={<SvgModel />}
                 >
                   iModel Alpha
                 </MenuItem>,
                 <MenuItem
                   key='iModelB'
                   sublabel='0x0987654321'
-                  icon={<SvgModel />}
+                  startIcon={<SvgModel />}
                   isSelected
-                  badge={<SvgCheckmark />}
+                  endIcon={<SvgCheckmark />}
                 >
                   iModel Beta
                 </MenuItem>,
                 <MenuItem
                   key='iModelC'
                   sublabel='0x0001337420'
-                  icon={<SvgModel />}
+                  startIcon={<SvgModel />}
                 >
                   iModel Charlie
                 </MenuItem>,
@@ -150,8 +150,6 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
             <SvgHelpCircular />
           </IconButton>
         </DropdownMenu>,
-      ]}
-      userIcon={
         <DropdownMenu
           key='profile'
           role='menu'
@@ -174,13 +172,13 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
             </MenuExtraContent>,
             <MenuDivider key={1} />,
             <MenuItem key='view-profile'>View profile</MenuItem>,
-            <MenuItem key='sign-out' badge={<SvgExit />}>
+            <MenuItem key='sign-out' endIcon={<SvgExit />}>
               Sign out
             </MenuItem>,
           ]}
         >
           <IconButton styleType='borderless'>
-            <UserIcon
+            <Avatar
               size='medium'
               image={
                 <img
@@ -190,19 +188,19 @@ export const DemoHeader = ({ isSlim = false }: DemoHeaderProps) => {
               }
             />
           </IconButton>
-        </DropdownMenu>
-      }
+        </DropdownMenu>,
+      ]}
       menuItems={() => [
-        <MenuItem key='settings' icon={<SvgSettings />}>
+        <MenuItem key='settings' startIcon={<SvgSettings />}>
           Settings
         </MenuItem>,
-        <MenuItem key='feedback' icon={<SvgSmileyHappy />}>
+        <MenuItem key='feedback' startIcon={<SvgSmileyHappy />}>
           Feedback
         </MenuItem>,
-        <MenuItem key='whats-new' icon={<SvgNews />}>
+        <MenuItem key='whats-new' startIcon={<SvgNews />}>
           {`What's new`}
         </MenuItem>,
-        <MenuItem key='about' icon={<SvgInfoCircular />}>
+        <MenuItem key='about' startIcon={<SvgInfoCircular />}>
           About
         </MenuItem>,
       ]}

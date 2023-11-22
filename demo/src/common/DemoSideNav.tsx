@@ -14,7 +14,6 @@ import { SidenavButton, SideNavigation } from '@itwin/itwinui-react';
 export const DemoSideNav = ({ activeItemKey = 'Home' }) => {
   return (
     <SideNavigation
-      className='app-sidenav'
       expanderPlacement='bottom'
       items={[
         <SidenavButton
@@ -44,6 +43,9 @@ export const DemoSideNav = ({ activeItemKey = 'Home' }) => {
           Configuration
         </SidenavButton>,
       ]}
+      wrapperProps={{
+        className: 'app-sidenav',
+      }}
     />
   );
 };
