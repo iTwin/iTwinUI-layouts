@@ -124,7 +124,6 @@ export const GridLayoutDemo = () => {
             right={
               <LabeledInput
                 key='search'
-                iconDisplayStyle='inline'
                 placeholder='Search…'
                 svgIcon={<SvgSearch />}
               />
