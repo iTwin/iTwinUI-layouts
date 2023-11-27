@@ -740,7 +740,7 @@ __metadata:
     "@itwin/itwinui-variables": 1.0.0
     autoprefixer: ^10.4.2
     chokidar-cli: ^3.0.0
-    postcss: ^8.4.5
+    postcss: ^8.4.31
     postcss-cli: ^9.1.0
     postcss-discard-comments: ^5.0.2
     sass: ^1.49.0
@@ -788,7 +788,7 @@ __metadata:
     eslint-plugin-react-hooks: ^4.3.0
     husky: ^7.0.0
     lint-staged: ^11.2.6
-    postcss: ^8.4.5
+    postcss: ^8.4.31
     postcss-scss: ^4.0.4
     prettier: ^2.5.1
     stylelint: ^15.10.1
@@ -6004,7 +6004,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.3.11, postcss@npm:^8.4.5":
+"postcss@npm:^8.3.11":
   version: 8.4.5
   resolution: "postcss@npm:8.4.5"
   dependencies:
@@ -6034,6 +6034,17 @@ __metadata:
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
   checksum: 9ed3ab8af43ad5210c28f56f916fd9b8c9f94fbeaebbf645dcf579bc28bdd8056c2a7ecc934668d399b81fedb6128f0c4b299f931e50454964bc911c25a3a0a2
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.31":
+  version: 8.4.31
+  resolution: "postcss@npm:8.4.31"
+  dependencies:
+    nanoid: ^3.3.6
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: 1d8611341b073143ad90486fcdfeab49edd243377b1f51834dc4f6d028e82ce5190e4f11bb2633276864503654fb7cab28e67abdc0fbf9d1f88cad4a0ff0beea
   languageName: node
   linkType: hard
 
