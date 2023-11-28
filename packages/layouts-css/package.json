@@ -44,7 +44,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "chokidar-cli": "^3.0.0",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.31",
     "postcss-cli": "^9.1.0",
     "postcss-discard-comments": "^5.0.2",
     "sass": "^1.49.0"
