@@ -24,10 +24,10 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview --port 4000",
+    "preview:serve": "npx -y serve dist -p 4000 -L",
     "test": "yarn build && node run-tests.js",
     "test:ci": "node run-tests.js",
-    "test:approve": "cypress-image-diff -u",
-    "build-docker": "node build-docker.js"
+    "test:approve": "cypress-image-diff -u"
   },
   "dependencies": {
     "@fontsource/noto-sans": "^4.5.11",
@@ -43,13 +43,13 @@
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "@vitejs/plugin-react": "^1.0.7",
-    "cypress": "^9.5.0",
-    "cypress-image-diff-js": "^1.18.1",
+    "@vitejs/plugin-react": "^4.2.0",
+    "cypress": "^13.6.0",
+    "cypress-image-diff-js": "^1.32.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "sass": "^1.49.0",
-    "typescript": "^4.4.4",
-    "vite": "^2.9.16"
+    "sass": "^1.69.5",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.4"
   }
 }

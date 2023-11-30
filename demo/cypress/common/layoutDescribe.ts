@@ -17,7 +17,7 @@ const SCREEN_SIZES = [
  */
 export const layoutDescribe = (
   testsName: string,
-  callback: (screenSize: typeof SCREEN_SIZES[number]) => void,
+  callback: (screenSize: (typeof SCREEN_SIZES)[number]) => void,
 ) => {
   SCREEN_SIZES.forEach((screenSize) => {
     describe(`${testsName} ${screenSize.width}x${screenSize.height}`, () => {
