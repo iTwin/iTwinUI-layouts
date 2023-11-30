@@ -14,8 +14,6 @@ jobs:
   release:
     name: Release
     if: github.repository == 'iTwin/iTwinUI-layouts'
-    permissions:
-      id-token: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
