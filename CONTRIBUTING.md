@@ -28,14 +28,6 @@ yarn start
 
 ### To run visual tests
 
-If you are running tests for the first time, then you need to build docker image locally by running:
-
-```console
-yarn build-docker
-```
-
-Then you can run tests by running:
-
 ```console
 yarn test
 ```

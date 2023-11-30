@@ -4,6 +4,8 @@
  *--------------------------------------------------------------------------------------------*/
 const { spawn } = require('child_process');
 
+const IMAGE_NAME = 'cypress/included:13.6.0'; // https://hub.docker.com/r/cypress/included
+
 // Need to use this script because current directory variable is different in different shells
 const dockerProcess = spawn(
   // --rm - removes container after run
@@ -12,7 +14,7 @@ const dockerProcess = spawn(
   // -w /e2e - makes `e2e` the working directory
   // cypress/included:9.5.0 or cookiescrumbs/cypress-m1:9.4.1 - Docker image to run
   // ./demo/entrypoint.sh - entrypoint script to run
-  `docker run --rm --entrypoint /bin/bash -v "${__dirname}/../":/e2e -w /e2e itwinui/cypress:latest ./demo/entrypoint.sh`,
+  `docker run --rm --entrypoint /bin/bash -v "${__dirname}/../":/e2e -w /e2e ${IMAGE_NAME} ./demo/entrypoint.sh`,
   {
     stdio: 'inherit',
     shell: true,
