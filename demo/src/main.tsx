@@ -9,12 +9,10 @@ import './index.scss';
 import App from './App';
 import { DEMOS_LIST } from './demos/list';
 import '@itwin/itwinui-react/styles.css';
-import { ThemeProvider } from '@itwin/itwinui-react';
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HashRouter>
-      <ThemeProvider>
         <Routes>
           <Route path='/' element={<App />} />
           {DEMOS_LIST.map(({ layouts }) =>
@@ -23,7 +21,6 @@ createRoot(document.getElementById('root') as HTMLElement).render(
             )),
           )}
         </Routes>
-      </ThemeProvider>
     </HashRouter>
   </React.StrictMode>,
 );
