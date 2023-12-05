@@ -13,14 +13,14 @@ import '@itwin/itwinui-react/styles.css';
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HashRouter>
-        <Routes>
-          <Route path='/' element={<App />} />
-          {DEMOS_LIST.map(({ layouts }) =>
-            layouts.map(({ path, component: Component }) => (
-              <Route key={path} path={path} element={<Component />} />
-            )),
-          )}
-        </Routes>
+      <Routes>
+        <Route path='/' element={<App />} />
+        {DEMOS_LIST.map(({ layouts }) =>
+          layouts.map(({ path, component: Component }) => (
+            <Route key={path} path={path} element={<Component />} />
+          )),
+        )}
+      </Routes>
     </HashRouter>
   </React.StrictMode>,
 );
