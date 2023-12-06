@@ -9,24 +9,40 @@ import './index.scss';
 import App from './App';
 import { DEMOS_LIST } from './demos/list';
 import '@itwin/itwinui-react/styles.css';
-import { ThemeProvider } from '@itwin/itwinui-react';
+import { ThemeProvider, ThemeType } from '@itwin/itwinui-react';
 import { ThemeContext } from './common/ThemeContext';
+
+export const CustomThemeProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  const [theme, setTheme] = React.useState<ThemeType>(() =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light',
+  );
+
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    </ThemeContext.Provider>
+  );
+};
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HashRouter>
-      <ThemeProvider>
-        <ThemeContext.Provider>
-          <Routes>
-            <Route path='/' element={<App />} />
-            {DEMOS_LIST.map(({ layouts }) =>
-              layouts.map(({ path, component: Component }) => (
-                <Route key={path} path={path} element={<Component />} />
-              )),
-            )}
-          </Routes>
-        </ThemeContext.Provider>
-      </ThemeProvider>
+      <CustomThemeProvider>
+        <Routes>
+          <Route path='/' element={<App />} />
+          {DEMOS_LIST.map(({ layouts }) =>
+            layouts.map(({ path, component: Component }) => (
+              <Route key={path} path={path} element={<Component />} />
+            )),
+          )}
+        </Routes>
+      </CustomThemeProvider>
     </HashRouter>
   </React.StrictMode>,
 );
