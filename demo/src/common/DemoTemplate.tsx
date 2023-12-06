@@ -14,7 +14,6 @@ import {
   InformationPanelHeader,
   InformationPanelWrapper,
   Tooltip,
-  ThemeProvider,
 } from '@itwin/itwinui-react';
 import { SvgDeveloper } from '@itwin/itwinui-icons-react';
 import { ThemeButton } from '../common/ThemeButton';
@@ -51,62 +50,60 @@ export const DemoTemplate = (props: DemoTemplateProps) => {
   };
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <ThemeProvider theme={theme}>
-        <InformationPanelWrapper>
-          <div className='demo-template-container'>
-            <div className='demo-template-content'>
-              {children}
-              {!isTestRun() && (
-                <ButtonGroup className='demo-template-button-overlay'>
-                  <ThemeButton />
-                  <IconButton onClick={() => setShowCodeDemo((f) => !f)}>
-                    <SvgDeveloper />
-                  </IconButton>
-                </ButtonGroup>
-              )}
-            </div>
-
-            <InformationPanel style={{ width: '40%' }} isOpen={showCodeDemo}>
-              <InformationPanelHeader
-                actions={
-                  <div className='demo-template-code-header-actions'>
-                    <Tooltip
-                      content='Copied to clipboard'
-                      visible={copyTooltipVisible}
-                    >
-                      <Button
-                        onClick={() => {
-                          navigator.clipboard.writeText(codeExample);
-                          showCopiedTooltip();
-                        }}
-                        styleType='high-visibility'
-                      >
-                        Copy
-                      </Button>
-                    </Tooltip>
-                  </div>
-                }
-              >
-                <Link to='../' className='iui-anchor'>
-                  ..
-                </Link>
-                <Text
-                  as='h1'
-                  variant='title'
-                  className='demo-template-code-header-title'
-                >
-                  {title}
-                </Text>
-              </InformationPanelHeader>
-              <CodeSample
-                showLineNumbers
-                style={{ height: '100%', border: 'none', margin: '0' }}
-                code={codeExample}
-              />
-            </InformationPanel>
+      <InformationPanelWrapper>
+        <div className='demo-template-container'>
+          <div className='demo-template-content'>
+            {children}
+            {!isTestRun() && (
+              <ButtonGroup className='demo-template-button-overlay'>
+                <ThemeButton />
+                <IconButton onClick={() => setShowCodeDemo((f) => !f)}>
+                  <SvgDeveloper />
+                </IconButton>
+              </ButtonGroup>
+            )}
           </div>
-        </InformationPanelWrapper>
-      </ThemeProvider>
+
+          <InformationPanel style={{ width: '40%' }} isOpen={showCodeDemo}>
+            <InformationPanelHeader
+              actions={
+                <div className='demo-template-code-header-actions'>
+                  <Tooltip
+                    content='Copied to clipboard'
+                    visible={copyTooltipVisible}
+                  >
+                    <Button
+                      onClick={() => {
+                        navigator.clipboard.writeText(codeExample);
+                        showCopiedTooltip();
+                      }}
+                      styleType='high-visibility'
+                    >
+                      Copy
+                    </Button>
+                  </Tooltip>
+                </div>
+              }
+            >
+              <Link to='../' className='iui-anchor'>
+                ..
+              </Link>
+              <Text
+                as='h1'
+                variant='title'
+                className='demo-template-code-header-title'
+              >
+                {title}
+              </Text>
+            </InformationPanelHeader>
+            <CodeSample
+              showLineNumbers
+              style={{ height: '100%', border: 'none', margin: '0' }}
+              code={codeExample}
+            />
+          </InformationPanel>
+        </div>
+      </InformationPanelWrapper>
     </ThemeContext.Provider>
   );
 };
