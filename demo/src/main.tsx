@@ -14,8 +14,10 @@ import { ThemeContext } from './common/ThemeContext';
 
 export const CustomThemeProvider = ({
   children,
+  className,
 }: {
   children: React.ReactNode;
+  className?: string;
 }) => {
   const [theme, setTheme] = React.useState<ThemeType>(() =>
     window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -25,7 +27,9 @@ export const CustomThemeProvider = ({
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      <ThemeProvider theme={theme} className={className}>
+        {children}
+      </ThemeProvider>
     </ThemeContext.Provider>
   );
 };
@@ -33,7 +37,7 @@ export const CustomThemeProvider = ({
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HashRouter>
-      <CustomThemeProvider>
+      <CustomThemeProvider className='custom-theme'>
         <Routes>
           <Route path='/' element={<App />} />
           {DEMOS_LIST.map(({ layouts }) =>
