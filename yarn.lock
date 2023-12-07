@@ -795,6 +795,58 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^1.4.2":
+  version: 1.5.0
+  resolution: "@floating-ui/core@npm:1.5.0"
+  dependencies:
+    "@floating-ui/utils": ^0.1.3
+  checksum: 54b4fe26b3c228746ac5589f97303abf158b80aa5f8b99027259decd68d1c2030c4c637648ebd33dfe78a4212699453bc2bd7537fd5a594d3bd3e63d362f666f
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:^1.5.1":
+  version: 1.5.3
+  resolution: "@floating-ui/dom@npm:1.5.3"
+  dependencies:
+    "@floating-ui/core": ^1.4.2
+    "@floating-ui/utils": ^0.1.3
+  checksum: 00053742064aac70957f0bd5c1542caafb3bfe9716588bfe1d409fef72a67ed5e60450d08eb492a77f78c22ed1ce4f7955873cc72bf9f9caf2b0f43ae3561c21
+  languageName: node
+  linkType: hard
+
+"@floating-ui/react-dom@npm:^2.0.2":
+  version: 2.0.3
+  resolution: "@floating-ui/react-dom@npm:2.0.3"
+  dependencies:
+    "@floating-ui/dom": ^1.5.1
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 86212b9001b4ad20469798c66ec2d84ccf84f0c8bc33ab9bb9cf1b5cd74d7a7c897108ef3da76b44e4fffbafc170dc5abc84e1fe27b7d74d63e3e21fae026aaa
+  languageName: node
+  linkType: hard
+
+"@floating-ui/react@npm:^0.25.4":
+  version: 0.25.4
+  resolution: "@floating-ui/react@npm:0.25.4"
+  dependencies:
+    "@floating-ui/react-dom": ^2.0.2
+    "@floating-ui/utils": ^0.1.1
+    tabbable: ^6.0.1
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 816a0aa5bfc122c147e073563c0888333bdf58e79972757e37095c788323c8e87ace18d9196d95be8b8f4fe11d90cdeec36b23e5373a791a71a7873bf805590f
+  languageName: node
+  linkType: hard
+
+"@floating-ui/utils@npm:^0.1.1, @floating-ui/utils@npm:^0.1.3":
+  version: 0.1.6
+  resolution: "@floating-ui/utils@npm:0.1.6"
+  checksum: b34d4b5470869727f52e312e08272edef985ba5a450a76de0917ba0a9c6f5df2bdbeb99448e2c60f39b177fb8981c772ff1831424e75123471a27ebd5b52c1eb
+  languageName: node
+  linkType: hard
+
 "@fontsource/noto-sans-mono@npm:^4.5.12":
   version: 4.5.12
   resolution: "@fontsource/noto-sans-mono@npm:4.5.12"
@@ -841,13 +893,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-css@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@itwin/itwinui-css@npm:1.0.0"
-  checksum: e3e3c8266e77c37789724d782797030da6ac520669606d538da6781d94778eb3e4163695f0f05c663280174f81f615989f976d7ec0f7a1d6c54451b08e48ec59
-  languageName: node
-  linkType: hard
-
 "@itwin/itwinui-icons-react@npm:^1.7.0":
   version: 1.8.0
   resolution: "@itwin/itwinui-icons-react@npm:1.8.0"
@@ -858,21 +903,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@itwin/itwinui-illustrations-react@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@itwin/itwinui-illustrations-react@npm:2.0.0"
-  peerDependencies:
-    react: ">=16.8.6"
-    react-dom: ">=16.8.6"
-  checksum: fdfa33106030f92d0ad0a1e3e820f4dfbb5290acae2739fbd3c9f1b8e3ab07561ff85def627cd6c979fa9514be63e9d12a7f4132e77dc21b7b396b3378ca162e
-  languageName: node
-  linkType: hard
-
 "@itwin/itwinui-layouts-css@workspace:*, @itwin/itwinui-layouts-css@workspace:packages/layouts-css":
   version: 0.0.0-use.local
   resolution: "@itwin/itwinui-layouts-css@workspace:packages/layouts-css"
   dependencies:
-    "@itwin/itwinui-variables": 1.0.0
     autoprefixer: ^10.4.2
     chokidar-cli: ^3.0.0
     postcss: ^8.4.31
@@ -891,7 +925,7 @@ __metadata:
     "@itwin/itwinui-icons-react": ^1.7.0
     "@itwin/itwinui-layouts-css": "workspace:*"
     "@itwin/itwinui-layouts-react": "workspace:*"
-    "@itwin/itwinui-react": ^2.0.0
+    "@itwin/itwinui-react": ^3.0.0
     "@types/react": ^18.0.0
     "@types/react-dom": ^18.0.0
     "@vitejs/plugin-react": ^4.2.0
@@ -950,30 +984,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@itwin/itwinui-react@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@itwin/itwinui-react@npm:2.0.0"
+"@itwin/itwinui-react@npm:^3.0.0":
+  version: 3.0.3
+  resolution: "@itwin/itwinui-react@npm:3.0.3"
   dependencies:
-    "@itwin/itwinui-css": ^1.0.0
-    "@itwin/itwinui-illustrations-react": ^2.0.0
-    "@itwin/itwinui-variables": ^1.0.0
-    "@tippyjs/react": ^4.2.6
-    "@types/react-table": ^7.0.18
-    classnames: ^2.2.6
-    react-table: ^7.1.0
-    react-transition-group: ^4.4.2
-    tippy.js: ^6.3.7
+    "@floating-ui/react": ^0.25.4
+    classnames: ^2.3.2
+    react-table: ^7.8.0
+    react-transition-group: ^4.4.5
+    tslib: ^2.6.0
   peerDependencies:
-    react: ">=16.8.6 < 19.0.0"
-    react-dom: ">=16.8.6 < 19.0.0"
-  checksum: 133621af8f906aa6e523fd59750c1b656b66058c27878f9d7dc8823731a7d8c30266e411a43b5194f23679e773b802707352b64d1510d4437f6c8ccb0d56946d
-  languageName: node
-  linkType: hard
-
-"@itwin/itwinui-variables@npm:1.0.0, @itwin/itwinui-variables@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@itwin/itwinui-variables@npm:1.0.0"
-  checksum: 6b0efdb7b44522ad3c68020c0e44d85b50a813b25527d59f92a97705756d8159cec9cf6cdd7a02707312b0d6bbd6e96417898ce6378d8599f2fe804073d3a644
+    "@itwin/itwinui-illustrations-react": ^2.1.0
+    react: ">= 17.0.0 < 19.0.0"
+    react-dom: ">=17.0.0 < 19.0.0"
+  peerDependenciesMeta:
+    "@itwin/itwinui-illustrations-react":
+      optional: true
+  checksum: 8a50bddd679cadc24f1c1098510208159f20fb5499e679ea05137c0737f58fd9446bf57eefcb096b2eaaecbafe2b2e27466d500d7bdbe3c733534859301591a7
   languageName: node
   linkType: hard
 
@@ -1103,13 +1130,6 @@ __metadata:
     picocolors: ^1.0.0
     tslib: ^2.6.0
   checksum: 24e04c121269317d259614cd32beea3af38277151c4002df5883c4be920b8e3490bb897748e844f9d46bf68230f86dabd4e8f093773130e7e60529a769a132fc
-  languageName: node
-  linkType: hard
-
-"@popperjs/core@npm:^2.9.0":
-  version: 2.11.2
-  resolution: "@popperjs/core@npm:2.11.2"
-  checksum: 5695bf020eda54636e16a62dc9b5fdd92beaf7b2d19f62fcef049d57c5cff92773562d80cbf760b217c3ec928da310eb24994ab6a00fd39dffa0af9b5dfc01a6
   languageName: node
   linkType: hard
 
@@ -1322,18 +1342,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tippyjs/react@npm:^4.2.6":
-  version: 4.2.6
-  resolution: "@tippyjs/react@npm:4.2.6"
-  dependencies:
-    tippy.js: ^6.3.1
-  peerDependencies:
-    react: ">=16.8"
-    react-dom: ">=16.8"
-  checksum: 8f0fba591c9dae2e1af1ae632bbc775ba5c9dd4498e50e242be70302b4c27115c6740eec44e885e294b27cb28515777b52af5b34aac9d4bab627d948add938ae
-  languageName: node
-  linkType: hard
-
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
@@ -1455,15 +1463,6 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: decde42d02a90ac2fe94fd6bfd9c78d002c03762a2d940df9422bf61af89c03d05e2113fd55fe45521fe27fa872a79dfd654b7d6b89652b455425efdcb763c58
-  languageName: node
-  linkType: hard
-
-"@types/react-table@npm:^7.0.18":
-  version: 7.7.9
-  resolution: "@types/react-table@npm:7.7.9"
-  dependencies:
-    "@types/react": "*"
-  checksum: 3f6c847c8e904479875bb249af02b70e271c5480d0f8b94f7da96eb3980a83cf011d7e558e885259851e3af8defb6493deb147227242766ebca37c9cb630c306
   languageName: node
   linkType: hard
 
@@ -2389,10 +2388,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.2.6, classnames@npm:^2.3.1":
+"classnames@npm:^2.3.1":
   version: 2.3.1
   resolution: "classnames@npm:2.3.1"
   checksum: 14db8889d56c267a591f08b0834989fe542d47fac659af5a539e110cc4266694e8de86e4e3bbd271157dbd831361310a8293e0167141e80b0f03a0f175c80960
+  languageName: node
+  linkType: hard
+
+"classnames@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "classnames@npm:2.3.2"
+  checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
   languageName: node
   linkType: hard
 
@@ -6611,16 +6617,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-table@npm:^7.1.0":
-  version: 7.7.0
-  resolution: "react-table@npm:7.7.0"
+"react-table@npm:^7.8.0":
+  version: 7.8.0
+  resolution: "react-table@npm:7.8.0"
   peerDependencies:
-    react: ^16.8.3 || ^17.0.0-0
-  checksum: a679edecc76d3e51311b095528395b38ac85a1ffa371716bea01559a5fdc75af9a6abb9bb907c63190c8e77da22b11f7b05065b3a45d190d8f43cb83e4366206
+    react: ^16.8.3 || ^17.0.0-0 || ^18.0.0
+  checksum: 44ca0fb848c6869cd793cede8dc33072b38ebb8f8d2833565afe7cf3eac5d1fa455ac5fb9d06838b16fab0523d5d03e3e82f7645032f71245096e67b892313b9
   languageName: node
   linkType: hard
 
-"react-transition-group@npm:^4.4.2":
+"react-transition-group@npm:^4.4.5":
   version: 4.4.5
   resolution: "react-transition-group@npm:4.4.5"
   dependencies:
@@ -7767,6 +7773,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tabbable@npm:^6.0.1":
+  version: 6.2.0
+  resolution: "tabbable@npm:6.2.0"
+  checksum: f8440277d223949272c74bb627a3371be21735ca9ad34c2570f7e1752bd646ccfc23a9d8b1ee65d6561243f4134f5fbbf1ad6b39ac3c4b586554accaff4a1300
+  languageName: node
+  linkType: hard
+
 "table@npm:^6.8.1":
   version: 6.8.1
   resolution: "table@npm:6.8.1"
@@ -7826,15 +7839,6 @@ __metadata:
   version: 2.3.8
   resolution: "through@npm:2.3.8"
   checksum: a38c3e059853c494af95d50c072b83f8b676a9ba2818dcc5b108ef252230735c54e0185437618596c790bbba8fcdaef5b290405981ffa09dce67b1f1bf190cbd
-  languageName: node
-  linkType: hard
-
-"tippy.js@npm:^6.3.1, tippy.js@npm:^6.3.7":
-  version: 6.3.7
-  resolution: "tippy.js@npm:6.3.7"
-  dependencies:
-    "@popperjs/core": ^2.9.0
-  checksum: cac955318a65288e8d2dca05059878b003c6e66f92c94f7810f5bc5448eb6646abdf7dacc9bd00020e2611592598d0aae3a28ec9a45349a159603c3fdddce5fb
   languageName: node
   linkType: hard
 
