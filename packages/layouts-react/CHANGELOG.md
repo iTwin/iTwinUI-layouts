@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.0
+
+### Minor Changes
+
+- [#87](https://github.com/iTwin/iTwinUI-layouts/pull/87): Added support for `@itwin/itwinui-react` v3 and removed dependency on `@itwin/itwinui-variables`.
+
+### Patch Changes
+
+- Updated dependencies:
+  - @itwin/itwinui-layouts-css@0.4.0
+
 ## 0.3.0 (2023-09-20)
 
 ### Changes
