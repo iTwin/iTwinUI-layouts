@@ -30,7 +30,8 @@
     "prepare": "husky install",
     "pre-commit": "lint-staged",
     "build-docker": "yarn workspace @itwin/itwinui-layouts-demo build-docker",
-    "release": "yarn build && changeset publish"
+    "release": "yarn build && yarn publish",
+    "publish": "yarn workspaces foreach --no-private npm publish --tolerate-republish --access public"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
