@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.1
+
+### Patch Changes
+
+- 3bc9e7e: Fix dependency version.
+
 ## 0.4.0 (2023-12-07)
 
 ### Minor Changes
