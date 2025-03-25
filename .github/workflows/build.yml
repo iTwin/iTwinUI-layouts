@@ -23,7 +23,7 @@ jobs:
 
       - run: yarn install --frozen-lockfile
 
-      - run: yarn npm audit --all --recursive
+      - run: yarn npm audit
 
       - run: yarn lint
       - run: yarn lint:copyright ${{ github.workspace }}/*/**.{js,ts,tsx,scss,html}
@@ -32,7 +32,7 @@ jobs:
 
       - run: yarn test:ci
       - name: Upload tests artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: tests-results
